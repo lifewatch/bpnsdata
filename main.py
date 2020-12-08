@@ -49,18 +49,22 @@ instruments = {'SoundTrap': soundtrap, 'uPam': upam, 'B&K': bk}
 REF_PRESSURE = 1e-6
 
 # SURVEY PARAMETERS
-nfft = 512
-binsize = 5.0
+nfft = 4096
+binsize = 60.0
 band_lf = [100, 500]
 band_mf = [500, 2000]
 band_hf = [2000, 20000]
 bands_list = [band_lf, band_mf, band_hf]
 
-features = ['rms', 'sel', 'peak']
+features = ['rms', 'sel', 'peak', 'aci']
 
 
 if __name__ == "__main__":
     dataset = dataset.DataSet(summary_path, output_folder, instruments, features, bands_list, binsize, nfft)
-    dataset.generate_entire_dataset()
+    # dataset.generate_entire_dataset()
+    # dataset.read_all_deployments()
+    # dataset.read_dataset()
+    # dataset.plot_all_features_evo()
+    dataset.plot_all_features_distr()
 
 
