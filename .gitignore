@@ -1,2 +1,4 @@
 .idea/
 *.bsp
+soundexplorer.egg-info/
+__pycache__/

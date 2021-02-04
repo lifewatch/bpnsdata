@@ -2,7 +2,7 @@ import pathlib
 import pyhydrophone as pyhy
 import argparse
 
-from acoustic_data_exploration import dataset
+from soundexplorer import dataset
 
 
 parser = argparse.ArgumentParser(description='Generate a dataset and some plots for data exploration in the bpns')
@@ -54,17 +54,18 @@ binsize = 60.0
 band_lf = [100, 500]
 band_mf = [500, 2000]
 band_hf = [2000, 20000]
-bands_list = [band_lf, band_mf, band_hf]
-
-features = ['rms', 'sel', 'peak', 'aci']
+band_list = [band_lf, band_mf, band_hf]
+features = ['rms', 'sel', 'peak']
+third_octaves = True
 
 
 if __name__ == "__main__":
-    dataset = dataset.DataSet(summary_path, output_folder, instruments, features, bands_list, binsize, nfft)
-    # dataset.generate_entire_dataset()
+    dataset = dataset.DataSet(summary_path, output_folder, instruments, features, third_octaves, band_list, binsize, nfft)
+    dataset.generate_entire_dataset()
     # dataset.read_all_deployments()
     # dataset.read_dataset()
     # dataset.plot_all_features_evo()
-    dataset.plot_all_features_distr()
+    # dataset.plot_all_features_distr()
+
 
 
