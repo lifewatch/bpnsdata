@@ -1,4 +1,3 @@
-import datetime
 import pathlib
 
 import contextily as ctx
@@ -6,17 +5,13 @@ import geopandas
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import pyproj
-import requests
 import shapely
-import rasterio
-import urllib
-from importlib import resources
+
 shapely.speedups.disable()
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 from pypam import acoustic_survey, geolocation
-from skyfield import almanac, api
 
+from soundexplorer import mapdata, timedata, seastatedata, humandata
 
 class DataSet:
     def __init__(self, summary_path, output_folder, instruments, features, third_octaves=True,
@@ -96,19 +91,34 @@ class DataSet:
                            datetime_col=deployment_row['datetime_col'],
                            lon_col=deployment_row['lon_col'],
                            lat_col=deployment_row['lat_col'],
-                           utc=deployment_row['utc'])
-            d.generate_deployment_data(features=self.features, band_list=self.band_list,
-                                       third_octaves=self.third_octaves, binsize=self.binsize, nfft=self.nfft)
-            d.add_spatial_data()
-            if coastfile is not None:
-                d.add_distance_to_coast(coastfile=coastfile)
-            d.add_seastate()
-            d.add_time_data()
-            d.add_seabottom_data()
-            d.add_shipping_data()
+                           utc=deployment_row['utc'],
+                           include_dirs=bool(deployment_row['include_dirs']))
             deployment_path = self.output_folder.joinpath('deployments/%s_%s.pkl' % (index, d.station_name))
-            d.evo.to_pickle(deployment_path)
-            self.deployments.append(deployment_path)
+            if deployment_path.exists():
+                d.evo = pd.read_pickle(deployment_path)
+                d.evo.drop_duplicates(inplace=True)
+                if 'geometry' in d.evo.columns:
+                    d.evo = geopandas.GeoDataFrame(d.evo, geometry='geom', crs='EPSG:4326')
+                else:
+                    d.add_spatial_data()
+                d.evo.to_pickle(deployment_path)
+            else:
+                d.generate_deployment_data(features=self.features, band_list=self.band_list,
+                                           third_octaves=self.third_octaves, binsize=self.binsize, nfft=self.nfft)
+                print('Adding spatial data...')
+                d.add_spatial_data()
+                if coastfile is not None:
+                    d.add_distance_to_coast(coastfile=coastfile)
+                print('Adding seastate information...')
+                d.add_seastate()
+                print('Adding Time Data information...')
+                d.add_time_data()
+                print('Adding Sea Bottom information...')
+                d.add_seabottom_data()
+                print('Adding shipping information...')
+                d.add_shipping_data()
+                d.evo.to_pickle(deployment_path)
+                self.deployments.append(deployment_path)
             self.dataset = self.dataset.append(d.evo)
         self.dataset.to_pickle(self.output_folder.joinpath('dataset.pkl'))
 
@@ -145,19 +155,15 @@ class DataSet:
                            datetime_col=deployment_row['datetime_col'],
                            lon_col=deployment_row['lon_col'],
                            lat_col=deployment_row['lat_col'],
-                           utc=deployment_row['utc'])
+                           utc=deployment_row['utc'],
+                           include_dirs=bool(deployment_row['include_dirs']))
             d.evo = pd.read_pickle(deployment_file)
             d.evo.drop_duplicates(inplace=True)
             if 'geometry' in d.evo.columns:
                 d.evo = geopandas.GeoDataFrame(d.evo, geometry='geom', crs='EPSG:4326')
             else:
                 d.add_spatial_data()
-            # d.add_seastate()
-            # d.add_seabottom_data()
-            # d.add_time_data()
-            # d.add_shipping_data()
             self.dataset = self.dataset.append(d.evo)
-            d.evo.to_pickle(deployment_file)
         self.dataset.to_pickle(self.output_folder.joinpath('dataset.pkl'))
 
     def add_metadata(self):
@@ -178,7 +184,9 @@ class DataSet:
                            gps_path=deployment_row['gps_path'],
                            datetime_col=deployment_row['datetime_col'],
                            lon_col=deployment_row['lon_col'],
-                           lat_col=deployment_row['lat_col'])
+                           lat_col=deployment_row['lat_col'],
+                           utc=deployment_row['utc'],
+                           include_dirs=bool(deployment_row['include_dirs']))
             metadata.at[index, ['start_datetime', 'end_datetime', 'duration']] = d.get_metadata()
         return metadata
 
@@ -206,7 +214,8 @@ class DataSet:
             self.dataset.plot(column=(column, band), ax=ax, legend=True, alpha=0.5, categorical=True, cax=cax)
         else:
             self.dataset[(column, band)] = self.dataset[(column, band)].astype(float)
-            self.dataset.plot(column=(column, band), ax=ax, legend=True, alpha=0.5, cmap='YlOrRd', categorical=False, cax=cax)
+            self.dataset.plot(column=(column, band), ax=ax, legend=True, alpha=0.5, cmap='YlOrRd', categorical=False,
+                              cax=cax)
         if map_file is None:
             ctx.add_basemap(ax, crs=self.dataset.crs.to_string(), source=ctx.providers.Stamen.TonerLite,
                             reset_extent=False)
@@ -234,12 +243,15 @@ class DataSet:
         """
         Creates the images of the temporal evolution of all the features and saves them in the correspondent folder
         """
+        i = 0
         for station_name, deployment in self.dataset.groupby(group_by):
             for feature in self.features:
                 deployment[feature].plot()
                 plt.title('%s %s evolution' % (station_name, feature))
-                plt.savefig(self.output_folder.joinpath('img/temporal_features/%s_%s.png' % (station_name, feature)))
+                plt.savefig(
+                    self.output_folder.joinpath('img/temporal_features/%s_%s_%s.png' % (i, station_name, feature)))
                 plt.show()
+                i += 1
 
     def plot_third_octave_bands_prob(self, group_by='station_name', h=1.0, percentiles=[0.1, 0.5, 0.9]):
         """
@@ -251,12 +263,13 @@ class DataSet:
         self.dataset.replace([np.inf, -np.inf], np.nan, inplace=True)
         bin_edges = np.arange(start=self.dataset['oct3'].min().min(), stop=self.dataset['oct3'].max().max(), step=h)
         fbands = self.dataset['oct3'].columns
+        station_i = 0
         for station_name, deployment in self.dataset.groupby((group_by, 'all')):
             sxx = deployment['oct3'].values.T
             spd = np.zeros((sxx.shape[0], bin_edges.size - 1))
             p = np.zeros((sxx.shape[0], percentiles.size))
             for i in np.arange(sxx.shape[0]):
-                spd[i, :] = np.histogram(sxx[i, :], bin_edges)[0] / ((bin_edges.size - 1) * h)
+                spd[i, :] = np.histogram(sxx[i, :], bin_edges, density=True)[0]
                 cumsum = np.cumsum(spd[i, :])
                 for j in np.arange(percentiles.size):
                     p[i, j] = bin_edges[np.argmax(cumsum > percentiles[j] * cumsum[-1])]
@@ -270,8 +283,10 @@ class DataSet:
             cbar = fig.colorbar(im)
             cbar.set_label('Empirical Probability Density', rotation=90)
             plt.title('1/3-octave bands probability distribution %s' % station_name)
-            plt.savefig(self.output_folder.joinpath('img/features_analysis/%s_third_oct.png' % station_name))
+            plt.savefig(self.output_folder.joinpath('img/features_analysis/%s_%s_third_oct_prob.png' %
+                                                    (station_i, station_name)))
             plt.show()
+            station_i += 1
 
     def plot_third_octave_bands_avg(self, group_by='station_name'):
         """
@@ -280,14 +295,17 @@ class DataSet:
         if not self.third_octaves:
             raise Exception('This is only possible if third-octave bands have been computed!')
         self.dataset.replace([np.inf, -np.inf], np.nan, inplace=True)
+        station_i = 0
         for station_name, deployment in self.dataset.groupby((group_by, 'all')):
             deployment['oct3'].mean(axis=0).plot()
             plt.title('1/3-octave bands average %s' % station_name)
             plt.xlabel('Frequency [Hz]')
             plt.xscale('log')
             plt.ylabel('Average Sound Level [dB re 1 $\mu Pa$]')
-            plt.savefig(self.output_folder.joinpath('img/features_analysis/%s_third_oct.png' % station_name))
+            plt.savefig(self.output_folder.joinpath('img/features_analysis/%s_%s_third_oct_avg.png' %
+                                                    (station_i, station_name)))
             plt.show()
+            station_i += 1
 
 
 class Deployment:
@@ -301,7 +319,9 @@ class Deployment:
                  datetime_col='datetime',
                  lat_col='Latitude',
                  lon_col='Longitude',
-                 utc=False):
+                 utc=False,
+                 etn_id=0,
+                 include_dirs=True):
         """
         Represents one deployment.
         Parameters
@@ -332,14 +352,16 @@ class Deployment:
         self.data_folder_path = data_folder_path
         self.gps_path = gps_path
         self.utc = not utc
+        self.etn_id = etn_id
+        self.include_dirs = include_dirs
         self.geoloc = geolocation.SurveyLocation(geofile=self.gps_path, datetime_col=datetime_col,
                                                  lat_col=lat_col, lon_col=lon_col)
         self.evo = None
 
-        self.mapdata = MapData()
-        self.timedata = TimeData()
-        self.seastate = SeaState()
-        self.humandata = HumanData()
+        self.mapdata = mapdata.MapData()
+        self.timedata = timedata.TimeData()
+        self.seastate = seastatedata.SeaState()
+        self.humandata = humandata.HumanData()
 
     def __getattr__(self, item):
         if item == 'evo':
@@ -361,12 +383,13 @@ class Deployment:
         """
         Generate a dataset in a pandas data frame with the spl values
         """
-        asa = acoustic_survey.ASA(self.hydrophone, self.data_folder_path, binsize=binsize, nfft=nfft, utc=self.utc)
+        asa = acoustic_survey.ASA(self.hydrophone, self.data_folder_path, binsize=binsize, nfft=nfft, utc=self.utc,
+                                  include_dirs=self.include_dirs)
         if features is not None:
             evo = asa.evolution_multiple(method_list=features,
                                          band_list=band_list)
             if third_octaves:
-                evo_freq = asa.evolution_freq_dom('third_octaves_levels', binsize=binsize, db=True)
+                evo_freq = asa.evolution_freq_dom('third_octaves_levels', db=True)
                 evo = evo.merge(evo_freq, left_index=True, right_index=True)
         else:
             if third_octaves:
@@ -379,6 +402,7 @@ class Deployment:
         evo[('instrument_preamp_gain', 'all')] = self.hydrophone.preamp_gain
         evo[('instrument_sensitivity', 'all')] = self.hydrophone.sensitivity
         evo[('station_name', 'all')] = self.station_name
+        evo[('etn_id', 'all')] = self.etn_id
         evo.index = evo.index.tz_localize('UTC')
         self.evo = evo
         return evo
@@ -524,333 +548,3 @@ class Deployment:
         """
         date_str = self.evo.index[0].strftime("%d%m%y")
         self.evo.to_pickle(folder_path.joinpath('%s_%s.pkl', (date_str, self.station_name)))
-
-
-class TimeData:
-    """
-    Class to calculate moon phase and moment of the day
-    """
-    def __init__(self):
-        self.ts = api.load.timescale()
-        with resources.path('soundexplorer.data', 'de421.bsp') as bsp_file:
-            self.eph = api.load_file(bsp_file)
-
-    def get_moon_phase(self, dt, categorical=False):
-        """
-        Return the moon phase of a certain date
-        Parameters
-        ----------
-        dt: datetime object
-            Datetime on which to calculate the moon phase
-        Returns
-        -------
-        Moon phase as string
-        """
-        utc_dt = dt.replace(tzinfo=datetime.timezone.utc)
-        t = self.ts.utc(utc_dt)
-        if categorical:
-            moon_phase_at = almanac.moon_phases(self.eph)
-            moon_phase = almanac.MOON_PHASES[moon_phase_at(t)]
-        else:
-            moon_phase = almanac.moon_phase(self.eph, t).radians
-        return moon_phase
-
-    def get_day_moment(self, dt, location):
-        """
-        Return moment of the day (day, night, twilight)
-        Parameters
-        ----------
-        dt : datetime
-            Datetime to get the moment of
-        location : geometry object
-
-        Returns
-        -------
-        Moment of the day (string)
-        """
-        bluffton = api.Topos(latitude_degrees=location.coords[0][0], longitude_degrees=location.coords[0][1])
-        utc_dt = dt.replace(tzinfo=datetime.timezone.utc)
-        t = self.ts.utc(utc_dt)
-        is_dark_twilight_at = almanac.dark_twilight_day(self.eph, bluffton)
-        day_moment = is_dark_twilight_at(t).min()
-        return almanac.TWILIGHTS[day_moment]
-
-    def get_time_data_df(self, df):
-        """
-        Add to the dataframe the moon_phase and the day_moment to all the rows
-        Parameters
-        ----------
-        df : DataFrame
-            DataFrame with the datetime as index
-        Returns
-        -------
-        The dataframe with the columns added
-        """
-        df[('moon_phase', 'all')] = None
-        df[('day_moment', 'all')] = None
-        for t, row in df.iterrows():
-            if row.loc[('geometry', '')] is not None:
-                df.at[t, ('moon_phase', 'all')] = self.get_moon_phase(t)
-                df.at[t, ('day_moment', 'all')] = self.get_day_moment(t, row.loc[('geometry', '')])
-            else:
-                df.at[t, ('moon_phase', 'all')] = np.nan
-                df.at[t, ('day_moment', 'all')] = np.nan
-        return df
-
-
-class SeaState:
-    def __init__(self):
-        """
-        Sea State for BPNS data downloader
-        """
-        self.seastate = pd.DataFrame()
-        self.columns_ph = ['surface_baroclinic_eastward_sea_water_velocity',
-                            'surface_baroclinic_northward_sea_water_velocity',
-                            'sea_surface_height_above_sea_level',
-                            'sea_surface_salinity',
-                            'sea_surface_temperature']
-        self.columns_wv = ['hs', 'tm_1']
-        self.min_lat = 51.0
-        self.max_lat = 51.91667
-        self.min_lon = 2.083333
-        self.max_lon = 4.214285
-
-    def get_data(self, df):
-        """
-        Add all the sea state data to the df
-        Parameters
-        ----------
-        df : DataFrame
-            Evolution dataframe with datetime as index
-        Returns
-        -------
-        The df with all the columns added
-        """
-        self.min_lon, self.min_lat, self.max_lon, self.max_lat = df.total_bounds
-        start_timestamp = (df.index.min() - datetime.timedelta(hours=1)).strftime('%Y-%m-%dT%H:%M:%SZ')
-        end_timestamp = (df.index.max() + datetime.timedelta(hours=1)).strftime('%Y-%m-%dT%H:%M:%SZ')
-        wavestate = self.get_griddap_df(start_timestamp, end_timestamp, 'WAM_ECMWF', self.columns_wv)
-        seastate = self.get_griddap_df(start_timestamp, end_timestamp, 'BCZ_HydroState_V1', self.columns_ph)
-        for col in self.columns_ph + self.columns_wv:
-            df[(col, 'all')] = None
-
-        time_indexes = pd.DataFrame(index=seastate.time.unique())
-        moored = len(df.geometry.unique()) == 1
-        closest_point_s = None
-        closest_point_w = None
-        for t, row in df.iterrows():
-            if row.loc[('geometry', '')] is not None:
-                selected_time_idx = time_indexes.index.get_loc(t, method='nearest')
-                selected_time = time_indexes.iloc[selected_time_idx].name
-                seastate_t = seastate[seastate.time == selected_time]
-                if moored:
-                    if closest_point_s is None:
-                        closest_point_s = shapely.ops.nearest_points(seastate_t.geometry.unary_union,
-                                                                     row.loc[('geometry', '')])[0]
-                else:
-                    closest_point_s = shapely.ops.nearest_points(seastate_t.geometry.unary_union,
-                                                                 row.loc[('geometry', '')])[0]
-                closest_row = seastate_t[(seastate_t.latitude == closest_point_s.coords.xy[1]) &
-                                         (seastate_t.longitude == closest_point_s.coords.xy[0])]
-                df.loc[t, (self.columns_ph, 'all')] = closest_row[self.columns_ph].values[0]
-                wavestate_t = wavestate[wavestate.time == selected_time]
-                if moored:
-                    if closest_point_w is None:
-                        closest_point_w = shapely.ops.nearest_points(wavestate_t.geometry.unary_union,
-                                                                     row.loc[('geometry', '')])[0]
-                else:
-                    closest_point_w = shapely.ops.nearest_points(wavestate_t.geometry.unary_union,
-                                                                 row.loc[('geometry', '')])[0]
-                closest_row = wavestate_t[(wavestate_t.latitude == closest_point_w.coords.xy[1]) &
-                                          (wavestate_t.longitude == closest_point_w.coords.xy[0])]
-                df.loc[t, (self.columns_wv, 'all')] = closest_row[self.columns_wv].values[0]
-            else:
-                df.loc[t, (self.columns_wv, 'all')] = np.nan
-        df['surface_baroclinic_sea_water_velocity'] = np.sqrt((df[['surface_baroclinic_eastward_sea_water_velocity',
-                                                                       'surface_baroclinic_northward_sea_water_velocity']] ** 2).sum(axis=1))
-
-        return df
-
-    def get_griddap_df(self, start_timestamp, end_timestamp, table_name, columns):
-        """
-        Returns a DataFrame with the data from the griddap service between the specified dates, and the specified
-        columns from the specified table
-        Parameters
-        ----------
-        start_timestamp : datetime
-            Start time to downlowad the data from
-        end_timestamp : datetime
-            End time to download the data from
-        table_name : string
-            Name of the table
-        columns : list of strings
-            List of all the columns to store
-
-        Returns
-        -------
-        DataFrame with the downloaded table from griddap
-        """
-        query = 'https://erddap.naturalsciences.be/erddap/griddap/%s.json?' % table_name
-        for col in columns:
-            query = query + '%s[(%s):1:(%s)][(%s):1:(%s)][(%s):1:(%s)],' % (col, start_timestamp, end_timestamp,
-                                                                            self.min_lat, self.max_lat,
-                                                                            self.min_lon, self.max_lon)
-        response = requests.get(query[:-1])
-        griddap = pd.DataFrame(columns=response.json()['table']['columnNames'], data=response.json()['table']['rows'])
-        griddap.dropna(inplace=True)
-        griddap.time = pd.to_datetime(griddap.time)
-        griddap = geopandas.GeoDataFrame(griddap, geometry=geopandas.points_from_xy(griddap.longitude, griddap.latitude),
-                                         crs="EPSG:4326")
-        return griddap
-
-    def check_limits(self, df):
-        """
-        Check if all the points are within the available data range
-        Parameters
-        ----------
-        df : GeopandasDataFrame
-            DataFrame with all the rows to check
-        Returns
-        -------
-        True if all the points are within the available range
-        """
-        square = shapely.geometry.box(self.min_lon, self.min_lat, self.max_lon, self.max_lat)
-        return df.geometry.intersects(square).all()
-
-
-class MapData:
-    """
-    Class to het the spatial data. Default is habitat type
-    """
-    def __init__(self, map_path=None):
-        """
-
-        Parameters
-        ----------
-        map_path : string or Path
-            Path where the data is
-        """
-        if map_path is None:
-            map_path = pathlib.Path('//fs/shared/datac/Geo/Layers/Belgium/habitatsandbiotopes/'
-                                    'broadscalehabitatmap/seabedhabitat_BE.shp')
-        else:
-            if not isinstance(map_path, pathlib.Path):
-                map_path = pathlib.Path(map_path)
-        self.map_path = map_path
-        self.map = geopandas.read_file(self.map_path)
-
-    def get_location_map_data(self, columns, location, crs):
-        """
-        Get the features of the columns at a certain location
-        Parameters
-        ----------
-        columns : list of strings
-            Columns to get the features from
-        location : geometry object
-            Location
-        crs : string or object
-            CRS projection
-
-        Returns
-        -------
-        List of features in that particular location
-        """
-        project = pyproj.Transformer.from_crs(crs.geodetic_crs, self.map.crs, always_xy=True).transform
-        location_crs = shapely.ops.transform(project, location)
-        mask = self.map.contains(location_crs)
-        idx = np.where(mask)[0][0]
-        features = self.map.loc[idx, columns]
-        return features.values
-
-    def get_seabottom_data(self, df, columns):
-        """
-        Get the features and the bathymetry together of all the DataFrame
-        Parameters
-        ----------
-        df : DataFrame
-            Where to add the seabottom data
-        columns : list of strings
-            Columns from the map to add
-        Returns
-        -------
-        DataFrame with features and bathymetry added
-        """
-        for column in columns:
-            df[(column, 'all')] = None
-        diff_points = df.geometry.unique()
-        for point in diff_points:
-            if point is not None:
-                if len(diff_points) == 1:
-                    idxes = df.index
-                else:
-                    idxes = df[df[('geometry', '')] == point].index
-                df.loc[idxes, (columns, 'all')] = self.get_location_map_data(columns, point, crs=df.crs)
-                df.loc[idxes, ('bathymetry', 'all')] = self.get_bathymetry(point.coords)
-            else:
-                idxes = df[df[('geometry', '')] == None].index
-                df.loc[idxes, (columns, 'all')] = np.nan
-                df.loc[idxes, ('bathymetry', 'all')] = np.nan
-        return df
-
-    @staticmethod
-    def get_bathymetry(location):
-        """
-        Return the bathymetry of a certain point from EMODnet
-        Parameters
-        ----------
-        location : geometry object
-            Location
-
-        Returns
-        -------
-        Bathymetry as a positive number
-        """
-        point_str = str(location)
-        response = requests.get("https://rest.emodnet-bathymetry.eu/depth_sample?geom=%s" % point_str)
-        if response.status_code == 200:
-            depth = response.json()['avg']
-        else:
-            depth = 0.0
-        return depth
-
-
-class HumanData:
-    def get_shipping_intensity_df(self, df):
-        """
-        Will return the intensity of the year and month of each sample
-        """
-        bbox = df.total_bounds
-        # Make sure the bbox is big enough to download some data
-        if abs(bbox[2] - bbox[0]) <= 0.00833333 * 2:
-            bbox[0] -= 2 * 0.00833333
-            bbox[2] += 2 * 0.00833333
-        if abs(bbox[3] - bbox[1]) <= 0.00833333 * 2:
-            bbox[1] -= 2 * 0.00833333
-            bbox[3] += 2 * 0.00833333
-        bbox = ",".join(bbox.astype(str))
-        years = df.index.year.unique()
-        months = df.index.month.unique()
-        df[('route_dens', 'all')] = None
-        for year in years:
-            for month in months:
-                request = 'https://ows.emodnet-humanactivities.eu/wcs?service=wcs&version=1.0.0&request=getcoverage&' \
-                          'coverage=emodnet:%s_%02d_rd_All&crs=EPSG:4326&BBOX=%s&' \
-                          'format=image/tiff&interpolation=nearest&resx=0.00833333&resy=0.00833333' % (year, month, bbox)
-                response = requests.get(request)
-                if response.status_code != 200:
-                    print('No shipping density layer found for %s-%s. Rows values set to None' % (year, month))
-                else:
-                    try:
-                        tif_file = urllib.request.urlretrieve(request)
-                        tif_raster = rasterio.open(tif_file[0])
-                        for idx, row in df.iterrows():
-                            if row['geometry', ''] is not None:
-                                if idx.month == month and idx.year == year:
-                                    x = row['geometry', ''].xy[0][0]
-                                    y = row['geometry', ''].xy[1][0]
-                                    row, col = tif_raster.index(x, y)
-                                    df.at[idx, ('route_dens', 'all')] = tif_raster.read(1)[row, col]
-                    except:
-                        print('Year %s and month %s was not downloaded' % (year, month))
-                        df.at[idx, ('route_dens', 'all')] = np.nan
-        return df
