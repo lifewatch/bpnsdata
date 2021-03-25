@@ -1,4 +1,4 @@
-from datetime import datetime
+import datetime
 from importlib import resources
 
 import numpy as np
