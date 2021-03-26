@@ -3,6 +3,7 @@ import urllib
 import numpy as np
 import rasterio
 import requests
+from tqdm import tqdm
 
 
 class HumanData:
@@ -36,14 +37,14 @@ class HumanData:
                     try:
                         tif_file = urllib.request.urlretrieve(request)
                         tif_raster = rasterio.open(tif_file[0])
-                        for idx, row in df.iterrows():
+                        for idx, row in tqdm(df.iterrows()):
                             if row['geometry', ''] is not None:
                                 if idx.month == month and idx.year == year:
                                     x = row['geometry', ''].xy[0][0]
                                     y = row['geometry', ''].xy[1][0]
                                     row, col = tif_raster.index(x, y)
-                                    df.at[idx, ('route_dens', 'all')] = tif_raster.read(1)[row, col]
-                    except:
+                                    df.loc[idx, ('route_dens', 'all')] = tif_raster.read(1)[row, col]
+                    except rasterio.errors.RasterioError:
                         print('Year %s and month %s was not downloaded' % (year, month))
                         idxs = df[(df.index.month == month) & (df.index.year == year)].index
                         df.loc[idxs, ('route_dens', 'all')] = np.nan
