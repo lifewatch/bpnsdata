@@ -140,7 +140,7 @@ class DataSet:
         """
         Read all the deployments in case they were already generated (but dataset was not generated or not complete)
         """
-        self.dataset = pd.DataFrame()
+        self.dataset = geopandas.GeoDataFrame()
 
         for index, deployment_file in enumerate(self.deployments):
             deployment_row = self.metadata.iloc[index]
@@ -164,6 +164,7 @@ class DataSet:
             else:
                 d.add_spatial_data()
             self.dataset = self.dataset.append(d.evo)
+        self.dataset.set_geometry('geom', crs='EPSG:4326', inplace=True)
         self.dataset.to_pickle(self.output_folder.joinpath('dataset.pkl'))
 
     def add_metadata(self):
@@ -190,7 +191,7 @@ class DataSet:
             metadata.at[index, ['start_datetime', 'end_datetime', 'duration']] = d.get_metadata()
         return metadata
 
-    def plot_distr(self, column, band=None, map_file=None, categorical=False):
+    def plot_distr(self, column, band=None, map_file=None, categorical=False, borders=False):
         """
         Generate the distribution figures for the specific column for the whole dataset
         Parameters
@@ -203,27 +204,41 @@ class DataSet:
             background map to use
         categorical : bool
             Set to True if it is a categorical variable
+        borders : bool
+            Set to True if it is desired to plot the borders from the mapdata
         """
+        if band is None:
+            band = 'all'
+            band_name = 'Broadband'
+        else:
+            band_name = self.band_list[band]
+
+        # Clean the dataset for easier plotting
+        clean_ds = self.dataset.iloc[:, self.dataset.columns.get_level_values('band')==band]
+        clean_ds.columns = clean_ds.columns.droplevel('band')
+        clean_ds = clean_ds.set_geometry(self.dataset.geometry)
+        clean_ds = clean_ds.drop_duplicates(subset=['geom', column])
+        clean_ds = clean_ds.dropna(axis=0, how='any', subset=['geom'])
+
         _, ax = plt.subplots(1, 1)
         divider = make_axes_locatable(ax)
         cax = divider.append_axes("right", size="5%", pad=0.1)
-
-        if band is None:
-            band = 'all'
         if categorical:
-            self.dataset.plot(column=(column, band), ax=ax, legend=True, alpha=0.5, categorical=True, cax=cax)
+            clean_ds.to_crs('EPSG:3857').plot(column=column, ax=ax, legend=True, alpha=0.5, categorical=True)
         else:
-            self.dataset[(column, band)] = self.dataset[(column, band)].astype(float)
-            self.dataset.plot(column=(column, band), ax=ax, legend=True, alpha=0.5, cmap='YlOrRd', categorical=False,
+            clean_ds[column] = clean_ds[column].astype(float)
+            clean_ds.to_crs('EPSG:3857').plot(column=column, ax=ax, legend=True, alpha=0.5, cmap='YlOrRd', categorical=False,
                               cax=cax)
+        if borders:
+            mapd = mapdata.MapData()
+            mapd.borders.to_crs('EPSG:3857').plot(ax=ax, legend=False)
         if map_file is None:
-            ctx.add_basemap(ax, crs=self.dataset.crs.to_string(), source=ctx.providers.Stamen.TonerLite,
-                            reset_extent=False)
+            ctx.add_basemap(ax, reset_extent=False)
         else:
-            ctx.add_basemap(ax, crs=self.dataset.crs.to_string(), source=map_file, reset_extent=False, cmap='BrBG')
+            ctx.add_basemap(ax, source=map_file, reset_extent=False, cmap='BrBG')
         ax.set_axis_off()
-        band_name = self.bands_list[band]
-        ax.set_title("%s distribution of band %s Hz" % (column, band_name))
+        cax.set_axis_off()
+        # ax.set_title("%s distribution of band %s Hz" % (column, band_name))
         plt.savefig(self.output_folder.joinpath('img/spatial_features/%s_%s_distr.png' % (column, band)))
         plt.show()
 
@@ -236,7 +251,7 @@ class DataSet:
             Background map. If None, a default one will be added
         """
         for feature in self.features:
-            for band_i in np.arange(len(self.bands_list)):
+            for band_i in np.arange(len(self.band_list)):
                 self.plot_distr(column=feature, band=band_i, map_file=map_file)
 
     def plot_all_features_evo(self, group_by='station_name'):
@@ -360,7 +375,7 @@ class Deployment:
 
         self.mapdata = mapdata.MapData()
         self.timedata = timedata.TimeData()
-        self.seastate = seastatedata.SeaState()
+        self.seastate = seastatedata.SeaStateData()
         self.humandata = humandata.HumanData()
 
     def __getattr__(self, item):
@@ -394,6 +409,9 @@ class Deployment:
         else:
             if third_octaves:
                 evo = asa.evolution_freq_dom('third_octaves_levels', binsize=binsize, db=True)
+            else:
+                evo = asa.timestamps_df()
+                evo.set_index('datetime', inplace=True)
         evo[('method', 'all')] = self.method
         evo[('hydrophone_depth', 'all')] = self.hydrophone_depth
         evo[('instrument_name', 'all')] = self.hydrophone.name

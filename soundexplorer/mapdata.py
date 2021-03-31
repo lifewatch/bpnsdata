@@ -13,7 +13,7 @@ class MapData:
     Class to het the spatial data. Default is habitat type
     """
 
-    def __init__(self, map_path=None):
+    def __init__(self, map_path=None, borders_path=None):
         """
 
         Parameters
@@ -27,8 +27,18 @@ class MapData:
         else:
             if not isinstance(map_path, pathlib.Path):
                 map_path = pathlib.Path(map_path)
+
+        if borders_path is None:
+            borders_path = pathlib.Path('//fs/shared/datac/Geo/Layers/Belgium/administrativeunits/'
+                                        'maritime_boundaries/MarineRegions/eez_boundaries_v10_BE_epsg4326.shp')
+        else:
+            if not isinstance(borders_path, pathlib.Path):
+                borders_path = pathlib.Path(borders_path)
+
         self.map_path = map_path
         self.map = geopandas.read_file(self.map_path)
+        self.borders_path = borders_path
+        self.borders = geopandas.read_file(self.borders_path)
 
     def get_location_map_data(self, columns, location, crs):
         """

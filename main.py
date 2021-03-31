@@ -43,7 +43,17 @@ upam_Vpp = 20.0
 upam = pyhy.Seiche(name=upam_name, model=upam_name, serial_number=upam_serial_number, sensitivity=upam_sensitivity,
                    preamp_gain=upam_preamp_gain, Vpp=upam_Vpp)
 
-instruments = {'SoundTrap': soundtrap, 'uPam': upam, 'B&K': bk}
+aural_name = 'Aural'
+aural_model = 'M2'
+aural_serial_number = 0
+aural_sensitivity = -164.0
+aural_preamp_gain = 16.0
+aural_Vpp = 2.0
+aural = pyhy.MTE(name=aural_name, model=aural_model, serial_number=aural_serial_number, sensitivity=aural_sensitivity,
+                 preamp_gain=aural_preamp_gain, Vpp=aural_Vpp, string_format='%y%m%d_%H%M%S')
+
+
+instruments = {'SoundTrap': soundtrap, 'uPam': upam, 'B&K': bk, 'Aural': aural}
 
 # Acoustic params. Reference pressure 1 uPa
 REF_PRESSURE = 1e-6
@@ -55,7 +65,7 @@ band_lf = [100, 500]
 band_mf = [500, 2000]
 band_hf = [2000, 20000]
 band_list = [band_lf, band_mf, band_hf]
-features = ['rms', 'sel', 'peak']
+features = ['rms', 'sel', 'aci']
 third_octaves = True
 
 
