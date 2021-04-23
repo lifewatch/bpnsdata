@@ -5,15 +5,14 @@ import numpy as np
 import pyproj
 import requests
 import shapely
-import tqdm
-
+from tqdm import tqdm
 
 class MapData:
     """
     Class to het the spatial data. Default is habitat type
     """
 
-    def __init__(self, map_path=None, borders_path=None):
+    def __init__(self, map_path=None, borders_path=None, benthic_path=None):
         """
 
         Parameters
@@ -35,37 +34,19 @@ class MapData:
             if not isinstance(borders_path, pathlib.Path):
                 borders_path = pathlib.Path(borders_path)
 
+        if benthic_path is None:
+            benthic_path = pathlib.Path('//fs/shared/onderzoek/6. Marine Observation Center/Projects/PhD_Clea/Data/maps'
+                                            '/Habitat Suitability2/Habitat Suitability2.shp')
+        else:
+            if not isinstance(benthic_path, pathlib.Path):
+                benthic_path = pathlib.Path(benthic_path)
+
         self.map_path = map_path
         self.map = geopandas.read_file(self.map_path)
         self.borders_path = borders_path
         self.borders = geopandas.read_file(self.borders_path)
-
-    def get_location_map_data(self, columns, location, crs):
-        """
-        Get the features of the columns at a certain location
-        Parameters
-        ----------
-        columns : list of strings
-            Columns to get the features from
-        location : geometry object
-            Location
-        crs : string or object
-            CRS projection
-
-        Returns
-        -------
-        List of features in that particular location
-        """
-        project = pyproj.Transformer.from_crs(crs.geodetic_crs, self.map.crs, always_xy=True).transform
-        location_crs = shapely.ops.transform(project, location)
-        mask = self.map.contains(location_crs)
-        try:
-            idx = np.where(mask)[0][0]
-            features = self.map.loc[idx, columns].values
-        except IndexError:
-            print('This location is not included in the map, setting to Nan')
-            features = np.nan
-        return features
+        self.benthic_path = benthic_path
+        self.benthic = geopandas.read_file(self.benthic_path)
 
     def get_seabottom_data(self, df, columns):
         """
@@ -89,11 +70,14 @@ class MapData:
                     idxes = df.index
                 else:
                     idxes = df[df[('geometry', '')] == point].index
-                df.loc[idxes, (columns, 'all')] = self.get_location_map_data(columns, point, crs=df.crs)
+                df.loc[idxes, (columns, 'all')] = self.get_location_map_data(self.map, columns, point, crs=df.crs)
+                df.loc[idxes, ('benthic', 'all')] = self.get_location_map_data(self.benthic, 'GRIDCODE',
+                                                                                   point, crs=df.crs)
                 df.loc[idxes, ('bathymetry', 'all')] = self.get_bathymetry(point)
             else:
                 idxes = df[df[('geometry', '')] == None].index
                 df.loc[idxes, (columns, 'all')] = np.nan
+                df.loc[idxes, ('benthic', 'all')] = np.nan
                 df.loc[idxes, ('bathymetry', 'all')] = np.nan
         if len(diff_points) == 0:
             df[('bathymetry', 'all')] = np.nan
@@ -119,3 +103,34 @@ class MapData:
         else:
             depth = 0.0
         return depth
+
+    @staticmethod
+    def get_location_map_data(map_df, columns, location, crs):
+        """
+        Get the features of the columns at a certain location
+        Parameters
+        ----------
+        columns : list of strings
+            Columns to get the features from
+        location : geometry object
+            Location
+        crs : string or object
+            CRS projection
+
+        Returns
+        -------
+        List of features in that particular location
+        """
+        project = pyproj.Transformer.from_crs(crs.geodetic_crs, map_df.crs, always_xy=True).transform
+        location_crs = shapely.ops.transform(project, location)
+        mask = map_df.contains(location_crs)
+        try:
+            idx = np.where(mask)[0][0]
+            if isinstance(columns, list):
+                features = map_df.loc[idx, columns].values
+            else:
+                features = map_df.loc[idx, columns]
+        except IndexError:
+            print('This location is not included in the map, setting to Nan')
+            features = np.nan
+        return features

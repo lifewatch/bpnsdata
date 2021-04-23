@@ -44,7 +44,7 @@ class HumanData:
                                     y = row['geometry', ''].xy[1][0]
                                     row, col = tif_raster.index(x, y)
                                     df.loc[idx, ('route_dens', 'all')] = tif_raster.read(1)[row, col]
-                    except rasterio.errors.RasterioError:
+                    except rasterio.errors.RasterioIOError:
                         print('Year %s and month %s was not downloaded' % (year, month))
                         idxs = df[(df.index.month == month) & (df.index.year == year)].index
                         df.loc[idxs, ('route_dens', 'all')] = np.nan

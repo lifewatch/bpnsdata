@@ -92,7 +92,8 @@ class DataSet:
                            lon_col=deployment_row['lon_col'],
                            lat_col=deployment_row['lat_col'],
                            utc=deployment_row['utc'],
-                           include_dirs=bool(deployment_row['include_dirs']))
+                           include_dirs=bool(deployment_row['include_dirs']),
+                           etn_id=deployment_row['etn_id'])
             deployment_path = self.output_folder.joinpath('deployments/%s_%s.pkl' % (index, d.station_name))
             if deployment_path.exists():
                 d.evo = pd.read_pickle(deployment_path)
@@ -156,12 +157,14 @@ class DataSet:
                            lon_col=deployment_row['lon_col'],
                            lat_col=deployment_row['lat_col'],
                            utc=deployment_row['utc'],
-                           include_dirs=bool(deployment_row['include_dirs']))
+                           include_dirs=bool(deployment_row['include_dirs']),
+                           etn_id=deployment_row['etn_id'])
             d.evo = pd.read_pickle(deployment_file)
             d.evo.drop_duplicates(inplace=True)
             if 'geometry' in d.evo.columns:
                 d.evo = geopandas.GeoDataFrame(d.evo, geometry='geom', crs='EPSG:4326')
             else:
+                print('Adding spatial data...')
                 d.add_spatial_data()
             self.dataset = self.dataset.append(d.evo)
         self.dataset.set_geometry('geom', crs='EPSG:4326', inplace=True)
@@ -187,11 +190,12 @@ class DataSet:
                            lon_col=deployment_row['lon_col'],
                            lat_col=deployment_row['lat_col'],
                            utc=deployment_row['utc'],
-                           include_dirs=bool(deployment_row['include_dirs']))
+                           include_dirs=bool(deployment_row['include_dirs']),
+                           etn_id=deployment_row['etn_id'])
             metadata.at[index, ['start_datetime', 'end_datetime', 'duration']] = d.get_metadata()
         return metadata
 
-    def plot_distr(self, column, band=None, map_file=None, categorical=False, borders=False):
+    def plot_distr(self, column, band=None, map_file=None, map_column=None, categorical=False, borders=False):
         """
         Generate the distribution figures for the specific column for the whole dataset
         Parameters
@@ -224,18 +228,23 @@ class DataSet:
         divider = make_axes_locatable(ax)
         cax = divider.append_axes("right", size="5%", pad=0.1)
         if categorical:
-            clean_ds.to_crs('EPSG:3857').plot(column=column, ax=ax, legend=True, alpha=0.5, categorical=True)
+            clean_ds.to_crs('EPSG:3857').plot(column=column, ax=ax, legend=True, alpha=0.5, categorical=True, zorder=3,
+                                              cmap='YlOrRd')
         else:
             clean_ds[column] = clean_ds[column].astype(float)
             clean_ds.to_crs('EPSG:3857').plot(column=column, ax=ax, legend=True, alpha=0.5, cmap='YlOrRd', categorical=False,
-                              cax=cax)
+                              cax=cax, zorder=3)
         if borders:
             mapd = mapdata.MapData()
-            mapd.borders.to_crs('EPSG:3857').plot(ax=ax, legend=False)
+            mapd.borders.to_crs('EPSG:3857').plot(ax=ax, legend=False, zorder=2)
         if map_file is None:
             ctx.add_basemap(ax, reset_extent=False)
         else:
-            ctx.add_basemap(ax, source=map_file, reset_extent=False, cmap='BrBG')
+            if map_file.suffix == '.shp':
+                map_df = geopandas.read_file(map_file)
+                map_df.to_crs('EPSG:3857').plot(column=map_column, alpha=0.5, legend=True, ax=ax, zorder=1)
+            else:
+                ctx.add_basemap(ax, source=map_file, reset_extent=False, cmap='BrBG')
         ax.set_axis_off()
         cax.set_axis_off()
         # ax.set_title("%s distribution of band %s Hz" % (column, band_name))
@@ -398,8 +407,14 @@ class Deployment:
         """
         Generate a dataset in a pandas data frame with the spl values
         """
-        asa = acoustic_survey.ASA(self.hydrophone, self.data_folder_path, binsize=binsize, nfft=nfft, utc=self.utc,
-                                  include_dirs=self.include_dirs)
+        if self.hydrophone.name == 'B&K':
+            # Find and remove calibration tone, calibrate output
+            asa = acoustic_survey.ASA(self.hydrophone, self.data_folder_path, binsize=binsize, nfft=nfft, 
+                                      utc=self.utc, include_dirs=self.include_dirs, 
+                                      calibration_time='auto', cal_freq=159.2, max_cal_duration=120.0)
+        else:
+            asa = acoustic_survey.ASA(self.hydrophone, self.data_folder_path, binsize=binsize, nfft=nfft, utc=self.utc,
+                                      include_dirs=self.include_dirs)
         if features is not None:
             evo = asa.evolution_multiple(method_list=features,
                                          band_list=band_list)
@@ -411,7 +426,8 @@ class Deployment:
                 evo = asa.evolution_freq_dom('third_octaves_levels', binsize=binsize, db=True)
             else:
                 evo = asa.timestamps_df()
-                evo.set_index('datetime', inplace=True)
+                evo = evo.set_index('datetime')
+                evo.columns = pd.MultiIndex.from_tuples([], names=('method', 'band'))
         evo[('method', 'all')] = self.method
         evo[('hydrophone_depth', 'all')] = self.hydrophone_depth
         evo[('instrument_name', 'all')] = self.hydrophone.name

@@ -13,12 +13,6 @@ args = parser.parse_args()
 summary_path = pathlib.Path(args.summary_path[0])
 include_dirs = False
 
-# Geospatial data
-oostende = {'Lat': 51.237421, 'Lon': 2.921875}
-coastfile = pathlib.Path('//fs/shared/datac/Geo/Projects/2020/natuurpunt/data/background/basislijn_BE.shp')
-habitat_map = pathlib.Path('//fs/shared/datac/Geo/Layers/Belgium/habitatsandbiotopes/'
-                           'broadscalehabitatmap/seabedhabitat_BE.shp')
-
 # Output folder
 output_folder = summary_path.parent.joinpath('data_exploration')
 
@@ -61,7 +55,7 @@ REF_PRESSURE = 1e-6
 # SURVEY PARAMETERS
 nfft = 4096
 binsize = 60.0
-band_lf = [100, 500]
+band_lf = [50, 500]
 band_mf = [500, 2000]
 band_hf = [2000, 20000]
 band_list = [band_lf, band_mf, band_hf]
