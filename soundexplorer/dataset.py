@@ -71,13 +71,15 @@ class DataSet:
             self.deployments = []
         self.read_dataset()
 
-    def generate_entire_dataset(self, coastfile=None):
+    def generate_entire_dataset(self, coastfile=None, env_vars=None):
         """
         Calculates the acoustic features of every deployment and saves them as a pickle in the deployments folder with
         the name of the station of the deployment.
         Also adds all the deployment data to the self object in the general dataset,
         and the path to each deployment's pickle in the list of deployments
         """
+        if env_vars is None:
+            env_vars = []
         for index in self.metadata.index:
             deployment_row = self.metadata.iloc[index]
             inst = self.instruments[deployment_row['instrument']]
@@ -106,18 +108,23 @@ class DataSet:
             else:
                 d.generate_deployment_data(features=self.features, band_list=self.band_list,
                                            third_octaves=self.third_octaves, binsize=self.binsize, nfft=self.nfft)
-                print('Adding spatial data...')
-                d.add_spatial_data()
-                if coastfile is not None:
-                    d.add_distance_to_coast(coastfile=coastfile)
-                print('Adding seastate information...')
-                d.add_seastate()
-                print('Adding Time Data information...')
-                d.add_time_data()
-                print('Adding Sea Bottom information...')
-                d.add_seabottom_data()
-                print('Adding shipping information...')
-                d.add_shipping_data()
+                if 'spatial_data' in env_vars:
+                    print('Adding spatial data...')
+                    d.add_spatial_data()
+                    if coastfile is not None:
+                        d.add_distance_to_coast(coastfile=coastfile)
+                if 'seastate' in env_vars:
+                    print('Adding seastate information...')
+                    d.add_seastate()
+                if 'timedata' in env_vars:
+                    print('Adding Time Data information...')
+                    d.add_time_data()
+                if 'sea_bottom' in env_vars:
+                    print('Adding Sea Bottom information...')
+                    d.add_seabottom_data()
+                if 'shipping' in env_vars:
+                    print('Adding shipping information...')
+                    d.add_shipping_data()
                 d.evo.to_pickle(deployment_path)
                 self.deployments.append(deployment_path)
             self.dataset = self.dataset.append(d.evo)
