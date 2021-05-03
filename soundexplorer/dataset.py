@@ -6,15 +6,16 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import shapely
-
-shapely.speedups.disable()
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 from pypam import acoustic_survey, geolocation
-
 from soundexplorer import mapdata, timedata, seastatedata, humandata
+from tqdm import tqdm
+
+shapely.speedups.disable()
+
 
 class DataSet:
-    def __init__(self, summary_path, output_folder, instruments, features, third_octaves=True,
+    def __init__(self, summary_path, output_folder, instruments, features, third_octaves=None,
                  bands_list=None, binsize=60.0, nfft=512):
         """
         A DataSet object is a representation of a group of acoustic deployments.
@@ -41,6 +42,8 @@ class DataSet:
             A list of all the features to be calculated
         bands_list : list of tuples
             A list of all the bands to consider (low_freq, high_freq)
+        third_octaves : False or band
+            If False, no octave bands are calculated. Otherwise the parameter is passed to the pypam as a band
         binsize : float
             In seconds, duration of windows to consider
         nfft : int
@@ -80,7 +83,7 @@ class DataSet:
         """
         if env_vars is None:
             env_vars = []
-        for index in self.metadata.index:
+        for index in tqdm(self.metadata.index, total=len(self.metadata)):
             deployment_row = self.metadata.iloc[index]
             inst = self.instruments[deployment_row['instrument']]
             inst.sensitivity = deployment_row['hydrophone_sensitivity']
@@ -113,10 +116,10 @@ class DataSet:
                     d.add_spatial_data()
                     if coastfile is not None:
                         d.add_distance_to_coast(coastfile=coastfile)
-                if 'seastate' in env_vars:
+                if 'sea_state' in env_vars:
                     print('Adding seastate information...')
                     d.add_seastate()
-                if 'timedata' in env_vars:
+                if 'time_data' in env_vars:
                     print('Adding Time Data information...')
                     d.add_time_data()
                 if 'sea_bottom' in env_vars:
@@ -225,7 +228,7 @@ class DataSet:
             band_name = self.band_list[band]
 
         # Clean the dataset for easier plotting
-        clean_ds = self.dataset.iloc[:, self.dataset.columns.get_level_values('band')==band]
+        clean_ds = self.dataset.iloc[:, self.dataset.columns.get_level_values('band') == band]
         clean_ds.columns = clean_ds.columns.droplevel('band')
         clean_ds = clean_ds.set_geometry(self.dataset.geometry)
         clean_ds = clean_ds.drop_duplicates(subset=['geom', column])
@@ -239,8 +242,9 @@ class DataSet:
                                               cmap='YlOrRd')
         else:
             clean_ds[column] = clean_ds[column].astype(float)
-            clean_ds.to_crs('EPSG:3857').plot(column=column, ax=ax, legend=True, alpha=0.5, cmap='YlOrRd', categorical=False,
-                              cax=cax, zorder=3)
+            clean_ds.to_crs('EPSG:3857').plot(column=column, ax=ax, legend=True, alpha=0.5, cmap='YlOrRd',
+                                              categorical=False,
+                                              cax=cax, zorder=3)
         if borders:
             mapd = mapdata.MapData()
             mapd.borders.to_crs('EPSG:3857').plot(ax=ax, legend=False, zorder=2)
@@ -289,7 +293,7 @@ class DataSet:
         Create a plot with the probability distribution of the levels of the third octave bands
         """
         percentiles = np.array(percentiles)
-        if not self.third_octaves:
+        if self.third_octaves is False:
             raise Exception('This is only possible if third-octave bands have been computed!')
         self.dataset.replace([np.inf, -np.inf], np.nan, inplace=True)
         bin_edges = np.arange(start=self.dataset['oct3'].min().min(), stop=self.dataset['oct3'].max().max(), step=h)
@@ -323,7 +327,7 @@ class DataSet:
         """
         Plot the average
         """
-        if not self.third_octaves:
+        if self.third_octaves is False:
             raise Exception('This is only possible if third-octave bands have been computed!')
         self.dataset.replace([np.inf, -np.inf], np.nan, inplace=True)
         station_i = 0
@@ -410,27 +414,26 @@ class Deployment:
         duration = asa.duration()
         return start, end, duration
 
-    def generate_deployment_data(self, features=None, third_octaves=True, band_list=None, binsize=60.0, nfft=512):
+    def generate_deployment_data(self, features=None, third_octaves=None, band_list=None, binsize=60.0, nfft=512):
         """
         Generate a dataset in a pandas data frame with the spl values
         """
         if self.hydrophone.name == 'B&K':
             # Find and remove calibration tone, calibrate output
-            asa = acoustic_survey.ASA(self.hydrophone, self.data_folder_path, binsize=binsize, nfft=nfft, 
-                                      utc=self.utc, include_dirs=self.include_dirs, 
+            asa = acoustic_survey.ASA(self.hydrophone, self.data_folder_path, binsize=binsize, nfft=nfft,
+                                      utc=self.utc, include_dirs=self.include_dirs,
                                       calibration_time='auto', cal_freq=159.2, max_cal_duration=120.0)
         else:
             asa = acoustic_survey.ASA(self.hydrophone, self.data_folder_path, binsize=binsize, nfft=nfft, utc=self.utc,
                                       include_dirs=self.include_dirs)
         if features is not None:
-            evo = asa.evolution_multiple(method_list=features,
-                                         band_list=band_list)
-            if third_octaves:
-                evo_freq = asa.evolution_freq_dom('third_octaves_levels', db=True)
+            evo = asa.evolution_multiple(method_list=features, band_list=band_list)
+            if third_octaves is not False:
+                evo_freq = asa.evolution_freq_dom('third_octaves_levels', band=third_octaves, db=True)
                 evo = evo.merge(evo_freq, left_index=True, right_index=True)
         else:
-            if third_octaves:
-                evo = asa.evolution_freq_dom('third_octaves_levels', binsize=binsize, db=True)
+            if third_octaves is not False:
+                evo = asa.evolution_freq_dom('third_octaves_levels', band=third_octaves, db=True)
             else:
                 evo = asa.timestamps_df()
                 evo = evo.set_index('datetime')
