@@ -1,11 +1,9 @@
 contextily==1.0.1
-descartes==1.1.0
 geopandas==0.8.1
 noisereduce==1.1.0
 pip-chill==1.0.0
 pyarrow==2.0.0
-pyhydrophone==0.1
-pypam==0.0.1
+pypam==0.1
 seaborn==0.11.0
 sklearn==0.0
-skyfield==1.33
+skyfield==1.34

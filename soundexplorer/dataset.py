@@ -72,6 +72,7 @@ class DataSet:
             self.deployments = already_computed_deployments
         else:
             self.deployments = []
+        self.dataset = None
         self.read_dataset()
 
     def generate_entire_dataset(self, coastfile=None, env_vars=None):
@@ -88,7 +89,7 @@ class DataSet:
             inst = self.instruments[deployment_row['instrument']]
             inst.sensitivity = deployment_row['hydrophone_sensitivity']
             d = Deployment(hydrophone=inst,
-                           location=deployment_row['location'],
+                           station_name=deployment_row['location'],
                            method=deployment_row['method'],
                            hydrophone_depth=deployment_row['hydrophone_depth'],
                            data_folder_path=deployment_row['data_folder'],
@@ -158,7 +159,7 @@ class DataSet:
             inst = self.instruments[deployment_row['instrument']]
             inst.sensitivity = deployment_row['hydrophone_sensitivity']
             d = Deployment(hydrophone=inst,
-                           location=deployment_row['location'],
+                           station_name=deployment_row['location'],
                            method=deployment_row['method'],
                            hydrophone_depth=deployment_row['hydrophone_depth'],
                            data_folder_path=deployment_row['data_folder'],
@@ -216,6 +217,8 @@ class DataSet:
             Band to plot the distribution of. If None, will be chosen 'all'
         map_file : string or Path
             background map to use
+        map_column : string
+            Column of the map to plot. Default is None and will plot the geometry points
         categorical : bool
             Set to True if it is a categorical variable
         borders : bool
@@ -226,6 +229,8 @@ class DataSet:
             band_name = 'Broadband'
         else:
             band_name = self.band_list[band]
+        if isinstance(map_file, str):
+            map_file = pathlib.Path(map_file)
 
         # Clean the dataset for easier plotting
         clean_ds = self.dataset.iloc[:, self.dataset.columns.get_level_values('band') == band]
@@ -258,7 +263,7 @@ class DataSet:
                 ctx.add_basemap(ax, source=map_file, reset_extent=False, cmap='BrBG')
         ax.set_axis_off()
         cax.set_axis_off()
-        # ax.set_title("%s distribution of band %s Hz" % (column, band_name))
+        ax.set_title("%s distribution of band %s Hz" % (column, band_name))
         plt.savefig(self.output_folder.joinpath('img/spatial_features/%s_%s_distr.png' % (column, band)))
         plt.show()
 
@@ -277,6 +282,11 @@ class DataSet:
     def plot_all_features_evo(self, group_by='station_name'):
         """
         Creates the images of the temporal evolution of all the features and saves them in the correspondent folder
+
+        Parameters
+        ----------
+        group_by: string
+            Column in which to separate the plots. A figure will be generated for each group
         """
         i = 0
         for station_name, deployment in self.dataset.groupby(group_by):
@@ -288,10 +298,20 @@ class DataSet:
                 plt.show()
                 i += 1
 
-    def plot_third_octave_bands_prob(self, group_by='station_name', h=1.0, percentiles=[0.1, 0.5, 0.9]):
+    def plot_third_octave_bands_prob(self, group_by='station_name', h=1.0, percentiles=None):
         """
         Create a plot with the probability distribution of the levels of the third octave bands
+        Parameters
+        ----------
+        group_by: string
+            Column in which to separate the plots. A figure will be generated for each group
+        h: float
+            Histogram bin size (in db)
+        percentiles: list of floats
+            Percentiles to plot (0 to 1). Default is 10, 50 and 90% ([0.1, 0.5, 0.9])
         """
+        if percentiles is None:
+            percentiles = [0.1, 0.5, 0.9]
         percentiles = np.array(percentiles)
         if self.third_octaves is False:
             raise Exception('This is only possible if third-octave bands have been computed!')
@@ -325,7 +345,11 @@ class DataSet:
 
     def plot_third_octave_bands_avg(self, group_by='station_name'):
         """
-        Plot the average
+        Plot the average third octave bands
+        Parameters
+        ----------
+        group_by: string
+            Column in which to separate the plots. A figure will be generated for each group
         """
         if self.third_octaves is False:
             raise Exception('This is only possible if third-octave bands have been computed!')
@@ -346,7 +370,7 @@ class DataSet:
 class Deployment:
     def __init__(self,
                  hydrophone,
-                 location,
+                 station_name,
                  method,
                  hydrophone_depth,
                  data_folder_path,
@@ -363,7 +387,7 @@ class Deployment:
         ----------
         hydrophone : hydrophone object
             Hydrophone object from pyhydrophone with all the characteristics
-        location : string
+        station_name : string
             Name of the deployment
         method : string
             Method name of the data acquisition
@@ -381,7 +405,7 @@ class Deployment:
             Name of the column where the Longitude is
         """
         self.hydrophone = hydrophone
-        self.station_name = location
+        self.station_name = station_name
         self.method = method
         self.hydrophone_depth = hydrophone_depth
         self.data_folder_path = data_folder_path
@@ -417,6 +441,25 @@ class Deployment:
     def generate_deployment_data(self, features=None, third_octaves=None, band_list=None, binsize=60.0, nfft=512):
         """
         Generate a dataset in a pandas data frame with the spl values
+        Parameters
+        ----------
+        features: list of str
+            All the features to compute
+        third_octaves: list or false
+            Set to False if no third octaves have to be computed. Pass the band to calculate the third octaves in
+            otherwise. If set to None, the broadband [0, fs/2] will be considered. Band is independent of the bands_list
+        band_list: list of lists
+            List of bands to compute all the features of. If set to None, the broadband [0, fs/2] will be considered.
+        binsize: float
+            Size of the bins to compute the features from, in seconds
+        nfft: int
+            Number of samples of the window size (only will be used in case of a frequency-domain operation)
+
+        Returns
+        -------
+        DataFrame with datetime as index and all the features and octave bands as columns. Other columns such as
+        method, hydrophone_depth, instrument_name, instrument_model, instrument_Vpp, instrument_preamp_gain,
+        instrument_sensitivity, station_name and etn_id  are also added.
         """
         if self.hydrophone.name == 'B&K':
             # Find and remove calibration tone, calibrate output
@@ -480,7 +523,7 @@ class Deployment:
         evo_loc = self.geoloc.add_distance_to(df=self.evo,
                                               lat=lat,
                                               lon=lon,
-                                              column=[column])
+                                              column=column)
 
         evo_loc = evo_loc.set_index('datetime')
         evo_loc.columns = pd.MultiIndex.from_product([evo_loc.columns, ['all']])
@@ -488,16 +531,13 @@ class Deployment:
         self.evo = geopandas.GeoDataFrame(evo, crs=evo_loc.crs)
         return self.evo
 
-    def add_distance_to_coast(self, coastfile, column='coast_dist'):
+    def add_distance_to_coast(self, coastfile):
         """
         Add distance to coast
         Parameters
         ----------
         coastfile : string or Path
             *.shp file with the coastline
-        column : string
-            Name of the column where to store the distance
-
         """
         self.evo = self.geoloc.add_distance_to_coast(df=self.evo, coastfile=coastfile, column='coast_dist')
         return self.evo

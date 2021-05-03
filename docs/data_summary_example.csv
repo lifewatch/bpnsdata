@@ -1,2 +1,2 @@
-location;instrument;hydrophone_sensitivity;hydrophone_amp;hydrophone_Vpp;hydrophone_depth;method;data_folder;gps_path;lat_col;lon_col;shipwreck;shipwreck_lat;shipwreck_lon;utc
-Heinkel 111;B&K;-170;0 (in dB);2 (in V);5 (in m);Drift;path_to_wavs;path_to_gps;Latitude;Longitude;1;lat_val (in decimals);lon_val (in decimals);1
+location,instrument,hydrophone_sensitivity,hydrophone_amp,hydrophone_Vpp,hydrophone_depth,method,data_folder,gps_path,datetime_col_name,lat_col_name,lon_col_name,shipwreck,shipwreck_lat,shipwreck_lon,utc,include_dirs,etn_id
+Heinkel 111,B&K,-170,0 (in dB),2 (in V),5 (in m),Drift,path_to_wavs,path_to_gps,datetime,Latitude,Longitude,1,lat_val (in decimals),lon_val (in decimals),1,0,0

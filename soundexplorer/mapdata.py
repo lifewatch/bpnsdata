@@ -7,6 +7,7 @@ import requests
 import shapely
 from tqdm import tqdm
 
+
 class MapData:
     """
     Class to het the spatial data. Default is habitat type
@@ -17,8 +18,12 @@ class MapData:
 
         Parameters
         ----------
-        map_path : string or Path
-            Path where the data is
+        map_path: string or Path
+            Path where the data is. If set to None the default is in VLIZ's archive (seabedhabitat)
+        borders_path: string or Path
+            Path where the borders of the desired zone to consider are. If set to None, default is Belgium EEZ.
+        benthic_path: string or Path
+            Path where the benthic habitat distribution is stored. If set to None, default is the ILVO map.
         """
         if map_path is None:
             map_path = pathlib.Path('//fs/shared/datac/Geo/Layers/Belgium/habitatsandbiotopes/'
@@ -36,7 +41,7 @@ class MapData:
 
         if benthic_path is None:
             benthic_path = pathlib.Path('//fs/shared/onderzoek/6. Marine Observation Center/Projects/PhD_Clea/Data/maps'
-                                            '/Habitat Suitability2/Habitat Suitability2.shp')
+                                        '/Habitat Suitability2/Habitat Suitability2.shp')
         else:
             if not isinstance(benthic_path, pathlib.Path):
                 benthic_path = pathlib.Path(benthic_path)
@@ -72,10 +77,10 @@ class MapData:
                     idxes = df[df[('geometry', '')] == point].index
                 df.loc[idxes, (columns, 'all')] = self.get_location_map_data(self.map, columns, point, crs=df.crs)
                 df.loc[idxes, ('benthic', 'all')] = self.get_location_map_data(self.benthic, 'GRIDCODE',
-                                                                                   point, crs=df.crs)
+                                                                               point, crs=df.crs)
                 df.loc[idxes, ('bathymetry', 'all')] = self.get_bathymetry(point)
             else:
-                idxes = df[df[('geometry', '')] == None].index
+                idxes = df[df[('geometry', '')].isnull()].index
                 df.loc[idxes, (columns, 'all')] = np.nan
                 df.loc[idxes, ('benthic', 'all')] = np.nan
                 df.loc[idxes, ('bathymetry', 'all')] = np.nan
@@ -110,12 +115,14 @@ class MapData:
         Get the features of the columns at a certain location
         Parameters
         ----------
+        map_df: DataFrame
+            DataFrame where the geographical data to get the features from is
         columns : list of strings
             Columns to get the features from
         location : geometry object
-            Location
-        crs : string or object
-            CRS projection
+            Location to get the features from
+        crs : CRS projection
+            Projection of the location
 
         Returns
         -------

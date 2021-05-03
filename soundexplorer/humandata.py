@@ -10,7 +10,15 @@ class HumanData:
     @staticmethod
     def get_shipping_intensity_df(df, layer='rd'):
         """
-        Will return the intensity of the year and month of each sample
+        Will return the intensity of the year and month of each sample from EMODnet Human Activities
+        https://www.emodnet-humanactivities.eu/
+
+        Parameters
+        ----------
+        df: DataFrame
+            Dataframe to add the shipping intenstiy to
+        layer: str
+            Can be 'rd' for Route Density or 'st' for Shipping intensity
         """
         bbox = df.total_bounds
         # Make sure the bbox is big enough to download some data

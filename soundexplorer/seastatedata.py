@@ -50,30 +50,15 @@ class SeaStateData:
             closest_point_w = None
             for t, row in df.iterrows():
                 if row.loc[('geometry', '')] is not None:
-                    selected_time_idx = time_indexes.index.get_loc(t, method='nearest')
-                    selected_time = time_indexes.iloc[selected_time_idx].name
-                    seastate_t = seastate[seastate.time == selected_time]
-                    if moored:
-                        if closest_point_s is None:
-                            closest_point_s = shapely.ops.nearest_points(seastate_t.geometry.unary_union,
-                                                                         row.loc[('geometry', '')])[0]
-                    else:
-                        closest_point_s = shapely.ops.nearest_points(seastate_t.geometry.unary_union,
-                                                                     row.loc[('geometry', '')])[0]
-                    closest_row = seastate_t[(seastate_t.latitude == closest_point_s.coords.xy[1]) &
-                                             (seastate_t.longitude == closest_point_s.coords.xy[0])]
-                    df.loc[t, (self.columns_ph, 'all')] = closest_row[self.columns_ph].values[0]
-                    wavestate_t = wavestate[wavestate.time == selected_time]
-                    if moored:
-                        if closest_point_w is None:
-                            closest_point_w = shapely.ops.nearest_points(wavestate_t.geometry.unary_union,
-                                                                         row.loc[('geometry', '')])[0]
-                    else:
-                        closest_point_w = shapely.ops.nearest_points(wavestate_t.geometry.unary_union,
-                                                                     row.loc[('geometry', '')])[0]
-                    closest_row = wavestate_t[(wavestate_t.latitude == closest_point_w.coords.xy[1]) &
-                                              (wavestate_t.longitude == closest_point_w.coords.xy[0])]
-                    df.loc[t, (self.columns_wv, 'all')] = closest_row[self.columns_wv].values[0]
+                    closest_point_s, closest_row_s = self._get_closest_row(seastate, row, t, time_indexes,
+                                                                           closest_point_s)
+                    df.loc[t, (self.columns_ph, 'all')] = closest_row_s[self.columns_ph].values[0]
+
+                    closest_point_w, closest_row_w = self._get_closest_row(wavestate, row, t, time_indexes,
+                                                                           closest_point_w)
+                    df.loc[t, (self.columns_wv, 'all')] = closest_row_w[self.columns_wv].values[0]
+                    if not moored:
+                        closest_point_s, closest_point_w = None, None
                 else:
                     df.loc[t, (self.columns_wv, 'all')] = np.nan
             df['surface_baroclinic_sea_water_velocity'] = np.sqrt((df[['surface_baroclinic_eastward_sea_water_velocity',
@@ -84,6 +69,38 @@ class SeaStateData:
             df[self.columns_ph] = np.nan
             df['surface_baroclinic_sea_water_velocity'] = np.nan
         return df
+
+    @staticmethod
+    def _get_closest_row(state_df, row, t, time_indexes, closest_point=None):
+        """
+        Return the closest row from the state_df to the specified row and time. To avoid computing every time the
+        closest point for a df with only one geometry point (but different times), pass the first closest point
+        calculated
+
+        Parameters
+        ----------
+        state_df: DataFrame
+            DataFrame to get the closest row from
+        row: DataFrame row
+            Row of the current position to compute
+        t: datetime
+            Datetime of the row
+        time_indexes: pandas Series
+            Unique times of the state_df dataframe
+
+        Returns
+        -------
+        closest_point (shapely point), closest_row (pandas row selected from state_df)
+        """
+        selected_time_idx = time_indexes.index.get_loc(t, method='nearest')
+        selected_time = time_indexes.iloc[selected_time_idx].name
+        df_t = state_df[state_df.time == selected_time]
+        if closest_point is None:
+            closest_point = shapely.ops.nearest_points(df_t.geometry.unary_union,
+                                                       row.loc[('geometry', '')])[0]
+        closest_row = df_t[(df_t.latitude == closest_point.coords.xy[1]) &
+                           (df_t.longitude == closest_point.coords.xy[0])]
+        return closest_point, closest_row
 
     def get_griddap_df(self, start_timestamp, end_timestamp, table_name, columns):
         """
