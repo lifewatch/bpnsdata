@@ -49,7 +49,7 @@ class SeaStateData:
             closest_point_s = None
             closest_point_w = None
             for t, row in df.iterrows():
-                if row.loc[('geometry', '')] is not None:
+                if row[('geometry', '')] is not None:
                     closest_point_s, closest_row_s = self._get_closest_row(seastate, row, t, time_indexes,
                                                                            closest_point_s)
                     df.loc[t, (self.columns_ph, 'all')] = closest_row_s[self.columns_ph].values[0]
@@ -97,7 +97,7 @@ class SeaStateData:
         df_t = state_df[state_df.time == selected_time]
         if closest_point is None:
             closest_point = shapely.ops.nearest_points(df_t.geometry.unary_union,
-                                                       row.loc[('geometry', '')])[0]
+                                                       row[('geometry', '')])[0]
         closest_row = df_t[(df_t.latitude == closest_point.coords.xy[1]) &
                            (df_t.longitude == closest_point.coords.xy[0])]
         return closest_point, closest_row

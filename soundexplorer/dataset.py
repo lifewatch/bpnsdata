@@ -473,7 +473,8 @@ class Deployment:
             evo = asa.evolution_multiple(method_list=features, band_list=band_list)
             if third_octaves is not False:
                 evo_freq = asa.evolution_freq_dom('third_octaves_levels', band=third_octaves, db=True)
-                evo = evo.merge(evo_freq['oct3'], left_index=True, right_index=True)
+                oct_3bands = evo_freq.loc[:, evo_freq.columns.get_level_values('method') == 'oct3']
+                evo = evo.merge(oct_3bands, left_index=True, right_index=True)
         else:
             if third_octaves is not False:
                 evo = asa.evolution_freq_dom('third_octaves_levels', band=third_octaves, db=True)

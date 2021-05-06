@@ -76,9 +76,9 @@ class TimeData:
         df[('moon_phase', 'all')] = None
         df[('day_moment', 'all')] = None
         for t, row in df.iterrows():
-            if row.loc[('geometry', '')] is not None:
+            if row[('geometry', '')] is not None:
                 df.loc[t, ('moon_phase', 'all')] = self.get_moon_phase(t)
-                df.loc[t, ('day_moment', 'all')] = self.get_day_moment(t, row.loc[('geometry', '')])
+                df.loc[t, ('day_moment', 'all')] = self.get_day_moment(t, row[('geometry', '')])
             else:
                 df.loc[t, ('moon_phase', 'all')] = np.nan
                 df.loc[t, ('day_moment', 'all')] = np.nan
