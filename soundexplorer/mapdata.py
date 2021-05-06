@@ -69,7 +69,7 @@ class MapData:
         for column in columns:
             df[(column, 'all')] = None
         diff_points = df.geometry.unique()
-        for point in tqdm(diff_points):
+        for point in tqdm(diff_points, total=len(diff_points)):
             if point is not None:
                 if len(diff_points) == 1:
                     idxes = df.index

@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 import requests
 import shapely
+from tqdm import tqdm
 
 
 class SeaStateData:
@@ -48,7 +49,7 @@ class SeaStateData:
             moored = len(df.geometry.unique()) == 1
             closest_point_s = None
             closest_point_w = None
-            for t, row in df.iterrows():
+            for t, row in tqdm(df.iterrows(), total=len(df)):
                 if row[('geometry', '')] is not None:
                     closest_point_s, closest_row_s = self._get_closest_row(seastate, row, t, time_indexes,
                                                                            closest_point_s)

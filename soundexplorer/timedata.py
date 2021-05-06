@@ -3,6 +3,7 @@ from importlib import resources
 
 import numpy as np
 from skyfield import almanac, api
+from tqdm import tqdm
 
 
 class TimeData:
@@ -75,7 +76,7 @@ class TimeData:
         """
         df[('moon_phase', 'all')] = None
         df[('day_moment', 'all')] = None
-        for t, row in df.iterrows():
+        for t, row in tqdm(df.iterrows(), total=len(df)):
             if row[('geometry', '')] is not None:
                 df.loc[t, ('moon_phase', 'all')] = self.get_moon_phase(t)
                 df.loc[t, ('day_moment', 'all')] = self.get_day_moment(t, row[('geometry', '')])

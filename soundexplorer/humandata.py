@@ -45,7 +45,7 @@ class HumanData:
                     try:
                         tif_file = urllib.request.urlretrieve(request)
                         tif_raster = rasterio.open(tif_file[0])
-                        for idx, row in tqdm(df.iterrows()):
+                        for idx, row in tqdm(df.iterrows(), total=len(df)):
                             if row['geometry', ''] is not None:
                                 if idx.month == month and idx.year == year:
                                     x = row['geometry', ''].xy[0][0]
