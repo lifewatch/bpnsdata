@@ -86,6 +86,7 @@ class MapData:
                 df.loc[idxes, ('bathymetry', 'all')] = np.nan
         if len(diff_points) == 0:
             df[('bathymetry', 'all')] = np.nan
+            df[('benthic', 'all')] = np.nan
         return df
 
     @staticmethod
