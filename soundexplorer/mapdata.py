@@ -6,6 +6,7 @@ import pyproj
 import requests
 import shapely
 from tqdm import tqdm
+from importlib import resources
 
 
 class MapData:
@@ -26,31 +27,28 @@ class MapData:
             Path where the benthic habitat distribution is stored. If set to None, default is the ILVO map.
         """
         if map_path is None:
-            map_path = pathlib.Path('//fs/shared/datac/Geo/Layers/Belgium/habitatsandbiotopes/'
-                                    'broadscalehabitatmap/seabedhabitat_BE.shp')
+            with resources.path('soundexplorer.data', 'seabedhabitat_BE.shp') as m:
+                self.map_path = m
         else:
             if not isinstance(map_path, pathlib.Path):
-                map_path = pathlib.Path(map_path)
+                self.map_path = pathlib.Path(map_path)
 
         if borders_path is None:
-            borders_path = pathlib.Path('//fs/shared/datac/Geo/Layers/Belgium/administrativeunits/'
-                                        'maritime_boundaries/MarineRegions/eez_boundaries_v10_BE_epsg4326.shp')
+            with resources.path('soundexplorer.data', 'eez_boundaries_v10_BE_epsg4326.shp') as m:
+                self.borders_path = m
         else:
             if not isinstance(borders_path, pathlib.Path):
-                borders_path = pathlib.Path(borders_path)
+                self.borders_path = pathlib.Path(borders_path)
 
         if benthic_path is None:
-            benthic_path = pathlib.Path('//fs/shared/onderzoek/6. Marine Observation Center/Projects/PhD_Clea/Data/maps'
-                                        '/Habitat Suitability2/Habitat Suitability2.shp')
+            with resources.path('soundexplorer.data', 'Habitat Suitability2.shp') as m:
+                self.benthic_path = m
         else:
             if not isinstance(benthic_path, pathlib.Path):
-                benthic_path = pathlib.Path(benthic_path)
+                self.benthic_path = pathlib.Path(benthic_path)
 
-        self.map_path = map_path
         self.map = geopandas.read_file(self.map_path)
-        self.borders_path = borders_path
         self.borders = geopandas.read_file(self.borders_path)
-        self.benthic_path = benthic_path
         self.benthic = geopandas.read_file(self.benthic_path)
 
     def get_seabottom_data(self, df, columns):
