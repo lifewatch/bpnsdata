@@ -3,7 +3,7 @@ import urllib
 import numpy as np
 import rasterio
 import requests
-from tqdm import tqdm
+from tqdm.auto import tqdm
 
 
 class HumanData:

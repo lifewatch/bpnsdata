@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 import requests
 import shapely
-from tqdm import tqdm
+from tqdm.auto import tqdm
 
 
 class SeaStateData:

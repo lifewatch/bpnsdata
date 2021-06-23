@@ -3,7 +3,7 @@ from importlib import resources
 
 import numpy as np
 from skyfield import almanac, api
-from tqdm import tqdm
+from tqdm.auto import tqdm
 
 
 class TimeData:
