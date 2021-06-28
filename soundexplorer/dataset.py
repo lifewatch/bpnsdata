@@ -8,8 +8,9 @@ import pandas as pd
 import shapely
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 from pypam import acoustic_survey, geolocation
-from soundexplorer import mapdata, timedata, seastatedata, humandata
+from soundexplorer import mapdata, timedata, seastatedata, humandata, shipwreck
 from tqdm import tqdm
+
 
 shapely.speedups.disable()
 
@@ -100,6 +101,8 @@ class DataSet:
                            utc=deployment_row['utc'],
                            include_dirs=bool(deployment_row['include_dirs']),
                            etn_id=deployment_row['etn_id'])
+                           # Add shipwreck information
+
             deployment_path = self.output_folder.joinpath('deployments/%s_%s.pkl' % (index, d.station_name))
             if deployment_path.exists():
                 d.evo = pd.read_pickle(deployment_path)
@@ -129,6 +132,11 @@ class DataSet:
                 if 'shipping' in env_vars:
                     print('Adding shipping information...')
                     d.add_shipping_data()
+                if 'shipwreck' in env_vars:
+                    print('Adding shipwreck information...')
+                    d.add_shipwreck_info()
+                    print('test')
+                # Add shipwreck information
                 d.evo.to_pickle(deployment_path)
                 self.deployments.append(deployment_path)
             self.dataset = self.dataset.append(d.evo)
@@ -205,6 +213,64 @@ class DataSet:
                            etn_id=deployment_row['etn_id'])
             metadata.at[index, ['start_datetime', 'end_datetime', 'duration']] = d.get_metadata()
         return metadata
+
+    def add_env_vars(self, env_vars):
+        self.dataset = geopandas.GeoDataFrame()
+
+        for index, deployment_file in enumerate(self.deployments):
+            deployment_row = self.metadata.iloc[index]
+            inst = self.instruments[deployment_row['instrument']]
+            inst.sensitivity = deployment_row['hydrophone_sensitivity']
+            d = Deployment(hydrophone=inst,
+                           station_name=deployment_row['location'],
+                           method=deployment_row['method'],
+                           hydrophone_depth=deployment_row['hydrophone_depth'],
+                           data_folder_path=deployment_row['data_folder'],
+                           gps_path=deployment_row['gps_path'],
+                           datetime_col=deployment_row['datetime_col'],
+                           lon_col=deployment_row['lon_col'],
+                           lat_col=deployment_row['lat_col'],
+                           utc=deployment_row['utc'],
+                           include_dirs=bool(deployment_row['include_dirs']),
+                           etn_id=deployment_row['etn_id'])
+            d.evo = pd.read_pickle(deployment_file)
+            d.evo.drop_duplicates(inplace=True)
+            if 'geometry' in d.evo.columns:
+                d.evo = geopandas.GeoDataFrame(d.evo, geometry='geom', crs='EPSG:4326')
+            else:
+                print('Adding spatial data...')
+                d.add_spatial_data()
+
+            if 'spatial_data' in env_vars:
+                print('Adding spatial data...')
+                d.add_spatial_data()
+                if coastfile is not None:
+                    d.add_distance_to_coast(coastfile=coastfile)
+            if 'sea_state' in env_vars:
+                print('Adding seastate information...')
+                d.add_seastate()
+            if 'time_data' in env_vars:
+                print('Adding Time Data information...')
+                d.add_time_data()
+            if 'sea_bottom' in env_vars:
+                print('Adding Sea Bottom information...')
+                d.add_seabottom_data()
+            if 'shipping' in env_vars:
+                print('Adding shipping information...')
+                d.add_shipping_data()
+            if 'shipwreck' in env_vars:
+                print('Adding shipwreck information...')
+                d.add_shipwreck_info()
+            # Add shipwreck information
+            
+            self.dataset = self.dataset.append(d.evo)
+
+
+        self.dataset.set_geometry('geom', crs='EPSG:4326', inplace=True)
+        self.dataset.to_pickle(self.output_folder.joinpath('dataset.pkl'))
+
+
+
 
     def plot_distr(self, column, band=None, map_file=None, map_column=None, categorical=False, borders=False):
         """
@@ -382,27 +448,27 @@ class Deployment:
                  etn_id=0,
                  include_dirs=True):
         """
-        Represents one deployment.
-        Parameters
-        ----------
-        hydrophone : hydrophone object
-            Hydrophone object from pyhydrophone with all the characteristics
-        station_name : string
-            Name of the deployment
-        method : string
-            Method name of the data acquisition
-        hydrophone_depth : float
-            Depth under the surface of the hydrophone
-        data_folder_path : string or Path
-            Folder where the data is
-        gps_path : string or Path
-            File where the gps data is
-        datetime_col : string
-            Name of the column where the datetime is in the gps file
-        lat_col : string
-            Name of the column where the Latitude is
-        lon_col : string
-            Name of the column where the Longitude is
+            Represents one deployment.
+            Parameters
+            ----------
+            hydrophone : hydrophone object
+                Hydrophone object from pyhydrophone with all the characteristics
+            station_name : string
+                Name of the deployment
+            method : string
+                Method name of the data acquisition
+            hydrophone_depth : float
+                Depth under the surface of the hydrophone
+            data_folder_path : string or Path
+                Folder where the data is
+            gps_path : string or Path
+                File where the gps data is
+            datetime_col : string
+                Name of the column where the datetime is in the gps file
+            lat_col : string
+                Name of the column where the Latitude is
+            lon_col : string
+                Name of the column where the Longitude is
         """
         self.hydrophone = hydrophone
         self.station_name = station_name
@@ -421,6 +487,8 @@ class Deployment:
         self.timedata = timedata.TimeData()
         self.seastate = seastatedata.SeaStateData()
         self.humandata = humandata.HumanData()
+        self.shipwreck = shipwreck.ShipWreck()
+        # add shipwreck information
 
     def __getattr__(self, item):
         if item == 'evo':
@@ -570,6 +638,15 @@ class Deployment:
         """
         self.evo = self.humandata.get_shipping_intensity_df(self.evo)
         return self.evo
+
+    def add_shipwreck_info(self):
+        """
+        Add the name of the closest shipwreck as well as the distance
+        """
+        self.evo = self.shipwreck.get_shipwreck_information_df(self.evo)
+        # print('XXXYYY')
+        return self.evo
+    # Add shipwreck information
 
     def plot_features_vs_distance_to(self, features, geo_column):
         """

@@ -1,8 +1,9 @@
 import pathlib
+from fiona import env
 import pyhydrophone as pyhy
 import argparse
 
-from soundexplorer import dataset
+from soundexplorer import dataset, shipwreck
 
 
 parser = argparse.ArgumentParser(description='Generate a dataset and some plots for data exploration in the bpns')
@@ -60,12 +61,14 @@ band_mf = [500, 2000]
 band_hf = [2000, 20000]
 band_list = [band_lf, band_mf, band_hf]
 features = ['rms', 'sel', 'aci']
-third_octaves = True
+third_octaves = None
+
+env_vars = ["spatial_data", "sea_state", "time_data", "sea_bottom","shipping","shipwreck"]
 
 
 if __name__ == "__main__":
     dataset = dataset.DataSet(summary_path, output_folder, instruments, features, third_octaves, band_list, binsize, nfft)
-    dataset.generate_entire_dataset()
+    dataset.generate_entire_dataset(env_vars = env_vars)
     # dataset.read_all_deployments()
     # dataset.read_dataset()
     # dataset.plot_all_features_evo()
