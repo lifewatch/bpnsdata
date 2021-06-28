@@ -10,31 +10,25 @@ from geopy import distance
 from coordinates import Coordinate
 import geopandas
 
-# Make init with wrakkenfile
-# Take out years months
-# Change the exception
-# Check line 42  coords = row['geometry', ''].coords
+# Adding shipwreck information
+# The distance between the measurement and the closest shipwreck
+# Coordinates and name of the closes shipwreck
 
 class ShipWreck:
     def __init__(self):
         self.wrakkenfile = '//fs/SHARED/onderzoek/6. Marine Observation Center/Projects/PhD_Clea/Data/wrakkendatabank/wrakkendatabank.afdelingkust.be-json-export_2021-04-02.xls'
 
-    # @staticmethod
+
     def get_shipwreck_information_df(self, df):
         # Add reading to init
-        # wrakkenfile = '//fs/SHARED/onderzoek/6. Marine Observation Center/Projects/PhD_Clea/Data/wrakkendatabank/wrakkendatabank.afdelingkust.be-json-export_2021-04-02.xls'
         wrakkenfile = self.wrakkenfile
         dfs = pd.read_excel(wrakkenfile, sheet_name='Sheet 1', header=0)
         geotrackpoints = geopandas.GeoDataFrame(dfs, geometry=geopandas.points_from_xy(x=dfs['features/geometry/coordinates/0'],y=dfs['features/geometry/coordinates/1']),
                                                 crs='EPSG:4326')
-        # years = df.index.year.unique()
-        # months = df.index.month.unique()
         df[('shipwrecks','distance')] = None
         df[('shipwrecks','co_x')] = None
         df[('shipwrecks','co_y')] = None
         df[('shipwrecks','name_ship')] = None
-        # for year in years:
-        #     for month in months:
         try:
             for idx, row in tqdm(df.iterrows(), total=len(df)):
                 if row['geometry', ''] is not None:

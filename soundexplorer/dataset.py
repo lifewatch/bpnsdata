@@ -101,7 +101,7 @@ class DataSet:
                            utc=deployment_row['utc'],
                            include_dirs=bool(deployment_row['include_dirs']),
                            etn_id=deployment_row['etn_id'])
-                           # Add shipwreck information
+                           
 
             deployment_path = self.output_folder.joinpath('deployments/%s_%s.pkl' % (index, d.station_name))
             if deployment_path.exists():
@@ -136,7 +136,6 @@ class DataSet:
                     print('Adding shipwreck information...')
                     d.add_shipwreck_info()
                     print('test')
-                # Add shipwreck information
                 d.evo.to_pickle(deployment_path)
                 self.deployments.append(deployment_path)
             self.dataset = self.dataset.append(d.evo)
@@ -261,7 +260,7 @@ class DataSet:
             if 'shipwreck' in env_vars:
                 print('Adding shipwreck information...')
                 d.add_shipwreck_info()
-            # Add shipwreck information
+                
             
             self.dataset = self.dataset.append(d.evo)
 
@@ -488,7 +487,6 @@ class Deployment:
         self.seastate = seastatedata.SeaStateData()
         self.humandata = humandata.HumanData()
         self.shipwreck = shipwreck.ShipWreck()
-        # add shipwreck information
 
     def __getattr__(self, item):
         if item == 'evo':
@@ -644,9 +642,8 @@ class Deployment:
         Add the name of the closest shipwreck as well as the distance
         """
         self.evo = self.shipwreck.get_shipwreck_information_df(self.evo)
-        # print('XXXYYY')
         return self.evo
-    # Add shipwreck information
+        
 
     def plot_features_vs_distance_to(self, features, geo_column):
         """
