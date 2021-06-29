@@ -5,7 +5,7 @@ import numpy as np
 import pyproj
 import requests
 import shapely
-from tqdm import tqdm
+from tqdm.auto import tqdm
 from importlib import resources
 
 

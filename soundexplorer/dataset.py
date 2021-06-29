@@ -171,9 +171,9 @@ class DataSet:
                            hydrophone_depth=deployment_row['hydrophone_depth'],
                            data_folder_path=deployment_row['data_folder'],
                            gps_path=deployment_row['gps_path'],
-                           datetime_col=deployment_row['datetime_col'],
-                           lon_col=deployment_row['lon_col'],
-                           lat_col=deployment_row['lat_col'],
+                           datetime_col=deployment_row['datetime_col_name'],
+                           lon_col=deployment_row['lon_col_name'],
+                           lat_col=deployment_row['lat_col_name'],
                            utc=deployment_row['utc'],
                            include_dirs=bool(deployment_row['include_dirs']),
                            etn_id=deployment_row['etn_id'])

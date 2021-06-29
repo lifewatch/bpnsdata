@@ -3,7 +3,7 @@ from importlib import resources
 
 import numpy as np
 from skyfield import almanac, api
-from tqdm import tqdm
+from tqdm.auto import tqdm
 
 
 class TimeData:
@@ -13,11 +13,12 @@ class TimeData:
 
     def __init__(self):
         self.ts = api.load.timescale()
-        try:
+        if resources.is_resource('soundexplorer.data', 'de421.bsp'):
             with resources.path('soundexplorer.data', 'de421.bsp') as bsp_file:
                 self.eph = api.load_file(bsp_file)
-        except FileNotFoundError:
-            self.eph = api.load('de421.bsp')
+        else:
+            load = api.Loader(resources.Path().joinpath('soundexplorer', 'data'))
+            self.eph = load('de421.bsp')
 
     def get_moon_phase(self, dt, categorical=False):
         """

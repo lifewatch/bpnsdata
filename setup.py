@@ -9,6 +9,7 @@ setuptools.setup(name='soundexplorer',
                  license='',
                  packages=setuptools.find_packages(),
                  package_data={
-                                "soundexplorer": ["data/de421.bsp"]
+                                "soundexplorer": ["data/*.*"]
                               },
+                 include_package_data=True,
                  zip_safe=False)
