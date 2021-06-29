@@ -16,7 +16,7 @@ import geopandas
 
 class ShipWreck:
     def __init__(self):
-        self.wrakkenfile = '//fs/SHARED/onderzoek/6. Marine Observation Center/Projects/PhD_Clea/Data/wrakkendatabank/wrakkendatabank.afdelingkust.be-json-export_2021-04-02.xls'
+        self.wrakkenfile = 'soundexplorer/data/wrakkendatabank.afdelingkust.be-json-export_2021-04-02.xls'
 
 
     def get_shipwreck_information_df(self, df):
