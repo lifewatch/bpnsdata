@@ -45,3 +45,10 @@ It computes for each row:
 Data Related to time series. It adds the time of the day (day, night, twilight dawn...) and the moon phase. 
 The calculation is done using skyfield (https://rhodesmill.org/skyfield/). 
 
+## Shipwreck Data
+Will add information about the closest shipwreck. The shipwrecks can be found back in the excel ('data/wrakkendatabank.afdelingkust.be-json-export_2021-04-02.xls') and are confined to the BPNS (belgian part of the north sea).
+Following information will be added:
+* Distance to closest shipwreck
+* (x,y) coordinates of shipwreck
+* Name of shipwreck
+
