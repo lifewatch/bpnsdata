@@ -62,11 +62,12 @@ band_list = [band_lf, band_mf, band_hf]
 features = ['rms', 'sel', 'aci']
 third_octaves = True
 
+env_vars = ['spatial_data', 'sea_state', 'time_data', 'sea_bottom', 'shipping']
 
 if __name__ == "__main__":
     dataset = dataset.DataSet(summary_path, output_folder, instruments, features, third_octaves, band_list, binsize, nfft)
-    # dataset.generate_entire_dataset()
-    dataset.read_all_deployments()
+    dataset.generate_entire_dataset(env_vars=env_vars)
+    # dataset.read_all_deployments()
     # dataset.read_dataset()
     # dataset.plot_all_features_evo()
     # dataset.plot_all_features_distr()
