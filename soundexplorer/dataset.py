@@ -512,17 +512,17 @@ class Deployment:
         else:
             asa = acoustic_survey.ASA(self.hydrophone, self.data_folder_path, binsize=binsize, nfft=nfft, utc=self.utc,
                                       include_dirs=self.include_dirs)
-        if features is not None:
+        if features is None or len(features) == 0:
+            if third_octaves is not False:
+                evo = asa.evolution_freq_dom('third_octaves_levels', band=third_octaves, db=True)
+            else:
+                evo = asa.timestamps_df()
+        else:
             evo = asa.evolution_multiple(method_list=features, band_list=band_list)
             if third_octaves is not False:
                 evo_freq = asa.evolution_freq_dom('third_octaves_levels', band=third_octaves, db=True)
                 oct_3bands = evo_freq.loc[:, evo_freq.columns.get_level_values('method') == 'oct3']
                 evo = evo.merge(oct_3bands, left_index=True, right_index=True)
-        else:
-            if third_octaves is not False:
-                evo = asa.evolution_freq_dom('third_octaves_levels', band=third_octaves, db=True)
-            else:
-                evo = asa.timestamps_df()
         evo[('method', 'all')] = self.method
         evo[('hydrophone_depth', 'all')] = self.hydrophone_depth
         evo[('instrument_name', 'all')] = self.hydrophone.name

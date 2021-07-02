@@ -60,7 +60,7 @@ band_lf = [50, 500]
 band_mf = [500, 2000]
 band_hf = [2000, 20000]
 band_list = []
-features = ['rms', 'sel', 'aci']
+features = []
 third_octaves = False
 
 env_vars = ['spatial_data', 'sea_state', 'time_data', 'sea_bottom', 'shipping', 'shipwreck']
