@@ -60,10 +60,10 @@ band_lf = [50, 500]
 band_mf = [500, 2000]
 band_hf = [2000, 20000]
 band_list = []
-features = []
+features = ['rms', 'sel', 'aci']
 third_octaves = False
 
-env_vars = ['spatial_data','sea_bottom', 'shipping', 'shipwreck']
+env_vars = ['spatial_data', 'sea_state', 'time_data', 'sea_bottom', 'shipping', 'shipwreck']
 
 if __name__ == "__main__":
     dataset = dataset.DataSet(summary_path, output_folder, instruments, features, third_octaves, band_list, binsize, nfft)
