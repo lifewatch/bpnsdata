@@ -26,7 +26,7 @@ class ShipWreck:
         df[('shipwrecks', 'co_y')] = None
         df[('shipwrecks', 'name_ship')] = None
         try:
-            for idx, row in tqdm(df.iterrows(), total=len(df)):
+            for idx, row in tqdm(df.iterrows(), total=len(df), position=0, leave=True):
                 if row['geometry', ''] is not None:
                     dis = min_distance_m(row['geometry', ''], geotrackpoints)
 
