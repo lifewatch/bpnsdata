@@ -55,13 +55,13 @@ REF_PRESSURE = 1e-6
 
 # SURVEY PARAMETERS
 nfft = 4096
-binsize = 60.0
+binsize = 5.0
 band_lf = [50, 500]
 band_mf = [500, 2000]
 band_hf = [2000, 20000]
-band_list = [band_lf, band_mf, band_hf]
+band_list = []
 features = ['rms', 'sel', 'aci']
-third_octaves = None
+third_octaves = False
 
 env_vars = ['spatial_data', 'sea_state', 'time_data', 'sea_bottom', 'shipping', 'shipwreck']
 

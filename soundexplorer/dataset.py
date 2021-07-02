@@ -95,13 +95,9 @@ class DataSet:
                            hydrophone_depth=deployment_row['hydrophone_depth'],
                            data_folder_path=deployment_row['data_folder'],
                            gps_path=deployment_row['gps_path'],
-                           datetime_col=deployment_row['datetime_col_name'],
-                           lon_col=deployment_row['lon_col_name'],
-                           lat_col=deployment_row['lat_col_name'],
                            utc=deployment_row['utc'],
                            include_dirs=bool(deployment_row['include_dirs']),
                            etn_id=deployment_row['etn_id'])
-                           
 
             deployment_path = self.output_folder.joinpath('deployments/%s_%s.pkl' % (index, d.station_name))
             if deployment_path.exists():
@@ -171,9 +167,6 @@ class DataSet:
                            hydrophone_depth=deployment_row['hydrophone_depth'],
                            data_folder_path=deployment_row['data_folder'],
                            gps_path=deployment_row['gps_path'],
-                           datetime_col=deployment_row['datetime_col_name'],
-                           lon_col=deployment_row['lon_col_name'],
-                           lat_col=deployment_row['lat_col_name'],
                            utc=deployment_row['utc'],
                            include_dirs=bool(deployment_row['include_dirs']),
                            etn_id=deployment_row['etn_id'])
@@ -204,9 +197,6 @@ class DataSet:
                            hydrophone_depth=deployment_row['hydrophone_depth'],
                            data_folder_path=deployment_row['data_folder'],
                            gps_path=deployment_row['gps_path'],
-                           datetime_col=deployment_row['datetime_col_name'],
-                           lon_col=deployment_row['lon_col'],
-                           lat_col=deployment_row['lat_col'],
                            utc=deployment_row['utc'],
                            include_dirs=bool(deployment_row['include_dirs']),
                            etn_id=deployment_row['etn_id'])
@@ -226,9 +216,6 @@ class DataSet:
                            hydrophone_depth=deployment_row['hydrophone_depth'],
                            data_folder_path=deployment_row['data_folder'],
                            gps_path=deployment_row['gps_path'],
-                           datetime_col=deployment_row['datetime_col'],
-                           lon_col=deployment_row['lon_col'],
-                           lat_col=deployment_row['lat_col'],
                            utc=deployment_row['utc'],
                            include_dirs=bool(deployment_row['include_dirs']),
                            etn_id=deployment_row['etn_id'])
@@ -440,9 +427,6 @@ class Deployment:
                  hydrophone_depth,
                  data_folder_path,
                  gps_path,
-                 datetime_col='datetime',
-                 lat_col='Latitude',
-                 lon_col='Longitude',
                  utc=False,
                  etn_id=0,
                  include_dirs=True):
@@ -462,12 +446,6 @@ class Deployment:
                 Folder where the data is
             gps_path : string or Path
                 File where the gps data is
-            datetime_col : string
-                Name of the column where the datetime is in the gps file
-            lat_col : string
-                Name of the column where the Latitude is
-            lon_col : string
-                Name of the column where the Longitude is
         """
         self.hydrophone = hydrophone
         self.station_name = station_name
@@ -478,8 +456,7 @@ class Deployment:
         self.utc = not utc
         self.etn_id = etn_id
         self.include_dirs = include_dirs
-        self.geoloc = geolocation.SurveyLocation(geofile=self.gps_path, datetime_col=datetime_col,
-                                                 lat_col=lat_col, lon_col=lon_col)
+        self.geoloc = geolocation.SurveyLocation(geofile=self.gps_path)
         self.evo = None
 
         self.mapdata = mapdata.MapData()
@@ -546,8 +523,6 @@ class Deployment:
                 evo = asa.evolution_freq_dom('third_octaves_levels', band=third_octaves, db=True)
             else:
                 evo = asa.timestamps_df()
-                evo = evo.set_index('datetime')
-                evo.columns = pd.MultiIndex.from_tuples([], names=('method', 'band'))
         evo[('method', 'all')] = self.method
         evo[('hydrophone_depth', 'all')] = self.hydrophone_depth
         evo[('instrument_name', 'all')] = self.hydrophone.name
