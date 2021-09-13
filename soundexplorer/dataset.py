@@ -51,6 +51,7 @@ class DataSet:
             Number of samples of window to use for frequency analysis
         """
         self.metadata = pd.read_csv(summary_path)
+        self.summary_path = summary_path
         self.instruments = instruments
         self.features = features
         self.third_octaves = third_octaves
@@ -88,7 +89,9 @@ class DataSet:
         for index in tqdm(self.metadata.index, total=len(self.metadata)):
             deployment_row = self.metadata.iloc[index]
             inst = self.instruments[deployment_row['instrument']]
-            inst.sensitivity = deployment_row['hydrophone_sensitivity']
+            inst.Vpp = deployment_row['hydrophone_Vpp']
+            if deployment_row['instrument'] == 'B&K':
+                inst.amplif = deployment_row['hydrophone_amp'] / 1e3
             d = Deployment(hydrophone=inst,
                            station_name=deployment_row['location'],
                            method=deployment_row['method'],
@@ -111,6 +114,10 @@ class DataSet:
             else:
                 d.generate_deployment_data(features=self.features, band_list=self.band_list,
                                            third_octaves=self.third_octaves, binsize=self.binsize, nfft=self.nfft)
+                # Update the metadata
+                self.metadata.loc[index, 'hydrophone_sensitivity'] = d.hydrophone.sensitivity
+                self.metadata.loc[index, 'hydrophone_Vpp'] = d.hydrophone.Vpp
+
                 if 'spatial_data' in env_vars:
                     print('Adding spatial data...')
                     d.add_spatial_data()
@@ -136,6 +143,7 @@ class DataSet:
                 self.deployments.append(deployment_path)
             self.dataset = self.dataset.append(d.evo)
         self.dataset.to_pickle(self.output_folder.joinpath('dataset.pkl'))
+        self.metadata.to_csv(self.summary_path, index=False)
 
     def read_dataset(self):
         """
@@ -254,8 +262,6 @@ class DataSet:
 
         self.dataset.set_geometry('geom', crs='EPSG:4326', inplace=True)
         self.dataset.to_pickle(self.output_folder.joinpath('dataset.pkl'))
-
-
 
 
     def plot_distr(self, column, band=None, map_file=None, map_column=None, categorical=False, borders=False):
@@ -508,10 +514,11 @@ class Deployment:
             # Find and remove calibration tone, calibrate output
             asa = acoustic_survey.ASA(self.hydrophone, self.data_folder_path, binsize=binsize, nfft=nfft,
                                       utc=self.utc, include_dirs=self.include_dirs,
-                                      calibration_time='auto', cal_freq=159.2, max_cal_duration=120.0)
+                                      calibration_time='auto', cal_freq=159.2, max_cal_duration=120.0, dc_subtract=True)
+            self.hydrophone = asa.hydrophone
         else:
             asa = acoustic_survey.ASA(self.hydrophone, self.data_folder_path, binsize=binsize, nfft=nfft, utc=self.utc,
-                                      include_dirs=self.include_dirs)
+                                      include_dirs=self.include_dirs, dc_subtract=True)
         if features is None or len(features) == 0:
             if third_octaves is not False:
                 evo = asa.evolution_freq_dom('third_octaves_levels', band=third_octaves, db=True)
