@@ -138,7 +138,6 @@ class DataSet:
                 if 'shipwreck' in env_vars:
                     print('Adding shipwreck information...')
                     d.add_shipwreck_info()
-                    print('test')
                 d.evo.to_pickle(deployment_path)
                 self.deployments.append(deployment_path)
             self.dataset = self.dataset.append(d.evo)
@@ -238,8 +237,6 @@ class DataSet:
             if 'spatial_data' in env_vars:
                 print('Adding spatial data...')
                 d.add_spatial_data()
-                if coastfile is not None:
-                    d.add_distance_to_coast(coastfile=coastfile)
             if 'sea_state' in env_vars:
                 print('Adding seastate information...')
                 d.add_seastate()
@@ -255,10 +252,7 @@ class DataSet:
             if 'shipwreck' in env_vars:
                 print('Adding shipwreck information...')
                 d.add_shipwreck_info()
-                
-            
             self.dataset = self.dataset.append(d.evo)
-
 
         self.dataset.set_geometry('geom', crs='EPSG:4326', inplace=True)
         self.dataset.to_pickle(self.output_folder.joinpath('dataset.pkl'))
