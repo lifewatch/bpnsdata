@@ -1,11 +1,69 @@
-contextily==1.0.1
+contextily==1.1.0
 erddapy==1.1.0
-geopandas==0.8.1
+geopandas==0.10.0
+netcdf4==1.5.7
 noisereduce==1.1.0
 pip-chill==1.0.0
 pyarrow==2.0.0
 pypam==0.1
+rtree==0.9.7
 seaborn==0.11.0
 sklearn==0.0
 skyfield==1.34
+xarray==0.19.0
 xlrd==2.0.1
+# affine==2.3.0 # Installed as dependency for rasterio
+# appdirs==1.4.4 # Installed as dependency for pooch
+# attrs==21.2.0 # Installed as dependency for rasterio, fiona
+# audioread==2.1.9 # Installed as dependency for librosa
+# certifi==2021.5.30 # Installed as dependency for skyfield, requests, pyproj
+# cffi==1.14.5 # Installed as dependency for soundfile
+# cftime==1.5.1 # Installed as dependency for netcdf4
+# chardet==4.0.0 # Installed as dependency for requests
+# click==8.0.1 # Installed as dependency for mercantile, fiona, click-plugins, rasterio, cligj
+# click-plugins==1.1.1 # Installed as dependency for rasterio, fiona
+# cligj==0.7.2 # Installed as dependency for rasterio, fiona
+# colorama==0.4.4 # Installed as dependency for click
+# cycler==0.10.0 # Installed as dependency for matplotlib
+# decorator==5.0.9 # Installed as dependency for librosa
+# fiona==1.8.13 # Installed as dependency for geopandas
+# gdal==3.0.4 # Installed as dependency for rasterio, fiona
+# geographiclib==1.52 # Installed as dependency for geopy
+# geopy==2.1.0 # Installed as dependency for contextily
+# idna==2.10 # Installed as dependency for requests
+# importlib-metadata==4.5.0 # Installed as dependency for click
+# joblib==1.0.1 # Installed as dependency for scikit-learn, contextily, librosa
+# jplephem==2.15 # Installed as dependency for skyfield
+# kiwisolver==1.3.1 # Installed as dependency for matplotlib
+# librosa==0.8.1 # Installed as dependency for noisereduce
+# llvmlite==0.36.0 # Installed as dependency for numba
+# matplotlib==3.4.2 # Installed as dependency for noisereduce, contextily, seaborn
+# mercantile==1.2.1 # Installed as dependency for contextily
+# munch==2.5.0 # Installed as dependency for fiona
+# numba==0.53.1 # Installed as dependency for librosa, resampy
+# numpy==1.21.0 # Installed as dependency for scikit-learn, jplephem, snuggs, netcdf4, xarray, pypam, cftime, resampy, numba, pyarrow, skyfield, rasterio, seaborn, noisereduce, pandas, librosa, matplotlib, scipy
+# packaging==20.9 # Installed as dependency for pooch, librosa
+# pandas==1.3.3 # Installed as dependency for pypam, xarray, geopandas, erddapy, seaborn
+# pillow==8.2.0 # Installed as dependency for matplotlib, contextily
+# pooch==1.4.0 # Installed as dependency for librosa
+# pycparser==2.20 # Installed as dependency for cffi
+# pyhydrophone==0.1 # Installed as dependency for pypam
+# pyparsing==2.4.7 # Installed as dependency for matplotlib, snuggs, packaging
+# pyproj==3.1.0 # Installed as dependency for geopandas
+# python-dateutil==2.8.1 # Installed as dependency for pandas, matplotlib
+# pytz==2021.1 # Installed as dependency for pandas
+# rasterio==1.1.4 # Installed as dependency for contextily
+# requests==2.25.1 # Installed as dependency for pooch, erddapy, contextily
+# resampy==0.2.2 # Installed as dependency for librosa
+# scikit-learn==0.24.2 # Installed as dependency for librosa, sklearn
+# scipy==1.7.0 # Installed as dependency for scikit-learn, resampy, noisereduce, seaborn, librosa
+# sgp4==2.19 # Installed as dependency for skyfield
+# shapely==1.7.1 # Installed as dependency for geopandas
+# six==1.16.0 # Installed as dependency for python-dateutil, fiona, cycler, resampy, munch
+# snuggs==1.4.7 # Installed as dependency for rasterio
+# soundfile==0.10.3.post1 # Installed as dependency for pypam, librosa
+# threadpoolctl==2.1.0 # Installed as dependency for scikit-learn
+# tqdm==4.61.1 # Installed as dependency for noisereduce
+# typing-extensions==3.10.0.0 # Installed as dependency for importlib-metadata
+# urllib3==1.26.5 # Installed as dependency for requests
+# zipp==3.4.1 # Installed as dependency for importlib-metadata

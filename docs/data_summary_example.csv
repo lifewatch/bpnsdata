@@ -1,2 +1,0 @@
-location,instrument,hydrophone_sensitivity,hydrophone_amp,hydrophone_Vpp,hydrophone_depth,method,data_folder,gps_path,utc,include_dirs,etn_id
-Heinkel 111,B&K,-170,0 (in dB),2 (in V),5 (in m),Drift,path_to_wavs,path_to_gps,1,0,0

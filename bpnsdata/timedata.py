@@ -10,15 +10,17 @@ class TimeData:
     """
     Class to calculate moon phase and moment of the day
     """
-
     def __init__(self):
         self.ts = api.load.timescale()
-        if resources.is_resource('soundexplorer.data', 'de421.bsp'):
-            with resources.path('soundexplorer.data', 'de421.bsp') as bsp_file:
+        if resources.is_resource('bpnsdata.data', 'de421.bsp'):
+            with resources.path('bpnsdata.data', 'de421.bsp') as bsp_file:
                 self.eph = api.load_file(bsp_file)
         else:
-            load = api.Loader(resources.Path().joinpath('soundexplorer', 'data'))
+            load = api.Loader(resources.Path().joinpath('bpnsdata', 'data'))
             self.eph = load('de421.bsp')
+
+    def __call__(self, df):
+        return self.get_time_data_df(df)
 
     def get_moon_phase(self, dt, categorical=False):
         """
@@ -75,13 +77,13 @@ class TimeData:
         -------
         The dataframe with the columns added
         """
-        df[('moon_phase', 'all')] = None
-        df[('day_moment', 'all')] = None
-        for t, row in tqdm(df.iterrows(), total=len(df), position=0, leave=True):
-            if row[('geometry', '')] is not None:
+        df[('moon_phase', 'all')] = np.nan
+        df[('day_moment', 'all')] = np.nan
+        df_4326 = df.to_crs(epsg=4326)
+        for row in tqdm(df_4326[[('geometry', '')]].itertuples(), total=len(df_4326), position=0, leave=True):
+            t = row.Index
+            geometry = row[1]
+            if geometry is not None:
                 df.loc[t, ('moon_phase', 'all')] = self.get_moon_phase(t)
-                df.loc[t, ('day_moment', 'all')] = self.get_day_moment(t, row[('geometry', '')])
-            else:
-                df.loc[t, ('moon_phase', 'all')] = np.nan
-                df.loc[t, ('day_moment', 'all')] = np.nan
+                df.loc[t, ('day_moment', 'all')] = self.get_day_moment(t, geometry)
         return df

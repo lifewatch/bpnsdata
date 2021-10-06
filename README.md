@@ -1,50 +1,18 @@
-# SOUNDEXPLORER 
+# BPNSdata 
 
-Soundexplorer is a package to ease acoustic data exploration. 
-The idea is to be able to process several deployments only with one command. 
-All the deployments have to be listed in a csv file with all the metadata, an example
-is provided in docs/data_summary_example.csv.
-The main classes of the soundexplorer are Dataset and Deployment. 
-A deployment represents a period of data acquisition with constant metadata (same instrument and 
-instrument settings). A Dataset is a conjunction of deployments to be studied together.
-The output is always in a structured folder.
-* output_folder/
-    * deployments/: contains one pickle file per deployment processed
-    * detections/: contains the output of the detectors (if applicable)
-    * img/: contains graphs created (if applicable)
-        * data_overview/: general plots 
-        * features_analysis/: stats from the features
-        * temporal_features/: graphs in time domain of the features 
-        * spatial_features/: spatial plots (in a map) of the features
-    * dataset.pkl : dataset containing all the deployments from deployments/
+bpnsdata is a package to ease acoustic data exploration. 
+
     
-
-## Acoustic data and general process
-To process the acoustic data, pypam (https://github.com/lifewatch/pypam) is used. 
-It can be called by using the function generate_deployment_data from the Deployment class to generate the data from one 
-deployment, or generate_entire_dataset when multiple deployments have to be processed. 
-When multiple deployments have to be processed, the metadata has to be summarized in a csv file. Each row is a 
-deployment, and an example can be found at docs/data_summary_example.csv.
-This metadata information will be at one point linked with the download output of ETN Underwater Acoustics 
-(https://www.lifewatch.be/etn/).
-
-The output of the data generation is 
-
 ## Environmental data
-A part from acoustic processing, environmental data can be added by specifying it in the env_vars
-variable when calling the generate_entire_dataset. To do so, it is necessary to have gps information, which 
-should be stored in a .gpx file, in the "waypoints" or "track_points" layer. Then the algorithm finds the point
-which is closest in time for each processed acoustic bin.
+Environmental data can be added by specifying it in the env_vars variable when calling the main class SeaDataManager.
+To do so, it is necessary to have gps information, which should be stored in a .gpx file, in the "waypoints" or 
+"track_points" layer. Then the algorithm finds the point which is closest in time for row of the dataframe.
 The available variables are: 
-* spatial_data
 * sea_state
 * time_data
 * sea_bottom
 * shipping
 * shipwreck
-
-To add environmental variables, it is necessary to include 'spatial_data', which will read the gps information 
-and correlate it with the sound. 
 
 Right now only Belgian Part of the North Sea data is available for all the classes. 
 They are: 

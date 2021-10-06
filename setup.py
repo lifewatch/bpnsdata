@@ -1,15 +1,15 @@
 import setuptools
 
-setuptools.setup(name='soundexplorer',
+setuptools.setup(name='bpnsdata',
                  version='0.1',
-                 description='Create acoustic datasets and explore the outcome for large deployments.',
+                 description='Add BPNS sea data to a geodataframe',
                  author='Clea Parcerisas',
                  author_email='clea.parcerisas@vliz.be',
                  url="/",
                  license='',
                  packages=setuptools.find_packages(),
                  package_data={
-                                "soundexplorer": ["data/*.*"]
+                                "bpnsdata": ["data/*.*"]
                               },
                  include_package_data=True,
                  zip_safe=False)
