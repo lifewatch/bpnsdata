@@ -46,7 +46,7 @@ class RasterData:
 
 class SeabedHabitatData(RasterData):
     def __init__(self):
-        columns = ['Substrate', 'Allcomb']
+        columns = {'Substrate': 'substrate', 'Allcomb': 'seabed_habitat'}
         with resources.path('bpnsdata.data', 'seabedhabitat_BE.shp') as m:
             super().__init__(m, columns)
 
