@@ -15,6 +15,7 @@ import seaborn as sns
 import shapely.geometry as sgeom
 from geopy import distance
 from mpl_toolkits.axes_grid1 import make_axes_locatable
+import requests
 
 # Apply the default theme
 sns.set_theme()
@@ -27,7 +28,7 @@ class SurveyLocation:
         Parameters
         ----------
         geofile : str or Path
-            Where the data is stored. can be a csv, gpx, pickle or sqlite3
+            Where the geo data is stored. can be a csv, gpx, pickle or sqlite3
         """
         if geofile is None:
             self.geotrackpoints = None
@@ -111,7 +112,7 @@ class SurveyLocation:
         lat_col : string
             Column with the Latitude
         lon_col : string
-            Column with the Longitude data
+            Column with the Longitude test_data
 
         Returns
         -------
@@ -124,7 +125,7 @@ class SurveyLocation:
     def read_sqlite3(self, geofile, table_name='gpsData', datetime_col='UTC', lat_col='Latitude',
                      lon_col='Longitude'):
         """
-        Read a sqlite3 file with geolocation data
+        Read a sqlite3 file with geolocation test_data
         Parameters
         ----------
         geofile : str or Path
@@ -136,7 +137,7 @@ class SurveyLocation:
         lat_col : string
             Column with the Latitude
         lon_col : string
-            Column with the Longitude data
+            Column with the Longitude test_data
 
         Returns
         -------
@@ -200,7 +201,7 @@ class SurveyLocation:
         geo_df = pd.merge_asof(datetime_df.sort_values('datetime'), self.geotrackpoints, left_on="datetime",
                                right_index=True, tolerance=pd.Timedelta(time_tolerance))
         geo_df = geo_df.set_index('datetime')
-        df = geopandas.GeoDataFrame(df, geometry='geometry', crs=self.geotrackpoints.crs.to_string())
+        df = geopandas.GeoDataFrame(geo_df, geometry='geometry', crs=self.geotrackpoints.crs.to_string())
 
         if other_cols is not None:
             for col in other_cols:
@@ -281,6 +282,7 @@ class SurveyLocation:
         column : str
             Name where to save the distance to the coast
         """
+        # TODO implement reading the coastline from emodnet bathymetry!
         if "geometry" not in df.columns:
             df = self.add_location(df)
         coastline = geopandas.read_file(coastfile).loc[0].geometry.coords
@@ -289,6 +291,30 @@ class SurveyLocation:
         df[column] = df['geometry'].apply(min_distance_m, geodf=coast_df)
 
         return df
+
+
+class Borders:
+    def __init__(self, borders_name):
+        """
+        Parameters
+        ----------
+        borders_name: string
+            Country code (2 letters). Default if BE (Belgium)
+        """
+        self.borders_name = borders_name
+
+    def read_borders(self):
+        query = 'https://geo.vliz.be/geoserver/wfs?request=getfeature&service=wfs&version=1.1.0&' \
+                  'typename=MarineRegions:eez&outputformat=json&Filter=<PropertyIsEqualTo><PropertyName>' \
+                  'geoname</PropertyName><Literal>%s Exclusive Economic Zone</Literal></PropertyIsEqualTo>' \
+                % self.borders_name
+        response = requests.get(query)
+        if response.status_code == 200:
+            borders = geopandas.read_file(response.text)
+        else:
+            borders = None
+
+        return borders
 
 
 def distance_m(coords, lat, lon):

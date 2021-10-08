@@ -2,14 +2,14 @@ import setuptools
 
 setuptools.setup(name='bpnsdata',
                  version='0.1',
-                 description='Add BPNS sea data to a geodataframe',
+                 description='Add BPNS sea test_data to a geodataframe',
                  author='Clea Parcerisas',
                  author_email='clea.parcerisas@vliz.be',
                  url="/",
                  license='',
                  packages=setuptools.find_packages(),
                  package_data={
-                                "bpnsdata": ["data/*.*"]
+                                "bpnsdata": ["test_data/*.*"]
                               },
                  include_package_data=True,
                  zip_safe=False)

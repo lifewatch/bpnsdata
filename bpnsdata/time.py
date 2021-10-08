@@ -77,13 +77,13 @@ class TimeData:
         -------
         The dataframe with the columns added
         """
-        df[('moon_phase', 'all')] = np.nan
-        df[('day_moment', 'all')] = np.nan
+        df['moon_phase'] = np.nan
+        df['day_moment'] = np.nan
         df_4326 = df.to_crs(epsg=4326)
-        for row in tqdm(df_4326[[('geometry', '')]].itertuples(), total=len(df_4326), position=0, leave=True):
+        for row in tqdm(df_4326[['geometry']].itertuples(), total=len(df_4326)):
             t = row.Index
             geometry = row[1]
             if geometry is not None:
-                df.loc[t, ('moon_phase', 'all')] = self.get_moon_phase(t)
-                df.loc[t, ('day_moment', 'all')] = self.get_day_moment(t, geometry)
+                df.loc[t, 'moon_phase'] = self.get_moon_phase(t)
+                df.loc[t, 'day_moment'] = self.get_day_moment(t, geometry)
         return df

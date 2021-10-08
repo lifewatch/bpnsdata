@@ -1,0 +1,1155 @@
+﻿features/geometry/type,features/geometry/coordinates/0,features/geometry/coordinates/1,features/type,features/properties/mb_lengte,features/properties/breedte_in_m,features/properties/wgs84_geo_e,features/properties/sunk_in_period,features/properties/bodemdiepte_oud,features/properties/wgs84_geo_n,features/properties/bazoverzicht,features/properties/code_diepte,features/properties/totaal,features/properties/thuishaven,features/properties/opmerkingen,features/properties/mb_30,features/properties/datedredged,features/properties/mb_breedte,features/properties/tonnenmaatbruto,features/properties/codetermote,features/properties/depth_20,features/properties/nationaliteit,features/properties/code_vaargeul,features/properties/bouwjaar,features/properties/vorige_diepten,features/properties/code_lengte,features/properties/length_5,features/properties/opgeruimd_tot_op,features/properties/code_historiek,features/properties/teken_op_kaart,features/properties/lengte_in_m,features/properties/lading,features/properties/code_teken,features/properties/bodemdiepte_aangepast,features/properties/berging_datum,features/properties/termote,features/properties/dredgeddepth,features/properties/mb_strekking,features/properties/holte_in_m,features/properties/wraknummer,features/properties/teken_10,features/properties/gevonden_door,features/properties/opgeruimd_door_firma,features/properties/type_schip,features/properties/totaal_klasse,features/properties/name,features/properties/side_scan,features/properties/multibeam,features/properties/utm_31n_northing,features/properties/fairway_35,features/properties/datefound,features/properties/utm_31n_easting,features/properties/werf,features/properties/gezonken_op,features/properties/bijzondere_opmerkingen,features/properties/eigenaar,features/properties/code_mb,features/properties/hout___staal,features/id
+Point,2.671158826158553,51.13999261405945,Feature,u,,"002\xb0 40,270 E",5,0,"51\xb0 08,400 N",1967 / 10 - 105,5,68.75,Nieuwpoort,,30,,,"29,99",1,20,Belgisch,1,1943,"00,2 Obstn GLLWS",2,2.5,,5,"0,3 Obstn",,-,3,-0.24,,8,,,,B_108_240,7.5,,,Vissersboot,3,N.757  ZULMA MARIA,,,476994.88,8.75,,5665444.19,"Ch. Meert - De Decker, Boom",1949/01/30,"Toen de Zulma Maria op terugweg was van het vissen in het Westhindergebied, kwam hij terecht in een zware mistbank. Om 1u30 's ochtends begon het schip te trillen en enkele ogenblikken later liep hij aan de grond. 
+Bij lodingen werd duidelijk dat het voorschip nog water onder zich had, maar dat het achterschip vastgekomen was op een zandbank. 
+Toen de mist optrok werd duidelijk dat ze gestrand waren voor Oostduinkerke. Bij laagwater werden de ankers uitgezet met de bedoeling het schip bij hoogwater te kunnen bevrijden. Tevergeefs. Doordat verschillende rompplanken waren ontzet en losgekomen stroomde het water binnen, kwam het volledige schip onder water te staan en werd de motor onbruikbaar. 
+Bij het volgende laagwater constateerde men dat Zulma Maria al 45\xb0 slagzij had en reddeloos verloren was.
+
+(Voordien N.79)","H. Van Kemmelbeke & M. Kerkhoek, Mannekensvere",5,Hout,65
+Point,2.82183899937843,51.42768580442216,Feature,u,"3,20","002\xb0 49,310 E",99,"21,00","51\xb0 25,661 N",2003 / 08 - 090,3,"49,25",,,6,,,,3,12,,3,,16 Wk,2,2.5,,,NIET op kaart,"11,63",,1,20.55,,,,,,B_125_249,2.5,Ter Streep,,,5,Helikopter,,2014/06/02,487613.8,26.25,2003/02/10,5697401.97,,2003/02/04,Op 4 februari 2003 stortte deze helikopter tijdens een beloodsing in zee. De 4 inzittenden konden met Sea King helikopter van Koksijde gered worden. Het wrak werd op 10 februari door Ter Streep gelokaliseerd met multibeam en Sidescan. Het wrak werd opgeruimd op 21 februari 2003. Nadien werd een Side Scan onderzoek uitgevoerd met ms Ter Streep. Er werd niets meer gevonden.,Noordzee Helikopters Vlaanderen,1,,304
+Point,2.868695807613874,51.52988448893382,Feature,"21,5",,"002\xb0 52,122 E",1,"22,00","51\xb0 31,793 N",1996 / 24 - 160,3,"56,00",,,24,,"5,00",,1,12,,1,,"18,0 Wk GLLWS",3,3.75,,1,"18,0 Wk",,,3,21.73,,258,,,,B_131_252,7.5,Ter Streep,,,4,Torpedoboot S20,,2001/02/08,490891.78,8.75,,5708760.9,,,"Het wrak ligt tussen twee ravels . Het hoogste punt steekt ongeveer 3,2 m boven de onmiddelijke omgeving uit.
+
+B_131_252
+
+Midden 51\xb0 31'.793 - 002\xb0 52'.122
+Pt_01  51\xb0 31'.798 - 002\xb0 52'.129
+Pt_02  51\xb0 31'.791 - 002\xb0 52'.117
+
+Dieptecijfer ongewijzigd in LAT",,4,,257
+Point,2.502663569678906,51.41144415818482,Feature,"20,83",,"002\xb0 30,160 E",1,"31,00","51\xb0 24,687 N",1997 / 05 - 069,2,"52,00",Zeebrugge,,24,1989/05/19,"6,67","100,00",1,8,Duits,1,,"27,5 Wk__ GLLWS",3,3.75,,3,"27,0 Wk__",,Torpedo's,3,30.47,,227,"27,60","315,00",,B_124_230_b,7.5,Ter Streep,-,Snelboot,4,S185 A-stuk,,1995/05/04,465411.75,8.75,,5695697.99,,,"Wrak ligt in twee stukken naast elkaar.
+
+B_124_230_b
+
+Midden 51\xb0 24'.687 - 002\xb0 30'.160
+Pt_01  51\xb0 24'.693 - 002\xb0 30'.156
+Pt_02  51\xb0 24'.683 - 002\xb0 30'.168
+
+Dieptecijfer gewijzigd naar LAT",Duitse Marine,4,Aluminium,227
+Point,2.625524218703546,51.28053692546032,Feature,15,,"002\xb0 37,531 E",99,"25,00","51\xb0 16,832 N",,3,"38,00",,,6,,,,3,12,,1,,,3,3.75,,,,,,3,23.64,,,,,,B_117_238,7.5,Eurosense,,,6,onbekend,,2015/03/09,473882,8.75,,5681089,,,NIEUW,,1,,306
+Point,2.827014693711859,51.29489242354983,Feature, ,,"002\xb0 49,621 E",1,"11,00","51\xb0 17,694 N",1996 / 17 - 129,4,41.25,-,,0,1985/08/29,"8,4","488,00",1,20,Duits,1,1940,"07,3 Wk__ GLLWS",4,5,,3,"07,2 Wk__",,-,3,8.37,,116,"7,30",265,,B_117_249,7.5,,,Vissersboot,5,LIES-Sperrbrecher 141,,2018/04/18,487938.8,8.75,,5682633.08,Schiedam,1944/03/31,"Bij de inval van de Duitsers in Nederland stond het schip nog in de steigers, en werd dan ingelijfd door de Kriegsmarine . Op 31 maart 1944 is het schip vergaan door een mijnontploffing ten noorden van Oostende.
+
+B_117_249
+
+Midden 51\xb0 17'.694 - 002\xb0 49'.621
+Pt_01  51\xb0 17'.696 - 002\xb0 49'.642
+Pt_02  51\xb0 17'.694 - 002\xb0 49'.603
+
+Dieptecijfer gewijzigd naar LAT",J. Vermaas Rotterdam NV Lies,0,Staal,115
+Point,2.49649639331852,51.395493168842435,Feature,89,"11,50","002\xb0 29,790 E",99,"30,00","51\xb0 23,730 N",1997 / 05 - 069,3,"39,25",-,,6,1987/07/03,"13,00","2215,00",1,12,Brits,1,1890,"23,0 Wk; 20,5 Wk__ GLLWS",4,5,,0,"20,4 Wk__","86,80",Glas & Aardewerk,3,29.94,,210,"20,50","49,00","5,30",B_123_229,7.5,,-,Stoomschip,6,KILMORE,,2009/04/09,464970.66,8.75,,5693927,"Edward's S.B. Co.,  Great-Britain",1906/07/29,"Het wrak werd ge\xefdentificeerd als KILMORE aan de hand van de scheepsbel. Het wrak staat recht op de bodem en steekt \xb1 8 m boven de omliggende bodem uit.
+
+B_123_229
+
+Midden 51\xb0 23'.730 - 002\xb0 29'.790
+Pt_01  51\xb0 23'.747 - 002\xb0 29'.820
+Pt_02  51\xb0 23'.716 - 002\xb0 29'.765
+
+Dieptecijfer gewijzigd naar LAT","Wm. Johnston & Co.,  Great-Britain",1,Staal,210
+Point,2.898649957563809,51.231649943332215,Feature,u,,002\xb0 53.919 E,2,0,51\xb0 13.899 N,,5,63.75,,,30,,,,2,20,,1,,,2,2.5,,1,,,,1,3.95,,60,,,,B_113_253,2.5,,,,3,HM Monitor 21,,,492923.78,8.75,,5675590.63,,,,,5,,39
+Point,2.64401724545195,51.36618082782708,Feature,15,,"002\xb0 38,641 E",99,0,"51\xb0 21,971 N",,3,"64,25",,,6,,,,3,12,,4,,,3,3.75,,,,,,3,25.32,,,,,,B_122_239_c,7.5,Eurosense,,,3,onbekend,,2015/03/16,475218,35,,5690607,,,NIEUW,,1,,285
+Point,2.806403177986843,51.20724019586926,Feature,u,,"002\xb0 48,384 E",1,0,"51\xb0 12,434 N",2003 / 15 - 137,5,"38,75",,,0,,,,1,20,,1,,"07,6 Wk GLLWS",2,2.5,,3,"07,5 Wk",,,3,9.3,,36,,"270,00",,B_112_248_a,7.5,Ter Streep,,,6,Landungsprahm C,,2003/06/10,486476,8.75,,5672889,,,"Vermoedelijk stalen schip. Steekt ongeveer tot 1,4 m boven de omringende bodem uit.
+
+Dieptecijfer gewijzigd naar LAT",,0,,15
+Point,2.658781469606482,51.151422263927714,Feature,29,,002\xb0 39.527 E,99,0,51\xb0 09.085 N,,5,"40,00",,,0,,,,2,20,,1,,,3,3.75,,5,"01,4 Wk__",,,3,4.76,,12,,,,B_109_239b,7.5,Geosurveyor IV,,,5,N.140 Charles Velghe,,2015/12/02,476134.88,8.75,,5666719.18,,,,,0,,69
+Point,2.655040394446983,51.36544948173468,Feature,20,,"002\xb0 39,302 E",99,0,"51\xb0 21,927 N",,3,"64,25",,,6,,,,3,12,,4,,,3,3.75,,,,,,3,23.63,,,,,,B_122_239_b,7.5,Eurosense,,,3,onbekend,,2015/03/16,475985,35,,5690522,,,NIEUW,,1,,284
+Point,2.606944847080998,51.76911401147145,Feature,60,"15,00","002\xb0 36,417 E",99,"40,01","51\xb0 46,147 N",,2,"61,50",,,6,,"15,00",,3,8,,4,,,4,5,,,,"60,00",,3,31.19,,,,"145,00","9,50",B_146_236,7.5,Ter Streep,,,3,onbekend,,2012/08/21,472878,35,2012/08/21,5735432,,,,,1,,291
+Point,3.295333419148679,51.39583395560912,Feature,u,"17,25","003\xb0 17,720 E",2,"11,40","51\xb0 23,750 N",1994 / 19 - 126,5,"63,75",-,,30,,,"5338,00",1,20,Panamees,1,1932,"zichtbaar bij LW ; 11,4 Wk__",2,2.5,bodem,4,#,"135,00",ballast,1,8.77,1960/05/05,211,"11,40",,"7,80",B_123_317_b,2.5,,Ackermans & Van Haaren,Vrachtschip,3,LOOK-OUT,,,520546.58,8.75,,5693886,Odens Stalenskilisaftved A.P. Moller-Odense,1944/12/12,Op 12 december 1944 stootte het schip op een wrak en zonk voor Knokke. In 1960  werd de LOOK-OUT opgeruimd tot de omringende bodem door Ackermans & Van Haaren.,U.S. Maritime Commission,5,Staal,211
+Point,2.401863355542075,51.35502478767827,Feature,69,,"002\xb0 24,112 E",99,"24,00","51\xb0 21,301 N",1997 / 05 - 069,3,59.50,_,,0,1978/06/15,"15,00",,1,12,Frans,4,1919,"21,0 Wk__ GLLWS",4,5,,0,"20,9 Wk__",,_,3,21.25,,145,"21,00",129,,B_121_224,7.5,,-,Tanker,4,SAINT PATRICE,,2018/08/29,458350.27,35,,5689475.99,-,1923/01/01,"Duikersonderzoek uitgevoerd in 1978 onder leiding van commandant Couwenbergh ( Marine) met het schip ""Valcke"".
+Bevindingen van de duikers in 1978: wrak rechtop , voor- en achtersteven 11 m boven de bodem, lengte ongeveer 100 m breedte 11 m. Grondtakel, lieren, sleepbeting, reserveschroef en hekanker op het dek aangetroffen.
+
+Duikersonderzoek van TT in 2005
+Het blijkt om een Franse tanker te gaan, ge\xefdentificeerd aan de bel. Het bouwjaar is 1919 en gezonken in 1923.
+
+B_121_224
+
+Midden 51\xb0 21'.301 - 002\xb0 24'.112
+Pt_01  51\xb0 21'.318 - 002\xb0 24'.085
+Pt_02  51\xb0 21'.286 - 002\xb0 24'.142
+
+Dieptecijfer gewijzigd naar LAT",-,0,staal,145
+Point,2.79322192482995,51.31461994232893,Feature,"3,75","3,73","002\xb0 47,593 E",99,"16,20","51\xb0 18,877 N",1995 / 24 - 157,4,"57,50",-,,24,1995/11/09,"1,25",,1,16,Belg,1,,"14,0 Wk__ GLLWS",1,1.25,-,5,"13,9 Wk__","12,80",-,3,15.4,,124,"14,00","284,04",,B_118_247,7.5,,-,Polyester zeiljacht,4,APACHE,,1995/11/09,485588.82,8.75,1995/11/09,5684833.06,-,1995/07/21,"Op 21/07/1995 brandde het Belgisch pleziervaartuig ""Apache"" uit en zonk in vermelde positie.
+
+B_118_247
+
+Midden 51\xb0 18'.877 - 002\xb0 47'.593
+Pt_01  51\xb0 18'.878 - 002\xb0 47'.595
+Pt_02  51\xb0 18'.877 - 002\xb0 47'.594
+
+Dieptecijfer gewijzigd naar LAT","Vandewalle J. Wezellaan,8 8400 Oostende",4,Polyester,123
+Point,2.883076385316023,51.286111566677526,Feature,u,,"002\xb0 52,985 E",99,"7,00","51\xb0 17,167 N",1997 / 06 - 073,5,"39,75",Nieuwpoort,,6,1981/11/09,,"33,73",1,20,Belgisch,1,,"zichtbaar bij LW ; 0,5 Wk__ ; 2,4 Wk__ ; 5,0 Wk__",2,2.5,,5,#,,-,1,6.36,,108,"5,00",,,B_117_253_a,2.5,,-,Vissersboot,6,N.741 HOOP OP VREDE,,2014/04/23,491846.08,8.75,,5681648.85,"J. Denye, Nieuwe Werfkaai, Oostende",1967/08/15,Duikersonderzoek uitgevoerd op 08/07/1988 door Tijdelijke Vereniging voor Bergingswerken . Volgens het rapport liggen er verspreide brokstukken over een oppervlakte van 11 m op 7 m. De omringende diepte is bepaald op 7 m tov het lokale H-vlak.,"am. Desaever Henri & Nestor, Nieuwpoort",1,Hout,107
+Point,2.491730868638241,51.40514426010863,Feature,"23,33",,"002\xb0 29,504 E",99,"30,80","51\xb0 24,309 N",1997 / 05 - 069,2,"47,00",Nieuwpoort,,24,1988/08/05,"7,50","48,82",1,8,Belgisch,1,1963,"22,9 Wk , 26 Wk__",3,3.75,,5,#,,-,1,30.82,,222,"26,30","318,00",,B_124_229,2.5,,-,Vissersboot,5,N. 591  DAGERAAD,,1999/07/02,464646.56,8.75,,5695002.59,"L. Degraeve, Zeebrugge",1976/09/23,"Het houten schip vatte vuur door een oververhitte schroefas, de bemanning werd gered door de N 346.
+
+B_124_229
+
+Midden 51\xb0 24'.309 - 002\xb0 29'.504
+Pt_01  51\xb0 24'.313 - 002\xb0 29'.500
+Pt_02  51\xb0 24'.306 - 002\xb0 29'.512","Rene Coulier - Desaever, Nieuwpoort",4,Hout,222
+Point,2.725686738557437,51.367093049102394,Feature,55,"13,44","002\xb0 43,541 E",99,"20,20","51\xb0 22,026 N",2002 / 22 - 134,4,82.50,Rostock,,24,1983/12/13,"5,83","1838,00",1,16,Oost-Duits,4,1946,"6,5 Wk, 2,8 Wk__ , 9,0 Wk__ , 15 Wk__ , 16,5 Wk_",4,5,bodem,5,#,"98,10",-,1,19.99,1966/09/21,165,"16,50","127,26","5,91",B_122_243_a,2.5,,,Koopvaardijschip,1,KAP ARKONA,,1995/08/18,480903.85,35,,5690684.02,Kockums Mek. Verkst. Malm\xf6,1964/01/18,"In 1988 werd een duikersonderzoek uitgevoerd. Hieruit blijkt dat het hoogste punt van het wrak nog 5 m boven de omringende bodem uitsteekt. Van 1946 tot 1958 gevaren onder de naam B.O. B\xf6rjesson - Gorthons Rederier Helsingborg Suede. Van 1958 tot 1964 was de naam gewijzigd in KAP ARKONA  - Deutsche Seereederei  V.E.B. Rostock Deutsche Democratische Republik. Op 19 januari 1964 werd het schip aangevaren door de Noorse tanker IDA Knudsen (20592 bruto register ton) en zonk in hoger vermelde positie. De Belgische loodsboot  5 kon 30 bemanningsleden in veiligheid brengen. Het wrak werd gedeeltelijk opgeruimd tot op een diepte van 150 dm ten opzichte van het lokale GLLWS - vlak. 
+
+In 2002 werd het wrak volledig opgeruimd tot omringende bodem en zelfs nog dieper ( 22 m).","Deutsche Seereederei, Rostock",4,staal,165
+Point,2.929778427545315,51.35944431888759,Feature,0,"19,80","002\xb0 55,787 E",99,"14,70","51\xb0 21,567 N",1986 / 26 - 142,4,"39,50",-,,6,1986/11/03,,"4200,00",1,16,Frans,1,,"zichtbaar wrak; 14,0 Wk__ GLLWS",1,1.25,bodem,5,"13,9 Wk__","136,00",450 Ton Uranium Hexafluoride UF6 radioaktief,3,14.42,,149,"14,00",,,B_121_255,7.5,,Norma,Ro-ro schip,6,MONT LOUIS,,2015/03/13,495110.75,8.75,,5689800.03,-,1984/08/25,"Het wrak werd opgeruimd tot op de bodem door TV Bergingswerken met de NORMA, Zeebrugge 1 , Ram en Bizon.
+
+Dieptecijfer gewijzigd naar LAT",-,1,Staal,149
+Point,2.577285315883364,51.38099375798088,Feature,"37,5",,"002\xb0 34,637 E",99,"25,00","51\xb0 22,860 N",1996 / 17 - 129,3,"65,50",-,,6,1989/04/20,"13,33","1503,00",1,12,Brits,4,,"20,7 Wk__ GLLWS",4,5,-,5,"20,6 Wk__",,Zeezand,3,25.08,,192,"20,70","287,20",,B_122_234_b,7.5,,-,Zandzuiger,3,BOWSPRITE  (boeg),,2015/04/07,470581.92,35,,5692279.01,-,1988/12/05,"Door duikers Hoffmann en Peters werd het wrak geidentificeerd als de Bowsprite.   Zie ook dossier B122/234 a
+
+B_122_234_b
+
+Midden 51\xb0 22'.860 - 002\xb0 34'.637
+Pt_01  51\xb0 22'.867 - 002\xb0 34'.631
+Pt_02  51\xb0 22'.853 - 002\xb0 34'.651
+
+Dieptecijfer gewijzigd naar LAT","Southcoast Shipping Cy.,  Great-Britain",1,Staal,192
+Point,2.532977042762925,51.3846102713422,Feature,"45,83","8,15","002\xb0 31,979 E",99,"27,00","51\xb0 23,077 N",1997 / 05 - 069,3,"65,50",Hamburg,,6,1984/06/26,"9,17","298,00",1,12,Duits,4,1955,"15 Wk; 20,0 Wk__ GLLWS",4,5,-,5,"19,9 Wk__","45,50",schroot (chassis auto's),3,24.16,,200,"20,00","185,39","2,50",B_123_232,7.5,,-,Kustvaarder,3,QUO VADIS,,2015/05/08,467500.94,35,,5692699.91,"Busumer Schiffsw. W.& E. Sielaff, Bqsum",1968/02/03,"Gezonken op 13/02/1968 na aanvaring met Griekse tanker PAVLOS V  op weg van Shoreham naar Terneuzen. Duikersonderzoek werd in 1978 uitgevoerd door de zeemacht .
+
+B_123_232
+
+Midden  51\xb0 23'.077 - 002\xb0 31'.979
+Pt_01   51\xb0 23'.088 - 002\xb0 31'.983
+Pt_02   51\xb0 23'.064 - 002\xb0 31'.980
+
+Dieptecijfer gewijzigd naar LAT","Heinrich Buck, Hamburg",1,staal,200
+Point,2.474313672515782,51.38555854140245,Feature,89,"13,60","002\xb0 28,459 E",99,"30,00","51\xb0 23,134 N",1997 / 05 - 069,3,"56,75",Napels,,6,1984/07/06,"17,00","3202,00",1,12,Nederlands,3,1918,"15 Wk ; 19,5 Wk__ GLLWS",4,5,,"2,50","19,4 Wk__","90,90",Zout & Fosfaten,3,27.08,,201,"19,50","197,00","7,50",B_123_228,7.5,,-,Stoomschip,4,LAURA,,2015/05/08,463419.47,26.25,,5692833,"Wallace Shipyards, Ltd. Vancouver, B.C.",1924/12/23,"Het Nederlands stoomschip de ""LAURA"" zonk in 1924 na een aanvaring met het Britse stoomschip ""LORENZO"". In 1978 werd het wrak  door duikers van de zeemacht onderzocht. Het steekt ongeveer 9 m boven de omringende bodem uit en staat recht op de bodem. Het voorschip is verwoest, de ruimen zijn leeg, de opbouw op de spanten na zijn verdwenen. Het achterschip staat rechtop , roer en schroef zijn nog aanwezig.B_123_228Midden 51\xb0 23'.134 - 002\xb0 28'.459Pt_01  51\xb0 23'.156 - 002\xb0 28'.473Pt_02  51\xb0 23'.109 - 002\xb0 28'.452Dieptecijfer gewijzigd naar LAT","Gulf Stoomboot Maatschappij (De Poorter), Rotterdam.",1,staal,201
+Point,2.688979524631729,51.48228176657386,Feature,"44,17","8,00","002\xb0 41,339 E",1,"27,90","51\xb0 28,937 N",1987 / 24 - 155,3,"57,25",Hamburg,,24,1987/07/26,"9,17","292,00",1,12,Duits,1,1927,"18,8 Wk ; 21,5 Wk ;21,0 Wk__ GLLWS",4,5,,3,"20,9 Wk__","46,00",-,3,28.87,,251,"21,20","284,00",,B_128_241,7.5,,-,Stoomschip,4,JOHN MAHN/Vorpostenboot V1302,,1997/04/03,478402.87,8.75,,5703504.53,Reiherst Schiffswerke,1942/02/01,"De JOHN MAHN werd door de Duitse marine gebruikt als voorpost. In februari 1942 werd deze stoomtreiler door een luchtaanval van de Royal Air Force  tot zinken gebracht. Het wrak ligt op zijn stuurboordzijde.
+
+B_128_241
+
+Midden 51\xb0 28'.937 - 002\xb0 41'.339
+Pt_01  51\xb0 28'.935 - 002\xb0 41'.360
+Pt_02  51\xb0 28'.940 - 002\xb0 41'.322
+
+Dieptecijfer gewijzigd naar LAT",Duitsland,4,Staal,250
+Point,2.540508168132975,51.13582049315639,Feature,"18,33",,"002\xb0 32,430 E",99,"14,20","51\xb0 08,149 N",1996 / 17 - 129,4,55.00,Nieuwpoort,,24,1988/04/29,"6,67","12,50",1,16,Belgisch,1,1945,"114 dm Wk__  , 12,4 Wk__",3,3.75,,5,#,,-,1,14.29,,5,"12,40","60,95",,B_108_232a,2.5,,-,Vissersboot,4,N.711  ROBERT-CLARA,,1995/10/27,467851.94,8.75,,5665029.19,"J. Provoost, Nieuwpoort",1957/06/12,"De N 711, voordien N 20 genoemd, zonk na een aanvaring met O.77 Jeannine op 12 juni 1957.","Renaat Asaert, Hoogstraat 17, Nieuwpoort",4,Hout,62
+Point,2.881027809470645,51.30032791430991,Feature,"55,7","8,41","002\xb0 52,862 E",99,"8,50","51\xb0 18,020 N",1981 / 21 - 069,5,41.25,-,,0,1981/09/29,"9,8","499,00",1,20,Panamees,1,,"zichtbaar wrak; 01,9 Wk__ GLLWS",4,5,-,5,"01,8 Wk__","51,75",500 ton staal,3,4,,119,"1,90","55,9","3,43",B_118_252,7.5,,-,Koopvaardijschip,5,NAUTICUS ENA,,2018/05/31,491705.78,8.75,,5683230.07,-,1974/09/28,"Gezonken door aanvaring met Duitse THURINGIA.  Duikersonderzoek uitgevoerd door TV Bergingswerken op 01/09/1988.
+
+B_118_252
+
+Midden 51\xb0 18'.020 - 002\xb0 52'.862
+Pt_01  51\xb0 18'.028 - 002\xb0 52'.880
+Pt_02  51\xb0 18'.012 - 002\xb0 52'.842
+
+Dieptecijfer gewijzigd naar LAT",Panama,0,Staal,118
+Point,2.501204407990557,51.16270349483103,Feature,"11,67",,"002\xb0 30,072 E",99,"14,00","51\xb0 09,762 N",1997 / 05 - 069,4,"60,00",-,,24,1985/05/22,"4,58",,1,16,-,1,,"12,7 Wk__ GLLWS",3,3.75,-,6,"12,5 Wk__",,-,3,15.14,,15,"12,70","178,03",,B_109_230,7.5,,-,,4,onbekend,,1996/07/05,465122.36,8.75,,5668036.64,-,,"Gerapporteerd door duiker aan hydrografisch bureau  in Taunton (Ministry of Defence Telex 46274)
+
+B_109_230
+
+Midden 51\xb0 09'.762 - 002\xb0 30'.072
+Pt_01  51\xb0 09'.766 - 002\xb0 30'.074
+Pt_02  51\xb0 09'.760 - 002\xb0 30'.074
+
+Dieptecijfer gewijzigd naar LAT",-,4,-,72
+Point,3.086694558067552,51.378603907581386,Feature,"146,58","19,00","003\xb0 05,202 E",99,"9,60","51\xb0 22,716 N",1997 / 05 - 069,5,"65,25",Gothenburg,,24,1986/06/23,"21,92","6095,00",1,20,Zweeds,1,1937,"3,5 Wk__, 3,3 Wk__; 05,7 Wk__ GLLWS",4,5,-,"2,50","05,7 Wk__","146,00",-,3,8.44,,186,"5,70","268,94",,B_122_305,7.5,,-,Stoomschip,3,NIPPON,,1995/04/14,506033.68,8.75,,5691932.01,Gotaverken A/B Gothenburg,1938/09/14,Dieptecijfer ongewijzigd in LAT,Svenska Ostasiatiska Kompaniet,4,Staal,186
+Point,2.583389746168884,51.137105142251826,Feature,107,"9,70","002\xb0 35,003 E",2,"4,00","51\xb0 08,226 N",1999 / 20 - 147,5,47.25,-,,6,1988/04/29,"7,20","1360,00",1,20,Brits,1,1930,"gevaarlijk wrak, 0,2 Wk__,01,2 Wk__ GLLWS",4,5,,3,"01,1 Wk__","107,00",-,3,3.02,,6,"1,20","353,00","3,60",B_108_235,7.5,,-,Destroyer,5,HMS  BASILISK,,2013/06/01,470852.92,8.75,,5665154.19,"John Brown & Co., Great-Britain",1940/06/01,"Tijdens de evacuatie van Britse troepen uit Duinkerke, werd het konvooi bestaande uit HMS BASILISK, HMS KEITH , HMS SALAMANDER en HMS SKIPJACK aangevallen door Duitse Stuka's. 
+Het schip onderging 3 aanvalsgolven. Bij de eerste werd onder andere stookruim 3 geraakt. Hierdoor nam de snelheid af.  Bij de tweede aanval werd het schip niet geraakt. De derde aanval telde vele treffers en bracht het schip tot stilstand. 
+
+De HMS BASILISK zonk in ondiep water. Hoewel het schip snel was ondergegaan bleef het aantal slachtoffers beperkt. Toen het wrak verlaten was vernietigde de HMS Whitehall deze verder om geen documenten en instrumenten (waaronder het Anti Submarine Detection Investigation Committee Systeem, of afgekort ASDIC) in handen van de Duitsers te laten vallen.
+De bovenbouw was lange tijd zichtbaar bij laagwater. ","Royal Navy,  Great-Britain",1,Staal,63
+Point,2.305342217499634,51.485675954631716,Feature,150,"21,00","002\xb0 18,321 E",99,"32,00","51\xb0 29,141 N",1996 / 19 - 141,3,69.50,Monrovia,,6,1970/11/27,53,"6933,00",1,16,LIBERIAAN,4,,"Gevaarlijk wrak ; 9,8 Wk ; 11,5 Wk__ GLLWS",4,5,-,5,"11,4 Wk__","145,00",?,3,19.56,,253,"11,50",27,,B_129_218,7.5,,-,Vrachtschip,3,GARDEN CITY,,2018/08/29,451767.05,35,,5704064.93,Forges et Chantiers de la Gironde Bordeaux,,"Gezonken op 19 maart 1969 na aanvaring met het  Poolse m/s Zaglebie Dabrowskie (11010 BRT)   Trajekt Antwerpen - Port Sudan - Madagascar.
+
+B_129_218 
+
+Midden 51\xb0 29'.141 - 002\xb0 18'.321
+Pt_01  51\xb0 29'.177 - 002\xb0 18'.361
+Pt_02  51\xb0 29'.108 - 002\xb0 18'.303
+
+Dieptecijfer gewijzigd naar LAT
+
+- gedregde wrakdiepte 11,5m GLLWS in 1970; bron Oostende 25/158-70 (en Oostende 1196/129)
+- 11,5m GLLWS = 11,4mLAT (Omzetting volgens Vlaamse Hydrografie)",1968 Atlantic Maritime CO Ltd Monrovia Liberia,1,staal,252
+Point,2.452240949763727,51.381294242173766,Feature,"33,33",,"002\xb0 27,134 E",99,"30,00","51\xb0 22,878 N",2014 / 13 - 203,3,"56,75",Oostende,,6,1992/10/02,"8,33","218,00",1,12,Belgisch,3,1866,"25,5 Wk__",4,5,,0,"25,0 Wk__","33,00",-,3,29.01,,193,"25,80","37,75",,B_122_227,7.5,,-,Lichtschip,4,WEST-HINDER LICHTSCHIP,,2015/07/01,461879.98,26.25,,5692370.01,-,1912/12/14,"Dit lichtschip ""West-Hinder"" werd NIET gelicht noch opgeruimd. Een ander lichtschip ""Westhinder"" zonk in positie 51 15 35 N - 02 46 15 E, zie BAZ 1960/13-94 (T) Vervolgens werd het wrak van de laatstgenoemde opgeruimd . Zie BAZ 's 1960/13-95 (T) en 1960/16-113.
+
+Aanbrengen de tekst “Historic Wk” in magenta kleur  
+
+Het scheepswrak West-Hinder in positie 51\xb022,878’N 002\xb027,134’E. 
+(122/227 Vlaamse Hydrografie)is door de gouverneur van West-Vlaanderen als cultureel erfgoed onder water erkend. (06/06/2014)
+
+B_122_227
+
+Midden 51\xb0 22'.878 - 002\xb0 27'.134
+Pt_01  51\xb0 22'.886 - 002\xb0 27'.144
+Pt_02  51\xb0 22'.872 - 002\xb0 27'.127
+
+Dieptecijfer gewijzigd naar LAT",Belgische Staat,1,Staal,193
+Point,2.840457633681523,51.35986028864197,Feature,50,"8,81","002\xb0 50,427 E",99,"20,00","51\xb0 21,592 N",1996 / 15 - 121,4,"61,25",Antwerpen,,24,1960/12/09,"15,00","613,00",1,16,Belgisch,1,1903,"gevaarlijk wrak voor bovenscheepvaart ; 11,3 Wk ; 15 Wk__ GLLWS",4,5,150 dm,5,"14,9 Wk__","59,40",algemene cargo,3,19.11,1960/12/20,151,"15,20","198,14","3,96",B_121_250_b,7.5,,Ackermans & Van Haaren,Stoomschip,3,EMERAUDE,,1996/05/21,488891.8,8.75,,5689856.03,"Craig Taylor & Co., Stockton",1945/07/02,"Er bestaat enige twijfel over de naam van het wrak omdat, zie baz van 1953 nr 39/154,vermeld wordt dat de EMERAUDE 150 m beS de EMPIRE FAITH ligt. De positie van de laatstgenoemde is: 51 21 40 N - 02 50 21 E. Zie BAZ 137/05 en dossier B 121/250 a. De EMERAUDE werd in 1903 gebouwd als SAN LORENZO (van 1903 - 1908 Argentinie); GAUCHO ( van 1908 - 1911 Brazilie ); RIO PARDO (1911-1918 Brazilie); EMERAUDE ( 1918 - 1945  Belgie ). Gezonken na aanvaring op het wrak SS EMPIRE FAITH of PATH = B 122/251 a.
+
+B_121_250_b
+
+Midden 51\xb0 21'.592 - 002\xb0 50'.427
+Pt_01  51\xb0 21'.606 - 002\xb0 50'.435
+Pt_02  51\xb0 21'.580 - 002\xb0 50'.423
+
+Dieptecijfer gewijzigd naar LAT","John Cockerill, Antwerpen",4,staal,151
+Point,2.849713402779176,51.366679339247554,Feature,"30,01","8,75","002\xb0 50,983 E",99,"20,00","51\xb0 22,001 N",1996 / 15 - 121,4,"61,25",-,,24,1960/10/28,"8,33","250,00",1,16,-,1,,"gevaarlijk wrak voor bovenscheepvaart; 15,0 Wk__ GLLWS",4,5,150 dm GLLWS,6,"14,9 Wk__","59,00",-,3,18.82,,161,"15,20","152,65","3,90",B_122_251,7.5,,Ackermans & Van Haaren,,3,Onbekend,,1996/05/21,489537.79,8.75,,5690613.02,-,1937/05/31,"Er bestaat enige twijfel over de naam van het wrak omdat, zie baz van 1953 nr 39/154, vermeld wordt dat de EMERAUDE 150 m beS de EMPIRE FAITH ligt. De positie van de laatstgenoemde is: 51 21 40 N - 02 50 21 E. Dus in tegenspraak met BAZ nr 25 van 1960. Mogelijks is dit wrak de OSKOBEL. Zie BAZ 1937/05 en dossier B 121 / 250 b.
+Uit het onderzoek van 21/05/1996 blijkt dat nog verscheidene hoge stukken aanwezig zijn. In het bijzonder in de positie 489 629 X en 5 690 824 Y steekt het wrakstuk ruim 4,36 m boven de omringende bodem uit. Ook in de positie 489 630 X en 5 690 816 Y kan men een verhoging van ruim 3 m vaststellen. Deze posities werden vastgesteld met DGPS en de ondiepten met het toestel Singlebeam Atlas Deso 20.
+
+B_122_251
+
+Midden 51\xb0 22'.001 - 002\xb0 50'.983
+Pt_01  51\xb0 22'.007 - 002\xb0 50'.982
+Pt_02  51\xb0 21'.994 - 002\xb0 50'.992
+
+Dieptecijfer gewijzigd naar LAT",-,4,Staal,161
+Point,3.199014569030238,51.37323376829257,Feature,60,"8,89","003\xb0 11,941 E",99,"11,80","51\xb0 22,394 N",1997 / 05 - 069,4,"61,25",-,,24,1984/07/05,"10,83","499,00",1,16,Nederlands,1,1952,"zichtbaar bij LW ,  8,0 Wk ,",4,5,,5,"07,6 Wk__","57,75","stukgoed , ijzer en lood",3,11.69,,176,"7,60","48,43",,B_122_312_a,7.5,,Van Gastel,Kustvaarder,3,ADMIRALENGRACHT,,1995/09/21,513852.43,8.75,,5691350.02,Bodewes Scheepswerven nv Martenshoek,1956/03/16,"Het schip zonk na een aanvaring met het stoomschip DEWSBURY in dichte mist op 16 maart 1956. Het wrak werd in 1960 slechts gedeeltelijk opgeruimd, zie duikersverslag van 25/08/1988, door TV  Bergingswerken.B_122_312_aMidden  51\xb0 22'.394 - 003\xb0 11'.941Pt_01   51\xb0 22'.406 - 003\xb0 11'.962Pt_02   51\xb0 22'.385 - 003\xb0 11'.924Dieptecijfer ongewijzigd in LAT",nv Splietshoff's Devracht Kantoor Amsterdam Nederland,4,Staal,176
+Point,2.518675837932395,51.22167147276623,Feature,20,"5,00","002\xb0 31,121 E",99,"16,20","51\xb0 13,300 N",1994 / 06 - 068,4,"42,00",Zeebrugge,,6,1994/02/18,"6,52","39,33",1,16,Belgische,1,1965,"14.4 Wk , 13,7 Wk GLLWS",3,3.75,-,5,"13,6 Wk__","18,00",-,3,17.04,,50,"13,70","289,29",,B_113_231,7.5,,_,Vissersboot,5,Z. 577  SABRINA,,2007/03/27,466386.95,8.75,,5674586.13,"Hoekman & Zn., Urk, Nederland",1972/05/13,"De SABRINA  of Z.577 raakte met zijn netten vast aan een onbekend voorwerp.Het schip kapseisde en bleef met de kiel boven drijven. De vier bemanningsleden werden gered.
+
+B_113_231
+
+Midden 51\xb0 13'.300 - 002\xb0 31'.121
+Pt_01  51\xb0 13'.300 - 002\xb0 31'.131
+Pt_02  51\xb0 13'.301 - 002\xb0 31'.115
+
+Dieptecijfer gewijzigd naar LAT","Joseph Welvaert - Bailleul, Zeebrugge",1,Staal,29
+Point,2.605643013970877,51.42527866590517,Feature,"43,33","8,25","002\xb0 36,339 E",99,"29,00","51\xb0 25,517 N",1997 / 05 - 069,3,"39,25",Fecamp,,6,1987/10/26,"10,83","365,00",1,12,Frans,1,1947,"23 Wk ;  22 Wk__; 21,5 Wk__ GLLWS",4,5,-,5,"21,0 Wk__","42,00",geen,3,26.99,,240,"21,60","163,61","3,85",B_125_236,7.5,,-,Vissersboot,6,F1040 DUC DE NORMANDIE,,2015/10/09,472581.91,8.75,,5697192.98,"Beliard - Crighton, Oostende",1951/02/21,"Het schip is in een zware storm vergaan op 21 februari 1951. Hierbij konden slechts 2 van de 26 bemanningsleden gered worden.
+
+B_125_236
+
+Midden 51\xb0 25'.517 - 002\xb0 36'.339
+Pt_01  51\xb0 25'.529 - 002\xb0 36'.335
+Pt_02  51\xb0 25'.507 - 002\xb0 36'.346
+
+Dieptecijfer gewijzigd naar LAT","Armement A. Ledun, rue de la Plage, Frcamp, Frankrijk",1,Staal,239
+Point,2.537801581395604,51.64983167594748,Feature,160,"18,68","002\xb0 32,268 E",99,"35,00","51\xb0 38,990 N",2004 / 18 - 131,3,"39,25",,,6,,,"6974,00",1,12,,1,1951,,4,5,,5,"6,8 Wk__","156,10",,3,25.82,,269,"6,80",,,B_139_232,7.5,Ter Streep,,Vrachtschip,6,BIRKENFELS,,2015/08/03,468022.93,8.75,,5722193.81,Weser  Werk Seebeck Bremershaven,1966/04/07,"Op 7 april 1966 kwam het schip in aanvaring, bij dichte mist, met het Duitse schip Marie Louise Bolten ongeveer 1 mijl bezuiden het lichtschip Noordhinder. De Birkenfels was op weg van Bremen naar Khorramshar in de Perzische Golf met een lading van 8750 ton ijzererts, kunstmest en algemene goederen. Alle bemanningsleden werden gered.
+
+B_139_232
+
+Midden 51\xb0 38'.990 - 002\xb0 32'.268
+Pt_01  51\xb0 39'.030 - 002\xb0 32'.270
+Pt_02  51\xb0 38'.949 - 002\xb0 32'.282
+
+Dieptecijfer is ongewijzigd naar LAT",Deutsche Dampshiff Geselshaft HANSA,1,Staal,268
+Point,2.908811782247904,51.37271087785549,Feature,"53,33","16,15","002\xb0 54,529 E",2,"16,60","51\xb0 22,363 N",1996 / 17 - 129,4,"78,75",New Orleans,,24,,"8,33","6054,00",1,16,U.S.A.,3,1921,"gevaarlijk voor bovenscheepvaart ; 6,5 Wk__ ; 15 Wk__ GLLWS",4,5,150 dm,4,"14,9 Wk__","122,70",3.000 ton militaire uitrusting + rollen prikkeldraad,3,15.71,,174,"15,00","304,46",,B_122_254,7.5,,Ackermans & Van Haaren,Liberty,2,NASHABA,,1996/03/15,493652.76,26.25,,5691277.02,"Pacific Coast S.B. Co., Bay Point, California",1945/02/26,"Opgeruimd wrak tot op 150 dm.  In 1921 gebouwd door Pacific Coast S. voor eigendom van United States Shipping Board tot 1938. Van 1938 tot 1945 was het schip eigendom van Lykes Bros Steamship C\xb0, Inc - New Orleans. Het schip vaarde vol geladen op een mijn en zonk nabij 9 mijlen benoorden Oostende.
+
+B_122_254
+
+Midden 51\xb0 22'.363 - 002\xb0 54'.529
+Pt_01  51\xb0 22'.372 - 002\xb0 54'.512
+Pt_02  51\xb0 22'.357 - 002\xb0 54'.547
+
+Dieptecijfer gewijzigd naar LAT","Lykes Bros S.S. Co.Inc., New Orleans",4,Staal,174
+Point,3.081644780472232,51.384263447789316,Feature,"109,17",,"003\xb0 04,899 E",99,"10,50","51\xb0 23,056 N",1997 / 05 - 069,5,"47,25",,,6,1988/06/10,"23,33",,1,20,,1,,,4,5,,6,"05,3 Wk__",,,3,8.17,,198,"5,30","179,13",,B_123_304,7.5,,,,5,onbekend,,2007/03/29,505681.53,8.75,,5692561.01,,,Dieptecijfer ongewijzigd in LAT,,1,,198
+Point,2.418644191326251,51.28605968966991,Feature,"12,5",,"002\xb0 25,119 E",99,"34,00","51\xb0 17,164 N",1996 / 17 - 129,2,"52,00",-,,24,1988/09/07,"5,83",,1,8,-,1,,"25,5 Wk__ GLLWS",3,3.75,-,6,"25,0 Wk__",,-,3,31.6,,107,"25,70","15,26",,B_117_225,7.5,,-,,4,onbekend,,1995/10/17,459458,8.75,,5681797.08,-,,"B_117_225
+
+Midden 51\xb0 17'.164 - 002\xb0 25'.119
+Pt_01  51\xb0 17'.166 - 002\xb0 25'.122
+Pt_02  51\xb0 17'.162 - 002\xb0 25'.120
+
+Dieptecijfer gewijzigd naar LAT",-,4,-,106
+Point,3.050630182128597,51.391735147607726,Feature,u,"5,53","003\xb0 03,038 E",99,"11,00","51\xb0 23,504 N",1998 / 03 - 059,5,"62,75",Nieuwpoort,,24,,,"50,00",3,20,Belg,1,,"0,5 Wk",2,2.5,,,NIET op kaart,"20,80",,3,8.07,,,,,"2,50",B_123_303_c,7.5,Ter Streep,,Vissersboot,3,N 12,,1998/01/12,503522.7,8.75,,5693390,,1997/09/11,"Op 11 september 1997 is het vissersschip N 12 ""ARTHUR"" vastgeslagen  op de wrakresten van de SANSIP. Hierbij werd na een poging om het schip los te maken averij opgelopen. Na anderhalf uur is het schip gezonken, nagenoeg op de SANSIP. Alle bemanningsleden werden gered. Het wrak werd op 19 december 1997 volledig opgeruimd. Bij het eerste onderzoek van 15/09/1997 stelde men vast dat het wrak rechtop staat . Het hoogste gevonden punt bevindt zich op 0,5 m beneden het H-vlak, mogelijks zijn er nog hogere punten. Dit werd  vastgesteld met  de singlebeam van de werkboot bij hoog water. Duikersonderzoek was noodzakelijk om de hoogste punten te lokaliseren en hun respectievelijke niveaus te bepalen ten op zichte van het lokale H-vlak. Het duikersonderzoek werd op 23/10/1997 uitgevoerd met 3 duikers van SUBMERGO . (zie verslag). Het wrak werd op 19 december 1997 volledig opgeruimd. Op 12 januari 1998 werd een controlemeting met TER STREEP uitgevoerd. Uit het onderzoek blijkt dat het wrak volledig verwijderd is en geen wrakresten van de N12 aanwezig zijn.",Vanhoutte Ronny,4,Staal,287
+Point,2.62022944520261,51.38163535709224,Feature,"30,83",,"002\xb0 37,214 E",99,"26,50","51\xb0 22,898 N",1996 / 17 - 129,3,83.50,-,,24,1982/11/04,"5,00",,1,12,Duits,4,,"20 Wk; 22,0 Wk__ GLLWS",4,5,-,6,"21,5 Wk__",,,3,22.47,,194,"22,00","169,29",,B_122_237,7.5,,-,Duikboot,1,UB 29,,1995/08/17,473570.9,35,,5692334.01,,,"Duitse duikboot uit de eerste wereldoorlog.
+
+B_122_237
+
+Midden  51\xb0 22'.898 - 002\xb0 37'.214
+Pt_01   51\xb0 22'.906 - 002\xb0 37'.214
+Pt_02   51\xb0 22'.891 - 002\xb0 37'.217
+
+Dieptecijfer gewijzigd naar LAT",,4,Staal,194
+Point,2.910326409848489,51.30702924939974,Feature,15,,"002\xb0 54,620 E",99,"7,50","51\xb0 18,422 N",2006 / 15 - 169,5,"64,00",Oostende,,24,,"3,13","26,75",1,20,Belgisch,1,,"5,9 Wk ; 5,5 Wk__ ;06,5 Wk__ GLLWS",3,3.75,,5,"06,4 Wk__",,-,3,7.31,,121,"6,50","251,00",,B_118_254,7.5,,-,Vissersboot,3,O.807  MAURICE,,1996/11/28,493749.26,8.75,,5683972.42,"J. Provoost, Hoogstraat 17, Nieuwpoort",,"Uit het SSS-onderzoek van 16/08/94 blijkt dit wrak nauwelijks 1 m boven de omringende bodem uit te steken.
+
+Dieptecijfer gewijzigd naar LAT","Diana Belpaeme, Oostende",4,Hout,120
+Point,2.343795931288196,51.68304175531664,Feature,35,"9,00","002\xb0 20,628 E",99,"36,00","51\xb0 40,983 N",,2,"61,50",,,6,,"9,00",,3,8,,4,,,4,5,,,,"35,00",,3,34.47,,,,"150,00","4,70",B_140_220,7.5,Ter Streep,,,3,onbekend,,2013/09/05,454634,35,2013/09/05,5725990,,,,,1,,290
+Point,2.849315362238493,51.28657861273492,Feature,5,"2,60","002\xb0 50,959 E",1,"7,00","51\xb0 17,195 N",1996 / 17 - 129,5,32.50,,,0,1985/09/18,2,"5,00",1,20,Brits,1,1915,"06,8 Wk__ GLLWS",1,1.25,,3,"06,7 Wk__","13,70",-,1,6.2,,109,"6,80",93,"0,80",B_117_251,2.5,,-,CMB Coastal Motor Boat,6,Minensuchboot M3610,,2018/05/31,489491.79,8.75,,5681705.08,,,"CMB is een afkorting voor Coastal Motor Boat
+
+Dieptecijfer gewijzigd naar LAT
+
+Kleine wrakrest die bijna niet boven de bodem uitsteekt","Royal Navy,  Great-Britain",0,staal,108
+Point,2.762616721288931,51.33131395054623,Feature,5,,"002\xb0 45,757 E",99,"12,00","51\xb0 19,879 N",1996 / 17 - 129,4,"57,50",-,,24,,"1,25",,1,16,,1,,"11,0 Wk GLLWS",1,1.25,-,6,"10,9 Wk",,-,3,10.7,,130,,"315,00",,B_119_245,7.5,,-,,4,onbekend,,1995/10/03,483461.83,8.75,1995/10/03,5686696.05,-,,"Gevonden tijdens de detaillodingen van de Middelkerkebank in 1995.
+
+B_119_249
+
+Midden 51\xb0 19'.707 - 002\xb0 49'.298
+Pt_01   51\xb0 19'.718 - 002\xb0 49'.297
+Pt_02   51\xb0 19'.697 - 002\xb0 49'.301
+
+Dieptecijfer gewijzigd naar LAT",-,4,-,129
+Point,2.923048716204389,51.246320037712984,Feature,35,,"002\xb0 55,383 E",99,"7,00","51\xb0 14,779 N",2015 / 07 - 094,5,"50,00",,,0,,"5,00",,3,20,,2,,,4,5,,,"05,2 Wk",,,3,6.83,,,,"144,00",,B_114_255_d,7.5,Hydro I,,,5,Flansea,,2014/07/25,494629,17.5,2013/02/26,5677220,,,"Scheepswrak ontdekt tijdens het FlanSea project.
+
+In Oostende laat het FlanSea-projectteam na twee jaar onderzoek een eerste prototype te water van een boei die elektriciteit opwekt uit de beweging van de golven. 
+
+B_114_255_d
+
+Midden 51\xb0 14'.779 - 002\xb0 55'.383
+Pt_01   51\xb0 14'.787 - 002\xb0 55'.374
+Pt_02   51\xb0 14'.772 - 002\xb0 55'.392
+
+minste diepte 5.2 m LAT
+
+Aanbrengen de tekst “Historic Wk” in magenta kleur bij het wrak in positie 51\xb014,779’N 002\xb055,383’E, dat werd erkend als cultureel erfgoed onder water.
+
+_(Bron: E-mail Kabinet gouverneur West-Vlaanderen d.d. 18/03/2015 - Ministerieel Besluit 10/03/2015)",,0,hout,303
+Point,3.235819969552162,51.36109828199914,Feature,"15,83",,"003\xb0 14,149 E",99,"5,80","51\xb0 21,666 N",1996 / 17 - 129,5,"64,00",-,,24,1994/02/28,"3,33",,1,20,-,1,,"4,5 Wk; 04,3 Wk__ GLLWS",3,3.75,-,6,"04,2 Wk__",,-,3,5.19,,153,"4,30","10,62",,B_121_314,7.5,,-,,3,onbekend,,1995/10/24,516418.61,8.75,,5690008.02,-,,Dieptecijfer gewijzigd naar LAT,-,4,-,153
+Point,2.548481018319102,51.408860094373814,Feature,50,,"002\xb0 32,909 E",99,"19,00","51\xb0 24,532 N",1997 / 05 - 069,4,"43,25",-,,6,1987/07/03,"11,67",,1,16,-,1,,"19,7 Wk; 17,7 Wk__ GLLWS",4,5,-,6,"17,6 Wk__",,-,3,19.06,,225,"17,70","37,41",,B_124_232,7.5,,-,,5,onbekend,,2006/10/12,468596.43,8.75,,5695389.99,-,,"Het wrak had voor 1963 een andere benaderende positie, namelijk 51 \xb024 N en 002\xb0 32,2 E ( zie BAZ 1963/18-146. Het teken op de kaart was ""gevaarlijk wrak PA ""
+
+B_124_232
+
+Midden 51\xb0 24'.532 - 002\xb0 32'.909
+Pt_01  51\xb0 24'.547 - 002\xb0 32'.915
+Pt_02  51\xb0 24'.520 - 002\xb0 32'.906
+
+Dieptecijfer gewijzigd naar LAT",-,1,-,225
+Point,2.751926775925142,51.3732300975013,Feature,"51,02",,"002\xb0 45,116 E",99,"22,00","51\xb0 22,394 N",2002 / 22 - 135,3,"78,50",,,24,1983/11/10,"8,16",,1,12,,4,,"? ; 15,0 Wk__ ; 17,0 Wk__",4,5,150 dm,"2,50",#,,,1,22.61,,175,"17,00","183,65",,B_122_245,2.5,,-,Stoomschip,2,SS Ino,,1996/03/15,482732.84,35,,5691360.02,,,Volgens de BAZ van 1953 en 1963 is het wrak met springstoffen opgeruimd geweest. Dit is in tegenspraak met het duikersonderzoek van 23/08/1988. In 2002 werd het wrak volledig opgeruimd tot omringende bodem en dieper tot 23 m.,,4,Staal,175
+Point,2.902197260083296,51.38902568871465,Feature,"7,5",,"002\xb0 54,132 E",99,"14,50","51\xb0 23,342 N",1997 / 05 - 069,4,"57,50",,,24,1994/05/16,"0,83",,1,16,,1,,"16,0  Obstn__ GLLWS",1,1.25,,6,"15,9  Obstn__",,,3,16.48,,202,"16,00","136,74",,B_123_254,7.5,,,,4,onbekend,,1996/05/21,493194.77,8.75,,5693092,,,"Op 21/10/1993 had de YMUIDEN MARU een anker verloren. Een uitgebreid SSS onderzoek werd uitgevoerd. Hierbij zijn een zestal kontaktpunten waargenomen. In deze positie werden door duikers op 16/05/1994 een stalen plaat van 6m lengte en 3 cm dikte gevonden. Deze plaat steekt  een 1.5 m boven de bodem uit.
+
+Dieptecijfer gewijzigd naar LAT",,4,,202
+Point,2.759558896913357,51.34512831992359,Feature,"5,83",,"002\xb0 45,574 E",99,"22,00","51\xb0 20,708 N",1996 / 17 - 129,3,"71,00",-,,24,1990/08/23,"2,50",,1,12,-,3,,"19,0 Wk__ GLLWS",1,1.25,-,6,"18,9 Wk__",,-,3,21.87,,136,,"324,46",,B_120_245,7.5,,-,,2,onbekend,,1995/05/05,483253.83,26.25,,5688233.04,-,,Dieptecijfer gewijzigd naar LAT,-,4,-,135
+Point,3.161610563808782,51.432304620857416,Feature,"51,67",,"003\xb0 09,697 E",99,"6,10","51\xb0 25,938 N",1997 / 05 - 069,5,"47,25",-,,6,1994/02/21,"5,00",,1,20,-,1,,"4,2 Wk",4,5,-,6,"04,3 Wk__",,-,3,5.58,,242,"4,30","346,40",,B_126_309,7.5,,-,,5,onbekend,,2007/03/29,511234.44,8.75,,5697912.97,-,,Dieptecijfer ongewijzigd in LAT,-,1,-,241
+Point,2.621746052782478,51.6989915131432,Feature,"145,83",,"002\xb0 37,305 E",99,"31,00","51\xb0 41,939 N",,2,"46,75",,,0,,"19,44",,1,8,,3,,"19,5 Wk GLLWS",4,5,,5,"19,4 Wk",,,3,30.86,,276,,"208,00",,B_141_237,7.5,Ter Streep,,,5,CALLISTO,,2016/09/05,473858.9,26.25,,5727627.77,,,"B_141_237
+
+Midden 51\xb0 41'.939 - 002\xb0 37'.305
+Pt_01  51\xb0 41'.973 - 002\xb0 37'.337
+Pt_02  51\xb0 41'.902 - 002\xb0 37'.275
+
+Dieptecijfer gewijzigd naar LAT",,0,,275
+Point,3.318385857937056,51.39745508669052,Feature,"6,94",,"003\xb0 19,103 E",1,"11,50","51\xb0 23,847 N",2001 / 26 - 173,5,"56,50",,,24,1966/11/24,"3,27",,1,20,,1,,-,1,1.25,,3,#,,,1,9.37,,212,"9,40","264,81",,B_123_319,2.5,,-,,4,Minensuchboot M3248,,1996/04/24,522149.57,8.75,,5694073,,,Het wrak werd volledig opgeruimd in 2001.,,4,,212
+Point,3.220129107911864,51.39266864405295,Feature,"38,33",,"003\xb0 13,208 E",99,"8,00","51\xb0 23,560 N",1986 / 26 - 143,5,"65,25",,,24,1986/09/24,"8,33",,1,20,,1,,"5,4 Wk ; 5,1 Wk ; 5,4 Wk__",4,5,,6,"06,2 Wk__",,,3,7.75,,208,"6,20","295,46",,B_123_313,7.5,,,,3,onbekend,,1995/09/21,515315.62,8.75,,5693515.59,,,Dieptecijfer ongewijzigd in LAT,,4,staal,208
+Point,2.492783735307843,51.370263810706845,Feature,"37,5",,"002\xb0 29,567 E",99,"30,00","51\xb0 22,216 N",1996 / 17 - 129,3,"65,50",,,6,1987/07/02,"9,17",,1,12,,4,,"22,0 Wk  ; 23,0 Wk__ ; 24,5 Wk__ GLLWS",4,5,,6,"24,0 Wk__",,,3,28.33,,172,"24,70","157,96",,B_122_229_b,7.5,,-,,3,onbekend,,2015/05/12,464692.96,35,,5691123.02,,,"B_122_229_b
+
+Midden 51\xb0 22'.216 - 002\xb0 29'.567
+Pt_01  51\xb0 22'.226 - 002\xb0 29'.560
+Pt_02  51\xb0 22'.208 - 002\xb0 29'.575
+
+Dieptecijfer gewijzigd naar LAT",,1,,172
+Point,2.670619945036525,51.33936080870528,Feature,"17,5",,"002\xb0 40,237 E",99,"25,00","51\xb0 20,362 N",1997 / 05 - 069,3,"56,00",,,24,1992/06/10,"6,67",,1,12,,1,,"24,0 Wk__ ; 24,0 Wk__ GLLWS",3,3.75,,6,"23,5 Wk__",,,3,24.47,,134,"24,30","21,25",,B_120_240,7.5,,-,,4,onbekend,,1996/08/22,477056.57,8.75,,5687615.69,,,"Het wrak steekt nauwelijks boven de omringende bodem uit.
+
+Dieptecijfer gewijzigd naar LAT",,4,,133
+Point,2.932827063850771,51.366666634556054,Feature,u,,"002\xb0 55,970 E",99,"15,00","51\xb0 22,000 N",1961 / 20 - 143,4,"77,25",,,30,,,,1,16,,3,,"8,4 Wk ; 7,6 Wk__ ;   +++",2,2.5,,6,#,,,1,14.86,,160,"15,00",,,B_122_256,2.5,,Ackermans & Van Haaren,,2,onbekend,,,495323.75,26.25,,5690603.03,,,Het wrak werd opgeruimd in 1961 tot omringende bodem.,,5,,160
+Point,3.177030512318849,51.36425012790733,Feature,"19,17",,"003\xb0 10,622 E",99,"11,20","51\xb0 21,855 N",1997 / 05 - 069,4,"42,00",,,6,1993/03/25,"6,67",,1,16,,1,,"zichtbaar bij LW ; 5,3 Obstn ; 7,3 Obstn; 07,4 Wk__ GLLWS",3,3.75,,"2,50","07,4 Wk__",,,3,13.97,,156,"7,40","9,87",,B_121_310,7.5,,-,,5,SOLENT,,2007/05/16,512324.64,8.75,,5690347.02,,,"In een voorlopig Bericht Aan Zeevarenden van 08 juli 1929 werd een gezonken Engels vaartuig"" SOLENT"" gemeld . In de BAZ van 29 augustus 1929 werd de positie vermeld nl 51\xb022\' N - 3\xb010\'30"" E . Er werden geen berichten gevonden die het opruimen van het wrak bevestigen. In een later bericht , BAZ 1972/23-149 (T), wordt een kleihompel gemeld in deze positie. Op 01/07/1992 werd een duikersonderzoek uitgevoerd door Piet Lagast ( Tijdelijke Vereniging  voor Bergingswerken ). Het onderzoek bevestigd de aanwezigheid van een wrak , vermoedelijk in hout. De inhoud van het wrak is slijk en zand.
+
+Dieptecijfer ongewijzigd naar LAT",,1,,156
+Point,3.030690688215096,51.384395772444954,Feature,"47,63",,"003\xb0 01,841 E",99,"10,00","51\xb0 23,064 N",1988 / 11 - 089,5,"65,25",,,24,,"9,28",,1,20,,1,,"3,2 Wk; 06,3 Wk__ GLLWS",4,5,,5,"06,2 Wk__",,,3,9.19,,199,"6,30","224,50",,B_123_301,7.5,,,,3,NEUTRON,,1999/08/23,502135.71,8.75,,5692573.01,,,"In 1965 op 4 augustus stootte het Nederlands schip de NEUTRON op het wrak van de SANSIP en zonk ongeveer een twintigtal minuten later. Volgens de vereniging ""Zeevaart"" was op verzoek van de verzekeringsmaatschappij op en in de positie 51\xb0 23' 32'' N en 003\xb0 02' 52'' E een duikersonderzoek uitgevoerd in 1965. Het wrak van de NEUTRON werd niet gevonden . Dit bevestigd het vermoeden dat de 2 wrakstukken  in de onderzochte positie enkel tot de SANSIP toebehoren. In dit geval zou de NEUTRON westelijker moeten liggen ten opzichte van de SANSIP. In 1970 werd het wrak B 123/301 ontdekt en zeer waarschijnlijk is dit gevonden wrak de NEUTRON.
+
+Dieptecijfer gewijzigd naar LAT",,4,,199
+Point,3.299086265130251,51.402640216713834,Feature,u,,"003\xb0 17,945 E",99,"12,10","51\xb0 24,158 N",2002 / 05 - 067,4,"53,25",Zeebrugge,,6,,,,3,16,Duits,3,,-,2,2.5,,,#,,-,1,11.75,,,"9,80",,,B_124_318,2.5,,-,Vissersboot,4,PRANGENHOF,,2014/11/24,520804.58,26.25,,5694643.99,-,,Het wrak werd volledig opgeruimd in 2001.,"Voorpostenflotille ""Flandern""",1,Staal,297
+Point,3.210964767124712,51.37668473857682,Feature,"11,67",,"003\xb0 12,658 E",99,"10,50","51\xb0 22,601 N",1993 / 09 - 094,4,"60,00",-,,24,1993/04/23,"2,50",,1,16,,1,,-,3,3.75,-,6,"08,7 Wk__",,-,3,10.36,,184,"8,70","309,81",,B_122_312_e,7.5,,-,,4,onbekend,,1995/09/21,514683.12,8.75,,5691736.13,-,,Dieptecijfer ongewijzigd in LAT,-,4,-,184
+Point,2.407476151263138,51.613828588718725,Feature,61,,"002\xb0 24,449 E",99,"35,50","51\xb0 36,830 N",1995 / 19 - 141,2,"61,50",-,,6,,"12,00",,1,8,-,4,,"29 Wk__ ; 32 Wk ; 31 Wk; 30,0 Wk GLLWS",4,5,-,6,"29,5 Wk",,-,3,32.34,,266,,"348,00",,B_136_224,7.5,,-,,3,onbekend,,2015/09/27,458974,35,,5718254.83,-,,"Het wrak werd in 1982 bewerkt met explosieven.
+ Ook wel gekend als het TWIN wrak.
+
+B_136_224
+
+Midden 51\xb0 36'.830 - 002\xb0 24'.449
+Pt_01  51\xb0 36'.822 - 002\xb0 24'.453
+Pt_02  51\xb0 36'.790 - 002\xb0 24'.464
+
+Dieptecijfer gewijzigd naar LAT",-,1,-,265
+Point,2.618119003856103,51.71903961971415,Feature,"55,83",,"002\xb0 37,087 E",99,"25,00","51\xb0 43,142 N",,3,"56,75",,,6,,"9,17",,1,12,,3,,"20,5 Wk__",4,5,,5,"20,4 Wk__",,,3,26.49,,277,,"206,19",,B_143_237,7.5,Ter Streep,,,4,ALFONSO TERCERO,,2015/07/20,473619.9,26.25,,5729858.76,,,B_143_237Midden 51\xb0 43'.142 - 002\xb0 37'.087Pt_01  51\xb0 43'.156 - 002\xb0 37'.102Pt_02  51\xb0 43'.128 - 002\xb0 37'.080Dieptecijfer gewijzigd naar LAT,,1,,276
+Point,3.109660883240653,51.41225013296192,Feature,18,,"003\xb0 06,580 E",99,"9,00","51\xb0 24,735 N",1997 / 05 - 069,5,"41,00",-,,6,,"2,50",,1,20,-,1,,"5,5 Wk",3,3.75,-,6,#,,-,1,9.61,,230,"5,50","55,00",,B_124_306,2.5,,-,,5,onbekend,,2014/02/19,507626.47,8.75,,5695675.99,-,,Wrak steekt nu ongeveer 1 m boven de omliggende bodem (19/02/2014),-,1,-,230
+Point,2.328725614062164,51.50861532804494,Feature,60,,"002\xb0 19,724 E",99,"21,00","51\xb0 30,517 N",1996 / 24 - 160,3,"65,50",,,6,,"15,00",,1,12,,4,,"20,0 Wk GLLWS 19,9 LAT",4,5,,6,"22,0 Wk",,,3,24.17,,255,,"145,00",,B_130_219,7.5,Ter Streep,,,3,onbekend,,2013/04/01,453414.03,35,,5706600.91,,,"Het wrak van ongeveer 28 m lang, ligt op een onregelmatige bodem. Het hoogste punt van het wrak ligt lager dan de ravels in onmiddellijke omgeving.
+
+B_130_219
+
+Midden 51\xb0 30'.517 - 002\xb0 19'.724
+Pt_01  51\xb0 30'.528 - 002\xb0 19'.730
+pt_02  51\xb0 30'.508 - 002\xb0 19'.721
+
+Dieptecijfer gewijzigd naar LAT
+
+Dit wrak is in 2010 gesurveyed door HrMs Luymes en is de diepte bepaald op 22,3m, voor de kaart gereduceerd naar 22m LAT dd 10/09/2012.",,1,,254
+Point,2.866644234502588,51.22484226720463,Feature,u,,"002\xb0 51,999 E",99,"7,50","51\xb0 13,491 N",1996 / 24 - 159,5,"68,75",,,30,,,,1,20,,1,,"Zichtbaar bij LW; 06,0 Obstn GLLWS",2,2.5,,"2,50","05,9 Obstn",,,3,7.43,,53,,,,B_113_252_a,7.5,Ter Streep,,Stoomschip,3,HUGHLI,,2014/09/15,490687.78,8.75,,5674837.13,,,"Volgens het echogram van de single-beam verheft deze obstructie zich tot 0,7 m boven de omringende bodem. In 1966 werd in de positie 51\xb013' 25"" N en 02\xb052' 16"" E een wrak opgeruimd ( Zie BAZ 1966/26-224 ). Na het opruimen in 1966 werd het teken van de kaart geschrapt.
+
+Dieptecijfer gewijzigd naar LAT",,5,staal,32
+Point,2.537794787188413,51.84787821076767,Feature,112,"16,50","002\xb0 32,268 E",99,"41,00","51\xb0 50,873 N",,2,"61,50",,,6,,"24,50","0,00",3,8,,4,0,,4,5,,,"30,5 Wk","112,00",,3,37.03,,,,"104,00","8,00",B_150_232,7.5,HrMs Snellius,,,3,Onbekend,,2013/09/04,468162,35,,5744220,,,"In de jaaropdracht voor ons HOV (Hydrografisch Opname Vaartuig), nummer HY12209_210_229 zit een stukje Belgi\xeb. Dit gebied is op 15 juli 2012 opgenomen door HrMs Snellius. Het betreft het gebied tussen de Belgisch - Nederlandse grens en het TSS North Hinder South. Hierin liggen twee wrakken die in onze database zijn opgenomen en ook in de kaart staan, te weten de nummers 1755 en 2551. 
+
+De diepte van wrak 2551 is volgens het wrakkenblad nu 30,97m, hetgeen resulteert in een kaartdiepte van 30,5m. LAT
+
+Midden  51\xb0 50'.873 - 002\xb0 32'.268
+Pt_01   51\xb0 50'.884 - 002\xb0 32'.183
+Pt_02   51\xb0 50'.874 - 002\xb0 32'.527
+
+Dieptecijfer LAT",,1,,293
+Point,2.974498706260265,51.2891635873709,Feature,69,"11,00","002\xb0 58,470 E",99,"5,60","51\xb0 17,350 N",1960 / 11 - 081,5,"66,25",-,,30,,,"1141,00",1,20,Brits,1,1943,"2,4 Wk ; 5,6 Wk__",4,5,bodem,6,#,"69,00",-,1,5.2,,112,"5,60",,"4,00",B_117_258,2.5,,Ackermans & Van Haaren,Tanker,3,onbekend,,,498221.73,8.75,,5681982.08,"Barnes Duluth S.B. & Co., Duluth, Minnesota",1944/11/02,"Opgeruimd wrak, opgeruimd tot omringende bodem. De RIO BRAVO werd op 2 november 1944 getorpedeerd door een Duitse E-boot waarbij 14 bemanningsleden gedood werden. De overlevenden werden gered door HMS KERNOT (Royal Navy - Belgische Sectie ). Op 01/07/96 werd een uitvoerig Side Scan onderzoek uitgevoerd . Hier is alleen sprake van een 17-tal merkwaardige bodems waarvan 5 mogelijks wrakresten bevatten en \xe9\xe9n een klein objekt. Zie verslag van Bruggen en Wegen Oostende van 01 juli 1996.","Ministry of War Transport, U.S.A. (Mgrs. F.T. Everaerd & S",5,staal,111
+Point,3.085637764630723,51.39746960670458,Feature,u,,"003\xb0 05,138 E",99,"11,50","51\xb0 23,848 N",1987 / 24 - 155,4,"77,25",,,30,1987/09/29,,,1,16,frans,3,,Obstn,2,2.5,bodem,5,#,,,1,11.62,1987/09/07,214,"11,50",,,B_123_305_b,2.5,,"T.V.B. ""Norma""",Mijnenveger,2,CAPELLA,,,505957.68,26.25,,5694030,,1987/02/28,Op 28 februari 1987 om 09 h 02 was de Franse mijnenveger in aanvaring gekomen met het Liberiaans vrachtschip GUATEMALA. De aanvaring gebeurde in dichte mist. De achtersteven van de mijnenveger werd afgevaren. Bij dit ongeluk werd \xe9\xe9n persoon gewond en werd voor verzorging per helicopter naar het Brugs ziekenhuis gebracht. Het wrakstuk werd in 1987 opgeruimd tot op de bodem.,,5,,214
+Point,3.113246683214811,51.39000089178283,Feature,u,"17,30","003\xb0 06,795 E",2,"9,40","51\xb0 23,400 N",1963 / 25 - 218,5,"81,25",Baltimore,,30,1963/11/04,,"7219,00",1,20,Brits,3,1943,"zichtbaar bij LW ; 1,9 Wk__ ; +++",2,2.5,,4,#,"128,00",Oil Fuel,1,9.82,,203,"9,40",,,B_123_306_a,2.5,,Ackermans & Van Haaren  & TVB NORMA,Liberty,1,SAMVURN  (E-deel),,,507879.67,26.25,,5693202,"Bethlehem Fairfield, Baltimore",1945/01/18,"Gezonken na een mijnexplosie  nabij NF 11 op 18 januari 1945 . Het schip vaarde in konvooi  van Antwerpen naar Londen. Bij deze ramp stierven 7 bemanningsleden en 9 soldaten, 41 overlevenden werden door HMLS T239 opgepikt. Zie afschrift van de verklaring van 23 januari 1945 van zeeloods J. Van Huyse.","Ministry of War, U.S.A.",5,Staal,203
+Point,2.696634836121781,51.250548215695176,Feature,109,"17,30","002\xb0 41,798 E",2,"11,50","51\xb0 15,033 N",1990 / 24 - 140,5,"66,25",-,,30,1990/11/13,,"2750,00",1,20,Brits,1,1942,"4,7 WK__ ; 7 Wk__",4,5,bodem,3,#,"109,00","Vrachtwagens, jeeps en oorlogsmateriaal",1,9.61,,82,"11,00",,"2,75",B_115_241,2.5,,"Tijd. Ver. Bergingswerken ""Norma""",LST Landing Ship Tanks,3,LST. 420  voorschip,,,478827.86,8.75,,5677731.11,Bethlehem Fairfield Baltimore,1940/11/07,"De LST 420 werd ter hoogte van de Middelkerke Bank door een mijn getroffen. Het schip brak in 2 stukken die uit elkaar dreven . De  boeg zonk in hoger vermelde positie en werd in 1990 opgeruimd tot de bodem. Het achterschip ligt in positie 51\xb015',510 N en 002\xb040',836 E . Deze positie werd met DGPS bepaald, zie dossier B115/240",USA,5,staal,81
+Point,2.71698905236023,51.16520978044756,Feature,u,,"002\xb0 43,019 E",2,"6,30","51\xb0 09,913 N",1989 / 14 - 110,5,"63,75",Scarborough,,30,1989/03/30,,"290,00",1,20,Brits,1,,"zichtbaar ; 2,6  Wk ; 2,6 Wk__",2,2.5,,4,#,,-,1,6.04,,17,"6,00",,,B_109_243,2.5,,"Tijd. Ver. Bergingswerken ""Norma""",Vissersboot,3,POLLY JOHNSON,,,480211.86,8.75,,5668235.17,,1940/05/29,"Het wrak werd opgeruimd en afgedregd tot  op 1 voet over de bodem , er werd niets meer gevonden.",Great-Britain,5,Staal,74
+Point,3.109745955410777,51.374502343953004,Feature,u,,"003\xb0 06,585 E",99,"9,00","51\xb0 22,470 N",1989 / 03 - 060,5,"63,75",,,30,1986/06/19,,"22,00",1,20,,1,,"7,7 Wk ; 8,3 Wk__  ; #",2,2.5,bodem,5,#,,,1,9.67,,180,"8,30",,,B_122_306,2.5,,Tijd. Ver. Bergingswerken Norma,,3,Z.438 KOMPAS,,,507638.67,8.75,,5691478.02,,1975/08/08,Het houten vissersvaartuig Z 438 zonk in augustus 1975 ongeveer 1/2 mijl west van de A2 lichtboei. In 1988 werd het wrak opgeruimd tot op de bodem door de Tijdelijke Vereniging Bergingswerken.,,5,hout,180
+Point,3.331700795664633,51.37619728105479,Feature,u,,"003\xb0 19,902 E",99,"5,50","51\xb0 22,572 N",1992 / 23 - 184,5,"68,75",,,30,1992/09/29,,,1,20,,1,,"04,9 Wk__ GLLWS",2,2.5,,5,"04,8 Wk__",,,3,3.91,,183,"4,90",,,B_122_319,7.5,,-,,3,Slijkbak HC14,,,523086.56,8.75,,5691713.01,,,"In 1955 zonk een met stortstenen gevulde lichter tussen Knokke en het Zoute, ongeveer een halve mijl uit de wal. De juiste positie was niet bekend. Zie BAZ 1955/11-57
+
+Dieptecijfer gewijzigd naar LAT",,5,,183
+Point,2.540031551307768,51.527950343212886,Feature,u,"5,00","002\xb0 32,402 E",1,"23,20","51\xb0 31,677 N",1994 / 19 - 126,2,"56,75",-,,30,1994/07/12,,"100,00",1,8,Duitsland,1,,"31,0 Wk__ GLLWS",2,2.5,-,3,"30,5 Wk__","35,00",-,3,32.75,,257,"31,30",,,B_131_232,7.5,,-,Snelboot,4,Schnellboot,,,468091.94,8.75,,5708637.9,-,,"Uit duikersonderzoek blijkt het wrak een duitse snelboot te zijn. De wrakstukken liggen verspreid.(Duitse snelboot type S 100)
+
+Dieptecijfer gewijzigd naar LAT",-,5,Aluminium,256
+Point,2.86791109291079,51.34249509717493,Feature,"52,08",,"002\xb0 52,075 E",0,"11,00","51\xb0 20,550 N",1996 / 17 - 129,5,47.25,,,6,1992/09/30,9,,1,20,,1,,"08,8 Wk__ GLLWS",4,5,,1,"08,7 Wk__",,,3,8.16,,135,"8,80",61,,B_120_252,7.5,,-,Duikboot,5,U 11,,2018/04/20,490799.78,8.75,,5687921.04,,,"Duitse duikboot uit eerste wereldoorlog.
+
+B_120_252
+
+Midden 51\xb0 20'.550 - 002\xb0 52'.075
+Pt_01  51\xb0 20'.561 - 002\xb0 52'.090
+Pt_02  51\xb0 20'.540 - 002\xb0 52'.061
+
+Dieptecijfer gewijzigd naar LAT",,1,,134
+Point,2.630327708684832,51.128324625646826,Feature,u,,"002\xb0 37,820 E",99,"0,00","51\xb0 07,699 N",1963 / 19 - 155,5,"63,75",,,30,,,,1,20,,1,,Zichtbaar bij LW ;,2,2.5,,6,Zichtbaar Wrak,,,1,1.09,,2,,,,B_107_237,2.5,,,,3,onbekend,,,474131.9,8.75,,5664160.2,,,"In 1947 werd een andere positie opgegeven nl  51\xb0 07' 44'' N - 02\xb0 37' 38'' E  zie BAZ nr.262. In 1963 werd een teken van zichtbaar wrak in de positie 
+51\xb0 07' 45.5'' N  -  02\xb0 37' 54'' E aangebracht ( zie BAZ 1963/19-155 ). In het zelfde jaar werd het zichtbare wrak in hoger vermelde positie geschrapt.  Een nieuw wrak met 0,2 Wk als teken werd aangebracht in positie 51\xb0 08' 03'' N en 02\xb0 37' 33'' E.",,5,,59
+Point,2.722510265664312,51.768292698697884,Feature,45,"15,00","002\xb0 43,351 E",99,"34,00","51\xb0 46,098 N",,2,53.00,,,0,,"15,00",,3,8,,4,,,2,2.5,,,,"45,00",,3,31.32,,,,"229,00","3,00",B_146_243,7.5,Ter Streep,,,4,onbekend,,2016/06/07,480852,35,2016/06/07,5735304,,,,,0,,299
+Point,2.94534424694761,51.25332942513754,Feature,"67,14",,"002\xb0 56,721 E",2,"5,00","51\xb0 15,200 N",1996 / 15 - 121,5,"41,25",-,,0,,"7,14","3600,00",1,20,Brits,1,,"zichtbaar bij HW ; 3,8 Wk__ GLLWS",4,5,,1,"03,7 Wk__",,-,3,5.08,,85,,"13,67",,B_115_256_a,7.5,Geosurveyor IV,-,Kruiser,5,HMS  BRILLIANT,,2015/12/02,496185.75,8.75,2015/12/02,5677998.11,-,1914/01/01,"In deze positie liggen 2 wrakken dicht bij  elkaar. De wrakken liggen bijna volledig onder het zand. Alleen de boegen steken nog ongeveer  2 m boven de bodem uit.
+
+B_115_256_a
+
+Midden 51\xb0 15'.200 - 002\xb0 56'.721
+Pt_01  51\xb0 15'.219 - 002\xb0 56'.725
+Pt_02  51\xb0 15'.187 - 002\xb0 56'.720
+
+Dieptecijfer gewijzigd naar LAT",Great-Britain,0,Staal,84
+Point,2.635844299622598,51.62082832707172,Feature,25,,"002\xb0 38,151 E",2,"36,00","51\xb0 37,250 N",1997 / 22 - 160,2,"69,50",,,24,,"5,00","135,00",1,8,,3,1915,,3,3.75,,2,33 Wk,,,3,36.42,,267,,"176,00",,B_137_238_a,7.5,Ter Streep,,Stoomschip,3,SS Timor,,1997/10/06,474789.89,26.25,,5718929.83,,1917/06/16,"Waarschijnlijk is dit schip de TIMOR.
+
+B_137_238_a
+
+Midden 51\xb0 37'.250 - 002\xb0 38'.151
+Pt_01  51\xb0 37'.257 - 002\xb0 38'.154
+Pt_02  51\xb0 37'.243 - 002\xb0 38'.156
+
+Dieptecijfer ongewijzigd in LAT",,4,Staal,266
+Point,2.850059975136344,51.36612228292846,Feature,u,,"002\xb0 51,004 E",99,0,"51\xb0 21,967 N",,4,"64,75",,,30,,,,1,16,,1,,,2,2.5,,6,-,,,3,19.92,,162,,,,B_121_251,7.5,,,,3,onbekend,,,489561.79,8.75,,5690551.02,,,"Tijdens de Side Scan opname van 22/03/1993, nabij het wrak van de OSKOBEL ( B 122/251 ), werd een klein en lang object gevonden. Het heeft een lengte van  tien meter en een hoogte van nauwelijks 1 meter.",,5,,162
+Point,3.299083201058501,51.40263330076582,Feature,u,,003\xb0 17.945 E,99,0,51\xb0 24.158 N,,4,77.25,,,30,,,,2,16,,3,,,2,2.5,,,,,,1,11.54,,218,,,,B_124_318,2.5,,,,2,,,,520804.37,26.25,,5694643.22,,,,,5,,218
+Point,2.821635379088734,51.32844233224699,Feature,"41,67",,"002\xb0 49,298 E",1,"14,00","51\xb0 19,707 N",1996 / 17 - 129,4,"43,25",Cuxhavn,,6,1988/03/18,"8,33","217,00",1,16,Duits,1,1905,"8,3 Wk__; 10,8 Wk__ GLLWS",4,5,,1,"10,7 Wk__",,-,3,13.97,,129,"10,80","174,29",,B_119_249,7.5,,-,Vissersboot,5,Vorpostenboot Senator Holthusen,,2006/09/22,487572.8,8.75,,5686365.05,"J.H.N. Wichhorst, Hamburg, Duitsland",1917/09/05,"Gebouwd in 1905 als EGON VIDAL - Partner Reederei KR. Egon Vidal - Hamburg.
+In 1908 werd het schip verkocht aan Cuxhavn Reederei onder de naam SENATOR HOLDHUSEN. In 1914 werd het door de Duitse marine gebruikt als voorpost.
+Op 5 september 1917 liep het schip op een mijn en zonk ongeveer 2 1/2 mijl ten zuidwesten van de Oostendebank Noord.
+
+B_119_249
+
+Midden 51\xb0 19'.707 - 002\xb0 49'.298
+Pt_01  51\xb0 19'.718 - 002\xb0 49'.297
+Pt_02  51\xb0 19'.697 - 002\xb0 49'.301
+
+Dieptecijfer gewijzigd naar LAT","Cuxhavn Rederei, Cuxhavn, Duitsland",1,Staal,128
+Point,2.643857449379825,51.2086221377774,Feature,13,,"002\xb0 38,631 E",2,"10,50","51\xb0 12,517 N",2008 / 03 - 050,4,"60,00",,,24,,"2,00",,1,16,Frans,1,1905,08 Wk GLLWS,3,3.75,,1,"07,9 Wk",,,3,10.15,,38,,"212,00",,B_112_238_a,7.5,Ter Streep,,Torpedoboot,4,Torpilleur 319,,1997/07/17,475121.89,8.75,,5673085.14,Augustin Normand (Le) Havre,1915/01/15,"Door de duiker GA herkend als een Franse torpedoboot uit de Eerste Wereldoorlog. Gestempelde koolbricqetten met het jaartal zijn gevonden alsook zilveren lepels en Delfts  toilet. Deze vondsten zijn te bezichtigen in het Maritiem museum in Oostduinkerke. Het schip zou op een mijn gelopen zijn op 15 januari 1915.
+
+B_112_238_a
+
+Midden 51\xb0 12'.517 - 002\xb0 38'.631
+Pt_01  51\xb0 12'.520 - 002\xb0 38'.635
+Pt_02  51\xb0 12'.514 - 002\xb0 38'.629
+
+Dieptecijfer gewijzigd naar LAT",,4,Staal,17
+Point,2.606414615159909,51.290123498690846,Feature,"40,82","8,00","002\xb0 36,385 E",1,"16,50","51\xb0 17,407 N",1997 / 20 - 147,4,"61,25",,,24,,"10,52","1000,00",1,16,Duits,1,1915,"15,4 Wk",4,5,,1,"15,3 Wk","82,90",,3,17.37,,113,,"136,77",,B_117_236_a,7.5,Ter Streep,,Destroyer,3,Torpedoboot G 96,,1997/07/17,472554.91,8.75,,5682162.08,Krupp Germania,1917/06/26,"Door de duiker GA gemeld wrak van een Duitse destroyer uit de Eerste Wereldoorlog. Het wrak ligt dwars en is erg verzand. Het kanon, het anker en de lieren zijn zichtbaar. Het wrak werd ge\xefdentificeerd als G 96 door de bel.
+
+B_117_236_a
+
+Midden 51\xb0 17'.407 - 002\xb0 36'.385
+Pt_01  51\xb0 17'.416 - 002\xb0 36'.374
+Pt_02  51\xb0 17'.400 - 002\xb0 36'.400
+
+Dieptecijfer gewijzigd naar LAT",,4,Staal,112
+Point,2.470494075110548,51.36350211870903,Feature,u,,"002\xb0 28,230 E",99,"29,50","51\xb0 21,810 N",,2,59.00,,,6,,,,1,8,,4,,"27,5 Wk__",2,2.5,,6,"27,0 Wk__",,,3,30.47,,155,"27,70",,,B_121_228,7.5,,,,4,onbekend,,,463135.97,35,,5690382.02,,,Dieptecijfer gewijzigd naar LAT,,1,,155
+Point,2.945847150006633,51.31312642967098,Feature,"38,35",,"002\xb0 56,751 E",1,"6,50","51\xb0 18,788 N",1996 / 17 - 129,5,"47,25",Oostende,,6,1994/08/16,"5,36",,1,20,Belgisch,1,,"gevaarlijk wrak voor bovenscheepvaart ; 05,0 Wk__ GLLWS",4,5,-,1,"04,9 Wk__",,-,3,6.47,,123,"5,00","107,45",,B_118_256,7.5,,-,Vissersboot,5,Vorpostenboot Senator Sthamer,,1996/04/30,496225.75,8.75,,5684648.06,-,,"In 1969 werd de positie  bepaald met DECCA, in 1994  met DGPS.  In 1927 werd er een positie opgegeven: 51 19 05 N - 02 56 20 E die ongeveer 100 m benoorden het wrak ligt. De naam "" O.73 RENILDE "" kan hier niet met zekerheid toegekend worden, dit schip is gezonken op 26 mei 1935.
+
+B_118_256 
+
+Midden 51\xb0 18'.788 - 002\xb0 56'.751
+Pt_01  51\xb0 18'.785 - 002\xb0 56'.770
+Pt_02  51\xb0 18'.791 - 002\xb0 56'.737
+
+Dieptecijfer gewijzigd naar LAT","Polidoor Hagers, Cadzandstraat 5, Oostende",1,staal,122
+Point,2.628445724130636,51.21677502774242,Feature,"28,19",,"002\xb0 37,707 E",2,"9,80","51\xb0 13,007 N",1996 / 07 - 082,5,"64,00",-,,24,,"3,81",,1,20,-,1,,"07,Wk GLLWS",3,3.75,-,1,"06,9 Wk",,-,3,9.54,,44,,"321,84",,B_113_237_a,7.5,,-,Destroyer,3,Branlebas,,1996/03/12,474049.9,8.75,1996/03/12,5673997.13,-,,"Op 27/12/1995 is de O.WILMAR vastgekomen in de positie 51 13.07 N - 02 37.82 E. 
+De zandzuiger  SPAUWER werd na het ongeval van 13 op 14 nov. 1995 ( 00h30 ) versleept van 51 18.43 N - 02 40.71 E naar 51 10.48 N - 02 35.97 E. Hierbij was het mogelijk dat brokstukken in de positie van de vastgekomen WILMAR lagen. Op 12/03/1996 werd in de positie 51 13.06 N - 02 37.79 E een obstructie met een lengte van 28 m gevonden. Waarschijnlijk gaat het hier om een onbekend wrak ipv wrakresten afkomstig van de Spauwer. Een duiker bevestigd de aanwezigheid van het wrak. Een 2- tal stalen boilers en koperen buizen zijn waargenomen. Volgens de kenmerken van het wrak vermoedt de duiker dat het om de ""BRANLEBAS"" gaat. Dit was een Franse destroyer van de eerste wereldoorlog.
+
+B_113_237_a
+
+Midden  51\xb0 13'.007 - 002\xb0 37'.707
+Pt_01   51\xb0 13'.013 - 002\xb0 37'.700
+Pt_02   51\xb0 13'.001 - 002\xb0 37'.714
+
+Dieptecijfer gewijzigd naar LAT",-,4,Staal,23
+Point,3.102572414849206,51.423981842240615,Feature,"33,33",,"003\xb0 06,154 E",0,"8,20","51\xb0 25,439 N",1997 / 05 - 069,5,"47,25",-,,6,1994/02/28,"4,17",,1,20,-,1,,-,4,5,-,1,"06,3 Wk__",,-,3,7.99,,237,"6,30","342,47",,B_125_306_a,7.5,,-,Duikboot,5,UC 4,,2007/03/28,507131.67,8.75,,5696979.98,-,,"Duitse duikboot uit eerste wereldoorlog.
+
+Op 15 april 1985 was de SANDERUS op ongeveer 0,6 mijl ten westen van de wrakboei nummer 11 op een obstructie gevaren . Hierbij was de kimplaat over 4 m gescheurd. Een bijkomend onderzoek werd ingesteld. Daaruit kon afgeleid worden dat de positie en het teken op de kaart  wel juist waren. In 1993  kon men in deze omgeving een tweede wrak met de nieuwe Side Scan Sonar 595 in beeld brengen.Dit tweede wrak verklaart de positie ten opzichte van de boei beschreven in het rapport van 28-05-85. Met andere woorden de SANDERUS zou een wrak geraakt hebben die in 1985 NIET op de kaart stond. Het tweede wrak is B 125/306 a afgedregd op 6,3 m   tov H-lokaal.
+
+Dieptecijfer ongewijzigd in LAT",-,1,-,237
+Point,3.104343776394135,51.420567871472876,Feature,"48,33",,"003\xb0 06,261 E",0,"7,50","51\xb0 25,234 N",1997 / 05 - 069,5,"47,25",-,,6,1985/06/18,"4,17",,1,20,-,1,,"4,7 Wk__ ;",4,5,-,1,"06,0 Wk__",,-,3,8.79,,238,"6,00","299,74",,B_125_306_b,7.5,,-,Duikboot,5,UB 59,,2007/03/28,507255.37,8.75,,5696600.48,-,,"Duitse duikboot uit eerste wereldoorlog.
+
+Op 15 april 1985 was de SANDERUS op ongeveer 0,6 mijl ten westen van de wrakboei nummer 11 op een obstructie gevaren . Hierbij was de kimplaat over 4 m gescheurd. Een bijkomend onderzoek werd ingesteld. Daaruit kon afgeleid worden dat de positie en het teken op de kaart  wel juist waren. In 1993  kon men in deze omgeving een tweede wrak met de nieuwe Side Scan Sonar 595 in beeld brengen. Dit tweede wrak verklaart de positie ten opzichte van de boei beschreven in het rapport van 28-05-85. Met andere woorden de SANDERUS zou een wrak geraakt hebben die in 1985 NIET op de kaart stond. Het tweede wrak is B 125/306 a afgedregd op 6,3 m tov H-lokaal.
+
+
+Dieptecijfer ongewijzigd in LAT",-,1,Staal,238
+Point,2.318466599477708,51.54221664361825,Feature,u,,002\xb0 19.108 E,99,0,51\xb0 32.533 N,,2,"78,00",,,30,,,,2,8,,4,,,2,2.5,,6,,,,1,32.71,,259,,,,B_132_219,2.5,,,,2,onbekend,,,452736.87,35,,5710344.36,,,,,5,,258
+Point,2.860886002696433,51.552372468438236,Feature,u,,"002\xb0 51,653 E",0,"30,40","51\xb0 33,142 N",1996 / 24 - 160,3,"54,75",,,24,,,,1,12,,1,,-,2,2.5,,1,"27,0 Wk",,,3,29.8,,260,,,,B_133_251,7.5,Ter Streep,,Duikboot,4,UB13,,2001/01/19,490354.79,8.75,,5711262.88,,,"Duitse duikboot uit eerste wereldoorlog.
+
+Volgens gegevens van de Belgische Zeemacht is dit het wrak van een duikboot van de eerste wereldoorlog . Als het hier om de UC 14 gaat is evenwel niet bevestigd.
+
+B_133_251
+
+Midden 51\xb0 33'.142 - 002\xb0 51'.653
+Pt_01  51\xb0 33'.146 - 002\xb0 51'.649
+Pt_02  51\xb0 33'.140 - 002\xb0 51'.662
+
+Dieptecijfer ongewijzigd in LAT",,4,,259
+Point,2.624973906296681,51.132974604248794,Feature,"18,3","3,30","002\xb0 37,498 E",2,"1,70","51\xb0 07,978 N",1994 / 26 - 155,5,70.00,-,,30,1994/12/02,,"11,00",1,20,Brits,1,1911,"zichtbaar LW , 0,2 Wk , zichtbaar LW , 00,1 Wk__ GLLWS",3,3.75,,1,Zichtbaar Wrak,"16,50",-,3,3.04,,3,"0,10",,"0,90",B_108_237,7.5,,,CMB Coastal Motor Boat,3,CMB. 71A,,,473759.9,8.75,,5664679.2,,1918/10/14,Dieptecijfer gewijzigd naar LAT,"Royal Navy,  Great-Britain",5,Staal,60
+Point,2.41823685756705,51.689413374644346,Feature,"73,3",,002\xb0 25.085 E,2,"36,00",51\xb0 41.356 N,,2,"61,50",,,6,,"10,20",,2,8,,4,,,4,5,,2,,,,3,33.31,,274,,"47,00",,B_141_225,7.5,,,,3,SS Ptarmigan ??,,2015/08/23,459786,35,,5726655,,,NIEUW,,1,,273
+Point,2.908661272427755,51.42667070332241,Feature,u,"14,64","002\xb0 54,520 E",2,"18,30","51\xb0 25,600 N",1992 / 18 - 172,4,"91,00",Glasgow,,30,1992/08/19,,"3510,00",1,16,Brits,4,1906,"10 Wk ; 11,1 Wk__ ;  12,5 Wk__; 17,0 Wk__ GLLWS",2,2.5,150 dm,2,"16,9 Wk__","106,75",-,3,16.86,1959/09/01,241,"17,00",,,B_125_254,7.5,,S.A .Ackermans & Van Haaren en nadien door T.V.B. Norma,Stoomschip,1,SS Dawdon,,,493649.76,35,,5697277.98,"R. Rodger & Co., Port Glasgow",1914/10/05,"De ARDMOUNT, gebouwd in 1906 vaarde op een Britse mijn en zonk ongeveer 3 mijlen oostwaarts van het lichtschip Wandelaar. Het wrak werd in 1959 opgeruimd tot op 150 dm beneden H - vlak. Nadien werden in 1988 opruimingen uitgevoerd door de NORMA en ZEEBRUGGE 1 ( Tijdelijke Vereniging voor Bergingswerken).De streefdiepte was hier 170 dm tov H - vlak. Bij de controlemeting van 16 december 1988 waren er nog hoge stukken aanwezig. De oplevering werd uitgesteld. De opruimingswerkzaamheden werden hervat en  de hoge stukken verwijderd. Op 19 augustus 1992 dregde men met Ter Streep opnieuw het wrak af tot op 170 dm. Brokstukken zijn nog aanwezig maar zeker lager dan 170 dm tov H- lokaal. De overeen gekomen streefdiepte van 170 dm  werd  gehaald. Het wrak werd definitief opgeleverd ( zie BAZ 1992/18-172 ).
+
+Dieptecijfer gewijzigd naar LAT","Ashmount S.S.Co. (Mgrs. A. Hope & Co.), Glasgow Britain",5,staal,240
+Point,3.215057826931712,51.362505007134445,Feature,20,,"003\xb0 12,903 E",2,"5,50","51\xb0 21,750 N",1980 / 23 - 126,5,"26,25",-,,0,,,,1,20,-,0,1916,"4,0 Wk , 6,7 Wk , 4,8 Wk__ ,",3,3.75,"6,70 m",1,#,,-,1,6.13,1956/03/26,154,"4,80",,,B_121_312_b,2.5,,Van Gastel,Destroyer,6,HMS NORTH STAR,,,514972.62,0,,5690160.02,-,1918/04/23,"Volgens de BAZ 1925/135a is de lengte van het wrak 74 m. In 1928 werd het wrak vernield tot op 6,70 m ten opzichte van het plaatselijke GLLWS . In 1956 werd het wrak opgeruimd door Van Gastel tot op de omringende bodem.",-,0,staal,154
+Point,3.194221304220183,51.3670014050309,Feature,10,"6,40","003\xb0 11,653 E",1,"10,50","51\xb0 22,020 N",1989 / 14 - 110,4,"22,25",Zeebrugge,,0,1989/05/12,,"330,00",1,16,Duits,0,,"6,1 Wk ; 7,7 Wk ; 7,2 Wk ; 7,9 Wk ;",3,3.75,bodem,1,#,"61,10",,1,13.36,,163,"10,50",,"2,30",B_122_311_b,2.5,,"TVB ""Norma""",Torpedoboot,6,Torpedoboot A.58,,,513520.63,0,,5690656.02,"Vulcan Stettin, Duitsland",1918/08/16,"Deze Duitse torpedoboot of kustjager A58 was op een mijn gelopen op 18 augustus 1918. In 1928 werd het wrak vernield tot op 7,7 m tov H-vlak. In 1988 werd het wrak volledig opgeruimd tot op de bodem door de Tijdelijke Vereniging Bergingswerken. Het schip werd herkend aan de opschriften van het schroef.",Duitse Kriegsmarine Torpedo division II.4,0,Staal,163
+Point,2.88690524539028,51.255023032873446,Feature,u,,"002\xb0 53,214 E",1,"7,50","51\xb0 15,301 N",1990 / 15 - 106,5,"63,75",Oostende,,30,,,"109,00",1,20,Duits,1,,"5,5 Wk__",2,2.5,bodem,1,#,,Vier mijnen,1,7.58,,88,"5,50",,,B_115_253_c,2.5,,TV Bergingswerken NORMA,Torpedoboot,3,Torpedoboot A.10,,,492107.77,8.75,,5678191.11,"AG. Vulcan, Hamburg, Duitsland",,Opgeruimd wrak ge\xefdentificeerd als A.10 Duitse torpedoboot WO 1.,"Duitse Kriegmarine, Oostende",5,Staal,87
+Point,2.564905629684394,51.14957306421711,Feature,u,,"002\xb0 33,894 E",2,"13,30","51\xb0 08,974 N",1993 / 09 - 093,4,59.75,Boulogne,,30,1990/06/19,,,1,16,Frans,1,1902,"8,9 Wk , 9,1 Wk__ , 9,4 Wk__",2,2.5,bodem,1,#,"37,40",-,1,12.6,,10,,,,B_109_233,2.5,,"Tijdelijke Vereniging van Bergingswerken ""Norma""",Treiler,4,MARIE,,,469567.93,8.75,,5666548.18,-,1915/02/20,"De Marie was een Franse gewapende stoomtreiler, en op 20 februari 1915 op mijnveegopdracht toen hij in aanvaring kwam met een losdrijvende Britse mijn.
+
+Het wrak werd opgeruimd door de Tijdelijke Vereniging Bergingswerken met de Norma in 1988 en definitief opgeleverd in 1993.",Franse marine,5,Staal,67
+Point,2.333204367003817,51.44657924029531,Feature,25,,"002\xb0 19,992 E",0,"17,00","51\xb0 26,795 N",1997 / 05 - 069,4,36.00,,,0,,3,,1,16,Duits,1,,"13,1 Wk GLLWS",3,3.75,,1,"13,0 Wk",,12 mijnen,3,14.04,,245,,136,,B_126_220,7.5,,-,Duikboot,6,UBIII,,2018/08/29,453662.03,8.75,,5699698.96,,,"Duitse duikboot uit eerste wereldoorlog.
+
+Dit wrak ligt op een onregelmatige bodem . Van het diepste punt in de erosieput tot het hoogste punt van het wrak, meten we 3,80 m in positie 5 699 694 Y en 453 667 X.
+
+B_126_220
+
+Midden 51\xb0 26'.795 - 002\xb0 19'.992
+Pt_01  51\xb0 26'.800 - 002\xb0 19'.996
+Pt_02  51\xb0 26'.792 - 002\xb0 19'.994
+
+Dieptecijfer gewijzigd naar LAT",,0,Staal,244
+Point,2.829847383720733,51.27740709438252,Feature,"40,83",,"002\xb0 49,791 E",1,"9,00","51\xb0 16,644 N",1996 / 17 - 129,4,"43,25",Oostende,,6,,"7,50","499,00",1,16,Nederlands,1,1940,"5,7 Wk; 05,2 Wk__ GLLWS",4,5,,3,"05,1 Wk__",,-,3,11.04,,100,"5,20","20,70",,B_116_249_a,7.5,,,Koopvaardijschip,5,WESTERBROEK/Sperrbrecher 142,,2006/09/22,488131.8,8.75,,5680688.09,"E.J. Smit & Zn., Westerbroek, Nederland (bouwnummer 661)",1942/09/15,"Het schip werd in 1940 gebouwd, overgenomen door de invallende Duitsers in 1941 en onder gebracht in het vierde Sperrbrecher Flotille onder nummer 142. Op 15 september 1942 liep het schip op een mijn en zonk.
+
+B_116_249
+
+Midden 51\xb0 16'.644 - 002\xb0 49'.791
+Pt_01  51\xb0 16'.655 - 002\xb0 49'.799
+Pt_02  51\xb0 16'.634 - 002\xb0 49'.787
+
+Dieptecijfer gewijzigd naar LAT","4M Sperrbrecherflotille Duitsland, basis Oostende",1,staal,99
+Point,2.687729023735542,51.28344466596296,Feature,69,"8,50","002\xb0 41,264 E",2,"19,20","51\xb0 17,007 N",1996 / 17 - 129,3,"39,25",-,,6,1988/08/18,"10,00","537,00",1,12,Brits,1,1899,"15,7 Wk __ GLLWS",4,5,,3,"15,6 Wk __","78,00",-,3,20.08,,105,"15,70","85,00",,B_117_241_a,7.5,,-,Stoomschip (raderboot),6,WAVERLEY,,2014/09/18,478221.87,8.75,,5681392.08,"A. & J. Inglis,  Great-Britain",1940/05/29,"De Waverley werd bij het begin van de tweede wereldoorlog uitgerust als mijnenveger. Op 28 mei 1940, tijdens de evacuatie van de Britse troepen, werd het schip aangevallen.
+
+B_117_241
+
+Midden 51\xb0 17'.007 - 002\xb0 41'.264
+Pt_01  51\xb0 17'.010 - 002\xb0 41'.270
+Pt_02  51\xb0 17'.006 - 002\xb0 41'.256
+
+Dieptecijfer gewijzigd naar LAT","Londen, Midland & Scottish Railway Co. Ltd.,  Great-Britain",1,Staal,104
+Point,2.722671042413351,51.37882934302257,Feature,45,"9,00","002\xb0 43,360 E",2,"24,00","51\xb0 22,730 N",2014 / 13 - 203,3,"39,25",,,6,1983/12/13,"9,17",,1,12,brit,1,1917,"17,2 Wk ; 17,5 Wk__ GLLWS",4,5,,3,"17,4 Wk__","103,00",,3,20.69,,188,"17,50","224,22","2,90",B_122_243_b1,7.5,,-,Destroyer,6,WAKEFUL (1\xb0deel),,2015/08/21,480698.85,8.75,,5691990.01,Clyde bank,1940/05/29,"De WAKEFUL, met 600 militairen aan boord op weg van Bray Dunes naar Engeland, werd in de nacht van 28 op 29 mei 1940 getorpedeerd. De Duitse S30 (E-boot), onder leiding van  Lt Zimmerman torpedeerde de Wakeful in het midden van het schip. Met volle vaart  brak de destroyer  in twee stukken. In nauwelijks 15 seconden verdween het schip met 600 man onder de golven. Mislukte reddingsacties met de NAUTILUS, GRAFTON, LYDD en COMFORT maakten de tragedie nog erger. 
+Het wrak van de Wakeful en Grafton werden door de Britse autoriteit erkend als ""WAR GRAVE"". Het wrak ligt in 2 stukken (zie B122/243 b2).
+
+Aanbrengen de tekst “Historic Wk” in magenta kleur  
+
+De twee delen van het scheepswrak HMS Wakeful respectievelijk in positie 
+51\xb022,730’N 002\xb043,360’E en 51\xb022,711’N 002\xb043,350’E.
+(122/243b1 en 122/243b2 Vlaamse Hydrografie) zijn door de gouverneur van West-Vlaanderen als cultureel erfgoed onder water erkend. (06/06/2014)
+
+B_122_243_b1
+
+Midden 51\xb0 22'.730 - 002\xb0 43'.360
+Pt_01  51\xb0 22'.739 - 002\xb0 43'.372
+Pt_02  51\xb0 22'.722 - 002\xb0 43'.346
+
+Dieptecijfer gewijzigd naar LAT",Roal Navy Great - Britain,1,staal,188
+Point,2.721993848945718,51.30794431033107,Feature,77,"10,30","002\xb0 43,320 E",2,"22,00","51\xb0 18,477 N",1990 / 16 - 109,4,"43,25",-,,6,1990/07/31,"10,50","1935,00",1,16,Brits,1,1935,"16,0 Wk__ GLLWS",4,5,,4,"15,9 Wk__","83,00",-,3,18.93,,122,"16,30","74,00","2,70",B_118_243,7.5,,-,Stoomschip,5,QUEEN OF THE CHANNEL,,2014/09/18,480621.85,8.75,,5684107.06,"W. Denny & Bros.,  Great-Britain",1940/05/28,"De Queen of the Channel, een pakketboot van 1935 en ingeschakeld tijdens de evacuatie van Britse troepen te Duinkerke, zonk op 28 mei 1940.
+
+B_118_243
+
+Midden 51\xb0 18'.477 - 002\xb0 43'.320
+Pt_01  51\xb0 18'.484 - 002\xb0 43'.354
+Pt_02  51\xb0 18'.471 - 002\xb0 43'.303
+
+Dieptecijfer gewijzigd naar LAT",General Steam Navigation Company,1,Staal,121
+Point,2.598183478170456,51.39109321642484,Feature,"31,67",,"002\xb0 35,891 E",1,"26,90","51\xb0 23,466 N",1987 / 24 - 155,3,"56,75",-,,6,1987/07/01,"10,00",,1,12,,3,,"22,5 Wk__ GLLWS",4,5,-,3,"22,0 Wk__",,-,3,25.03,,205,"22,80","116,57",,B_123_235,7.5,,-,,4,KW 58 Hendericus,,2015/05/10,472042.44,26.25,,5693394,-,,"B_123_235
+
+Midden  51\xb0 23'.466 - 002\xb0 35'.891
+Pt_01   51\xb0 23'.467 - 002\xb0 35'.908
+Pt_02   51\xb0 23'.467 - 002\xb0 35'.880
+
+Dieptecijfer gewijzigd naar LAT",,1,Staal,205
+Point,2.786703775078995,51.38011327687404,Feature,"79,17","17,00","002\xb0 47,202 E",2,"17,00","51\xb0 22,807 N",1997 / 05 - 069,4,"61,25",,,24,1993/04/22,"12,50","7176,00",1,16,Amerikaans,1,1943,"zichtbaar LW , +++ , 15,5 Wk; 15,0 Wk__ GLLWS",4,5,-,4,"14,9 Wk__","128,00",ballast,3,16.37,,190,"15,30","126,87","10,60",B_122_247,7.5,,-,Liberty,3,ROBERT L.VANN,,1996/05/21,485155.72,8.75,,5692117.89,"New England S.B. Corp., Portland, M.E.",1945/03/01,"Vergaan door mijnontploffing. Opgeruimd wrak in 1952 door de Britse admiraliteit  HMS  STEEPHOLM en afgedregd in 1953 door HMS Shackleton. In het onderzoek van 21/05/1996 werd vastgesteld dat er nog verscheidene brokstukken aanwezig zijn. De grootste bevindt zich, volgens de singlebeam opnamen, in positie 485 157 m X en 5 692 122 Y.
+Dit stuk steekt nog 2,65 m boven de omringende bodem uit. 
+Volgens de multibeam opnamen ligt er een hoger stuk in positie 485 139 X en 5 692 112 Y .( is geconverteerd naar WGS84)
+
+B_122_247
+
+Midden  51\xb0 22'.807 - 002\xb0 47'.202
+Pt_01   51\xb0 22'.820 - 002\xb0 47'.177
+Pt_02   51\xb0 22'.792 - 002\xb0 47'.230
+
+Dieptecijfer gewijzigd naar LAT","U.S. War.Shipping  Administration, Portland, USA",4,staal,190
+Point,2.658781469606482,51.151422263927714,Feature,82,"9,00","002\xb0 39,527 E",2,"4,80","51\xb0 09,085 N",1996 / 17 - 129,5,41.25,-,,0,1988/04/28,12,"1100,00",1,20,Brits,1,1918,"zichtbaar LW , 01,6 Wk__ GLLWS",4,5,-,3,"1,4 Wk__","95,00",-,3,2.84,,11,"1,60",309,"3,00",B_109_239a,7.5,Ter Streep,-,Destroyer,5,HMS  WHITLEY,,2018/07/24,476134.88,8.75,,5666719.18,"Doxford,  Great-Britain",1940/05/19,De HMS WHITLEY werd op 19 mei 1940 aangevallen door de Duitse luchtmacht tussen Nieuwpoort en Oostende. Dit oorlogsschip was \xe9\xe9n van de vele V&W -class Destroyers. Het werd gebouwd in 1918 met zeer krachtige stoomturbines (27000 pk). Daarmee kon men een snelheid van 34 knopen of 63 km per uur halen. Duikersonderzoek uitgevoerd door TV Bergingswerken. Het wrak wordt door de Britse autoriteit erkend als WAR GRAVE.,Royal Navy -  Great-Britain,0,Staal,68
+Point,2.614917019190747,51.334877920772165,Feature,"93,33","14,50","002\xb0 36,895 E",2,"22,00","51\xb0 20,093 N",1996 / 17 - 129,4,"43,25",,,6,1986/07/04,"20,83","3256,00",1,16,Let,1,1913,"13 Wk__ ; 12,6 Wk__ GLLWS",4,5,126 dm,4,"12,5 Wk__","100,00",Lood en tin,3,15.48,1963/04/06,133,"12,60","63,08","6,80",B_120_237,7.5,,Smit Tak's Internationaal   Bergingsbedrijf,Stoomschip,5,SIGURD FAULBAUMS,,2015/03/12,473173.9,8.75,,5687136.04,"J. Blumer & Co., Sunderland",1940/05/22,"Het wrak werd opgeruimd tot 126 dm. Belangrijke hoge stukken liggen nog op de bodem. Zie  echolood  van 17/10/1995, vanuit de wrakput tot het hoogste  punt meten we nog steeds 9,50 m in de positie X  473.328 en Y 5.687.359 Gebouwd in 1913 als DINGLE BANK  , Dingle shipping C\xb0 - Liverpool Britain. In 1914 tot 1932 als ANGLET , Plisson & C\xb0 - Bayonne France. Van 1932 tot 1937 als NORDEFLINGE , Constants Ltd -Londen Britain.  In 1937 tot 1940 als SIGURD FAULBAUMS , James Siering & C\xb0 RIGA . Op 10 mei opge\xebist door de Belgische Staat en gemeerd te Zeebrugge met motordefekt. Op 22 mei 1940 werd het schip gesleept naar Engeland door de Belgische sleeper GRAAF VISART . Onderweg werd de SIGURD FAULBAUMS tot zinken gebracht door de duitse onderzee\xebr U 9.
+
+B_120_237
+
+Midden 51\xb0 20'.093 - 002\xb0 36'.895
+Pt_01  51\xb0 20'.097 - 002\xb0 36'.937
+Pt_02  51\xb0 20'.088 - 002\xb0 36'.859","Max Faulbaum Steamship Line, Sunderland",1,Staal,132
+Point,3.049637878960843,51.391183289840036,Feature,54,"17,40","003\xb0 02,978 E",2,"11,60","51\xb0 23,471 N",1997 / 05 - 069,5,"65,25",,,24,1988/04/26,"19,00","7176,00",1,20,,1,1943,"zichtbaar bij LW , 2,5 Wk__ 05,2 Wk__ GLLWS",4,5,,4,"05,1 Wk__","128,62",,3,7.82,,206,"5,20","10,00",,B_123_303_a,7.5,,,Liberty,3,SANSIP ( 2e deel ),,1998/01/12,503453.7,8.75,,5693328.58,"Bethlehem Fairfield Shipyard Inc., Baltimore, Indiana",1944/12/07,"Gezonken na mijnexplosie op 7 december 1944 op 1 mijl  noordwesten  van  de NF11 boei. De overlevenden werden opgepikt door HMS Kernot.  Het schip ligt duidelijk in 2 stukken en niet in \xe9\xe9n lijn( zie Multi Beam opname ). In 1965 op 4 augustus stootte het nederlands schip de NEUTRON op het wrak van de SANSIP en zonk ongeveer een twintigtal minuten later. Volgens de vereniging ""Zeevaart"" was op verzoek van de verzekeringsmaatschappij op en in de positie 51\xb0 23' 32'' N en 003\xb0 02' 52'' E een duikersonderzoek uitgevoerd in 1965. Het wrak van de NEUTRON werd niet gevonden . Dit bevestigt het vermoeden dat de 2 wrakstukken enkel tot de SANSIP toebehoren. In dit geval zou de NEUTRON westelijker moeten liggen. Op 11 september 1997 is het vissersschip N 12 ""ARTHUR"" vastgeslagen  op de wrakresten van de SANSIP. Hierbij werd na een poging het schip los te maken , averij opgelopen. Na anderhalf uur is het schip gezonken nagenoeg op de SANSIP. Alle bemanningsleden werden gered. zie dossier B 123/303 c).
+
+Dieptecijfer gewijzigd naar LAT",Ministery Of War Transport USA: New Zeeland Shipping Co. Ltd,4,Staal,206
+Point,2.728500048201761,51.41117772890668,Feature,"47,5","9,45","002\xb0 43,710 E",2,"22,00","51\xb0 24,671 N",1997 / 05 - 069,4,"43,25",,,6,1993/04/22,"10,00","560,00",1,16,Brits,1,,"17,4 Wk; 17,3 Wk__ GLLWS",4,5,,3,"17,2 Wk__","58,52","1.044 5"" rockets",3,17.33,,226,"17,30","66,67","1,65",B_124_243,7.5,,,LCT(R)-III,5,LCT. 457 (R),,2007/05/15,481117.85,8.75,,5695585.99,,1944/11/05,"De LCT (R) 457 , wat betekent Landing Craft Tanks Rocket, liep op 5 november 1944 op een mijn .
+
+B_124_243
+
+Midden 51\xb0 24'.671 - 002\xb0 43'.710
+Pt_01  51\xb0 24'.678 - 002\xb0 43'.730
+Pt_02  51\xb0 24'.668 - 002\xb0 43'.694
+
+Dieptecijfer gewijzigd naar LAT",U.S.A. (lend leased),1,Staal,226
+Point,2.679262301998065,51.257659558357844,Feature,"41,67","17,30","002\xb0 40,756 E",2,"10,70","51\xb0 15,460 N",1988 / 19 - 117,5,"47,25",-,,6,1988/08/03,"12,50","2750,00",1,20,Brits,1,1942,"zichtbaar bij LW ; 3,8 Wk__ ; 6,4 Wk__ GLLWS",4,5,,3,"06,3 Wk__","109,00","Vrachtwagens,  jeeps en oorlogsmateriaal",3,8.62,,90,"6,40","127,97","2,75",B_115_240,7.5,,-,LST Landing Ship Tanks,5,LST. 420,,2007/06/05,477618.87,8.75,,5678527.1,,1944/11/07,"Het schip vaarde op een mijn en brak in 2 stukken . Het boegdeel werd opgeruimd in 1990 door TV Bergingswerken  zie dossier B 115/241.
+
+B_115_240
+
+Midden  51\xb0 15'.460 - 002\xb0 40'.756
+Pt_01   51\xb0 15'.469 - 002\xb0 40'.746
+Pt_02   51\xb0 15'.450 - 002\xb0 40'.767
+
+Dieptecijfer gewijzigd naar LAT",U.S.A.,1,Staal,89
+Point,3.050610169693944,51.39183406710245,Feature,67,"17,40","003\xb0 03,037 E",2,"11,50","51\xb0 23,510 N",1998 / 03 - 059,5,"65,25",,,24,1988/04/26,"19,00","7176,00",1,20,,1,1943,"zichtbaar bij LW , 2,5 Wk__ , 03,5 Wk__ GLLWS",4,5,,4,"03,4 Wk__","128,62",,3,7.62,,207,"3,50","52,00",,B_123_303_b,7.5,,,Liberty,3,SANSIP ( 1e deel ),,1998/01/12,503521.3,8.75,,5693401,"Bethlehem Fairfield Shipyard Inc., Baltimore, Indiana",1944/12/07,"Gezonken na mijnexplosie op 7 december 1944 op 1 mijl  noordwesten  van  de NF11 boei. De overlevenden werden opgepikt door HMS Kernot.  Het schip ligt duidelijk in 2 stukken en niet in \xe9\xe9n lijn( zie Multi Beam opname ). In 1965 op 4 augustus stootte het nederlands schip de NEUTRON op het wrak van de SANSIP en zonk ongeveer een twintigtal minuten later. Volgens de vereniging ""Zeevaart"" was op verzoek van de verzekeringsmaatschappij op en in de positie 51\xb0 23' 32'' N en 003\xb0 02' 52'' E een duikersonderzoek uitgevoerd in 1965. Het wrak van de NEUTRON werd niet terug gevonden . Dit bevestigd het vermoeden dat de 2 wrakstukken enkel tot de SANSIP toebehoren. In dit geval zou de NEUTRON westelijker moeten liggen.Op 11 september 1997 is het vissersschip N 12 ""ARTHUR"" vastgeslagen  op de wrakresten van de SANSIP. Hierbij werd na een poging het schip los te maken , averij opgelopen. Na anderhalf uur is het schip gezonken nagenoeg op de SANSIP. Alle bemanningsleden werden gered. (zie dossier B 123/303 c).
+
+Dieptecijfer gewijzigd naar LAT",Ministery Of War Transport USA: New Zeeland Shipping Co. Ltd,4,Staal,207
+Point,3.073763336698534,51.378747639561645,Feature,"71,67","17,30","003\xb0 04,426 E",2,"9,20","51\xb0 22,725 N",1986 / 26 - 143,5,"47,25",-,,6,,"20,83","7176,00",1,20,Brits,1,1943,"zichtbaar bij LW , 10,0 Wk , 2,2 Wk__ GLLWS",4,5,,4,"02,1 Wk__","128,60",Oil fuel,3,7.27,,187,"2,20","149,45",,B_122_304_a,7.5,,,Liberty,5,SAMVURN  (w.-deel),,2007/05/16,505133.69,8.75,,5691947.01,"Bethlehem Fairfield, Baltimore, USA",1945/01/18,"Gezonken na een mijnexplosie  nabij NF 11 op 18 januari 1945 . Het schip vaarde in konvooi  van Antwerpen naar Londen. Bij deze ramp stierven 7 bemanningsleden en 9 soldaten, 41 overlevenden werden door HMLS T239 opgepikt. Zie afschrift van de verklaring van 23 januari 1945 van zeeloods J. Van Huyse.
+
+Dieptecijfer gewijzigd naar LAT",MOWT on bare boat charter from USA: Thomson & Co. Mgrs.,1,Staal,187
+Point,2.840712572326571,51.36089470985538,Feature,125,"16,00","002\xb0 50,443 E",2,"20,30","51\xb0 21,654 N",1996 / 15 - 121,4,"61,25",-,,24,1961/01/17,"20,00","7061,00",1,16,Brits,1,1943,"gevaarlijk voor bovenscheepvaart ; 8,5 Wk__ ; 15 Wk__ GLLWS",4,5,150 dm GLL,4,"14,9 Wk__","124,00",ballast,3,18.38,,152,"15,00","10,23","10,00",B_121_250_a,7.5,,Ackermans & Van Haaren,Liberty,3,EMPIRE FAITH,,1996/05/21,488909.8,8.75,,5689971.03,"Readhead & Sons Ltd., South Shields,  Great-Britain",1945/01/02,"Het SSS-onderzoek bevestigt de aanwezigheid van 2 wrakken : het eerste in positie 51 21 44 N - 02 50 34 E  met een  lengte 124 m en  breedte 18 m  (EMPIRE FAITH of EMPIRE PATH) ; het tweede : in positie 5121 40 N -  02 50 32 E met een lengte 52 m en een breedte van 9 m ( EMERAUDE ). Zie BAZ nr 39-154  van 1953 en ook dossier  B 122/251
+
+B_121_250_a
+
+Midden 51\xb0 21'.654 - 002\xb0 50'.443
+Pt_01  51\xb0 21'.689 - 002\xb0 50'.454
+Pt_02  51\xb0 21'.622 - 002\xb0 50'.435
+
+Dieptecijfer gewijzigd naar LAT","M.O.W.T. (Mgrs. Moller Line Ltd.),  Great-Britain",4,Staal,152
+Point,3.216531176861503,51.369134575284384,Feature,"37,5","13,40","003\xb0 12,992 E",2,"11,00","51\xb0 22,148 N",1997 / 05 - 069,5,"65,25",,,24,1993/04/23,"12,50","2156,00",1,20,Deens,1,1916,"1,6 Wk ; 4,8 Wk ; +++ ; 7,2 Wk",4,5,,4,"06,9 Wk__","88,40",1.500 t. ijzer,3,8.81,1956/05/01,169,"6,90","25,33","5,75",B_122_313_b,7.5,,Van den Tak's Bergingsbedrijf,Vrachtschip,3,GORM,,1995/09/21,515073.02,8.75,,5690897.6,Nylands Vaerkstad Oslo Norvege,1940/05/13,"Het schip, onderweg van Antwerpen naar Engeland, werd door de onderze\xeber U9 tot zinken gebracht op 13 mei 1940. Het wrak werd in mei 1956 met explosieven bewerkt . Nadien werd het opgeruimd en op 14 december 1964 werd er tot de definitieve oplevering overgegaan. Uit de metingen van 21/09/95  blijken nog stukken aanwezig te zijn die tot 3 m boven de omringende bodem uit steken.
+
+Dieptecijfer ongewijzigd in LAT",Det Forenede Dampskibs Selskab A / S Copenhagen Danmark,4,Staal,169
+Point,2.885777772953244,51.40337978912285,Feature,155,"17,40","002\xb0 53,147 E",2,"15,70","51\xb0 24,203 N",1997 / 05 - 069,4,"61,25",Baltimore,,24,1963/06/06,"33,00","7219,00",1,16,Brits,1,1943,"zichtbaar ;  5,6 Wk ; 15 Wk__ GLLWS",4,5,15 m GLLWS,4,"14,9 Wk__","129,00",oorlogsmaterialen,3,14.13,1962/09/01,220,"15,00","118,05",,B_124_253,7.5,,Ackermans & Van Haaren,Liberty,3,SAMPA,,1995/05/05,492054.77,8.75,,5694689.99,"Bethlehem Fairfield Shipyard Ic., Baltimore, Ind.",1945/02/27,"Op 27 februari 1945 vaarde het schip op een mijn en zonk in hogergenoemde positie. Het wrak werd opgeruimd tot op 15 m ten opzichte van H - lokaal door Ackermans & Van Haaren Antwerpen in 1962.
+
+B_124_253
+
+Midden 51\xb0 24'.203 - 002\xb0 53'.147
+Pt_01  51\xb0 24'.178 - 002\xb0 53'.205
+Pt_02  51\xb0 24'.222 - 002\xb0 53'.075
+
+Dieptecijfer gewijzigd naar LAT","MOWT (Mgrs. Houlder Bros & Co.), Baltimore",4,staal,220
+Point,2.55043836920483,51.249403649725906,Feature,"63,33","9,64","002\xb0 33,026 E",2,"16,50","51\xb0 14,964 N",1996 / 17 - 129,4,"43,25",-,,6,1988/09/09,"10,00","2000,00",1,16,Frans,1,1925,"12,4 Wk; 13,2 Wk__ GLLWS",4,5,-,3,"13,1 Wk__","105,77","6 TT, DC's",3,15.71,,78,"13,20","260,54","4,30",B_115_233_a,7.5,,-,Destroyer,5,BOURRASQUE,,2007/03/27,468623.93,8.75,,5677656.11,"A.C. de France, Frankrijk",1940/05/30,"De Bourrasque , een torpedojager , werd in mei 1940 ingezet tijdens de evacuatie van Britse en Franse troepen. Op 30 mei 1940 zonk het schip in hoger gemelde positie.
+
+B_115_233
+
+Midden  51\xb0 14'.964 - 002\xb0 33'.026
+Pt_01   51\xb0 14'.965 - 002\xb0 33'.057
+Pt_02   51\xb0 14'.962 - 002\xb0 33'.000
+
+Dieptecijfer gewijzigd naar LAT",Franse Marine,1,Staal,57
+Point,2.382163066970179,51.352257664176534,Feature,65,,"002\xb0 22,930 E",2,"32,00","51\xb0 21,135 N",1997 / 05 - 069,2,"79,50",London,,24,1987/10/29,"10,83","2365,00",1,8,Brits,4,1919,"18 Wk ; 22,5 Wk__ GLLWS",4,5,,4,"22,0 Wk__",,?,3,32.82,,140,"22,70","227,08",,B_121_223,7.5,,-,Stoomschip,2,HALO,,1995/09/22,456975.91,35,,5689179.63,Dublin Dockyard C\xb0 Ltd  Dublin,1945/01/22,"Gebouwd op 1919 in Dublin als WAR BRIGADE. Later werd de naam gewijzigd in HALO. 
+Op 22 januari 1945 werd het schip door een Duitse E-boot tot zinken gebracht.
+
+B_121_223
+
+Midden 51\xb0 21'.135 - 002\xb0 22'.930
+Pt_01  51\xb0 21'.148 - 002\xb0 22'.950
+Pt_02  51\xb0 21'.125 - 002\xb0 22'.910
+
+Dieptecijfer gewijzigd naar LAT",Gas Light & Coke C\xb0 en Stephenson Clarke & C\xb0,4,staal,140
+Point,2.818121418631367,51.40701427140704,Feature,u,"8,00","002\xb0 49,087 E",2,"19,00","51\xb0 24,421 N",1984 / 15 - 103,4,"58,25",,,6,1984/06/15,,,1,16,Brit,3,1935,"16,2 Wk__ GLLWS",2,2.5,,3,"16,1 Wk__","107,00",,3,18.52,,223,"16,20",,"3,00",B_124_249,7.5,,,Destroyer,4,GRAFTON,,2014/09/01,487349.64,26.25,,5695103.69,Thornycraft,1940/05/29,"De HMS GRAFTON , een Britse destroyer van de eerste "" Flotilla from Harwich "" onder leiding van Cdr C.E.C. Robinson en samen met 29 andere destroyers , minesweepers , coasters waren ingeschakeld voor de evacuatie op 28-29 mei 1940. Het schip zonk na een torpedo-aanval.  Dit wrak is erkend door de Britse autoriteit als ""WAR GRAVE"". Pas in 1984 werd dit wrak  gelokaliseerd bij werkzaamheden op het naburige opgeruimde wrak ""AURETTA "".
+
+B_124_249
+
+Midden 51\xb0 24'.421 - 002\xb0 49'.087
+Pt_01  51\xb0 24'.433 - 002\xb0 49'.108
+Pt_02  51\xb0 24'.413 - 002\xb0 49'.082
+
+Dieptecijfer gewijzigd naar LAT",,1,staal,223
+Point,2.656521725412501,51.20927146403619,Feature,"70,83","7,50","002\xb0 39,391 E",2,"9,60","51\xb0 12,556 N",1996 / 17 - 129,4,"61,25",-,,24,1973/02/20,"15,83","393,00",1,16,Brits,1,1936,"Gevaarlijk wrak voor de bovenscheepvaart, 7.0 Wk __ , 04,7 Wk GLLWS",4,5,-,3,"04,6 Wk","59,30",-,3,10.02,,39,"7,00","222,18","2,50",B_112_239,7.5,,-,Stoomschip (raderboot),3,GRACIE FIELDS,,1995/05/02,476006.88,8.75,,5673153.14,"J.I. Thornycroft,  Great-Britain",1940/05/28,"De GRACIE FIELDS , genoemd naar  de ster Miss Fields  was een paddelschip gebouwd in 1936 als ferry op de lijn Southhampton - Cowes . Op het voordek was er plaats voor auto's . Tijdens de evacuatie van Duinkerke op 28 mei 1940 met 750 man aan boord werd het schip aangevallen. Een voltreffer in de machinekamer schakelde \xe9\xe9n paddel uit. Hierdoor bleef de GRACIE FIELDS stuurloos. Het schip werd op sleep genomen . Het maakte echter veel water en zonk in de omgeving van de Middelkerke bank.  Uit de registratie van het echolood werd de  minste diepte bepaald op 4.78 m tov H lokaal.  Dit bericht werd in de BAZ nr 11-1992 opgenomen.
+
+B_112_239
+
+Midden  51\xb0 12'.556 - 002\xb0 39'.391
+Pt_01   51\xb0 12'.572 - 002\xb0 39'.415
+Pt_02   51\xb0 12'.544 - 002\xb0 39'.372
+
+Dieptecijfer gewijzigd naar LAT","Royal Navy,  Great-Britain",4,Staal,18
+Point,2.437821006497974,51.353755487164236,Feature,95,"13,00","002\xb0 26,269 E",2,"32,00","51\xb0 21,225 N",1996 / 17 - 129,3,"65,50",-,,6,1989/05/24,"16,67","1930,00",1,12,Brits,4,1925,"128 Wk(O 15); 236 Wk(O 15a); 23,5 Wk__ GLLWS",4,5,,4,"23,0 Wk__","88,45",-,3,28.09,,143,"23,50","236,17","5,79",B_121_226,7.5,,-,Stoomschip,3,TRINGA,,2015/05/11,460852.99,35,,5689315.03,C. Van Der Giessen & Zn.,1940/05/11,"B_121_226
+
+Midden 51\xb0 21'.225 - 002\xb0 26'.269
+Pt_01  51\xb0 21'.243 - 002\xb0 26'.299
+Pt_02  51\xb0 21'.213 - 002\xb0 26'.233
+
+Dieptecijfer gewijzigd naar LAT","Britisch & Continent SS CM Ltd.,  Great-Britain",1,staal,143
+Point,2.738356304277811,51.220759153271935,Feature,"22,92",,"002\xb0 44,301 E",1,"4,80","51\xb0 13,246 N",1996 / 17 - 129,5,"64,00",,,24,1992/11/05,"5,83","499,00",1,20,Nederlands,1,,"gevaarlijk voor bovenscheepvaart ; 3,1 Wk ; 3,0 Wk__ GLLWS, ook Sperrbrecher 143",3,3.75,,3,"02,9 Wk__",,,3,4.7,,48,"3,00","59,26",,B_113_244a,7.5,,,Vrachtschip,3,LOLA/Sperrbrecher 143,,1996/03/11,481727.84,8.75,,5674407.13,,1915/10/20,"B_113_244
+
+Midden  51\xb0 13'.246 - 002\xb0 44'.301
+Pt_01   51\xb0 13'.247 - 002\xb0 44'.312
+Pt_02   51\xb0 13'.243 - 002\xb0 44'.294
+
+Dieptecijfer gewijzigd naar LAT",Duitse Marine,4,Staal,27
+Point,2.722500525302809,51.37851422151294,Feature,"25,8","9,00","002\xb0 43,350 E",2,"24,00","51\xb0 22,711 N",2014 / 13 - 203,3,"64,25",,,6,1983/12/13,"7,50",,1,12,brit,4,1917,"17,2 Wk ; 17,5 Wk__ GLLWS",3,3.75,,3,"17,4 Wk__","103,00",,3,20.54,,185,"17,50","147,80","2,90",B_122_243_b2,7.5,Ter Streep,-,Destroyer,3,WAKEFUL (2\xb0deel),,2015/08/21,480686.85,35,,5691955.01,Clyde bank,1940/05/29,"De WAKEFUL , met 600 militairen aan boord op weg van Bray Dunes naar Engeland, werd in de nacht van 28 op 29 mei 1940 getorpedeerd. De Duitse S30 (E-boot), onder leiding van  Lt Zimmerman torpedeerde de Wakeful in het midden van het schip.  Met volle vaart  brak de destroyer  in twee stukken. In nauwelijks 15 seconden verdween het schip met 600 man onder de golven . Mislukte reddingsacties met de NAUTILUS , GRAFTON , LYDD en COMFORT maakten de tragedie nog erger. 
+Het wrak van de Wakeful en Grafton werden door de Britse autoriteit erkend als ""WAR GRAVE""  Het wrak ligt in 2 stukken (zie B 122/243 b1).
+
+Aanbrengen de tekst “Historic Wk” in magenta kleur  
+
+De twee delen van het scheepswrak HMS Wakeful respectievelijk in positie 
+51\xb022,730’N 002\xb043,360’E en 51\xb022,711’N 002\xb043,350’E.
+(122/243b1 en 122/243b2 Vlaamse Hydrografie) 
+zijn door de gouverneur van West-Vlaanderen als cultureel erfgoed onder water erkend. (06/06/2014)
+
+
+B_122_243_b2
+
+Midden  51\xb0 22'.711 - 002\xb0 43'.350
+Pt_01   51\xb0 22'.717 - 002\xb0 43'.347
+Pt_02   51\xb0 22'.706 - 002\xb0 43'.357
+
+Dieptecijfer gewijzigd naar LAT",Roal Navy Great - Britain,1,staal,185
+Point,2.617810425012139,51.1662406813592,Feature,10,,"002\xb0 37,069 E",1,"14,50","51\xb0 09,974 N",1996 / 17 - 129,4,"42,00",-,,6,1978/08/25,"4,17",,1,16,-,1,,"12,1 Wk__ GLLWS",3,3.75,-,3,"12,0 Wk__",,-,3,14.15,,18,"12,10","57,26",,B_110_237_a,7.5,,-,Sleepboot,5,Raumboot R94,,2007/06/11,473277.9,8.75,,5668381.17,-,,"Wrakonderzoek met duikers van TV Bergingswerken. Volgens de duiker GA betreft het een R-boot met Duitse munitie. Van het wrak is de romp in hout , de spanten zijn nog zichtbaar. Het wrak steekt nog 2 m boven de bodem uit.
+
+B_110_237_a
+
+Midden  51\xb0 09'.974 - 002\xb0 37'.069
+Pt_01   51\xb0 09'.977 - 002\xb0 37'.077
+Pt_02   51\xb0 09'.974 - 002\xb0 37'.062
+
+Dieptecijfer gewijzigd naar LAT",-,1,-,75
+Point,2.503080624886956,51.411543939161824,Feature,"33,33",,"002\xb0 30,185 E",1,"31,00","51\xb0 24,693 N",1997 / 05 - 069,2,"53,25",Zeebrugge,,24,1989/05/19,"8,33","100,00",1,8,Duits,1,,"27,5 Wk__ GLLWS",4,5,,3,"27,0 Wk__",,Torpedo's,3,30.33,,228,"27,60","349,82",,B_124_230_a,7.5,,-,Snelboot,4,S185 B-stuk,,1995/05/04,465440.83,8.75,,5695708.89,,,"Wrak ligt in twee stukken naast elkaar.
+
+B_124_230_a
+
+Midden 51\xb0 24'.693 - 002\xb0 30'.185
+Pt_01  51\xb0 24'.702 - 002\xb0 30'.185
+Pt_02  51\xb0 24'.685 - 002\xb0 30'.189
+
+Dieptecijfer gewijzigd naar LAT",Duitse Marine,4,Aluminium,228
+Point,2.659725928897575,51.37066071893702,Feature,"28,33",,"002\xb0 39,584 E",2,"30,00","51\xb0 22,240 N",1996 / 17 - 129,3,"82,25",-,,24,1987/07/01,"8,33",,1,12,-,4,,"21,5 Wk__ GLLWS",3,3.75,-,3,"21,0 Wk__",,-,3,24.61,,173,"21,60","160,02",,B_122_239,7.5,,-,,1,LCT,,1995/08/18,476313.88,35,,5691100.02,-,,"B_122_239
+
+Midden  51\xb0 22'.240 - 002\xb0 39'.584
+Pt_01   51\xb0 22'.248 - 002\xb0 39'.583
+Pt_02   51\xb0 22'.234 - 002\xb0 39'.592
+
+Dieptecijfer gewijzigd naar LAT",-,4,-,173
+Point,2.668441217619015,51.18312065058224,Feature,"23,73",,"002\xb0 40,106 E",1,"12,80","51\xb0 10,987 N",1997 / 05 - 069,4,"36,00",,,0,1984/04/28,"7,63",,1,16,,1,,"7,7 Wk , 7,0 Wk__ , 08,2 Wk__ GLLWS",3,3.75,,3,"08,1 Wk__",,-,3,11.54,,27,"8,20","356,42",,B_111_240,7.5,Ter Streep,-,Sleepboot,6,KEULSE VAART IV/Hafenschutzboot RO 3S,,2015/12/02,476826.38,8.75,,5670241.16,,,"Duikersonderzoek door TV Bergingswerken. Bewapende sleepboot met dieptebommen op het  dek. Volgens de duiker GA werd de bouwplaat gevonden met als opschrift ""KEULSE VAART IV "" Deze sleepboot is ongeveer 25 m lang en staat recht op de bodem.
+ Ook wel Hafenschutzboot RO 3S genoemd.
+
+B_111_240 
+
+Midden 51\xb0 10'.987 - 002\xb0 40'.106
+Pt_01  51\xb0 10'.992 - 002\xb0 40'.108
+Pt_02  51\xb0 10'.979 - 002\xb0 40'.108
+
+Dieptecijfer gewijzigd naar LAT",Duitsland,0,Staal,6
+Point,3.278110197118105,51.400003377293544,Feature,u,"17,20","003\xb0 16,687 E",2,"11,10","51\xb0 24,000 N",2002 / 14 - 113,5,"63,75",-,,30,,,"7062,00",1,20,Brits,1,1944,zichtbaar bij LW ;,2,2.5,bodem,4,#,"131,40","2870 ton munitie , 3000 ton militaire uitrusting , 500 ton suiker",1,9.18,,216,"11,10",,,B_124_316,2.5,,Ackermans & Van Haaren,Liberty,3,EMPIRE BLESSING,,,519346.59,8.75,,5694345,Bartram & Sons Ltd Sunderland,1945/03/19,Gezonken na mijnexplosie voor Knokke Zoute op 19 maart 1945. Het wrak werd opgeruimd door Ackermans & Van Haaren tot op de bodem .,Ministery Of War Transport  (W. Runciman & Co. Ltd. Mgrs.),5,Staal,216
+Point,2.910058718707524,51.57922432450391,Feature,49,,"002\xb0 54,604 E",2,"28,00","51\xb0 34,753 N",1997 / 09 - 097,3,"39,25",,,6,1993/04/21,"15,00",,1,12,,1,,"23,5 Wk",4,5,,4,"24,0 Wk__",,,3,28.21,,262,"24,30","39,94",,B_134_254,7.5,,-,,6,SS Grutto,,2007/03/15,493767.76,8.75,,5714243.86,,,"In 1985 werd het wrak als ongevaarlijk wrak beschouwd. In 1990 werden de symbolen van ongevaarlijke wrakken gewijzigd in  # . Dit symbool wordt ook toegepast voor vuile grond. Tijdens de metingen met Side Scan Sonar in 1993 zijn vrij hoge stukken waargenomen  Daaruit volgt dat hier van vuile grond of wrakresten geen sprake is. Op 25 april 1997 werd een onderzoek met multibeam uitgevoerd. Daaruit herkent men twee stukken die 55 m uit elkaar liggen. Waarschijnlijk is het \xe9\xe9n wrak die gebroken is. Het eerste stuk bevindt zich in positie 5 714 244 Y en 493 768 X ; het tweede in 5 714 240 Y en 493 841 X   . De positie van het eerste grootste en hoogste stuk werd als referentie aangenomen.
+
+B_134_254
+
+Midden 51\xb0 34'.753 - 002\xb0 54'.604
+Pt_01  51\xb0 34'.744 - 002\xb0 54'.592
+Pt_02  51\xb0 34'.749 - 002\xb0 54'.680
+
+Dieptecijfer is ongewijzigd naar LAT",,1,,261
+Point,2.616674442875352,51.16870085045821,Feature,31,,"002\xb0 37,000 E",99,"14,50","51\xb0 10,122 N",1997 / 20 - 148,4,"43,25",,,6,,"6,67",,1,16,,1,,12 Wk GLLWS,4,5,,6,"11,9 Wk",,,3,14.63,,19,,"37,33",,B_110_237_c,7.5,Ter Streep,,,5,onbekend,,2007/06/11,473199.9,8.75,,5668655.17,,,"B_110_237_c 
+
+Midden  51\xb0 10'.122 - 002\xb0 37'.000
+Pt_01   51\xb0 10'.131 - 002\xb0 37'.010
+Pt_02   51\xb0 10'.117 - 002\xb0 36'.995
+
+Dieptecijfer gewijzigd naar LAT",,1,Staal,76
+Point,2.883170763674813,51.417890187299435,Feature,4,,"002\xb0 52,990 E",99,"19,50","51\xb0 25,073 N",2004 / 08 - 086,4,"65,75",,,6,,"4,00",,1,16,,4,,16 Obstn GLLWS,1,1.25,,6,"15,9 Obstn",,,3,19.3,,236,,,,B_125_252_a,7.5,Ter Streep,,,3,Boei,,2007/03/14,491876,35,,5696304,,,"Dit  object werd voor het eerst waargenomen in de algemene peiling van 2004 in het gebied van de Akkaert.
+Op 23/03/2004 werd een eerste onderzoek uitgevoerd met Ter Streep . Hieruit blijkt dat het object een 3.5 m boven de onmiddellijke omgeving uitsteekt. In de weergave van de singlebeam lijkt het object op een kardinale boei ( romp en 3 segmenten herkenbaar).
+
+Dieptecijfer gewijzigd naar LAT",,1,,236
+Point,2.863977833440233,51.22272613117299,Feature,9,,"002\xb0 51,839 E",3,"7,40","51\xb0 13,364 N",1997 / 05 - 069,5,"37,50",-,,0,,"4,00",,1,20,,1,,"5,8 Wk__ GLLWS",1,1.25,,3,"05,7 Wk__",,-,3,7.22,,52,,"164,00",,B_113_251_a,7.5,,-,,6,HEINKEL 111,,2015/12/02,490501.15,8.75,,5674602.14,-,,"Vliegtuigresten, bevestigd door duikersonderzoek  van TV bergingswerken op 18/04/1989
+
+Dieptecijfer gewijzigd naar LAT",,0,Aluminium,31
+Point,2.840962631934124,51.21803908782693,Feature,"15,46",,"002\xb0 50,458 E",99,"8,10","51\xb0 13,082 N",1996 / 24 - 159,5,"64,00",,,24,,"7,22",,1,20,,1,,"07,0 Obstn GLLWS",3,3.75,,6,"06,9 Obstn",,,3,8.45,,46,,"140,78",,B_113_250,7.5,Ter Streep,,,3,onbekend,,1996/09/17,488892.8,8.75,,5674084.13,,,"Deze obstructie werd gevonden door HAECON tijdens metingen in de ""Kleine Rede"" van 3 september 1996. De obstructie steekt ongeveer 0,80 m boven de bodem uit. Uit het SSS-onderzoek blijkt deze hindernis eerder willekeurig van vorm te zijn. In de positie 489 195 m  X en 5 674 200 m  Y blijkt er een voorwerp te liggen van 28 m lengte en 4 m breedte in een strekking van 62 graden.
+
+Dieptecijfer gewijzigd naar LAT",,4,,25
+Point,3.103862410158732,51.39028833311184,Feature,"9,58",,"003\xb0 06,232 E",99,"9,50","51\xb0 23,417 N",1996 / 25 - 164,5,"61,50",,,24,,"4,58",,1,20,,1,,-,1,1.25,,6,"09,0 Obstn",,,3,9.86,,204,,"159,44",,B_123_306_b,7.5,Ter Streep,,,3,onbekend,,1996/11/27,507226.67,8.75,,5693233,,,"Deze obstructie is zeer waarschijnlijk een gebroken container. In de maand november 1996 werd door het Zeewezen twee verloren containers gemeld.  Nabij scheur 5 werd \xe9\xe9n drijvend opgemerkt. Een poging deze container te lichten mislukte en zonk in de positie 51\xb0 23' 32"" N en 003\xb0 06' 12"" E. Op 27/11/1996 werd deze omgeving uitvoerig gescand en in positie 51\xb0 23',467 N en 003\xb006',312 E een obstructie gevonden. Deze hindernis bevindt zich in een 2 m diepe erosieput en steekt niet buiten de omringende bodem ( maaiveld )uit.Dieptecijfer ongewijzigd in LAT",,4,,204
+Point,2.581623656567599,51.81962084319368,Feature,45,"0,00","002\xb0 34,897 E",99,"0,00","51\xb0 49,177 N",,2,"61,50",,gepeild door Eurosense,6,,,"0,00",3,8,,4,0,,4,5,,,33 Wk,"0,00",,3,38.22,,,,,"0,00",B_149_234,7.5,HrMs Snellius,,,3,Onbekend,,2015/10/04,471163,35,,5741059,,,"In de jaaropdracht voor ons HOV (Hydrografisch Opname Vaartuig), nummer HY12209_210_229 zit een stukje Belgi\xeb. Dit gebied is op 15 juli 2012 opgenomen door HrMs Snellius. Het betreft het gebied tussen de Belgisch - Nederlandse grens en het TSS North Hinder South. Hierin liggen twee wrakken die in onze database zijn opgenomen en ook in de kaart staan, te weten de nummers 1755 en 2551. 
+Voor dit wrak 1755 zijn er kaarttechnisch geen wijzigingen.",,1,,292
+Point,3.062364158606379,51.43523212156425,Feature,"4,8",,"003\xb0 03,741 E",99,"9,50","51\xb0 26,114 N",2014 / 22 - 319,5,"43,50",,,6,,,,3,20,,1,,,1,1.25,,,"7,4 Obstn",,,3,8.41,,,,"53,00",,B_126_303,7.5,Eurosense,,,5,Onbekend,,2014/10/02,504335,8.75,,5698228,,,Er werd door Ter Streep een side scan en multibeam survey uitgevoerd op de positie waar Eurosense een nieuw object had doorgegeven op de Vlakte van de Raan.,,1,,305
+Point,3.23697539851448,51.37346887323434,Feature,"18,75",,"003\xb0 14,219 E",99,"7,60","51\xb0 22,408 N",,5,"64,00",,,24,,"6,25",,1,20,,1,,-,3,3.75,,6,NIET op kaart,,,3,7.12,,177,,"140,91",,B_122_314,7.5,Ter Streep,,,3,onbekend,,1996/09/04,516494.61,8.75,,5691384.02,,,"Het SSS-onderzoek werd op 04/09/1996 uitgevoerd naar aanleiding van een faxbericht van 15/08/1996. Daarin vermeldde het Loodswezen dat een racebootje was gezonken in de positie 51\xb022',42 N en 003\xb013',83 E . Dit is ongeveer 1,3 mijl van de E -dam van Zeebrugge in een peiling van 075\xb0. Enkele zwakke echo's werden waargenomen. Gezien de lengte van het wrakje slechts 4 m bedroeg kon men de resultaten vergelijken met deze gekende lengte. Daaruit volgde dat geen enkele echo aan dit criterium voldeed,dus kon men het wrak niet lokaliseren. Op de single-beamregistratie kon men een obstructie  van nauwelijks 0,45 m boven de omringende bodem terug vinden. Op de Side-Scan-Sonar werd op de zelfde plaats een obstructie waargenomen van  ongeveer 19 m lengte. Met de multi-beam kon slechts in differentiele mode iets zichtbaar gemaakt worden  van 18 m lengte. Gezien we hier in de nabijheid zijn van de gaspijpleiding kan deze obstructie mogelijks steenbestorting zijn.",,4,,177
+Point,2.484616765678903,51.813589203157505,Feature,49,"11,00","002\xb0 29,077 E",99,"38,00","51\xb0 48,815 N",,2,"52,75",,,6,,"8,00","0,00",3,8,,3,0,,4,5,,,,"49,00",,3,33.18,,,,"101,00","6,80",B_148_229,7.5,Ter Streep,,,4,Onbekend,,2013/09/04,464472,26.25,,5740431,,,"Wrak gevonden tijdens het opmeten van het Belgisch ContinentaalPlat Noord in sept 2013 met Ter Streep.
+
+Midden 51\xb0 48'.815 - 002\xb0 29'.077
+Pt_01  51\xb0 48'.820 - 002\xb0 29'.053
+Pt_02  51\xb0 48'.816 - 002\xb0 29'.100",,1,,301
+Point,2.844998254897079,51.215273744167675,Feature,14,,"002\xb0 50,700 E",99,"7,50","51\xb0 12,917 N",2008 / 26 - 252,5,"46,00",,,6,,"1,00",,3,20,,1,,"07,2 Obstn GLLWS",3,3.75,,,"07,1Obstn",,,3,7.13,,,"0,00",,,B_113_250_b,7.5,Ter Streep,,,5,Onbekend,,2008/11/14,489174,8.75,,5673776,,,"Tijdens het Maritiem Archeologisch erfgoedonderzoek 2006-2007 werd een kleine obstructie vastgesteld door het VIOE. De resultaten van de Side Scan en Multibeam doen vermoeden dat het hier om een zuigbuis betreft. Deze obstructie steekt nauwelijks boven de omringende bodem uit \xb1 0.5 m.
+
+Dieptecijfer gewijzigd naar LAT",,1,,302
+Point,2.380311035303882,51.60416624934631,Feature,80,"15,00","002\xb0 22,819 E",99,"36,00","51\xb0 36,250 N",1982 / 16 - 116,2,"61,50",,,6,,"15,00",,1,8,,4,,29 Wk__ GLLWS,4,5,,5,"28,5 Wk__","80,00",,3,33.97,,264,,"289,00",,B_136_222,7.5,Ter Streep,,,3,SS M\xe9d\xe9e,,2012/03/14,457084.01,35,,5717195.84,,,"Het wrak werd in 1982 met explosieven bewerkt.
+
+Dieptecijfer gewijzigd naar LAT",,1,,263
+Point,3.110566847539786,51.434935538054795,Feature,u,,"003\xb0 06,634 E",99,"7,00","51\xb0 26,096 N",1996 / 25 - 165,5,"44,75",,,6,,,,1,20,,1,,-,2,2.5,,6,"06,0 Wk",,,3,7.96,,243,,,,B_126_306,7.5,Ter Streep,,,5,onbekend,,2014/08/25,507685.67,8.75,,5698198.97,,,"Dit wrak werd door een visser gemeld in november 1996.
+
+Dieptecijfer ongewijzigd in LAT",,1,,242
+Point,2.64401724545195,51.36618082782708,Feature,14,,"002\xb0 38,641 E",99,"26,00","51\xb0 21,971 N",2015 / 00 - 000,3,"38,00",,,6,,"3,00",,3,12,,1,,,3,3.75,,,-,,,3,25.25,,,,"310,00",,B_121_238_b,7.5,,,,6,Onbekend,,2015/08/21,475218,8.75,,5690607,,,"Wrak gevonden tijdens multibeam peiling augustus 2015.
+Minste diepte bepaald op 25.3 m LAT, omringende bodem 26 m LAT",,1,,309
+Point,2.60446150151303,51.114958383283565,Feature,u,,"002\xb0 36,268 E",99,"1,50","51\xb0 06,898 N",1973 / 22 - 160,5,"68,75",,,30,,,,1,20,,1,,"01,5 Wk GLLWS",2,2.5,,6,"01,3 Wk",,,3,2.11,,1,,,,B_106_236,7.5,,,,3,onbekend,,,472313.91,8.75,,5662683.21,,,Dieptecijfer gewijzigd naar LAT,,5,,58
+Point,2.881222729219143,51.23032510861583,Feature,"3,5",,"002\xb0 52,873 E",2,"7,10","51\xb0 13,820 N",2003 / 15 - 137,5,"37,50",,,0,,"3,50",,1,20,,1,,06 Wk GLLWS,1,1.25,,1,"05,9 Wk",,,3,6.92,,56,,,,B_113_252_b,7.5,Ter Streep,,,6,HM Motor Launch 561,,2015/12/02,491706.78,8.75,2003/06/06,5675445.12,,,"Vermoedelijk betreft het hier om een militair vliegtuig.
+
+Dieptecijfer gewijzigd naar LAT",,0,,35
+Point,2.908316139235882,51.29714229845765,Feature,"19,17",,"002\xb0 54,499 E",1,"6,30","51\xb0 17,829 N",1996 / 17 - 129,5,"46,00",,,6,1992/09/30,"4,17",,1,20,,1,,"06,0 Wk__ GLLWS",3,3.75,,1,"05,9 Wk__",,,3,6.56,,218,"6,00","272,60",,B_117_254,7.5,,-,,5,Vorpostenboot Prangenhof,,2006/09/22,493607.76,8.75,,5682873.07,,,"B_117_254
+
+Midden 51\xb0 17'.829 - 002\xb0 54'.499
+Pt_01  51\xb0 17'.828 - 002\xb0 54'.508
+Pt_02  51\xb0 17'.828 - 002\xb0 54'.493
+
+Dieptecijfer gewijzigd naar LAT",,1,,219
+Point,3.066273859507777,51.45588372179938,Feature,u,,"003\xb0 03,976 E",1,"12,50","51\xb0 27,353 N",1996 / 24 - 160,4,"40,75",,,6,,,,0,16,,1,,-,2,2.5,,1,"11,0 Wk",,,3,11.98,,246,,,,B_127_304_b,7.5,Ter Streep,,,5,Torpedoboot G88 voorschip,,2014/09/15,504604.69,8.75,,5700524.95,,,"Het hoogste punt van dit verzande wrakje steekt ongeveer 1,45 m boven de omringende bodem uit. Amateursduikers bevestigen de aanwezigheid van een oorlogsboot. Het wrak is erg verzand maar het kanon is nog zichtbaar. Rond het wrak ligt nog munitie waaronder obussen en kogels in lederen hulzen.
+
+
+Dieptecijfer ongewijzigd in LAT",,1,,245
+Point,2.633843124753951,51.231260387845026,Feature,"15,83",,"002\xb0 38,031 E",1,"11,50","51\xb0 13,876 N",1996 / 17 - 129,4,"42,00",,,6,1994/02/18,"4,17",,1,16,,1,,"7,6 Wk ,ongevaarlijk wrak, 10,0 Wk__",3,3.75,,1,"09,9 Wk__",,,3,11.56,,59,"10,00","330,64",,B_113_238_a,7.5,,-,,5,Achterschip Torpedoboot A19,,2007/03/27,474434.89,8.75,,5675606.11999999,,,"In de BAZ van 1964 onder 5/62  werd in de positie 51\xb0 13' 40.8'' N en 002\xb0 38' 09.1'' een wrak gemeld. In deze positie  werd in 1988 en 1993 uitvoerig gezocht en niets gevonden, maar wel in positie 51\xb013' 56'' en 002\xb038' 06''. Daaruit werd besloten dat het hier gaat om een onnauwkeurigheid van de plaatsbepaling (in 1964) DECCA. Zie ook naar dossier B 113/238 b.  Een tweede wrakje werd gevonden op ongeveer  90 m van dit wrak.B_113_238_aMidden 51\xb0 13'.876 - 002\xb0 38'.031Pt_01  51\xb0 13'.879 - 002\xb0 38'.030Pt_02  51\xb0 13'.873 - 002\xb0 38'.037Dieptecijfer gewijzigd naar LAT",,1,,38
+Point,2.728312309367444,51.67284254682855,Feature,u,,"002\xb0 43,699 E",99,0,"51\xb0 40,371 N",1994 / 28 - 353,2,"74,25",-,,30,,,,1,8,-,3,,-,2,2.5,-,5,"30,5 Wk",,-,3,31.59,,271,,,,B_140_243,7.5,,-,,2,Z511 Normandie,,,481212.85,26.25,,5724686.79,-,,Dieptecijfer is ongewijzigd naar LAT,-,5,-,270
+Point,3.199532420793778,51.3661112704807,Feature,u,,"003\xb0 11,972 E",99,0,"51\xb0 21,967 N",1989 / 14 - 110,4,"77,25",,,30,,,,3,16,,3,,,2,2.5,bodem,,#,,,1,12.52,,,,,,B_122_312_b,2.5,,"TVB ""Norma""",,2,onbekend,,,513890.63,26.25,,5690558.02,,,Het wrak werd tot op de bodem opgeruimd door Tijdelijke Vereniging voor Bergingswerken in 1988.,,5,,280
+Point,2.691326982327813,51.7741941999782,Feature,u,,"002\xb0 41,480 E",99,0,"51\xb0 46,450 N",2003 / 13 - 128,2,83.00,,,30,,,,3,8,,4,,,2,2.5,,,33 Wk,,,3,35.11,,,,,,B_146_241,7.5,,,,1,Onbekend,,,478703,35,,5735969,,,"Bron Nederlandse Hydrografie BaZ 22 art 320  dd 29/05/03
+
+Dieptecijfer ongewijzigd in LAT",,5,,278
+Point,2.889342984891456,51.29294523466223,Feature,31,,"002\xb0 53,361 E",1,"7,00","51\xb0 17,577 N",1989 / 15 - 113,5,"65,25",,,24,1989/06/20,"12,00",,1,20,,1,,"06,0 Wk__ GLLWS",4,5,,3,"05,9 Wk__",,,3,6.59,,115,"6,00","167,59",,B_117_253_b,7.5,,-,,3,Hafenschutzboot FO 12,,1996/11/28,492284.24,8.75,,5682408.14,,,"Het wrak ligt verspreid op de bodem tot 50 m van hoger vermelde positie.
+
+B_117_253_b
+
+Midden 51\xb0 17'.577 - 002\xb0 53'.361
+Pt_01  51\xb0 17'.586 - 002\xb0 53'.359
+Pt_02  51\xb0 17'.569 - 002\xb0 53'.365
+
+Dieptecijfer gewijzigd naar LAT",,4,Staal,114
+Point,2.804147659107578,51.40734513598335,Feature,"45,83","17,00","002\xb0 48,249 E",2,"18,00","51\xb0 24,441 N",1997 / 05 - 069,4,"78,75",Hull,,24,1992/09/30,"13,33","4571,00",1,16,Brit,3,1935,"zichtbaar bij LW ; 15 Wk__; 15,6 Wk__ GLLWS",4,5,150 dm,4,"15,5 Wk__","125,00",-,3,17.8,1962/10/10,224,"15,90","271,08","7,60",B_124_248,7.5,,Ackermans & Van Haeren,,2,AURETTA,,1995/05/05,486377.81,26.25,,5695142.99,Burntisland S.B.& CM,1945/02/26,"Gebouwd in 1935 en tot 1941 eigendom van Chellew SS Mgt. C\xb0 - London , van 1941 tot 1945 eigendom van W.H. Cockerline & C\xb0 , Ltd - Hull . Op 26 februari  1945 vaarde het schip op een mijn en zonk ongeveer 11 mijlen benoorden Oostende. Het wrak werd opgeruimd tot 150 dm tov H-lokaal . In 1962 op 17 oktober werd op deze plaats gedregd op 150 dm . Op 13 juni 1984 werd in deze positie niets meer terug gevonden . Tijdens het zoeken waren sterke echo's waargenomen en een wrak werd gevonden 900 m beoosten van deze gekende positie. Dit wrak werd op 15 juni 1984 afgedregd tot 162 dm tov H-lokaal. Dit nieuwe wrak werd foutief als de AURETTA aanzien. Daarom werd het teken van de kaart 15 Wk__  geschrapt en 16,2 Wk__ aangebracht in de positie 51 \xb0 24' 28'' N en 002\xb0 49' 10'' E ( zie BAZ 1984/15-103 ) . Dit nieuwe wrak is later ge\xefdentificeerd als de GRAFTON - B 124/249.
+
+B_124_248
+
+Midden 51\xb0 24'.441 - 002\xb0 48'.249
+Pt_01  51\xb0 24'.443 - 002\xb0 48'.271
+Pt_02  51\xb0 24'.441 - 002\xb0 48'.233
+
+Dieptecijfer gewijzigd naar LAT",Walter H.Cockerline,4,staal,224
+Point,2.65521885395896,51.3654614268018,Feature,"55,83",,"002\xb0 39,313 E",2,"26,00","51\xb0 21,928 N",1997 / 05 - 069,3,"65,50",-,,6,1986/08/18,"10,00",,1,12,-,4,,"23 Wk; 22,5 Wk__ GLLWS",4,5,-,3,"22,0 Wk__",,-,3,23.78,,157,"22,50","269,00",,B_121_239,7.5,,-,,3,LCT,,2015/08/21,475997.43,35,,5690523.27,-,,"Volgens Baz 262 van 1947 is dit wrak een   ""Landing Craft Tank"" vaartuig.
+
+B_121_239
+
+Midden 51\xb0 21'.928 - 002\xb0 39'.313
+Pt_01  51\xb0 21'.931 - 002\xb0 39'.337
+Pt_02  51\xb0 21'.930 - 002\xb0 39'.290
+
+Dieptecijfer gewijzigd naar LAT",-,1,-,157
+Point,2.437112524386504,51.36938015494214,Feature,"87,5",,"002\xb0 26,227 E",2,"30,00","51\xb0 22,163 N",1996 / 17 - 129,3,"65,50",,,6,1987/07/02,"12,50",,1,12,,4,,"gevaarlijk wrak ; 22,5 Wk ; 20,7 Wk__ GLLWS",4,5,,4,"20,6 Wk__",,,3,25.83,,170,"20,70","54,26",,B_122_226,7.5,,,,3,SS VIIU,,2015/05/17,460816.99,35,,5691053.02,,,"B_122_226
+
+Midden 51\xb0 22'.163 - 002\xb0 26'.227
+Pt_01  51\xb0 22'.177 - 002\xb0 26'.257
+Pt_02  51\xb0 22'.151 - 002\xb0 26'.195
+
+Dieptecijfer gewijzigd naar LAT",,1,,170
+Point,2.627099746531925,51.38319414518576,Feature,"17,5",,"002\xb0 37,626 E",2,"26,50","51\xb0 22,992 N",1997 / 05 - 069,3,"64,25",-,,6,1989/02/10,"5,83",,1,12,-,4,,"22,0 Wk__ GLLWS",3,3.75,-,3,"21,5 Wk__",,-,3,23.85,,197,"22,00","139,76",,B_123_237,7.5,,-,,3,onbekend-LCT,,2015/08/21,474049.9,35,,5692504.91,-,,"Waarschijnlijk boeg van een schip.  Andere stukken liggen vermoedelijk in positie  51 22 35 N  - 02 37 20 E,  Zie BAZ 1986/26-143  en BAZ 1987/11-97.
+
+B_123_237
+
+Midden 51\xb0 22'.992 - 002\xb0 37'.626
+Pt_01  51\xb0 22'.997 - 002\xb0 37'.635
+Pt_02  51\xb0 22'.989 - 002\xb0 37'.635
+
+Dieptecijfer gewijzigd naar LAT",-,1,-,197
+Point,2.484957004542351,51.46471261097949,Feature,"113,33",,"002\xb0 29,097 E",2,"30,70","51\xb0 27,883 N",1997 / 05 - 069,2,"35,25",,,6,1989/06/13,"15,00",,1,8,,1,,"23,5 Wk__ GLLWS",4,5,,4,"23,0 Wk__",,,3,32.58,,250,"23,60","132,75",,B_127_229,7.5,,-,,6,SS Sint Annaland,,2007/02/20,464221.96,8.75,,5701630.54,,,"B_127_229
+
+Midden 51\xb0 27'.883 - 002\xb0 29'.097
+Pt_01  51\xb0 27'.908 - 002\xb0 29'.064
+Pt_02  51\xb0 27'.860 - 002\xb0 29'.136
+
+Dieptecijfer is gewijzigd in LAT",,1,,249
+Point,2.749543476892832,51.19894176863496,Feature,"36,67",,"002\xb0 44,973 E",1,"4,50","51\xb0 11,937 N",1996 / 17 - 129,5,"41,25",,,0,1994/07/20,"7,50",,1,20,,1,,"02,3 Wk__ GLLWS",4,5,,3,"02,2 Wk__",,,3,5.21,,33,"2,30","221,58",,B_112_245,7.5,Ter Streep,,,5,Vorpostenboot V-1808,,2015/12/02,482500.84,8.75,,5671978.15,,,"Het wrak ligt op de zuid-flank van de Stroombank. Het hoogste punt bevindt zich op 3,50 m boven de omringende bodem. Op 10 augustus 1999 werd een nieuw SSS onderzoek uitgevoerd, Hierbij werden 2 kleine stukken gelokaliseerd, Het eerste stuk bevindt zich in de positie (geconverteerd naar WGS84)  X = 482 612 en Y = 5 671 991, het tweede  X = 482 522 en Y = 5 671 975, Duikers J. Devent en  J. Vandamme vinden in beide posities stukken van de mast van het wrak.
+
+B_112_245
+
+Midden 51\xb0 11'.937 - 002\xb0 44'.973
+Pt_01  51\xb0 11'.944 - 002\xb0 44'.982
+Pt_02  51\xb0 11'.930 - 002\xb0 44'.963
+
+Dieptecijfer gewijzigd naar LAT",,0,,12
+Point,2.863587702438114,51.25122689200398,Feature,28,,"002\xb0 51,815 E",1,"8,80","51\xb0 15,074 N",1997 / 05 - 069,5,"41,00",,,6,,"21,00",,1,20,-,1,,"onzichtbaar bij LW ; 3,4 Wk ; 8,3 Wk__",3,3.75,bodem,3,#,,,1,8.56,,83,"8,30",,,B_115_251,2.5,,Ackermans & Van Haaren,,5,Sperrbrecher 170,,2009/02/01,490479.79,8.75,,5677771.71,,,Het wrak werd in 1959 opgeruimd tot omringende bodem. In 2006 is er een Side Scan meting uitgevoerd waaruit blijkt dat er nog kleine brokstukken verspreid op de bodem liggen.,,1,-,82
+Point,3.029845599538586,51.3183475458566,Feature,"34,58",,"003\xb0 01,791 E",1,0,"51\xb0 19,101 N",1997 / 05 - 069,5,"41,25",,,0,1984/11/12,"7,50",,1,20,,1,,"2,8 Wk__; 03,5 Wk__ GLLWS",4,5,,3,"03,4 Wk__",,,3,5.2,,126,"3,50","25,62",,B_119_301_b,7.5,Geosurveyor IV,,,5,Minensuchboot M3606,,2015/12/02,502079.89,8.75,2015/12/02,5685227.73,,,Dieptecijfer gewijzigd naar LAT,,0,,125
+Point,2.554754280618828,51.21175558753981,Feature,u,,"002\xb0 33,285 E",2,"15,00","51\xb0 12,705 N",1997 / 05 - 069,4,"40,75",,,6,1989/06/14,,,1,16,,1,,"10,3 , 09,9 Wk__ GLLWS",2,2.5,,3,"09,7 Wk__",,,3,11.74,,41,"9,90",,,B_112_233,7.5,,-,,5,ST. ACHILLEUS,,2007/01/25,468899.78,8.75,,5673467.53,,,"In 1964 werd dit wrak in kaart gebracht met als teken 10,3 Wk (BAZ 1964/5-62). Op 22/05/1990 werd een duikersonderzoek uitgevoerd door ZEEBRUGGE I   met Van Mullem D. en Lagast P. Uit het rapport blijkt dat er vaten liggen die mogelijks dieptebommen zijn. In 1995 blijkt uit het Multi Beam onderzoek dat het ondiepste punt op 8,82 m tov H-lokaal ligt. In 1996 blijkt het hoogste punt gemeten met multibeam op 10,70 m te liggen.Volgens Tomas Termote is dit wrak de St.- Achilleus, een antiduikboot stoomtreiler H127.De voormalige Hullse treiler stond onder het bevel van luitenant ter zee H.A. Gellet, R.N.V.R., van de elfde Anti Submarine Striking Force.Tijdens de operatie Dynamo had ze tot 1 juni de patrouille opgenomen langs de Y-route. Naar het einde van de dag verloor de de luitenant ter zee K.J. Lee van de Cap Argona het contact met de St.Achilleus. Verschillende ontploffingen werden er gehoord. Bij dageraad werd de Korvet Sheldrake door vliegtuigen naar een loctie geleid waar drijfhout werd gezien. De Sheldrake vond overblijfselen van de St.-Achilleus. Elf bemanningsleden werden nog uit het water gehaald. Vier stierven door onderkoeling.
+Het wrak ligt op zijn stuurboordzijde en is grotendeels intact.
+B_112_233
+Midden 51\xb0 12'.705 - 002\xb0 33'.285
+Pt_01  51\xb0 12'.718 - 002\xb0 33'.297
+Pt_02  51\xb0 12'.694 - 002\xb0 33'.279
+Dieptecijfer gewijzigd naar LAT",,1,Staal,20
+Point,2.418251649638348,51.68035895732713,Feature,"27,7",,002\xb0 25.100 E,99,"39,00",51\xb0 40.820 N,,2,51.50,,,6,,"4,30",,2,8,,3,,,3,3.75,,6,,,,3,37.21,,272,,"50,00",,B_140_225,7.5,,,,4,onbekend,,2015/10/02,459779,26.25,,5725648,,,NIEUW,,1,,271
+Point,2.574227206287921,51.369877688026826,Feature,"30,01","7,20","002\xb0 34,454 E",99,"20,00","51\xb0 22,193 N",2001 / 26 - 173,3,78.50,Oostende,,24,1988/12/15,"8,33","150,23",1,12,Belgisch,4,1970,-,4,5,-,5,#,"29,20",-,1,22.77,,171,"17,00","271,68",,B_122_234_a,2.5,,-,Vissersboot,2,O.82  MARINER,,1995/08/18,470361.92,35,,5691044.02,"Henri Deweert, Oostende",1979/12/17,"Op 05/12/1988 zonk in de omgeving van 51 22 15 N  en 02 34 27 E de boeg van de Bowsprite . De zeemacht vond in de positie 51 22 14 N en 02 34 34 E een wrak . Dit wrak was echter niet op kaart opgenomen (1988). Na duikersonderzoek wist men door de staat van begroeiing dat dit niet de BOWSPRITE was. In 1921 werd een obstructie in deze omgeving gemeld ,zie BAZ 1921/109. Daar de O.82 zonk in 1979 kan men de naam van het wrak "" O.82 MARINER "" niet met zekerheid aanwijzen. 
+
+Het wrak werd volledig opgeruimd in 2001.","Pintelon-Versluys, Oostende",4,Staal,171
+Point,2.478536687370134,51.41291280404774,Feature,"13,66",,"002\xb0 28,712 E",1,0,"51\xb0 24,775 N",2000 / 03 - 069,3,"56,00",,,24,,"4,39",,1,12,,1,,"24,0 Wk GLLWS",3,3.75,,3,"23,5 Wk",,,3,24.88,,231,,"318,00",,B_124_228_a,7.5,Ter Streep,,,4,S192,,1999/06/24,463734.97,8.75,,5695872.98,,,"Duikers onderzoek verricht op het wrak op 03/09/99. Het wrak kan ook een oude stoomtreiler zijn maar is waarschijnlijk een torpedoboot van de tweede wereldoorlog.  Rond het wrak zijn buizen gevonden, de romp is zwaar doorgeroest. Het wrak ligt ongeveer 0,5 m boven de bodem, aldus Johan Devent. Duikersonderzoek door Gilbert Allerweirelt beschrijft het wrak eveneens als een Duitse Snelboot uit aluminium (vedette).
+
+B_124_228_a
+
+Midden 51\xb0 24'.775 - 002\xb0 28'.712
+Pt_01  51\xb0 24'.777 - 002\xb0 28'.712
+Pt_02  51\xb0 24'.772 - 002\xb0 28'.719
+
+Dieptecijfer gewijzigd naar LAT",,4,,231
+Point,2.937830323826673,51.24666251886487,Feature,50,,"002\xb0 56,270 E",99,0,"51\xb0 14,800 N",1962 / 13 - 097,5,41.25,-,,0,,,"3600,00",1,20,Brits,1,1890,"01,2 Wk__ GLLWS",4,5,,0,"01,1 Wk__",,-,3,2.94,,73,"1,20",,,B_114_256_a,7.5,,-,Kruiser,5,Cap Horn,,2015/12/02,495660.75,8.75,,5677257.11,-,1918/04/23,"Wrak van Engelse kruiser.
+
+Dieptecijfer gewijzigd naar LAT","Royal Navy,  Great-Britain",0,Staal,52
+Point,2.638768854824106,51.35316082812155,Feature,"33,88","4,36","002\xb0 38,326 E",1,"20,00","51\xb0 21,190 N",1997 / 05 - 069,3,54.75,Oostende,,0,1986/07/02,"4,96","263,00",1,16,Duits,3,1915,"17 Wk ; 16,1 Wk ; 16,4 Wk__ GLLWS",4,5,-,1,"16,3 Wk__","36,13",-,3,18.2,,142,"16,40","45,77",,B_121_238,7.5,,-,Duikboot,4,UB 20,1993/10/05,2017/04/03,474845.5,26.25,,5689160.83,"Blohm & Voss, Hamburg, Duitsland",1917/08/28,"Duikersonderzoek uitgevoerd door Zeebouw Zeezand.
+Duitse duikboot uit de eerste wereldoorlog.
+
+B_121_238
+
+Midden 51\xb0 21'.190 - 002\xb0 38'.326
+Pt_01   51\xb0 21'.196 - 002\xb0 38'.339
+Pt_02   51\xb0 21'.184 - 002\xb0 38'.318
+
+Dieptecijfer gewijzigd naar LAT","Duitse Kriegsmarine, basis Oostende",0,Staal,142
+Point,2.944240767314069,51.25342781795514,Feature,65,13,"002\xb0 56,654 E",2,"5,5","51\xb0 15,206 N",1996 / 15 - 121,5,41.25,,,0,1984/10/16,"9,6",,1,20,Brits,1,1894,"zichtbaar bij LW ; 3,8 Wk__ GLLWS",4,5,,1,"03,7 Wk__",95,,3,3.87,,86,"3,80","9,5","5,5",B_115_256_b,7.5,,-,Kruiser,5,HMS SIRIUS,,2015/12/02,496108.75,8.75,,5678009.11,,1918/01/24,"In deze positie liggen 2 wrakken dicht bij elkaar. De wrakken liggen bijna volledig onder het zand.  Alleen de boegen steken ongeveer 2 m  boven de bodem uit. Waarschijnlijk is dit de Sirius. of mogelijks is dit wrak de HMS BRILLIANT. 
+
+B_115_256_b
+
+Midden  51\xb0 15'.206 - 002\xb0 56'.654
+Pt_01   51\xb0 15'.216 - 002\xb0 56'.642
+Pt_02   51\xb0 15'.191 - 002\xb0 56'.673
+
+Dieptecijfer gewijzigd naar LAT",,0,,85
+Point,2.703295434548811,51.24865895304857,Feature,"38,54","4,00","002\xb0 42,198 E",2,0,"51\xb0 14,920 N",1990 / 24 - 140,4,62.25,Brussel,,30,1990/11/13,,"257,00",1,16,Belg,1,1938,"8,2 Wk __",4,5,bodem,3,#,"38,54",-,1,10.31,,76,,,,B_114_242,2.5,,"Tijd. Ver. Bergingswerken ""Norma""",Motorjacht,3,ALOHA,,,479291.86,8.75,,5677519.11,"John Cockerill, Antwerpen",1940/05/21,Het jacht is waarschijnlijk op een mijn gevaren en zonk in hoger vermelde positie.,"Baron de Launoit, Brussel",5,Staal,55
+Point,3.204776549804527,51.34866690153176,Feature,20,,"003\xb0 12,287 E",99,0,"51\xb0 20,920 N",1962 / 16 - 125,4,"22,25",,,0,,,,3,16,,0,,"6,5 Wk",3,3.75,,,-,,,1,10,,,,,,B_120_312_c,2.5,Ter Streep,,,6,onbekend,,,514261.12,0,,5688619.03,,,"Opgeruimd wrak ,opgeruimd in 1962.",,0,,308
+Point,2.854849898462113,51.229699914407966,Feature,u,,002\xb0 51.291 E,99,0,51\xb0 13.782 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,2.41,,55,,,,B_113_251_d,2.5,,,,3,onbekend,,,489865.25,8.75,,5675378.9,,,,,5,,34
+Point,2.690266556350979,51.15844993870341,Feature,u,,002\xb0 41.416 E,99,0,51\xb0 09.507 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,4.77,,14,,,,B_109_241,2.5,,,,3,onbekend,,,478340.26,8.75,,5667490.96,,,,,5,,71
+Point,3.262836526231581,51.3686120193901,Feature,u,,"003\xb0 15,770 E",99,0,"51\xb0 22,117 N",1976 / 12 - 096,5,"68,75",,,30,,,,1,20,,1,,"4,5 Wk ; 2,6 Wk__",2,2.5,,6,"02,6 Wk__",,,3,5.54,,166,"2,60",,,B_122_315,7.5,,,,3,onbekend,,,518296.6,8.75,,5690850.02,,,Dieptecijfer ongewijzigd in LAT,,5,,166
+Point,2.883166610916618,51.41788325942935,Feature,u,,002\xb0 52.990 E,99,0,51\xb0 25.073 N,,4,"91,00",,,30,,,,2,16,,4,,,2,2.5,,6,,,,3,19.31,,234,,,,,7.5,,,,1,onbekend,,,491875.71,35,,5696303.23,,,,,5,,234
+Point,2.765733329377987,51.222083252380536,Feature,u,,002\xb0 45.944 E,99,0,51\xb0 13.325 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,6.4,,51,,,,B_113_245a,2.5,,,,3,onbekend,,,483640.21,8.75,,5674547.93,,,,,5,,30
+Point,2.812268953471723,51.193322182500474,Feature,u,,"002\xb0 48,736 E",99,0,"51\xb0 11,599 N",1967 / 06 - 065,5,"68,75",,,30,1967/03/07,,,1,20,,1,,"01,7 Wk__ GLLWS",2,2.5,,6,"01,6 Wk__",,,3,3.71,,30,"1,70",,,B_111_248,7.5,,,,3,onbekend,,,486881.81,8.75,,5671340.15,,,Dieptecijfer gewijzigd naar LAT,,5,Staal,9
+Point,2.862545826461296,51.21138533162014,Feature,u,,"002\xb0 51,753 E",99,0,"51\xb0 12,683 N",,5,"63,75",,,30,,,,1,20,,1,,,2,2.5,,6,Zichtbaar Wrak,,,1,-1.5,,40,,,,B_112_251a,2.5,,,,3,onbekend,,,490398.79,8.75,,5673341.14,,,-,,5,,19
+Point,3.029845599538586,51.3183475458566,Feature,34,,"003\xb0 01,791 E",1,0,"51\xb0 19,101 N",,5,"41,25",,,0,,,,2,20,,1,,,4,5,,3,"03,4 Wk__",,,3,5.22,,127,,,,B_119_301_c,7.5,Geosurveyor IV,,,5,Minensuchboot M3604,,2015/12/02,502079.89,8.75,2015/12/02,5685227.73,,,,,0,,126
+Point,2.954983286313371,51.29619992387627,Feature,u,,002\xb0 57.299 E,99,0,51\xb0 17.772 N,,5,"63,75",,Autoclean: Martagon,30,,,,2,20,,1,,,2,2.5,,6,,,,1,7.07,,117,,,,B_117_257_c,2.5,,,,3,stortstenen,,,496861.35,8.75,,5682765.24,,,,,5,,116
+Point,2.941399921797869,51.251433329006296,Feature,u,,002\xb0 56.484 E,99,0,51\xb0 15.086 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,4.83,,84,,,,B_115_256_f,2.5,,,,3,onbekend,,,495910.32,8.75,,5677787.46,,,,,5,,83
+Point,2.915613332814741,51.23637969021059,Feature,u,,"002\xb0 54,937 E",99,0,"51\xb0 14,183 N",2006 / 09 - 118,5,"63,75",-,,30,,,,1,20,-,1,,Zichtbaar wrak \_+_/,2,2.5,-,6,Geen,,-,1,0,,62,,,,B_114_255_a,2.5,,-,Baggermolen,3,onbekend,,,494108.76,8.75,,5676115.12,-,,"Nabij de haven  werd een noodstrand aangebracht waardoor een aanzienlijke verhoging gerealiseerd werd.
+Het wrak is nu niet meer zichtbaar.(werd immers opgeruimd)",,5,-,41
+Point,2.981333248722216,51.32699998654028,Feature,u,,002\xb0 58.880 E,99,0,51\xb0 19.620 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,6.28,,128,,,,B_119_258,2.5,,,,3,onbekend,,,498699.39,8.75,,5686189.71,,,,,5,,127
+Point,2.983133331746133,51.270983279235494,Feature,u,,002\xb0 58.988 E,99,0,51\xb0 16.259 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,4.51,,97,,,,B_116_258,2.5,,,,3,onbekend,,,498823.38,8.75,,5679960.09,,,,,5,,96
+Point,2.863699932941505,51.21446659180352,Feature,u,,002\xb0 51.822 E,99,0,51\xb0 12.868 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,1.8,,43,,,,B_112_251b,2.5,,,,3,onbekend,,,490480.04,8.75,,5673683.65,,,,,5,,22
+Point,2.957883241371998,51.283183297675734,Feature,u,,002\xb0 57.473 E,99,0,51\xb0 16.991 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,5.93,,104,,,,B_116_257,2.5,,,,3,onbekend,,,497062.71,8.75,,5681317.55,,,,,5,,103
+Point,2.908316554300592,51.29714994201945,Feature,u,,002\xb0 54.499 E,2,0,51\xb0 17.829 N,,5,"68,75",,,30,,,,2,20,,1,,,2,2.5,,3,,,,3,6.53,,118,,,,B_117_254,7.5,,,,3,Loreley,,,493607.79,8.75,,5682873.92,,,,,5,,117
+Point,3.20199240513735,51.379999506650876,Feature,u,,"003\xb0 12,120 E",1,0,"51\xb0 22,800 N",1954 / 25 - 127,4,"59,75",,,30,,,,1,16,,1,,"5,3 Wk  ; +++",2,2.5,,3,#,,,1,10.18,,189,,,,B_122_312_c,2.5,,Van Gastel,,4,Minensuchboot M3201,,,514057.63,8.75,,5692103.01,,,Het wrak werd tot op de bodem opgeruimd door Van Gastel in 1954 .,,5,,189
+Point,3.061942640972216,51.40011914746146,Feature,u,"17,00","003\xb0 03,717 E",99,0,"51\xb0 24,007 N",2015 / 21 - 246,5,"41,25",,,0,,,"6577,00",3,20,Nederland,1,2002,,2,2.5,,,Zichtbaar Wrak,"130,00","staal, ijzer en kraanonderdelen",4,8.98,,,,,"5,60",B_124_303,10,,,Vrachtschip,5,FLINTERSTAR,,,504309,8.75,,5694323,,2015/10/06,"Dinsdag 06/10/2015 omstreeks 04h00
+
+Ongeveer 8 km voor de kust van Blankenberge zijn de 315 m lange gastanker de ""Al-Oraiq"", varende onder de vlag van de Marshalleilanden en het 130 m lange Nederlandse vrachtschip ""Flinterstar"" met elkaar in aanvaring gekomen.
+
+De kustreddingsdiensten hebben alle 12 opvarenden van het gezonken schip ""Flinterstar"" gered.
+
+Het wrak van de ""Flinterstar"" is zichtbaar ook bij hoogwater.
+
+BaZ bericht 21/246 van 2015",,0,Staal,281
+Point,2.551516559658576,51.25019999589192,Feature,u,,002\xb0 33.091 E,99,0,51\xb0 15.012 N,,4,"59,75",,,30,,,,2,16,,1,,,2,2.5,,6,,,,1,16.65,,80,,,,B_115_233_b,2.5,,,,4,onbekend,,,468699.72,8.75,,5677744.21,,,,,5,,79
+Point,2.883816585384063,51.24199995815099,Feature,u,,002\xb0 53.029 E,99,0,51\xb0 14.520 N,,5,"63,75",,niet gevonden door Geosurveyor IV,30,,,,2,20,,1,,,2,2.5,,6,,,,1,4.83,,68,,,,B_114_253_b,2.5,,,,3,onbekend,,,491889.94,8.75,,5676743.17,,,,,5,,47
+Point,3.206447878099317,51.380279483648025,Feature,u,,"003\xb0 12,387 E",99,0,"51\xb0 22,817 N",1954 / 25 - 127,4,"59,75",,,30,,,,1,16,,1,,"5,7 Wk ; +++",2,2.5,,6,#,,,1,10.12,,191,,,,B_122_312_d,2.5,,Van Gastel,,4,onbekend,,,514367.62,8.75,,5692135.01,,,Het wrak werd in 1954 opgeruimd tot op de bodem door Van Gastel.,,5,,191
+Point,2.533099952049826,51.186833327568095,Feature,u,,002\xb0 31.986 E,99,0,51\xb0 11.210 N,,4,"64,75",,,30,,,,2,16,,1,,,2,2.5,,0,,,,3,15.34,,28,,,,B_111_231,7.5,,,,3,Belgisch Loodsschip Nr. 5,,,467369.64,8.75,,5670705.39,,,,,5,,7
+Point,3.216193435902077,51.36879728166406,Feature,35,,"003\xb0 12,972 E",99,0,"51\xb0 22,128 N",1997 / 05 - 069,5,"65,25",,,24,1993/04/23,"10,00",,1,20,,1,,"4,8 Wk ; +++",4,5,,5,"06,9 Wk__",,,3,8.51,,167,"6,90","144,06",,B_122_313_a,7.5,Ter Streep,Van den Tak's Bergingsbedrijf,Bergingsvaartuig,3,CARL R2,,1995/09/21,515049.62,8.75,,5690860.02,,1960/05/29,"Uit de multibeam opname blijken er 2 wrakken haaks bij elkaar te liggen. De grootste zal wellicht de GORM zijn en is genummerd als B 122/313 b. Tijdens de bergingswerken in  mei 1960 is het  bergingsvaartuig CARL , ( Van den Tak ) gezonken . Volgens BAZ nummer 12 van 1960 paragraaf 85 is het schip gezonken op of nabij de GORM. Dit tweede wrak was toen zelfs gevaarlijk voor bovenscheepvaart.
+
+Dieptecijfer ongewijzigd in LAT",,4,Staal,167
+Point,2.519816563170292,51.30466661553314,Feature,u,,002\xb0 31.189 E,99,0,51\xb0 18.280 N,,3,"55,75",,,30,,,,2,12,,1,,,2,2.5,,6,,,,1,26.54,,120,,,,B_118_231,2.5,,,,4,stenen,,,466526.95,8.75,,5683815.33,,,,,5,,119
+Point,2.78918321209037,51.66531662158339,Feature,u,,002\xb0 47.351 E,99,0,51\xb0 39.919 N,,3,"55,75",,,30,,,,2,12,,1,,,2,2.5,,6,,,,1,21.27,,270,,,,B_139_247,2.5,,,,4,onbekend,,,485419.64,8.75,,5723835.88,,,,,5,,269
+Point,2.857084543853616,51.22281674071482,Feature,12,"2,70","002\xb0 51,425 E",99,0,"51\xb0 13,369 N",2001 / 26 - 172,5,"59,00",Oostende,,24,,"3,00",,3,20,Belg (Vlagbrief K402544),1,,"4,4 Wk",3,3.75,,,NIET op kaart,"11,90",,1,7.79,,,,"233,00","1,40",B_113_251_b,2.5,Ter Streep,,Pleziervaartuig,4,OFFSHORE I,,2000/07/04,490019.79,8.75,,5674613.13,,2000/07/03,"De OFFSHORE I is gezonken omstreeks 16h00 op 03/07/2000. De volgende dag werd met Ter Streep de minste diepte bepaald op 4,4 m tov het lokale H-vlak. Volledig verwijderd .",Vanhee Rik (10/12/1963) Cirkelstraat 34 8400 Oostende,4,Staal,294
+Point,3.085633303047766,51.397466642641405,Feature,u,,003\xb005.138 E,99,0,51\xb0 23.848 N,,4,"77,25",,,30,,,,2,16,,3,,,2,2.5,,6,,,,1,11.38,,213,,,,B_123_305_a,2.5,,,,2,North Star,,,505957.37,26.25,,5694029.67,,,,,5,,213
+Point,3.143795188496691,51.37429466138633,Feature,11,,"003\xb0 08,628 E",99,0,"51\xb0 22,458 N",1999 / 22 - 153,5,"59,00",Zeebrugge,,24,,"3,00",,1,20,Belg,1,,"8,2 Wk",3,3.75,,"2,50",#,"7,80",,1,9.77,,178,,"45,00",,B_122_308_a,2.5,Ter Streep,,Vissersboot,4,LIENTJE/O.18 Lucia,,1999/07/27,510008.65,8.75,,5691459.02,,1999/07/01,Klein vissersvaartuig gekapseisd na vastslaan aan anker of andere obstructie. Het wrak werd volledig gelicht .,"Janssens Eddy St. - Antoniusstraat 22 , 8301 Heist",4,,178
+Point,2.983916562457625,51.275983254285094,Feature,u,,002\xb0 59.035 E,99,0,51\xb0 16.559 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,5.34,,99,,,,B_116_259,2.5,,,,3,onbekend,,,498878.14,8.75,,5680516.12,,,,,5,,98
+Point,2.914883320143665,51.23609995578828,Feature,u,,002\xb0 54.893 E,99,0,51\xb0 14.166 N,,5,"81,25",,,30,,,,2,20,,3,,,2,2.5,,6,,,,1,0,,61,,,,,2.5,,,,1,onbekend,,,494057.76,26.25,,5676084.07,,,,,5,,40
+Point,2.944233309400573,51.25343329958937,Feature,u,,002\xb0 56.654 E,99,0,51\xb0 15.206 N,,5,"68,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,3,5.04,,87,,,,B_115_256_e,7.5,,,,3,onbekend,,,496108.23,8.75,,5678009.72,,,,,5,,86
+Point,2.538033493680314,51.78057018246022,Feature,45,,"002\xb0 32,282 E",99,0,"51\xb0 46,834 N",,2,"52,75",,,6,,,,3,8,,3,,,4,5,,,,,,3,33.78,,,,,,B_147_232,7.5,Eurosense,,,4,Onbekend,,2015/10/03,468131,26.25,2015/10/03,5736734,,,NIEUW,,1,,300
+Point,2.676135426832053,51.40475040983235,Feature,u,"4,00","002\xb0 40,568 E",99,0,"51\xb0 24,285 N",2001 / 10 - 104,3,"54,75",,,24,,,,1,12,,1,,"16,5 Obstn GLLWS",2,2.5,,5,"16,4 Obstn","13,00",Ledig,3,22.72,,221,,,,B_124_240_a,7.5,Ter Streep,,,4,Container,,2000/11/30,477472.87,8.75,,5694885.99,,2000/11/20,"Het containerschip MAERSK BELAWAN lag voor anker op 18 november 2000 in het ankergebied  van de Westhinder. Dit is in de omgeving van de A - Noord boei. Na het ophalen van het anker is het schip in problemen geraakt. Het dreef tegen een ander voor anker liggend schip "" STATE of ANDRHA PRADESH "" . Bij deze aanvaring in de positie 51\xb0 24,460 N en 002\xb0 40,220 E zijn 4 containers beschadigd. Drie containers  zijn door de klap op het dek van het ander schip  gevallen en de vierde container viel in het water. Er werd een info opgesteld met nr 248/00 die de scheepvaart waarschuwde voor deze obstructie.  Op 21 november 2000 werd met Ter Streep een onderzoek uitgevoerd . De container werd gevonden in de positie 51\xb0 24,335 N  en 002\xb0 40,649.
+Afgeleid uit de Sonarbeelden werden de dimensies bepaald op 13 meter lengte, de breedte op 4 meter. De minste diepte werd bepaald op 16,5 meter tov het lokale H vlak. Dit bericht werd opgenomen in de BaZ nr 24 /189
+De Agent van de MAERSK is : MAERSK BENELUX BV   De Keyserlei 5/4  2018 ANTWERPEN  tel 03/2051515
+fax 03/5681632,
+
+Dieptecijfer gewijzigd naar LAT",MAERSK,4,,221
+Point,2.472292652155112,51.28820210536139,Feature,u,"6,30","002\xb0 28,338 E",99,0,"51\xb0 17,292 N",1998 / 26 - 181,4,"53,75",Nieuwpoort,,24,,,"93,00",3,16,Belg,1,1984,Gevaarlijk voor de bovenscheepvaart,2,2.5,,,#,"23,90",,1,13.03,,,,,"2,76",B_117_228,2.5,Ter Streep,,Vissersboot,4,SEAHUNTER N.52,,1998/11/18,463200.97,8.75,,5682007.08,"L. Degraeve Westvlaamse Scheepswerven , Oostkamp-Zeebrugge",1998/10/08,"Op de terugreis van Ramsgate naar Oostende werd het schip tijdens een storm vermist. Vermoedelijk werd het schip door een ""grondzee"" verrast en zonk nabij de Oostdijck bank. Op 9 oktober werd het lijk van Pierre Le Louarn geborgen. De mijnenveger M.915 ""ASTER"" heeft op 9 oktober het wrak gelokaliseerd nabij de bank.Het wrak werd in zijn geheel gelicht en binnen gebracht in Zeebrugge . Na het lichten van het wrak zijn na enkele dagen de overige lichamen teruggevonden. Controle onderzoek werd uitgevoerd op 2 december 1998. Geen obstructies meer aanwezig.","Rederij Jami Oostende Meeuwenlaan 18 bus 4, 8000 Oostende",4,Staal,295
+Point,3.077871671335623,51.35280342388666,Feature,"11,25","3,30","003\xb0 04,672 E",99,0,"51\xb0 21,168 N",2000 / 15 - 148,5,"64,00",,,24,,"3,75",,1,20,Belg,1,,"4,9 Wk",3,3.75,volledig,5,NIET op kaart,"9,45",,3,7.28,1999/10/28,141,,"208,44",,B_121_304_a,7.5,Ter Streep,Firma Subtech Heidemolen 37 2970 Schilde fax 03/385 92 44,Motorjacht,3,Stephanie II,,1999/08/23,505422.68,8.75,,5689062.03,,1999/08/22,"Op 22 augustus 1999 zonk het motorjacht STEPHANIE II . Aan boord waren Guy Termote , C. & A. Devriese. De drie personen konden zich met hun reddingsloep in veiligheid stellen . Ze werden opgemerkt en overgebracht aan boord van de Z.122 NOORDSTAR en voor verdere verzorging met de redeboot van Zeebrugge weggebracht. De volgende dag werd een SSS-onderzoek ingesteld . De resultaten zijn als volgt : het wrak ligt in zijn geheel op de bodem. Het steekt ongeveer 2,40 m boven de omringende bodem uit. Ongeveer 90 m verder ligt een stuk vermoedelijk afkomstig van dit motorjacht in de positie 505 585 X , 5 689 293 Y. Dit voorwerp is 8 m lang en vrij smal (mast?).
+Op18 oktober werd een nieuw onderzoek uitgevoerd . Met Ter Streep werd het wrak opnieuw ingemeten met de single en multibeam. In deze positie is enkel  een schuurput van ongeveer 0,80 m diep waargenomen. In deze put zijn kleine oneffenheden te zien die nauwelijks boven de omringende bodem uitsteken. Samengevat: van het wrak is er nog nauwelijks iets zichtbaar (volledig verzand??). Op 28/10/1999 heeft de firma Subtech uit Schilde 2970 het wrak gelicht maar is het in de nabijheid van de meetpaal MOW1 opnieuw gezonken !! Het wrak is op 16/05/2000 volledig verwijderd, controlemeting werd uitgevoerd.",Guy Termote Hoogstraat 148  Waasmunster,4,Polyester,141
+Point,2.688776955676806,51.279023435533354,Feature,u,,"002\xb0 41,327 E",99,0,"51\xb0 16,741 N",1995 / 08 - 091,4,"40,75",-,,6,,,,1,16,Belg,1,,"15,0 Wk GLLWS",2,2.5,-,5,"14,9 Wk",,-,3,18.01,,103,,,,B_116_241_b,7.5,,-,Motorjacht,5,RITA/O.818 Lucie-Jenny II,,2014/09/18,478292.87,8.75,,5680900.09,-,1995/04/06,"Deze polyester motorboot met motor Volvo Penta 130 pk zonk na een  aanvaring door N.141 op 06-04-1995.
+
+Dieptecijfer gewijzigd naar LAT","Buyl Andre,Geraardsbergen",1,Polyester,102
+Point,2.488819910042622,51.64319242589107,Feature,15,,"002\xb0 29,329 E",99,0,"51\xb0 38,592 N",,2,"60,25",,,6,,,,3,8,,4,,,3,3.75,,,,,,3,34.07,,,,,,B_139_229,7.5,Eurosense,,,3,onbekend,,2015/08/09,464629,35,2015/08/09,5721478,,,NIEUW,,1,,289
+Point,3.108468550592647,51.46010540111305,Feature,"112,5",,"003\xb0 06,508 E",2,0,"51\xb0 27,606 N",1996 / 17 - 129,4,"43,25",,,6,,"25,00",,1,16,Brits,1,,"zichtbaar bij LW , gevaarlijk wrak,",4,5,,3,"02,7 Wk__",,,3,11.91,,249,"2,70","56,31",,B_127_306,7.5,,,LST Landing Ship Tanks,5,LST. 80,,2007/03/28,507535.67,8.75,,5700997.95,,1945/03/20,"B_127_306
+
+Midden 51\xb0 27'.606 - 003\xb0 06'.508
+Pt_01  51\xb0 27'.625 - 003\xb0 06'.557
+Pt_02  51\xb0 27'.591 - 003\xb0 06'.481
+
+
+Dieptecijfer ongewijzigd in LAT",U.S.A.,1,Staal,248
+Point,2.815200761271907,51.212361980717155,Feature,u,,"002\xb0 48,912 E",99,0,"51\xb0 12,741 N",2003 / 15 - 137,5,"62,75",,,24,,,,1,20,,1,,"06,1 Wk GLLWS",2,2.5,,6,"06,0 Wk",,,3,9.34,,42,,,,B_112_248_b,7.5,Ter Streep,,,3,Onbekend,,2003/06/10,487092,8.75,,5673457,,,Dieptecijfer gewijzigd naar LAT,,4,,21
+Point,2.739666621548468,51.23125000356904,Feature,u,,002\xb0 44.380 E,99,0,51\xb0 13.875 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,6.05,,58,,,,B_113_244b,2.5,,,,3,onbekend,,,481823.48,8.75,,5675573.47,,,,,5,,37
+Point,2.620216662619469,51.38161724183887,Feature,25,,"002\xb0 37,213 E",99,0,"51\xb0 22,897 N",,3,"64,25",,,6,,,,3,12,,4,,,3,3.75,,,,,,3,22.67,,,,,,B_123_237_b,7.5,Eurosense,,,3,onbekend,,2015/04/07,473570,35,,5692332,,,NIEUW,,1,,286
+Point,2.94683327400322,51.25041666669038,Feature,u,,002\xb0 56.810 E,99,0,51\xb0 15.025 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,3.81,,81,,,,B_115_256_d,2.5,,,,3,onbekend,,,496289.43,8.75,,5677674.11,,,,,5,,80
+Point,3.071925342153059,51.4564648581899,Feature,46,,"003\xb0 04,316 E",1,0,"51\xb0 27,388 N",1997 / 05 - 069,4,"43,25",,,6,,"9,00",,1,16,,1,,"5,8 Wkn__",4,5,,1,"05,8 Wk__",,,3,10.93,,247,"6,00","75,00",,B_127_304_a,7.5,,,,5,Torpedoboot G88 achtership,,2014/09/15,504997.29,8.75,,5700589.95,,,Dieptecijfer ongewijzigd in LAT,,1,,246
+Point,2.487550212539341,51.37579800686184,Feature,"42,5",,"002\xb0 29,253 E",99,0,"51\xb0 22,548 N",1996 / 17 - 129,3,"65,50",,,6,1987/01/31,"10,00",,1,12,,4,,"22,0 Wk__ GLLWS",4,5,,6,"21,5 Wk__",,,3,28.17,,182,"22,00","38,33",,B_122_229_a,7.5,,-,,3,onbekend,,2015/05/17,464332.96,35,,5691741.01,,,"B_122_229_a
+
+Midden  51\xb0 22'.548 - 002\xb0 29'.253
+Pt_01   51\xb0 22'.559 - 002\xb0 29'.263
+Pt_02   51\xb0 22'.541 - 002\xb0 29'.24
+
+Dieptecijfer gewijzigd naar LAT",,1,,182
+Point,2.51552741926955,51.42581299791579,Feature,u,,"002\xb0 30,932 E",99,0,"51\xb0 25,549 N",,2,"56,75",,,30,,,,3,8,,1,,,2,2.5,,,NIET op kaart,,,3,30.06,,,,,,B_125_231,7.5,Ter Streep,,,4,onbekend,,,466316.95,8.75,,5697289.97,,,Duidelijke echo op de Side Scan Sonar op beide kanalen 100 kHz en 500 kHz.,,5,,298
+Point,2.738449456271279,51.39866304271425,Feature,"42,5","7,00","002\xb0 44,307 E",99,0,"51\xb0 23,920 N",1997 / 05 - 069,3,"65,50",,,6,1988/06/25,"9,17","232,00",1,12,,4,1906,"20,2 Wk ; 20,2 Wk__; 19,1 Wk__ GLLWS",4,5,,"2,50","19,0 Wk__","38,00",,3,22.02,,215,"19,10","18,43",,B_123_244,7.5,,,,3,BOSKOBEL,,2007/05/15,481804.84,35,,5694191.7,,,"B_123_244
+
+Midden 51\xb0 23'.920 - 002\xb0 44'.307
+Pt_01  51\xb0 23'.932 - 002\xb0 44'.317
+Pt_02  51\xb0 23'.911 - 002\xb0 44'.302
+
+Definiteve identificatie als BOSKOBEL aan de hand van een koperen plaat met opschrift WVV Ligderwood
+
+
+Dieptecijfer gewijzigd naar LAT",,1,Staal,215
+Point,2.765884535536919,51.202491555525526,Feature,u,,"002\xb0 45,953 E",99,0,"51\xb0 12,149 N",1969 / 21 - 162,5,"63,75",Oostende,,30,,,"64,56",1,20,Belg,1,,gevaarlijk voor bovenscheepvaart,2,2.5,,5,#,,-,1,3.75,,35,,,,B_112_246,2.5,,,Vissersboot,3,O.137 St THERESE DE J.,,,483643.83,8.75,,5672369.15,"A; Hillebrandt, Nieuwe Werfkaai, Oostende",1954/01/01,In 1988 onderzocht met SSS en niets meer gevonden.,"Emiel Lambrecht, Oostende",5,Hout,14
+Point,2.903936435811695,51.23777346279473,Feature,u,,"002\xb0 54,236 E",1,0,"51\xb0 14,266 N",1959 / 21 - 106,5,"68,75",-,,30,,,,1,20,Duits,1,,"41 dm; 05,7 Wk__ GLLWS",2,2.5,,3,"05,6 Wk__",,Mijnen en munitie,3,6.99,,63,"5,70",,,B_114_254_b,7.5,,Van Gastel,Vissersboot,3,U-Bootsj\xe4ger 121,,,493293.77,8.75,,5676271.12,"Beliard & Crighton, Oostende",1941/02/01,Dieptecijfer gewijzigd naar LAT,Duitsland,5,Staal,42
+Point,3.141852474741228,51.357697727057115,Feature,10,,"003\xb0 08,511 E",99,0,"51\xb0 21,462 N",2004 / 21 - 145,5,"64,00",,,24,,"4,00",,1,20,,1,,06.5 Wk GLLWS,3,3.75,,6,"06,5 Wk",,,3,6.33,,148,,"45,00",,B_121_308_a,7.5,Ter Streep,,,3,Onbekend,,2004/03/23,509877,8.75,,5689613,,,"Wrak gevonden tijdens de algemene peiling in 2004
+
+Dieptecijfer gewijzigd naar LAT",,4,,148
+Point,2.867366552889761,51.24198328433471,Feature,u,,002\xb0 52.042 E,99,0,51\xb0 14.519 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,6.26,,67,,,,B_114_252,2.5,,,,3,onbekend,,,490741.66,8.75,,5676743.26,,,,,5,,46
+Point,2.620264892442232,51.17910753783918,Feature,"17,92",,"002\xb0 37,216 E",99,0,"51\xb0 10,746 N",1996 / 10 - 100,5,"64,00",-,,24,,"2,92",,1,20,-,1,,"06,0 Obstn GLLWS",3,3.75,-,6,"05,9 Obstn",,-,3,5.57,,24,,"137,91",,B_110_237_d,7.5,,-,,3,onbekend,,1996/05/02,473456.9,8.75,,5669811.16,-,,"Deze obstructie werd gemeld door O.148 de SNIPE op 27/12/1995 aan de Eerste Waterschout J.Bedert
+
+B_110_237_d
+
+Midden 51\xb0 10'.746 - 002\xb0 37'.216
+Pt_01  51\xb0 10'.751 - 002\xb0 37'.212
+Pt_02  51\xb0 10'.744 - 002\xb0 37'.222
+
+Dieptecijfer gewijzigd naar LAT",-,4,-,4
+Point,2.836016640571895,51.58866661644359,Feature,u,,002\xb0 50.161 E,99,0,51\xb0 35.320 N,,3,"55,75",,,30,,,,2,12,,1,,,2,2.5,,6,,,,1,21.84,,263,,,,B_135_250,2.5,,,,4,onbekend,,,488639.57,8.75,,5715302.89,,,,,5,,262
+Point,2.728666584711006,51.249983274659705,Feature,u,,002\xb0 43.720 E,99,0,51\xb0 14.999 N,,4,"59,75",,,30,,,,2,16,,1,,,2,2.5,,6,,,,1,14.89,,79,,,,B_115_243,2.5,,,,4,onbekend,,,481063.15,8.75,,5677659.54,,,,,5,,78
+Point,3.199533448969108,51.3661164840587,Feature,20,,003\xb0 11.972 E,1,0,51\xb0 21.967 N,,4,"22,25",,,0,,,,2,16,,0,,,3,3.75,,3,,,,1,12.46,,159,,,,B_122_212_b,2.5,,,,6,Hafenschutzboot HS 120,,,513890.7,0,,5690558.6,,,,,0,,159
+Point,2.580962508587521,51.36697687614781,Feature,"12,5",,"002\xb0 34,858 E",99,0,"51\xb0 22,019 N",,3,"77,25",,,24,,"11,67",,3,12,,4,,-,3,3.75,,,-,,,1,24.47,,,,"133,15",,B_122_234_c,2.5,,,,2,onbekend,,1995/08/18,470828.92,35,,5690718.72,,,"Tijdens de algemene peilingen van de Westhinder op 06/09/93 werd met de Side Scan Sonar een kleine obstructie gevonden . Het betreft hier om losse stukken, vermoedelijk wrakresten.
+
+B_122_234_c
+
+Midden 51\xb0 22'.019 - 002\xb0 34'.858
+Pt_01  51\xb0 22'.015 - 002\xb0 34'.864
+pt_02  51\xb0 22'.023 - 002\xb0 34'.857",,4,,279
+Point,2.490299926425533,51.6974499880943,Feature,u,,002\xb0 29.418 E,99,0,51\xb0 41.847 N,,2,"78,00",,,30,,,,2,8,,4,,,2,2.5,,6,,,,1,33.86,,275,,,,B_141_229,2.5,,,,2,onbekend,,,464773.52,35,,5727511.57,,,,,5,,274
+Point,3.107074248216622,51.485526245738974,Feature,u,,"003\xb0 06,424 E",99,0,"51\xb0 29,132 N",1961 / 13 - 096,4,"40,75",Zeebrugge,,6,,,,1,16,Belgisch,1,,,2,2.5,-,5,"02,1 Wk__",,-,3,15.39,,252,"2,10",,,B_129_306,7.5,,,Vissersboot,5,Z.442 Andre Jeannine,,2007/03/28,507434.67,8.75,,5703824.93,,,"SSS- onderzoek op 28/10/93 .
+Uit het onderzoek blijkt dat van dit wrak nauwelijks iets over blijft.
+
+Dieptecijfer is ongewijzigd naar LAT",,1,Hout,251
+Point,3.213735436563127,51.41474109218745,Feature,u,,"003\xb0 12,824 E",99,0,"51\xb0 24,884 N",1992 / 91 - 326,4,"35,75",,,6,,,,1,16,,1,,-,2,2.5,,6,#,,,1,10.78,,232,,,,B_124_312,2.5,,,,6,onbekend,,2009/04/29,514863.62,8.75,,5695968.98,,,,,1,,232
+Point,2.732849881988434,51.20798328968193,Feature,u,,002\xb0 43.971 E,99,0,51\xb0 12.479 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,8.3,,37,,,,B_112_243,2.5,,,,3,onbekend,,,481338.13,8.75,,5672987.74,,,,,5,,16
+Point,2.96079991075399,51.29138326757227,Feature,u,,002\xb0 57.648 E,99,0,51\xb0 17.483 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,6.14,,114,,,,B_117_257_b,2.5,,,,3,onbekend,,,497266.61,8.75,,5682229.35,,,,,5,,113
+Point,2.687733289314731,51.28344998267213,Feature,u,,002\xb0 41.264 E,99,0,51\xb0 17.007 N,,3,"55,75",,,30,,,,2,12,,1,,,2,2.5,,5,,,,1,20.12,,106,,,,B_117_241_b,2.5,,,,4,Rita,,,478222.17,8.75,,5681392.67,,,,,5,,105
+Point,2.63031664116672,51.1798499393757,Feature,u,,002\xb0 37.819 E,99,0,51\xb0 10.791 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,4.08,,25,,,,B_110_237_e,2.5,,,,3,onbekend,,,474159.92,8.75,,5669890.14,,,,,5,,5
+Point,3.131159777144863,51.38194353648528,Feature,u,"17,30","003\xb0 07,870 E",2,0,"51\xb0 22,917 N",1955 / 21 - 101,5,"63,75",-,,30,,,"7253,00",1,20,Brits,1,1944,"5,9 Wk ;  -1,2 Wk ; 7,8 Wk__ ; +++",2,2.5,,4,#,"128,60",-,1,9.83,1955/09/14,195,,,,B_122_307_b,2.5,,Van Gastel,Liberty,3,SAMSELBU (achterschip),,,509127.66,8.75,,5692308.01,"J.A. Jones Const. Co. Inc., Panama City",1945/03/19,"Gezonken na mijnexplosie nabij NF 11 boei. Het wrak is in 2 stukken gebroken en hier betreft het achterste gedeelte  van  de SAMSELBU. Het voorste gedeelte bevindt zich in positie 51\xb025',010 N - 003\xb011',363 E.","W. Runciman & Co. Ltd. Mgrs Londen Britain, MOWT US gecharterd",5,Staal,195
+Point,2.966478433251376,51.60917780563011,Feature,33,,"002\xb0 57,989 E",0,0,"51\xb0 36,551 N",2000 / 10 - 113,2,"35,25",,,6,,"7,50",,1,8,,1,,#,4,5,,1,"28,0 Wk_",,,3,30.11,,265,,"125,00",,B_136_258_a,7.5,Ter Streep,,,6,UC62,,2007/03/14,497678.74,8.75,,5717571.84,,,"N_136_258_a
+
+Midden 51\xb0 36'.551 - 002\xb0 57'.989
+Pt_01  51\xb0 36'.553 - 002\xb0 57'.965
+Pt_02  51\xb0 36'.544 - 002\xb0 57'.988
+
+Dieptecijfer is ongewijzigd naar LAT",,1,Staal,264
+Point,2.918108200807881,51.24305353393403,Feature,u,,"002\xb0 55,086 E",99,0,"51\xb0 14,583 N",1985 / 10 - 084,5,"63,75",-,,30,,,,1,20,-,1,,"zichtbaar wrak,",2,2.5,-,6,-,,-,1,8.85,,71,,,,B_114_255_b,2.5,Geosurveyor IV,-,,3,Flakplatform,,,494283.76,8.75,2015/12/02,5676857.11,-,1934/01/04,"Op 04/01/1934 zonk een vissersloep in positie 51 14 36 N - 02 55 13 E.  In 1969 werd een obstructie verwijderd in positie 51 14 30 N  02 55 00 E. In 1974 vond men opnieuw een houten obstructie, zelfs zichtbaar bij LW. In 1975 werd deze obstructie verwijderd ( BAZ 1975/9-86 ). In 1982, zie BAZ 1982/26-154(T), wordt weer melding gemaakt van een wrak in positie 51 14 38 N - 02 55 10 E.",-,5,-,50
+Point,3.271303318848593,51.37444638970787,Feature,u,,"003\xb0 16,278 E",99,0,"51\xb0 22,467 N",1984 / 26 - 135,5,"68,75",,,30,1984/11/13,,,1,20,,1,,"3,3 Wk__ ; 04,0 Wk__ GLLWS",2,2.5,,6,"03,9 Wk__",,,3,5.94,,179,"4,00",,,B_122_316,7.5,,-,,3,onbekend,,,518883.59,8.75,,5691501.01,,,Dieptecijfer gewijzigd naar LAT,,5,,179
+Point,3.20977162457587,51.456667942782836,Feature,u,,"003\xb0 12,586 E",99,0,"51\xb0 27,400 N",1994 / 19 - 126,5,"63,75",-,,30,,,,1,20,-,1,,Wrak gevaarlijk voor bovenscheepvaart PA,2,2.5,-,6,# ED,,-,1,5.97,,248,,,,B_127_312,2.5,,-,,3,onbekend,,,514574.62,8.75,,5700630.95,-,,"Een zone van 2 km op 2km werd gescand met sss en zoeksonar , niets gevonden.",-,5,-,247
+Point,2.712649869616237,51.21720000220763,Feature,u,,002\xb0 42.759 E,99,0,51\xb0 13.032 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,6.49,,45,,,,B_113_242,2.5,,,,3,onbekend,,,479931.06,8.75,,5674018.03,,,,,5,,24
+Point,3.11810312825787,51.36721974658949,Feature,u,,"003\xb0 07,086 E",2,0,"51\xb0 22,033 N",1956 / 06 - 028,5,"63,75",-,,30,,,"7244,00",1,20,Grieks,1,1944,"zichtbaar op laag water, 70 dm ,",2,2.5,bodem,4,#,,ballast,1,9.31,1956/04/10,164,,,,B_122_307,2.5,,Van Gastel,Liberty,3,ELEPHTERIA,,,508221.66,8.75,,5690669.02,-,1945/03/23,Gezonken na mijnexplosie en opgeruimd door Van Gastel tot op omringende bodem in 1955-1956.,Griekse regering (on bare boat charter from USA),5,Staal,164
+Point,3.274219833190168,51.35760683699228,Feature,u,,"003\xb0 16,453 E",99,0,"51\xb0 21,456 N",1965 / 14 - 112,5,"68,75",,,30,,,,3,20,,1,,,2,2.5,,,-,,,3,5.01,,,,,,B_121_316_a,7.5,Ter Streep,,,3,onbekend,,,519093.59,8.75,,5689629.03,,,Gevonden tijdens algemene peilingen op 19/03/1992.,,5,,283
+Point,2.36975262740608,51.35887617299898,Feature,u,,"002\xb0 22,185 E",99,0,"51\xb0 21,533 N",1994 / 19 - 126,2,"78,00",Nieuwpoort,,30,,,"57,85",1,8,Belgische,4,1955,29 Wk,2,2.5,,5,#,,-,1,35.03,,150,,,,B_121_222,2.5,,-,Vissersboot,2,N.147  SUZANNE,,,456118.02,35,,5689923.02,"Loy A., Nieuwe Werfkaai, Oostende",1974/01/18,-,"Norbert Vercoutter, Oostduinkerke",5,hout,150
+Point,2.690876023330761,51.2738855141478,Feature,u,,"002\xb0 41,453 E",99,0,"51\xb0 16,433 N",1988 / 19 - 117,4,"59,75",Oostende,,30,,,"32,85",1,16,Belgisch,1,1945,11 WK  ; +++,2,2.5,,6,#,,-,1,13.57,,98,,,,B_116_241_a,2.5,,-,Vissersboot,4,O.818  LUCIE-JENNY II ?,,,478436.87,8.75,,5680328.09,"P. Vynck, Nielsestraat 260, Boom",1970/02/15,-,"Raphayl Blondr - Beyen, Oostende",5,Hout,97
+Point,2.757700006202073,51.22761659443947,Feature,u,,002\xb0 45.462 E,99,0,51\xb0 13.657 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,5.23,,54,,,,B_113_245b,2.5,,,,3,onbekend,,,483081.24,8.75,,5675165.1,,,,,5,,33
+Point,2.811853471189599,51.25666185976385,Feature,42,"7,18","002\xb0 48,711 E",2,0,"51\xb0 15,400 N",1963 / 12 - 110,5,"66,25",,,30,1963/05/16,,"324,00",1,20,Brits,1,1917,"zichtbaar bij LW ; 6,7 Wk ; 4 Wk__ ;",4,5,bodem,3,#,"41,81",-,1,8.63,,89,,,,B_115_248,2.5,,Ackermans & Van Haaren,Treiler,3,HAYBURN WYKE,,,486870.81,8.75,,5678384.1,"Cockrane & Son Ltd., Delby",,Opgeruimd wrak.,Addson & Co Ltd,5,Staal,88
+Point,2.988664636523084,51.357495577394026,Feature,u,,"002\xb0 59,320 E",99,0,"51\xb0 21,450 N",1963 / 07 - 050,5,"63,75",Londen,,30,,,"4104,00",1,20,Brits,1,1909,"8,3 Wk ; 7,6 Wk__  ; +++",2,2.5,,0,#,,7.600 t goederen & katoen,1,8.98,1963/03/01,147,,,,B_121_259_a,2.5,,Ackermans & Van Haaren,Stoomschip,3,CROXTETH HALL,,,499210.73,8.75,,5689581.03,"Rickmers R.R. Shipb. Co., Bremershaven",1929/02/27,"Dit schip zonk op 27/02/29 nabij het lichtschip WANDELAAR . Kort na deze ramp stootte de GABOON ( 3297 ton ) met volle lading , 5000 ton fuel op het wrak van de  CROXTETH HALL. In 1930 werd het wrak gedeeltelijk opgeruimd door J.O. INGRAM ( Salvage Contractors ). In 1962-1963 werd het wrak verder opgeruimd door ACKERMANS & Van Haaren uit  Antwerpen.","Ellerman Lines (Hall Line Ltd), Londen",5,staal,147
+Point,2.5991165674463,51.17524998044478,Feature,u,,002\xb0 35.947 E,99,0,51\xb0 10.515 N,,5,"68,75",,,30,,,,2,20,,1,,,2,2.5,,5,,,,3,7.47,,22,,,,,7.5,,,,3,Brug visserschip,,,471976.32,8.75,,5669390.02,,,,,5,,2
+Point,2.940600544898928,51.33166530644698,Feature,u,,"002\xb0 56,436 E",99,0,"51\xb0 19,900 N",1955 / 23 - 113,5,"63,75",Cuxhavn,,30,,,"186,00",1,20,Duits,1,,"9,6 Wk ; +++",2,2.5,,6,#,,-,1,8.71,,131,,,,B_119_256,2.5,,-,Vissersboot,3,onbekend,,,495861.75,8.75,,5686710.05,"G. Seebeck, Geestemqnde, Duitsland",1917/04/02,,"Cuxhavener Hochseefischerei A.G., Cuxhavn",5,Staal,130
+Point,2.941028965441458,51.28860300009811,Feature,u,,"002\xb0 56,462 E",99,0,"51\xb0 17,316 N",1957 / 16 - 091,5,"63,75",Oostende,,30,,,"9,53",1,20,Belgisch,1,1942,"4,5 Wk ;  +++",2,2.5,,5,#,,-,1,7.35,,111,,,,B_117_256,2.5,,-,Vissersboot,3,O.76  NOORDSTER,,,495887.75,8.75,,5681921.08,-,1956/07/25,,"Goderis Germaine, Oesterbankstraat 23, Oostende",5,Hout,110
+Point,3.0881104429611,51.442498617035206,Feature,u,,"003\xb0 05,287 E",99,0,"51\xb0 26,550 N",1994 / 26 - 156,5,"63,75",,,30,,,,1,20,,1,,"8,7 Wk",2,2.5,,6,#,,,1,9.44,,244,,,,B_126_305,2.5,,,,3,onbekend,,,506123.68,8.75,,5699037.96,,,Uitgebreid sonaronderzoek 2km x1km: niets gevonden 28/10/93.,,5,,243
+Point,2.885606523953682,51.2644364124497,Feature,u,,"002\xb0 53,136 E",99,0,"51\xb0 15,866 N",1960 / 22 - 157,5,"63,75",,,30,,,,3,20,,1,,"onzichtbaar bij LW ; 7,5 Wk ;",2,2.5,bodem,,#,,,1,9.18,,,,,,B_115_253_b,2.5,,Van den Tak,,3,onbekend,,,492018.77,8.75,,5679238.1,,,"Opgeruimd wrak. In de BAZ van 1960/22-157 vermeld men de positie van 3 wrakken , De Anton Hammerbacher en 2 onbekenden. In de BAZ van 1950/315 verwijst men naar het wrak RIO BRAVO met als positie 51 16 00 N - 02 52 58 E. Dus een van deze onbekende was de RIO BRAVO.",,5,,282
+Point,3.140328762193297,51.41528356645452,Feature,u,,"003\xb0 08,420 E",99,0,"51\xb0 24,917 N",1969 / 20 - 159,5,"63,75",,,30,,,,1,20,,1,,[+++] Van Nederlandse kaart afgenomen voor 1969,2,2.5,,6,#,,,1,5.47,,233,,,,B_124_308,2.5,,,,3,onbekend,,,509758.65,8.75,,5696016.98,,,-,,5,,233
+Point,2.897544315368207,51.24574397131508,Feature,u,,"002\xb0 53,853 E",99,0,"51\xb0 14,745 N",1972 / 07 - 073,5,"63,75",,,30,,,,1,20,,1,,"Gevaarlijk voor bovenscheepvaart , #",2,2.5,-,5,#,,,1,5.84,,72,,,,B_114_253_a,2.5,,-,,3,Zuigbuis Decloedt,,,492848.77,8.75,,5677158.11,,1971/11/01,-,,5,,51
+Point,3.189358310206326,51.368969608242395,Feature,u,,"003\xb0 11,362 E",2,0,"51\xb0 22,138 N",1967 / 19 - 157,4,"77,25",,,30,,,,1,16,,3,,,2,2.5,,1,#,,,1,14.22,,168,,,,B_122_311_c,2.5,Ter Streep,,,2,HM Motor Launch 424,,,513181.53,26.25,,5690874.02,,,"Tijdens het zoeken naar de aangevaren Zandboei werd in deze positie een obstructie waargenomen. Bij nader duikersonderzoek, verricht in 1967  door de Zeemacht, blijkt deze obstructie een stalen jacht te zijn. Het wrak stak in 1967 ongeveer 1 m boven de omringende bodem uit.",,5,,168
+Point,3.013109372535949,51.411941021773536,Feature,u,,"003\xb0 00,787 E",99,0,"51\xb0 24,716 N",1971 / 22 - 145,4,"59,75",,,30,,,,1,16,,1,,"11,5 Wk ; +++",2,2.5,bodem,6,#,,,1,16.59,1987/11/01,229,,,,B_124_300,2.5,,Tijdelijke Vereniging Bergingswerken,,4,onbekend,,,500911.71,8.75,,5695635.99,,,"Op 23 juni 1983 verrichte de sleepzuiger ""RUPEL"" baggerwerkzaamheden in vak 2. In de positie 501 100 X en 5 695 750 Y , dit is iets oosten van de positie van het wrak, werd de zuigkop zwaar beschadigd. In dezelfde positie werd op 29 juni 1983 opnieuw een onderwater obstructie geraakt. Het wrak werd in 1987 opgeruimd tot op de bodem door de Norma en Zeebrugge 1 van de Tijdelijke Vereniging voor Bergingswerken.",,5,,229
+Point,2.770283241075659,51.21969999313348,Feature,u,,002\xb0 46.217 E,99,0,51\xb0 13.182 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,7.74,,47,,,,B_113_246,2.5,,,,3,onbekend,,,483957.12,8.75,,5674281.89,,,,,5,,26
+Point,2.906766540542917,51.23996659458629,Feature,u,,002\xb0 54.406 E,99,0,51\xb0 14.398 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,7.07,,64,,,,B_114_254_e,2.5,,,,3,onbekend,,,493491.65,8.75,,5676514.76,,,,,5,,43
+Point,2.626766644853595,51.153333284528024,Feature,u,,002\xb0 37.606 E,99,0,51\xb0 09.200 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,6.89,,13,,,,B_109_237,2.5,,,,3,onbekend,,,473896.82,8.75,,5666942.57,,,,,5,,70
+Point,2.784966618565686,51.19869992517536,Feature,u,,002\xb0 47.098 E,99,0,51\xb0 11.922 N,,5,"63,75",,,30,,,,1,20,,1,,,2,2.5,,6,,,,1,9.03,,32,,,,B_111_247,2.5,,,,3,onbekend,,,484975.74,8.75,,5671943.42,,,,,5,,11
+Point,2.688116923697019,51.14628341014763,Feature,u,,002\xb0 41.287 E,99,0,51\xb0 08.777 N,,5,"63,75",,,30,,,,1,20,,1,,,2,2.5,,6,,,,1,0.66,,9,,,,B_108_241,2.5,,,,3,onbekend,,,478184.2,8.75,,5666138.6,,,,,5,,66
+Point,2.751033286926788,51.18804997517781,Feature,u,,002\xb0 45.062 E,99,0,51\xb0 11.283 N,,5,"63,75",,,30,,,,1,20,,1,,,2,2.5,,6,,,,1,8.42,,29,,,,B_111_245,2.5,,,,3,Onbekend,,,482600.83,8.75,,5670766.55,,,,,5,,8
+Point,2.742733225516386,51.178599973707605,Feature,u,,002\xb0 44.564 E,99,0,51\xb0 10.716 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,5.38,,23,,,,B_110_244,2.5,,,,3,onbekend,,,482017.1,8.75,,5669717.64,,,,,5,,3
+Point,3.182797027229314,51.420035679958346,Feature,u,"3,40","003\xb0 10,968 E",99,0,"51\xb0 25,202 N",1999 / 22 - 154,5,"63,75",,,30,,,,3,20,Belg,1,,Gevaarlijk voor Bovenscheepvaart,2,2.5,Volledig opgeruimd,,NIET op kaart,"10,50",,1,6.35,1999/09/10,,,,,B_125_311_a,2.5,Ter Streep,ITS Tijdokstraat 12 Zeebrugge 050/557010 Quarain Michiel,Vissersboot,3,DONALD DUCK,,,512710.63,8.75,,5696551.98,,,"Het wrakje is in zijn geheel gelicht, Op 12 oktober 1999 is een controle onderzoek uitgevoerd . Er zijn geen resten van het wrak terug gevonden.",Van Hee Edgar Westkapellestraat 89   8301 Knokke-Heist,5,Staal,288
+Point,2.983663853214544,51.36555167656233,Feature,u,,"002\xb0 59,020 E",2,0,"51\xb0 21,933 N",1961 / 22 - 158,4,"59,75",Oostende,,30,,,"254,00",1,16,Belgisch,1,1922,"6,3 Wk  ; 6,6 Wk__  ; +++",2,2.5,bodem,4,#,,- [3 A.A.'s],1,10.1,1963/05/05,158,,,,B_121_259_b,2.5,,Ackermans & Van Haaren,Lichtschip,4,WANDELAAR LICHTSCHIP,,,498862.73,8.75,,5690477.02,"Hoboken, Belgi\xeb",1941/02/01,"Het schip werd op 23/04/1940 van zijn ankerplaats weggehaald en naar Oostende overgebracht. Op 17 mei 1940 werd het weggesleept door de Loodsboot N7 met bestemming Frankrijk. Onderweg brak de sleeptros en strandde het schip. De Duitsers brachten het schip terug vlot en lieten de nodige herstellingen uitvoeren bij Beliard & Crighton. Het schip werd van bewapening voorzien en teruggelegd in de zelfde positie onder de naam ""ZEPHYR"".Tenslotte is het schip door een luchtaanval in februari 1941 tot zinken gebracht.  De positie volgens de Belgische Zeemacht is 51 22 00 N - 02 58 55 E. Het wrak werd met explosieven bewerkt en  opgeruimd tot omringende bodem.",Belgische Staat,5,Staal,158
+Point,2.885233245913484,51.266816613950546,Feature,u,,002\xb0 53.114 E,2,0,51\xb0 16.009 N,,5,"90,00",,,30,,,,2,20,,4,,,2,2.5,,4,,,,1,9.61,,95,,,,B_116_253_b,2.5,,,,1,MV Rio Bravo achterschip,,,491993.14,35,,5679502.84,,,,,5,,94
+Point,2.824399976564965,51.221683314954035,Feature,u,,002\xb0 49.464 E,99,0,51\xb0 13.301 N,,5,"68,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,3,3.52,,49,,,,B_113_249,7.5,,,,3,onbekend,,,487737.03,8.75,,5674492.03,,,,,5,,28
+Point,2.890783233840667,51.513283276748965,Feature,u,,002\xb0 53.447 E,99,0,51\xb0 30.797 N,,4,"59,75",,,30,,,,2,16,,1,,,2,2.5,,6,,,,1,17.11,,256,,,,B_130_253,2.5,,,,4,Rotsblok,,,492421.17,8.75,,5706912.1,,,,,5,,255
+Point,2.539217035050404,51.13868226450879,Feature,u,,002\xb0 32.353 E,99,0,51\xb0 08.321 N,,4,"59,75",,,30,,,,2,16,,1,,,2,2.5,,6,,,,1,14.82,,7,,,,B_108_232c,2.5,,,,4,onbekend,,,467763.6,8.75,,5665348,,,,,5,,64
+Point,2.966949969742933,51.2876165953973,Feature,u,,002\xb0 58.017 E,99,0,51\xb0 17.257 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,5,,110,,,,B_117_257_a,2.5,,,,3,onbekend,,,497695.26,8.75,,5681810.25,,,,,5,,109
+Point,3.088663956201878,51.33444331970694,Feature,u,,"003\xb0 05,320 E",99,0,"51\xb0 20,067 N",1957 / 25 - 139,5,"63,75",,,30,,,,1,20,Belgisch,1,,gevaarlijk voor bovenscheepvaart,2,2.5,,6,#,,,1,5.37,,132,,,,B_120_305,2.5,,,Vissersboot,3,onbekend,,,506176.68,8.75,,5687021.05,,,-,,5,Hout,131
+Point,2.934916585874146,51.24929994196338,Feature,u,,002\xb0 56.095 E,99,0,51\xb0 14.958 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,4.91,,77,,,,B_114_256_b,2.5,,,,3,onbekend,,,495457.64,8.75,,5677550.59,,,,,5,,56
+Point,2.521349996847294,51.247999925007676,Feature,u,,002\xb0 31.281 E,99,0,51\xb0 14.880 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,4.45,,75,,,,B_114_231,2.5,,,,3,onbekend,,,466592.77,8.75,,5677512.83,,,,,5,,54
+Point,2.830233297207498,51.277766618367224,Feature,u,,002\xb0 49.814 E,99,0,51\xb0 16.666 N,,4,"64,75",,,30,,,,2,16,,1,,,2,2.5,,0,,,,3,11.39,,101,,,,B_116_249_b,7.5,,,,3,onbekend,,,488158.81,8.75,,5680728.01,,,,,5,,100
+Point,2.669166593246818,51.171749925770385,Feature,u,,002\xb0 40.150 E,99,0,51\xb0 10.305 N,,5,"63,75",,,30,,,,2,20,,1,,,2,2.5,,6,,,,1,9.55,,20,,,,B_110_240,2.5,,,,3,onbekend,,,476871.39,8.75,,5668976.43,,,,,5,,77
+Point,2.626983273028211,51.1735999846732,Feature,u,,002\xb0 37.619 E,99,0,51\xb0 10.416 N,,4,"59,75",,,30,,,,2,16,,1,,,2,2.5,,6,,,,1,14.49,,21,,,,B_110_237_b,2.5,,,,4,onbekend,,,473923.4,8.75,,5669196.28,,,,,5,,1
+Point,2.867849973757644,51.68299998300922,Feature,u,,002\xb0 52.071 E,99,0,51\xb0 40.980 N,,2,54.25,,,30,,,,2,8,,1,,,4,5,,6,,,,1,31,,273,,,,B_140_252,2.5,,,,4,onbekend,,,490863.89,8.75,,5725789.79,,,,,5,,272
+Point,2.88477327487852,51.26527186014322,Feature,u,,"002\xb0 53,086 E",1,0,"51\xb0 15,916 N",1960 / 22 - 157,5,81.25,Hamburg,,30,,,"443,00",1,20,Duits,3,,"zichtbaar bij LW ; 1,3 Wk ; +++",2,2.5,bodem,3,#,,-,1,9.41,,92,,,,B_115_253_a,2.5,,Van den Tak,Treiler,1,ANTON HAMMERBACHER,,,491960.78,26.25,,5679331.1,-,1955/11/24,"Opgeruimd wrak. In deze onmiddellijke omgeving  lag een wrakstuk van de RIO BRAVO, opgeruimd in 1960 door Van den Tak en in 1988 door TV Bergingswerken nagezien. Ook het derde onbekende wrak werd in 1960 opgeruimd en nagezien.",Gemeindwirtschaftliche Hochseefischerei G.M.B.H.,5,Staal,91
+Point,2.474798099433793,51.6271670362964,Feature,29,,"002\xb0 28,488 E",2,0,"51\xb0 37,630 N",1990 / 18 - 116,2,"60,25",Rotterdam,,6,,"9,00","257,00",1,8,Nederlands,4,,"25,5 Wk; 31,0 Wk GLLWS",3,3.75,,2,"30,5 Wk",,-,3,31.66,,268,,"152,00",,B_137_228,7.5,,,Stoomschip,3,BREDA,,2015/08/09,463645.96,35,,5719702.62,-,,"Wijziging  op kaart aangebracht pas in 1996 op de D11 Vlaamse Banken.
+
+B_137_228
+
+Midden 51\xb0 37'.630 - 002\xb0 28'.488
+Pt_01  51\xb0 37'.633 - 002\xb0 28'.484
+Pt_02  51\xb0 37'.620 - 002\xb0 28'.496
+
+Dieptecijfer gewijzigd naar LAT","C. E. Van Meel, Rotterdam, Nederland",1,Staal,267
+Point,3.097833053786124,51.400274521837915,Feature,u,"18,10","003\xb0 05,870 E",2,0,"51\xb0 24,016 N",1982 / 22 - 139,4,"86,00",Aberdeen,,30,1982/10/24,,"120,00",1,16,Brit,4,1909,"6,2 Wk, 7,6 Wk, 7,2 Wk, 11,4 Wk ,10,8 Wk",2,2.5,"76 dm ,108",1,#,"105,00",-,1,17.13,,217,"17,50",,,B_124_305,2.5,,"?,Ackermans & Van Haaren,TVB.",Torpedojager,1,MAORI,,,506805.67,35,,5694343,J.S. White Cowes,1915/05/07,"De MAORI, ex Northstar, ex Yacht , ex Marumbert , ex Calejon was een Britse destroyer of torpedojager en zonk in 1915. Het wrak werd gedeeltelijk opgeruimd door Ackermans & Van Haaren in 1961-1962. In 1982 werd door de Tijdelijke Vereniging voor Bergingswerken met de NORMA het wrak volledig opgeruimd. Nadien werd het wrak afgedregd op 17,50 m door de Paster Pype op 24 october 1982.",C. Craig,5,Staal,217
+Point,2.927549005987696,51.243050765719644,Feature,77,"8,78","002\xb0 55,653 E",2,0,"51\xb0 14,583 N",1962 / 13 - 097,5,"47,25",-,,6,,,"810,00",1,20,Brits,1,1916,"01,6 Wk GLLWS",4,5,,1,"01,5 Wk","77,18",-,3,2.29,,70,,,"2,30",B_114_255_c,7.5,,-,Mijnenveger,5,HMS  PLUMPTON,,,494942.75,8.75,,5676856.11,"Mac Millan,  Great-Britain",1918/10/19,Dieptecijfer gewijzigd naar LAT (Mijnenveger Ascott),"British Navy,  Great-Britain",1,Staal,49
+Point,2.866434834697774,51.26749140687513,Feature,u,,"002\xb0 51,986 E",99,0,"51\xb0 16,049 N",1987 / 24 - 155,5,"63,75",,,30,,,,1,20,,1,,"5,9 Wk",2,2.5,,6,#,,,1,9.89,,96,,,,B_116_252_a,2.5,,-,,3,onbekend,,,490681.78,8.75,,5679580.1,,,niets meer gevonden,,5,,95
+Point,3.192274957296394,51.344722714823064,Feature,20,,"003\xb0 11,537 E",0,0,"51\xb0 20,683 N",1980 / 23 - 126,4,"22,25",,,0,,,,3,16,,0,,"4, 0 Wk ; 6,7 Wk ; 4,8 Wk__ in oorspronkelijke positie",3,3.75,,1,-,,,1,10,,,,,,B_120_311,2.5,,,Duikboot,6,U-boot,,,513391.63,0,,5688178.04,,,"Duitse duikboot uit eerste wereldoorlog.
+
+Het wrak werd op 22/10/1980 gelicht door DRUOON  ANTIGOON en herlegd in bovenstaande positie.  Volgens het verslag van TV Zeebouw-Zeezand gaat het hier om de UB.10. 
+De oorspronkelijke positie was 51 21 49 N - 03 13 12 E. Volgens BAZ van 1925/135 a heeft het wrak een lengte van 74 m , de Zeemacht vind in 1978 slechts een wrak met een lengte van 27 m.  Aldus kan het hier om 2 wrakken gaan.",,0,Staal,307
+Point,3.079776594616028,51.37472431195004,Feature,u,"17,30","003\xb0 04,787 E",2,0,"51\xb0 22,483 N",1971 / 19 - 132,5,"63,75",,,30,,,"7176,00",1,20,Amerikaans,1,1943,"zichtbaar bij LW ; 8,8 Wk ;  +++",2,2.5,,4,#,"128,60",,1,9.03,,181,,,,B_122_304_b,2.5,,Ackermans & Van Haaren,Liberty,3,CHARLES D. MACIVER,,,505552.68,8.75,,5691500.01,"North Carolina S.B.Co., Wilmington, N.C.",1945/03/23,Gezonken na mijnexplosie nabij NF11 boei op 23 maart 1945. Opgeruimd door Ackermans & Van Haaren uit Antwerpen.,U.S. War Shipping Administration,5,Staal,181
+Point,2.883107813665838,51.266385228744475,Feature,u,,"002\xb0 52,986 E",2,0,"51\xb0 15,983 N",,5,"81,25",,,30,,,,1,20,,3,,+++,2,2.5,,4,#,,-,1,9.59,,94,,,,B_116_253_a,2.5,,Van den Tak's Bergingsbedrijf n.v.,,1,MV Rio Bravo voorschip,,,491844.78,26.25,,5679455.1,,,,,5,,93
+Point,2.797509671890642,51.246692730440344,Feature,"30,01",,"002\xb0 47,851 E",2,0,"51\xb0 14,802 N",1984 / 26 - 136,5,"47,25",-,,6,1984/10/15,"12,50","545,00",1,20,Brits,1,1943,"gevaarlijk wrak voor bovenscheepvaart , 5,1 Wk ,  5,9 Wk__ , 07,2 Wk__",4,5,-,3,"07,1 Wk__",,30 DC's,3,9.37,,74,"7,20","94,90",,B_114_247,7.5,,-,Treiler,5,HMS. COLSAY,,2007/01/26,485866.82,8.75,,5677278.11,"Cook, Welton & Gemmel Holmes,  Great-Britain",1944/11/02,"Het wrak ligt verspreid in 3 stukken. Het hoogste punt bevindt zich in het stuk b  in positie 5 677 466 N - 485 932 E. De verspreiding bedraagt 93 m (a-b-c). De HMS COLSAY werd op 02/11/1944 getorpedeerd door een Biber (\xe9\xe9nmansduikboot) terwijl het schip voor anker lag.
+
+B_114_247
+
+Midden 51\xb0 14'.802 - 002\xb0 47'.851
+Pt_01  51\xb0 14'.800 - 002\xb0 47'.866
+Pt_02  51\xb0 14'.774 - 002\xb0 47'.805
+
+Dieptecijfer gewijzigd naar LAT","Royal Navy,  Great-Britain",1,Staal,53
+Point,3.188044084256548,51.416002351750585,Feature,"82,5","17,30","003\xb0 11,283 E",2,0,"51\xb0 24,960 N",1997 / 05 - 069,5,"47,25",-,,6,,"18,33","7253,00",2,20,Brits,1,1944,zichtbaar bij LW ;,4,5,,4,"02,8 Wk__","128,60",-,3,6.41,,235,,"221,40",,B_125_311,7.5,,-,Liberty,5,SAMSELBU (voorschip),,2007/03/29,513076.63,8.75,,5696104.35,"J.A. Jones Const. Co. Inc., Panama City",1945/03/19,"Gezonken na mijnexplosie nabij NF 11 boei. Het wrak is in 2 stukken gebroken en hier betreft het voorste gedeelte  van  de SAMSELBU. Het achterste gedeelte bevindt zich in positie 51\xb0 22',950 N - 003\xb008',100 E
+
+
+Dieptecijfer ongewijzigd in LAT","W. Runciman & Co. Ltd. Mgrs Londen Britain, MOWT US gecharterd",1,Staal,235
+Point,2.540494750145287,51.13581873189385,Feature,u,,002\xb0 32..430 E,2,0,51\xb0 08.149 N,,4,"59,75",,,30,,,,2,16,,1,,,2,2.5,,3,,,,1,14.51,,4,,,,B_108_232b,2.5,,,,4,onbekend,,,467851,8.75,,5665029,,,,,5,,61
+Point,2.872912929544355,51.278163138591836,Feature,35,,"002\xb0 52,375 E",1,0,"51\xb0 16,690 N",1990 / 24 - 140,5,"83,75",-,,30,,,"100,00",1,20,Duits,3,1943,"5,5 Wk__",4,5,bodem,3,#,"35,00",-,1,8.03,,102,"5,50",,"1,52",B_116_252_b,2.5,,"Tijd. Ver. Bergingswerken ""Norma""",Snelboot,1,S.220,,,491135.78,26.25,,5680766.09,,,Opgeruimd wrak (Duitse snelboot type S 100),Duitse Marine,5,Staal,101
+Point,2.844773244764617,51.25999225677394,Feature,u,,"002\xb0 50,686 E",2,0,"51\xb0 15,600 N",1960 / 12 - 089,5,"68,75",,,30,,,,1,20,Duits,1,,"onzichtbaar bij LW ; 4,9 Wk ; 3,9 Wk ; 10,7 Wk__ GLLWS",2,2.5,bodem,3,"10,6 Wk__",,,3,9.92,,91,"10,70",,,B_115_250,7.5,,Ackermans & Van Haaren,Kanonneerboot,3,HMS Rifsnes,,,489168.79,8.75,,5678749.1,,,"Opgeruimd wrak
+
+Dieptecijfer gewijzigd naar LAT",,5,Staal,90
+Point,3.034778997919232,51.35610620367763,Feature,0,"17,25","003\xb0 02,087 E",2,0,"51\xb0 21,366 N",1963 / 26 - 224,5,"62,50","Jacksonville, Florida America",,30,1964/05/22,,"7176,00",1,20,Amerikaans,1,1943,"zichtbaar LW,",1,1.25,,4,#,"129,00",Oorlogswerktuigen,1,8.58,,146,,,"13,20",B_121_302,2.5,,Ackermans & Van Haaren,Liberty,3,FRANCIS ASHBURY,,,502421.7,8.75,,5689427.03,"St. John's River S.B.Co., Jacksonville, Fla",1944/12/03,Gezonken na mijnexplosie  nabij  NF 11 boei met volle lading oorlogsmaterialen. In 1954 werd een gedeelte van de lading geborgen . In 1963 werd het wrak verder opgeruimd door Ackermans & Van Haaren uit Antwerpen.,U.S. War Shipping Administration,5,Staal,146
+Point,2.900040891288034,51.34972040275138,Feature,0,"18,90","002\xb0 54,002 E",2,0,"51\xb0 20,983 N",1961 / 10 - 077,4,"58,50",Londen,,30,,,"8208,00",1,16,Brits,1,1931,"2,6 Wk__  ; +++",1,1.25,138 dm,4,#,"137,60",8.300 ton Octaan-,1,13.72,1961/04/24,138,,,,B_121_254,2.5,,Ackermans & Van Haaren,Tanker,4,GOLDSHELL,,,493038.77,8.75,,5688721.03,"Bremen Vulcan, Vegesack",1945/04/16,"Deze Britse tanker met 8300 ton Octane spirit aan boord vaarde op een mijn en zonk nabij de Oostendebank op 16 april 1945. Gebouwd in 1931 als GOLDSHELL voor eigendom van Anglo-Saxon Petroleum C\xb0,Ltd. Britain. Het wrak werd opgeruimd met explosieven tot op de omringende bodem in 1960 door Ackermans & Van Haaren.","Anglo-Saxon Petroleum Co. Ltd., Londen",5,staal,137
+Point,2.658183236989121,51.16398328638139,Feature,"13,8",,002\xb0 39.491 E,3,0,51\xb0 09.839 N,,5,"70,00",,,30,,"11,10",,2,20,,1,,,3,3.75,,3,,,,3,7.65,,16,,,,B_109_239c,7.5,,,,3,Duits vliegtuig,,,476099.53,8.75,,5668116.24,,,,,5,,73
+Point,3.204333326129491,51.34999992609317,Feature,20,,003\xb0 12.260 E,2,0,51\xb0 21.000 N,,4,"22,25",,,0,,,,2,16,,0,,,3,3.75,,4,,,,1,10,,139,,,,B_121_312_c,2.5,,,,6,Jura,,,514229.84,0,,5688767.19,,,,,0,,139
+Point,2.913085162471519,51.240163528691205,Feature,u,,"002\xb0 54,785 E",2,0,"51\xb0 14,410 N",1990 / 24 - 140,5,"63,75",Nieuwpoort,verkeerdelijk benoemd als Siriu,30,1989/11/13,,,1,20,Belgisch,1,,"6,2 Wk __",2,2.5,bodem,4,#,,-,1,7,,65,"6,20",,,B_114_254_c,2.5,,TV  Bergingswerken NORMA,Sleepboot,3,Raymond,,,493932.76,8.75,,5676536.12,,,"Opgeruimd wrak, op 13/11/1990 opnieuw onderzocht  en er werden geen wrakresten meer gevonden.  Afgedregd tot 1 voet boven de bodem .",Belgische Staat,5,Staal,44
+Point,3.178715490525799,51.382501013690394,Feature,65,,"003\xb0 10,722 E",99,0,"51\xb0 22,950 N",2004 / 17 - 126,4,"43,25",,,6,,"9,00",,1,16,,1,,09.8 Wk GLLWS,4,5,,6,09.8 Wk,,,3,10.64,,196,,"312,00",,B_122_310_a,7.5,Ter Streep,,,5,Onbekend,,2007/05/16,512437,8.75,,5692377,,,"Wrak gevonden met de algemene peilingen van juni 2004.
+BaZ gepubliceerd onder 17/126 Belgische kust. Haven Zeebrugge. Omgeving WZ boei. Wrak.
+
+Dieptecijfer ongewijzigd in LAT",,1,,196
+Point,2.490319108706792,51.19609452719017,Feature,u,,"002\xb0 29,419 E",99,0,"51\xb0 11,766 N",1994 / 19 - 126,4,"35,75",-,,6,,,,1,16,-,1,,"Wrak, gevaarlijk voor bovenscheepvaart",2,2.5,-,6,#,,-,1,18.26,,31,,,,B_111_229,2.5,,-,,6,onbekend,,2009/05/14,464386.96,8.75,,5671755.15,-,,"De positie en het teken van het wrak werden afgeleid uit Franse zeekaarten INT 1512 (6735D) van 1978 en INT 1512 (6652D) van 1985. Op 24/05/1993 werd een uitgebreid onderzoek uitgevoerd en niets gevonden in positie 5 671 965 en 464 480. Volgens de SSS-opnamen van 24/05/1993 werd in positie 5 672 304 - 463 971 een zwakke echo waargenomen , evenwel zonder enige schaduw. Dus gaat het hier waarschijnlijk om een veranderlijke bodemstructuur.",-,1,-,10
+Point,2.936360253364031,51.26593082109874,Feature,22,,"002\xb0 56,181 E",99,0,"51\xb0 15,956 N",2003 / 15 - 137,5,"46,00",,,6,,"6,00",,1,20,,1,,"06,6 Wk GLLWS",3,3.75,,6,"06,5 Wk",,,3,6.55,,93,,,,B_115_256_c,7.5,Ter Streep,,,5,Onbekend,,2006/10/12,495560,8.75,,5679400,,,"Dit is duidelijk een deel van een wrak. De spanten zijn zichtbaar op de SideScan beelden.
+
+Dieptecijfer gewijzigd naar LAT",,1,,92
+Point,3.098926774131106,51.39416811093194,Feature,u,,"003\xb0 05,936 E",99,0,"51\xb0 23,650 N",1921 / 109,4,"82,25",,,30,,,,3,16,,3,,,2,2.5,,,NIET op kaart,,,3,11.16,,,,,,B_123_306_c,7.5,Ter Streep,,,1,onbekend,,,506882.67,26.25,,5693664,,,Volgens BAZ van 1921 is in deze positie een schip gezonken .,,5,,277
+Point,3.174358104305334,51.40808053725053,Feature,4,,"003\xb0 10,461 E",99,0,"51\xb0 24,485 N",2008 / 17 - 183,4,"57,00",,,6,,"4,00",,3,16,,3,,,1,1.25,,,"09,6 Obstn","4,00",,3,10.88,,,,"0,00",,B_124_310,7.5,Ter Streep,,,4,Onbekend,,2008/08/06,512127,26.25,,5695221,,,Object waargenomen tijdens de monitoring van de vaargeulen.Het object ligt op ongeveer 112 m NO van de boei S8. Het object is zeer waarschijnlijk een boei.,,1,,296
+Point,2.901717779215558,51.245269978006625,Feature,u,,"002\xb0 54,103 E",99,0,"51\xb0 14,716 N",1963 / 09 - 070,5,"63,75",,,30,,,,1,20,,1,,"Gevaarlijk voor bovenscheepvaart; 3,1 Wk ; 4,9 Wk ;  4,9 Wk__ ; ongevaarlijk wrak",2,2.5,,6,#,,,1,7.08,,69,"4,90",,,B_114_254_a,2.5,,Ackermans & Van Haaren,,3,onbekend,,,493140,8.75,,5677105,,,"Opgeruimd wrak
+De BaZ van 1963 09/70 verwijst naar de wrakboeien ipv het wrak. De positie van het wrak is vermeld onder de BaZ 13/97 van 1962.",,5,,48
+Point,3.114944702682546,51.49212836145611,Feature,22,,"003\xb0 06,897 E",99,0,"51\xb0 29,528 N",,4,"37,00",,,6,,"4,00",,1,16,,1,,,3,3.75,,0,Geen,,,1,16.51,,254,,"331,00",,B_129_306_b,2.5,,,,6,het Vliegent Hart,,2009/04/27,507980,8.75,,5704560,,,VOC schip niet op kaart duikonderzoek uitgevoerd door VIOEzuidelijkste punt0.75 m boven de omringende bodem  WGS84: 51\xb029'.5196 N 003\xb006'.9088 EMidden (Losse stukken lijken op balken) 51\xb029'.5280 N 003\xb006'.8970 Enoordelijkste punt 0.65 m boven de omringende bodem51\xb029'.5349 N 003\xb006'.8955 E De strekking : 331\xb0lengte = 32 mOmringende bodem \xb1 17.2m GLLWS,,1,,253
+Point,3.148372123792465,51.424148805358044,Feature,,,"003\xb0 08,902 E",99,0,"51\xb0 25,449 N",2004 / 21 - 146,5,"43,50",,,6,,,,1,20,,1,,,1,1.25,,6,"02,5 Obstn",,,3,4.13,,139,,,,B_125_308_a,7.5,Ter Streep,,,5,Steenbestorting,,2007/03/29,510316,8.75,,5697004,,,"Deze obstructie bestaat uit steenbestorting en bevindt zich in de onmiddellijke omgeving van de verwijderde meetpaal MOW 5. De bestorting verhoogt de omringende bodem met 1,95 m zodat de kaartdiepte 2.50 m wordt ipv 4.45 m.
+De positie van de oorspronkelijke paal was WGS 84  51\xb025,440 N - 003\xb008,910 E 
+De meting dateert van 30/09/2004 en werd uitgevoerd door Ter streep.
+
+
+Dieptecijfer ongewijzigd in LAT",,1,,138
+Point,2.503179611673354,51.24052615838842,Feature,"15,83",,"002\xb0 30,191 E",99,0,"51\xb0 14,432 N",1998 / 06 - 076,5,"46,00",,,6,,"5,42",,1,20,,1,,"06,5 Wk GLLWS",3,3.75,,0,"06,4 Wk",,,3,6.1,,66,,"141,00",,B_114_230_a,7.5,Ter Streep,,,5,BARNEVELD ?,,2007/03/27,465318.959999999,8.75,,5676690.10999999,,,"Het wrak steekt ongeveer 0,80 m boven de onmiddellijke bodem uit en bevat een H - vormige constructie ( afgeleid uit de Side Scan Sonar - en Multibeam opnamen.) In de omgeving van het wrak werden enkele kleine objecten waargenomen. Deze objecten zijn gemeten ten opzichte van het midden van het wrak. De lokaties zijn als volgt: vanuit het centrum wrak punt A: 350\xb0 afstand 57 m ; punt B: 346\xb0 afstand 82 m ;punt C: 324\xb0  afstand 57 m ; punt D: 314\xb0 afstand 75 m ; punt E: 239\xb0 afstand 61 m ; punt F: 130\xb0 afstand 38 m . Deze hoeken zijn benaderend  omdat verondersteld wordt dat de aslijn van de Side Scan Sonar evenwijdig is aan de aslijn van het schip. Gezien het traject   ongeveer rechtlijnig was zal deze afwijking relatief klein zijn.
+
+Dieptecijfer gewijzigd naar LAT",,1,Hout,45
+Point,2.634092022237784,51.230577760338264,Feature,"25,41",,"002\xb0 38,046 E",1,0,"51\xb0 13,835 N",1996 / 17 - 129,5,"64,00",,,24,,"3,28",,1,20,,1,,"7,6 Wk , ongevaarlijk wrak, 08,8 Wk GLLWS",3,3.75,,1,"08,7 Wk",,,3,9.2,,57,,"276,00",,B_113_238_b,7.5,,,,3,Voorschip Torpedoboot A19,,1995/05/02,474451.89,8.75,,5675530.12,,,"Dit wrakje ligt op de steile helling van de bank en is niet nauwkeurig af te dreggen. 
+Zie echolood van 18/02/1994.
+
+B_113_238_b
+
+Midden 51\xb0 13'.835 - 002\xb0 38'.046
+Pt_01  51\xb0 13'.835 - 002\xb0 38'.058
+Pt_02  51\xb0 13'.835 - 002\xb0 38'.036
+
+Dieptecijfer gewijzigd naar LAT",,4,,36
+Point,3.206993600687488,51.354723592796795,Feature,u,,"003\xb0 12,420 E",2,0,"51\xb0 21,283 N",1955 / 17 - 079,4,"21,00",,,0,,,,1,16,,0,,zichtbaar bij LW ;  05 Wk ; +++,2,2.5,,1,#,,,1,10,,144,,,,B_121_312_a,2.5,,Van Gastel,,6,HM Motor Launch 110,,,514413.62,0,,5689293.03,,,Opgeruimd wrak,,0,,144
+Point,3.02961219564965,51.316664210966415,Feature,"35,51",,"003\xb0 01,777 E",1,0,"51\xb0 19,000 N",1997 / 05 - 069,5,"41,25",,,0,1984/11/12,"7,35",,1,20,,1,,"3,5 Wk__; 04,4 Wk__ GLLWS",4,5,,3,"04,3 Wk__",,,3,5.2,,125,"4,40","266,64",,B_119_301_a,7.5,Geosurveyor IV,,,5,Minensuchboot M3600,,2015/12/02,502063.7,8.75,2015/12/02,5685040.52,,,Dieptecijfer gewijzigd naar LAT,,0,,124
+Point,2.875417990544061,51.57038636857015,Feature,60,,"002\xb0 52,525 E",2,0,"51\xb0 34,223 N",1997 / 09 - 097,2,"35,25",,,6,1993/04/21,"16,67",,1,8,,1,,"23,5 Wk",4,5,,4,"22,5 Wk__",,,3,30.29,,261,"22,60","122,78",,B_134_252,7.5,,-,,6,SS Rijnstroom,,2007/03/12,491365.75,8.75,,5713264.47,,,"In 1985 werd het wrak als ongevaarlijk wrak beschouwd. In 1990 werden de symbolen van ongevaarlijke wrakken gewijzigd in  #. Dit symbool wordt ook toegepast voor vuile grond. Tijdens de metingen met Side Scan Sonar in 1993 zijn vrij hoge stukken waargenomen  Daaruit volgt dat hier van vuile grond of wrakresten geen sprake is. Het wrak steekt ongeveer 4,5 m boven de omringende bodem uit (Zie single beam opname van 23 07/1996).
+
+B_134_252
+
+Midden 51\xb0 34'.223 - 002\xb0 52'.525
+Pt_01  51\xb0 34'.233 - 002\xb0 52'.505
+Pt_02  51\xb0 34'.217 - 002\xb0 52'.546
+
+Dieptecijfer ongewijzigd in LAT",,1,,260
+Point,2.712280537293197,51.20018692813688,Feature,10,,"002\xb0 42,737 E",1,0,"51\xb0 12,011 N",1996 / 02 - 054,5,"64,00",-,,24,,"4,17",,1,20,-,1,,"06,0 Wk GLLWS",3,3.75,-,3,"05,9 Wk",,-,3,7.96,,34,,"52,13",,B_112_242,7.5,,-,,3,Hafenschutzboot FO 06,,1995/10/26,479897.86,8.75,,5672126.15,-,,"Het wrak is erg verzand,enkel de stuurhut steekt ongeveer 2,7 m boven de omringende bodem uit.
+
+B_112_242
+
+Midden  51\xb0 12'.011 - 002\xb0 42'.737
+Pt_01   51\xb0 12'.013 - 002\xb0 42'.741
+Pt_02   51\xb0 12'.011 - 002\xb0 42'.733
+
+Dieptecijfer gewijzigd naar LAT",-,4,-,13
+Point,3.216439105980577,51.34777380427935,Feature,u,,"003\xb0 12,986 E",2,0,"51\xb0 20,866 N",1958 / 09 - 062,4,"21,00",Liverpool,,0,1958/05/03,,"1382,00",1,16,Brits,0,1921,"zichtbaar wrak ; 1,5 Wk ; 4,0 Wk ; +++",2,2.5,40 dm,3,#,,ballast,1,10,,137,"4,00",,,B_120_313,2.5,,Depret,,6,FLORENTINO,,,515073.62,0,,5688522.04,H & C Crayson Ltd Garston,1940/05/25,Lloydsnummer 24.553.  Gedurende de WO 2  heeft dit Argentijnse schip dienst   gedaan als blokkadeschip nabij de m\xf4le van Zeebrugge .Het wrak werd door de bergingsfirma Depret vlottend gemaakt . Op weg naar haar laatste  bestemming op 17 juni 1950 brak het schip middendoor en zonk in hoger vermelde positie. In 1955 werden de opruimingingswerken aangevat en in 1958 werd het definitief opgeleverd .,Mc Andrews & Co Londen,0,Staal,136
+Point,3.285617348684453,51.39361005790069,Feature,u,"14,30","003\xb0 17,137 E",2,0,"51\xb0 23,617 N",1971 / 19 - 132,5,"63,75",,,30,,,"3108,00",1,20,,1,1919,"zichtbaar bij LW ; 9,8 Wk",2,2.5,,4,#,"104,00",ballast,1,7.92,,209,,,,B_123_317_a,2.5,,,,3,FOSCOLO,,,519871.59,8.75,,5693636,"Lloyd Royal Belge (Great- Britain), Ltd Glasgow",1940/05/15,"Op 15 mei 1940 werd de FOSCOLO bij een Duitse aanval tot zinken gebracht. De bemanning werd gered en opgepikt door Belgische reddingsboten. . Het schip is meermaals van naam veranderd. Tot eind 1919 heette het  schip WAR RIPPLE , met als eigenaar The Shipping Controller uit Londen. Tot 1926 was de naam ROGIER met als eigenaar Lloyd Royal Belge uit Antwerpen.  Van 1926 tot 1934 wijzigde de naam in MARINGA van de Compagnie Africaine de Navigation later de Compagnie Maritime Belge uit Antwerpen. Tenslotte veranderde de naam in FOSCOLO. Het wrak werd voor 1953 opgeruimd tot op de bodem. Volgens het duikersonderzoek van augustus 1953 uitgevoerd door HMS Schackleton ligt er nog een kleine obstructie ongevaarlijk voor de bovenscheepvaart.",S.A. di Navigatione Tirrenia Napels Itali\xeb,5,Staal,209
