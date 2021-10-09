@@ -2,15 +2,24 @@
 
 bpnsdata is a package to add environmental data to a geopandas DataFrame. There is no support for multiindex columns, 
 so one level has to be selected or dropped out before using it.
-Right now only Belgian Part of the North Sea data is available for all the classes. 
+Right now only Belgian Part of the North Sea data is available for all the classes. However, some classes are not 
+restricted to the bpns and can be used to add environmental data to other parts of the world. 
 
 ## Install 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install 
-the dependencies 
+the dependencies.
 
 ```bash
 pip install -r requirements.txt 
 ```
+
+If you are working on Windows, it can be tricky to install geopandas. 
+We recommend to install FIRST the following packages by downloading the wheels of: 
+- GDAL
+- rasterio
+- Fiona
+You can follow this tutorial: 
+https://geoffboeing.com/2014/09/using-geopandas-windows/
 
 Build the project
 
@@ -43,7 +52,8 @@ For easier running of the classes, there is a main class called SeaDataManager, 
 desired environmental variables in one line of code.
 
 ### EMODnet
-Entry point to download map data from EMODnet using WCS. The implemented classes so far are: 
+Entry point to download map data from EMODnet using WCS. Coverage to be checked in EMODnet, but larger than BPNS. 
+The implemented classes so far are: 
 
 #### Shipping
 Shipping activity from https://www.emodnet-humanactivities.eu/
@@ -60,7 +70,8 @@ The output column is:
 * bathymetry
 
 ### Raster Data 
-Raster Data represents geographical data. The two outputs are:
+Raster Data represents geographical data. Only BPNS available 
+The two outputs are:
 
 #### Seabed habitats
 Adds the sea habitat (https://www.emodnet-seabedhabitats.eu/).
@@ -78,6 +89,7 @@ The closest point from the maps is added to the each point of the dataset. The o
 
 ### ERDDAP RBINS Data
 Sea State Data from RBINS (https://erddap.naturalsciences.be/erddap/index.html). 
+Coverage to be checked in the RBINS erddap website, but restricted to North Sea. 
 In this version only the tables BCZ_HydroState_V1 and WAM_ECMWF are implemented.
 
 #### Sea Surface
@@ -99,6 +111,7 @@ Output columns:
 ### Time Data 
 Data Related to time series. It adds the time of the day (day, night, twilight dawn...) and the moon phase. 
 The calculation is done using skyfield (https://rhodesmill.org/skyfield/). 
+Coverage in all the world. 
 The output columns are: 
 * moment_day (twilight, dawn, day, night)
 * moon_phase (in radians)
