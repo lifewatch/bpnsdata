@@ -9,7 +9,7 @@ setuptools.setup(name='bpnsdata',
                  license='',
                  packages=setuptools.find_packages(),
                  package_data={
-                                "bpnsdata": ["test_data/*.*"]
+                                "bpnsdata": ["data/*.*"]
                               },
                  include_package_data=True,
                  zip_safe=False)

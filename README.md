@@ -119,7 +119,7 @@ Following information will be added:
 
 ## Usage 
 Possible ways of loading the data 
-```pyhton 
+```python 
 import bpnsdata 
 import pandas as pd 
 import numpy as np
