@@ -294,20 +294,20 @@ class SurveyLocation:
 
 
 class Borders:
-    def __init__(self, borders_name):
+    def __init__(self, borders_name='Belgium'):
         """
         Parameters
         ----------
         borders_name: string
-            Country code (2 letters). Default if BE (Belgium)
+            Country code (2 letters). Default if Belgium
         """
         self.borders_name = borders_name
 
     def read_borders(self):
-        query = 'https://geo.vliz.be/geoserver/wfs?request=getfeature&service=wfs&version=1.1.0&' \
-                  'typename=MarineRegions:eez&outputformat=json&Filter=<PropertyIsEqualTo><PropertyName>' \
-                  'geoname</PropertyName><Literal>%s Exclusive Economic Zone</Literal></PropertyIsEqualTo>' \
-                % self.borders_name
+        query = 'https://geo.vliz.be/geoserver/MarineRegions/wfs?service=WFS&version=1.0.0&' \
+                'request=GetFeature&typeName=eez_boundaries&outputformat=application/' \
+                'json&Filter=<PropertyIsEqualTo><PropertyName>territory' \
+                '</PropertyName><Literal>%s</Literal></PropertyIsEqualTo>' % self.borders_name
         response = requests.get(query)
         if response.status_code == 200:
             borders = geopandas.read_file(response.text)
