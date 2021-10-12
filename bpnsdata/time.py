@@ -20,7 +20,9 @@ class TimeData:
             self.eph = load('de421.bsp')
 
     def __call__(self, df):
-        return self.get_time_data_df(df)
+        df = self.get_time_data_df(df)
+        self.eph.close()
+        return df
 
     def get_moon_phase(self, dt, categorical=False):
         """

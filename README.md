@@ -14,11 +14,12 @@ pip install -r requirements.txt
 ```
 
 If you are working on Windows, it can be tricky to install geopandas. 
-We recommend to install FIRST the following packages by downloading the wheels of: 
-- GDAL
-- rasterio
-- Fiona
-You can follow this tutorial: 
+We recommend to install FIRST the following packages (in this order) by downloading the wheels of: 
+* GDAL
+* rasterio
+* Fiona
+
+You can follow this tutorial if you're not familiar with wheels and/or pip: 
 https://geoffboeing.com/2014/09/using-geopandas-windows/
 
 Build the project
@@ -33,8 +34,7 @@ To do so, it is necessary to have gps information, which can be stored in a .gpx
 "track_points" layer. It can also be loaded as a csv or a shp file.
 Then the algorithm finds the point which is closest in time for row of the dataframe.
 The available data sources are: 
-* csv: Static geo data in a csv file
-    * shipwrecks
+* csv: Static geo data in a csv file. Files to be provided by the user
 * time: Information about the moment of the day and the moon
     * moon cycle
     * day moment
@@ -47,6 +47,8 @@ The available data sources are:
 * griddap: RBINS data from the erddap server
     * sea surface 
     * wave information
+* wrakken_bank: shipwreck information 
+* meetnet_vlaamse_banken (STILL TO IMPLEMENT): read weather data from the buoys of the meetnet vlaamse banken
 
 For easier running of the classes, there is a main class called SeaDataManager, which allows to run all the 
 desired environmental variables in one line of code.
@@ -55,7 +57,7 @@ desired environmental variables in one line of code.
 Entry point to download map data from EMODnet using WCS. Coverage to be checked in EMODnet, but larger than BPNS. 
 The implemented classes so far are: 
 
-#### Shipping
+##### Shipping
 Shipping activity from https://www.emodnet-humanactivities.eu/
 Adds the route density or the shipping intensity from the month of the deployment to the dataset, considering the 
 location, the year and the month. 
@@ -64,7 +66,7 @@ It adds the columns:
 * ship_density
 (depending on the layer type selected)
 
-#### Bathymetry
+##### Bathymetry
 Adds the mean bathymetry (https://www.emodnet-bathymetry.eu/) layer considering location (no time considered)
 The output column is:
 * bathymetry
@@ -73,13 +75,13 @@ The output column is:
 Raster Data represents geographical data. Only BPNS available 
 The two outputs are:
 
-#### Seabed habitats
+##### Seabed habitats
 Adds the sea habitat (https://www.emodnet-seabedhabitats.eu/).
 The output columns are: 
 * seabed_habitat
 * substrate
 
-#### Benthic habitats 
+##### Benthic habitats 
 Habitat suitability map from the publication ([1]V. Van Lancker, G. Moerkerke, I. Du Four, E. Verfaillie, M. Rabaut, 
 and S. Degraer, “Fine-scale Geomorphological Mapping of Sandbank Environments for the Prediction of Macrobenthic 
 Occurences, Belgian Part of the North Sea,” Seafloor Geomorphology as Benthic Habitat, 
@@ -92,7 +94,7 @@ Sea State Data from RBINS (https://erddap.naturalsciences.be/erddap/index.html).
 Coverage to be checked in the RBINS erddap website, but restricted to North Sea. 
 In this version only the tables BCZ_HydroState_V1 and WAM_ECMWF are implemented.
 
-#### Sea Surface
+##### Sea Surface
 The data is added from the table: BCZ_HydroState_V1.
 * surface_baroclinic_eastward_sea_water_velocity
 * surface_baroclinic_northward_sea_water_velocity
@@ -101,7 +103,7 @@ The data is added from the table: BCZ_HydroState_V1.
 * sea_surface_temperature
 * surface_baroclinic_sea_water_velocity
 
-#### Wave Data
+##### Wave Data
 The data is added from the table: WAM_ECMWF
 Output columns:
 * hs: wave height in cm
@@ -121,14 +123,18 @@ Static data that is stored in a csv, with a lat and a lon columns (names to be g
 It returns the closest point of all the csv, the distance to it, the coordinates and also other columns selected by the
 user with the specified suffix.
 
-#### Shipwreck Data
-Will add information about the closest shipwreck. The shipwrecks can be found back in the excel 
-('data/wrakkendatabank.csv') and are confined to the BPNS.
+### Wrakken Bank 
+Will add information about the closest shipwreck. The data is extracted from https://wrakkendatabank.afdelingkust.be/.
 Following information will be added:
 * shipwreck_distance: Distance to closest shipwreck
 * shipwreck_lat 
 * shipwreck_lon
 * shipwreck_name
+
+### Meetnet Vlaamse Banken 
+STILL TO IMPLEMENT
+Read the rainfall and the wind speed at the closest buoy
+
 
 ## Usage 
 Possible ways of loading the data 
@@ -157,7 +163,7 @@ Use of the SeaDataManager
 import bpnsdata
 
 # Define the seadatamanager
-env_vars = ['shipping', 'shipwreck', 'time', 'shipwreck', 'habitat_suitability',
+env_vars = ['shipping', 'time', 'wrakken_bank', 'habitat_suitability',
             'seabed_habitat', 'sea_surface', 'sea_wave']
 manager = bpnsdata.SeaDataManager(env_vars)
 
@@ -168,7 +174,7 @@ geodf = manager.add_geodata(df, gpx_file)
 df_env = manager(geodf)
 ```
 
-Use without the SeaDataManager
+Use without the SeaDataManager**
 ```python 
 import bpnsdata
 

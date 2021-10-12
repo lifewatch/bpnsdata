@@ -18,7 +18,7 @@ class TestSeaDataManager(unittest.TestCase):
         self.geodf = survey_location.geotrackpoints
 
     def test_sea_data_manager(self):
-        env_vars = ['shipping', 'shipwreck', 'time', 'shipwreck', 'habitat_suitability',
+        env_vars = ['shipping', 'time', 'wrakken_bank', 'habitat_suitability',
                     'seabed_habitat', 'sea_surface', 'sea_wave']
         self.manager = bpnsdata.SeaDataManger(env_vars)
         self.manager(self.geodf)
@@ -36,7 +36,7 @@ class TestSeaDataManager(unittest.TestCase):
         df = bathymetry(self.geodf)
 
     def test_shipwreck(self):
-        shipwreck = bpnsdata.ShipwreckData()
+        shipwreck = bpnsdata.WrakkenBankData()
         df = shipwreck(self.geodf)
 
     def test_sea_surface(self):

@@ -5,3 +5,5 @@ from bpnsdata.griddap import *
 from bpnsdata.time import *
 from bpnsdata.emodnet import *
 from bpnsdata.csv import *
+from bpnsdata.meetnet_vlaamse_banken import *
+from bpnsdata.wrakken_bank import *

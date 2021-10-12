@@ -43,11 +43,3 @@ class CSVData:
 
         return df
 
-
-class ShipwreckData(CSVData):
-    def __init__(self):
-        lat_col = 'features/geometry/coordinates/1'
-        lon_col = 'features/geometry/coordinates/0'
-        columns = ['features/properties/name']
-        with resources.path('bpnsdata.data', 'wrakkendatabank.csv') as m:
-            super().__init__(m, lon_col, lat_col, columns=columns, suffix='shipwreck')
