@@ -1,3 +1,5 @@
 .idea/
 *.bsp
 __pycache__/
+build/
+bpnsdata.egg-info

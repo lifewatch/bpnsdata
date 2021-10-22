@@ -20,7 +20,7 @@ class TestSeaDataManager(unittest.TestCase):
     def test_sea_data_manager(self):
         env_vars = ['shipping', 'time', 'wrakken_bank', 'habitat_suitability',
                     'seabed_habitat', 'sea_surface', 'sea_wave']
-        self.manager = bpnsdata.SeaDataManger(env_vars)
+        self.manager = bpnsdata.SeaDataManager(env_vars)
         self.manager(self.geodf)
 
     def test_geolocation(self):

@@ -5,7 +5,7 @@ import shapely
 shapely.speedups.disable()
 
 
-class SeaDataManger:
+class SeaDataManager:
     def __init__(self, env_vars):
         """
         Start a Sea Data Manager with a list of all the environment variables that want to be added
