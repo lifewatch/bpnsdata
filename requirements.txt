@@ -1,139 +1,47 @@
-autopep8==1.5.4
-flake8==3.8.3
-ggplot==0.11.5
-jupyter==1.0.0
-pip-chill==1.0.1
-pydocstyle==5.1.1
-pyhydrophone==0.1
-rope==0.17.0
-seaborn==0.11.1
-sklearn==0.0
-soundfile==0.10.3.post1
-spyder==4.1.5
-virtualenvwrapper-win==1.2.5
-yapf==0.30.0
-# alabaster==0.7.12 # Installed as dependency for sphinx
-# argon2-cffi==20.1.0 # Installed as dependency for notebook
-# astroid==2.4.2 # Installed as dependency for pylint
-# async-generator==1.10 # Installed as dependency for nbclient
-# atomicwrites==1.4.0 # Installed as dependency for spyder
-# attrs==20.2.0 # Installed as dependency for jsonschema
-# babel==2.8.0 # Installed as dependency for sphinx
-# backcall==0.2.0 # Installed as dependency for ipython
-# bcrypt==3.2.0 # Installed as dependency for paramiko
-# bleach==3.2.0 # Installed as dependency for nbconvert
-# brewer2mpl==1.4.1 # Installed as dependency for ggplot
-# certifi==2020.6.20 # Installed as dependency for requests
-# cffi==1.14.2 # Installed as dependency for bcrypt, cryptography, argon2-cffi, soundfile, pynacl
-# chardet==3.0.4 # Installed as dependency for spyder, requests
-# cloudpickle==1.6.0 # Installed as dependency for spyder-kernels, spyder
-# colorama==0.4.3 # Installed as dependency for ipython, sphinx, pylint
-# cryptography==3.1 # Installed as dependency for paramiko
-# cycler==0.10.0 # Installed as dependency for ggplot, matplotlib
-# decorator==4.4.2 # Installed as dependency for ipython
-# defusedxml==0.6.0 # Installed as dependency for nbconvert
-# diff-match-patch==20200713 # Installed as dependency for spyder
-# docutils==0.16 # Installed as dependency for sphinx
-# entrypoints==0.3 # Installed as dependency for nbconvert
-# helpdev==0.7.1 # Installed as dependency for qdarkstyle
-# idna==2.10 # Installed as dependency for requests
-# imagesize==1.2.0 # Installed as dependency for sphinx
-# importlib-metadata==1.7.0 # Installed as dependency for helpdev, flake8, pluggy, jsonschema, keyring
-# intervaltree==3.1.0 # Installed as dependency for spyder
-# ipykernel==5.3.4 # Installed as dependency for ipywidgets, qtconsole, jupyter, spyder-kernels, jupyter-console, notebook
-# ipython==7.18.1 # Installed as dependency for ipywidgets, spyder, jupyter-console, ipykernel
-# ipython-genutils==0.2.0 # Installed as dependency for traitlets, nbformat, qtconsole, notebook
-# ipywidgets==7.6.3 # Installed as dependency for jupyter
-# isort==5.5.2 # Installed as dependency for pylint
-# jedi==0.17.1 # Installed as dependency for spyder, ipython, python-language-server
-# jinja2==2.11.2 # Installed as dependency for nbconvert, numpydoc, sphinx, notebook
-# joblib==1.0.1 # Installed as dependency for scikit-learn
-# jsonschema==3.2.0 # Installed as dependency for nbformat
-# jupyter-client==6.1.7 # Installed as dependency for qtconsole, nbclient, ipykernel, spyder-kernels, jupyter-console, notebook
-# jupyter-console==6.4.0 # Installed as dependency for jupyter
-# jupyter-core==4.6.3 # Installed as dependency for qtconsole, nbformat, nbconvert, jupyter-client, notebook
-# jupyterlab-pygments==0.1.1 # Installed as dependency for nbconvert
-# jupyterlab-widgets==1.0.0 # Installed as dependency for ipywidgets
-# keyring==21.4.0 # Installed as dependency for spyder
-# kiwisolver==1.1.0 # Installed as dependency for matplotlib
-# lazy-object-proxy==1.4.3 # Installed as dependency for astroid
-# markupsafe==1.1.1 # Installed as dependency for jinja2
-# matplotlib==3.1.1 # Installed as dependency for ggplot, seaborn
-# mccabe==0.6.1 # Installed as dependency for flake8, pylint
-# mistune==0.8.4 # Installed as dependency for nbconvert
-# nbclient==0.5.0 # Installed as dependency for nbconvert
-# nbconvert==6.0.3 # Installed as dependency for jupyter, notebook, spyder
-# nbformat==5.0.7 # Installed as dependency for ipywidgets, nbconvert, notebook, nbclient
-# nest-asyncio==1.4.0 # Installed as dependency for nbclient
-# notebook==6.4.0 # Installed as dependency for widgetsnbextension, jupyter
-# numpy==1.17.4 # Installed as dependency for seaborn, scikit-learn, ggplot, matplotlib, statsmodels, pandas, patsy, scipy
-# numpydoc==1.1.0 # Installed as dependency for spyder
-# packaging==20.4 # Installed as dependency for bleach, sphinx
-# pandas==0.25.3 # Installed as dependency for ggplot, statsmodels, seaborn
-# pandocfilters==1.4.2 # Installed as dependency for nbconvert
-# paramiko==2.7.2 # Installed as dependency for spyder
-# parso==0.7.0 # Installed as dependency for spyder, jedi
-# pathtools==0.1.2 # Installed as dependency for watchdog
-# patsy==0.5.1 # Installed as dependency for ggplot, statsmodels
-# pexpect==4.8.0 # Installed as dependency for spyder
-# pickleshare==0.7.5 # Installed as dependency for spyder, ipython
-# pluggy==0.13.1 # Installed as dependency for python-language-server
-# prometheus-client==0.10.1 # Installed as dependency for notebook
-# prompt-toolkit==3.0.7 # Installed as dependency for jupyter-console, ipython
-# psutil==5.7.2 # Installed as dependency for spyder
-# ptyprocess==0.6.0 # Installed as dependency for pexpect
-# pycodestyle==2.6.0 # Installed as dependency for flake8, autopep8
-# pycparser==2.20 # Installed as dependency for cffi
-# pyflakes==2.2.0 # Installed as dependency for flake8
-# pygments==2.7.1 # Installed as dependency for qtconsole, jupyterlab-pygments, nbconvert, jupyter-console, ipython, spyder, sphinx
-# pylint==2.6.0 # Installed as dependency for spyder
-# pynacl==1.4.0 # Installed as dependency for paramiko
-# pyparsing==2.4.5 # Installed as dependency for packaging, matplotlib
-# pyqt5==5.12.3 # Installed as dependency for spyder, pyqtwebengine
-# pyqt5-sip==12.8.1 # Installed as dependency for pyqt5
-# pyqtwebengine==5.12.1 # Installed as dependency for spyder
-# pyrsistent==0.17.3 # Installed as dependency for jsonschema
-# python-dateutil==2.8.1 # Installed as dependency for jupyter-client, pandas, matplotlib
-# python-jsonrpc-server==0.4.0 # Installed as dependency for python-language-server
-# python-language-server==0.35.1 # Installed as dependency for spyder
-# pytz==2019.3 # Installed as dependency for babel, pandas
-# pywin32==228 # Installed as dependency for jupyter-core
-# pywin32-ctypes==0.2.0 # Installed as dependency for keyring
-# pywinpty==1.1.1 # Installed as dependency for terminado
-# pyzmq==19.0.2 # Installed as dependency for qtconsole, jupyter-client, spyder-kernels, notebook, spyder
-# qdarkstyle==2.8.1 # Installed as dependency for spyder
-# qtawesome==0.7.2 # Installed as dependency for spyder
-# qtconsole==4.7.7 # Installed as dependency for spyder, jupyter
-# qtpy==1.9.0 # Installed as dependency for spyder, qdarkstyle, qtconsole, qtawesome
-# requests==2.24.0 # Installed as dependency for sphinx
-# scikit-learn==0.24.1 # Installed as dependency for sklearn
-# scipy==1.3.2 # Installed as dependency for ggplot, scikit-learn, statsmodels, seaborn
-# send2trash==1.5.0 # Installed as dependency for notebook
-# six==1.13.0 # Installed as dependency for bcrypt, cryptography, ggplot, cycler, bleach, argon2-cffi, pynacl, qtawesome, packaging, astroid, jsonschema, patsy, python-dateutil
-# snowballstemmer==2.0.0 # Installed as dependency for pydocstyle, sphinx
-# sortedcontainers==2.2.2 # Installed as dependency for intervaltree
-# sphinx==3.2.1 # Installed as dependency for spyder, numpydoc
-# sphinxcontrib-applehelp==1.0.2 # Installed as dependency for sphinx
-# sphinxcontrib-devhelp==1.0.2 # Installed as dependency for sphinx
-# sphinxcontrib-htmlhelp==1.0.3 # Installed as dependency for sphinx
-# sphinxcontrib-jsmath==1.0.1 # Installed as dependency for sphinx
-# sphinxcontrib-qthelp==1.0.3 # Installed as dependency for sphinx
-# sphinxcontrib-serializinghtml==1.1.4 # Installed as dependency for sphinx
-# spyder-kernels==1.9.4 # Installed as dependency for spyder
-# statsmodels==0.10.1 # Installed as dependency for ggplot
-# terminado==0.10.0 # Installed as dependency for notebook
-# testpath==0.4.4 # Installed as dependency for nbconvert
-# threadpoolctl==2.1.0 # Installed as dependency for scikit-learn
-# toml==0.10.1 # Installed as dependency for autopep8, pylint
-# tornado==6.1 # Installed as dependency for jupyter-client, notebook, terminado, ipykernel
-# traitlets==5.0.4 # Installed as dependency for ipywidgets, qtconsole, nbformat, nbconvert, jupyter-core, nbclient, jupyter-client, ipykernel, notebook, ipython
-# typed-ast==1.4.1 # Installed as dependency for astroid
-# ujson==3.2.0 # Installed as dependency for python-jsonrpc-server, python-language-server
-# urllib3==1.25.10 # Installed as dependency for requests
-# virtualenv==16.7.7 # Installed as dependency for virtualenvwrapper-win
-# watchdog==0.10.3 # Installed as dependency for spyder
-# wcwidth==0.2.5 # Installed as dependency for prompt-toolkit
-# webencodings==0.5.1 # Installed as dependency for bleach
-# widgetsnbextension==3.5.1 # Installed as dependency for ipywidgets
-# wrapt==1.12.1 # Installed as dependency for astroid
-# zipp==3.1.0 # Installed as dependency for importlib-metadata
+contextily==1.2.0
+erddapy==1.1.0
+geopandas==0.10.2
+netcdf4==1.5.7
+owslib==0.25.0
+pygeos==0.10.2
+rtree==0.9.7
+skyfield==1.39
+tqdm==4.62.3
+xarray==0.19.0
+# affine==2.3.0 # Installed as dependency for rasterio
+# attrs==21.2.0 # Installed as dependency for fiona, rasterio
+# certifi==2021.10.8 # Installed as dependency for pyproj, skyfield, fiona, requests, rasterio
+# cftime==1.5.1 # Installed as dependency for netcdf4
+# charset-normalizer==2.0.7 # Installed as dependency for requests
+# click==7.1.2 # Installed as dependency for cligj, mercantile, fiona, rasterio, click-plugins
+# click-plugins==1.1.1 # Installed as dependency for fiona, rasterio
+# cligj==0.7.2 # Installed as dependency for fiona, rasterio
+# colorama==0.4.4 # Installed as dependency for tqdm
+# cycler==0.10.0 # Installed as dependency for matplotlib
+# fiona==1.8.19 # Installed as dependency for geopandas
+# gdal==3.2.3 # Installed as dependency for fiona, rasterio
+# geographiclib==1.52 # Installed as dependency for geopy
+# geopy==2.2.0 # Installed as dependency for contextily
+# idna==3.3 # Installed as dependency for requests
+# joblib==1.1.0 # Installed as dependency for contextily
+# jplephem==2.16 # Installed as dependency for skyfield
+# kiwisolver==1.3.2 # Installed as dependency for matplotlib
+# matplotlib==3.4.3 # Installed as dependency for contextily
+# mercantile==1.2.1 # Installed as dependency for contextily
+# munch==2.5.0 # Installed as dependency for fiona
+# numpy==1.21.3 # Installed as dependency for skyfield, netcdf4, xarray, pandas, pygeos, snuggs, cftime, rasterio, matplotlib, jplephem
+# pandas==1.3.4 # Installed as dependency for erddapy, geopandas, xarray
+# pillow==8.4.0 # Installed as dependency for matplotlib, contextily
+# pyparsing==3.0.1 # Installed as dependency for snuggs, matplotlib
+# pyproj==3.2.1 # Installed as dependency for geopandas, owslib
+# python-dateutil==2.8.2 # Installed as dependency for owslib, matplotlib, pandas
+# pytz==2021.3 # Installed as dependency for owslib, pandas
+# pyyaml==6.0 # Installed as dependency for owslib
+# rasterio==1.2.3 # Installed as dependency for contextily
+# requests==2.26.0 # Installed as dependency for erddapy, owslib, contextily
+# sgp4==2.20 # Installed as dependency for skyfield
+# shapely==1.7.1 # Installed as dependency for geopandas
+# six==1.16.0 # Installed as dependency for fiona, python-dateutil, cycler, munch
+# snuggs==1.4.7 # Installed as dependency for rasterio
+# urllib3==1.26.7 # Installed as dependency for requests
+# xyzservices==2021.10.0 # Installed as dependency for contextily

@@ -1,6 +1,5 @@
 import geopandas
 import pandas as pd
-from importlib import resources
 
 
 class CSVData:

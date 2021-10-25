@@ -11,14 +11,10 @@ import contextily as ctx
 import geopandas
 import matplotlib.pyplot as plt
 import pandas as pd
-import seaborn as sns
 import shapely.geometry as sgeom
 from geopy import distance
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 import requests
-
-# Apply the default theme
-sns.set_theme()
 
 
 class SurveyLocation:
