@@ -1,13 +1,18 @@
 import setuptools
 
 setuptools.setup(name='bpnsdata',
-                 version='0.1',
+                 version='0.1.0',
                  description='Add BPNS sea test_data to a geodataframe',
                  author='Clea Parcerisas',
                  author_email='clea.parcerisas@vliz.be',
                  url="/",
                  license='',
                  packages=setuptools.find_packages(),
+                 install_requires=['geopandas', 'owslib', 'pygeos', 'rtree', 'tqdm', 'contextily'],
+                 extras_require={
+                     "time": ["skyfield"],
+                     "griddap": ["erddapy", 'xarray']
+                 },
                  package_data={
                                 "bpnsdata": ["data/*.*"]
                               },
