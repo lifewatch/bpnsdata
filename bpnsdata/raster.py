@@ -1,4 +1,11 @@
-from importlib import resources
+import sys
+if sys.version_info < (3, 9):
+    # importlib.resources either doesn't exist or lacks the files()
+    # function, so use the PyPI version:
+    import importlib_resources
+else:
+    # importlib.resources has files(), so use that:
+    import importlib.resources as importlib_resources
 import geopandas
 
 
@@ -47,8 +54,9 @@ class RasterData:
 class SeabedHabitatData(RasterData):
     def __init__(self):
         columns = {'Substrate': 'substrate', 'Allcomb': 'seabed_habitat'}
-        with resources.path('bpnsdata.data', 'seabedhabitat_BE.shp') as m:
-            super().__init__(m, columns)
+        seabed_resource = importlib_resources.files('bpnsdata') / 'data' / 'seabedhabitat_BE.shp'
+        with importlib_resources.as_file(seabed_resource) as seabed_path:
+            super().__init__(seabed_path, columns)
 
 
 class HabitatSuitabilityData(RasterData):
@@ -60,5 +68,6 @@ class HabitatSuitabilityData(RasterData):
     """
     def __init__(self):
         columns = {'GRIDCODE': 'benthic_habitat'}
-        with resources.path('bpnsdata.data', 'Habitat Suitability2.shp') as m:
-            super().__init__(m, columns)
+        suitability_resource = importlib_resources.files('bpnsdata') / 'data' / 'Habitat Suitability2.shp'
+        with importlib_resources.as_file(suitability_resource) as suitability_path:
+            super().__init__(suitability_path, columns)

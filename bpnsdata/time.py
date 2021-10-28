@@ -1,5 +1,13 @@
 import datetime
-from importlib import resources
+import sys
+
+if sys.version_info < (3, 9):
+    # importlib.resources either doesn't exist or lacks the files()
+    # function, so use the PyPI version:
+    import importlib_resources
+else:
+    # importlib.resources has files(), so use that:
+    import importlib.resources as importlib_resources
 
 import numpy as np
 from skyfield import almanac, api
@@ -12,14 +20,16 @@ class TimeData:
     """
     def __init__(self):
         self.ts = api.load.timescale()
-        if resources.is_resource('bpnsdata.data', 'de421.bsp'):
-            with resources.path('bpnsdata.data', 'de421.bsp') as bsp_file:
-                self.eph = api.load_file(bsp_file)
-        else:
-            load = api.Loader(resources.Path().joinpath('bpnsdata', 'data'))
-            self.eph = load('de421.bsp')
+        self.bsp_file = importlib_resources.files('bpnsdata') / 'data' / 'de421.bsp'
+        if not self.bsp_file.exists():
+            print('Downloading the de421.bsp file...')
+            load = api.Loader(self.bsp_file.parent)
+            load.download('de421.bsp')
+
+        self.eph = None
 
     def __call__(self, df):
+        self.eph = api.load_file(self.bsp_file)
         df = self.get_time_data_df(df)
         self.eph.close()
         return df

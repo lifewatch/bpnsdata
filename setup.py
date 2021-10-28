@@ -8,13 +8,13 @@ setuptools.setup(name='bpnsdata',
                  url="https://github.com/lifewatch/bpnsdata.git",
                  license='',
                  packages=setuptools.find_packages(),
-                 install_requires=['geopandas', 'owslib', 'pygeos', 'rtree', 'tqdm', 'contextily'],
+                 install_requires=['geopandas', 'owslib', 'pygeos', 'rtree', 'tqdm',
+                                   'contextily', 'importlib-resources'],
                  extras_require={
                      "time": ["skyfield"],
                      "griddap": ["erddapy", 'xarray']
                  },
                  package_data={
-                                "bpnsdata": ["bpnsdata/data/*.*"]
+                                "bpnsdata": ["data/*.*"]
                               },
-                 include_package_data=True,
                  zip_safe=False)
