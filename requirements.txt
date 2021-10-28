@@ -40,7 +40,7 @@ xarray==0.19.0
 # rasterio==1.2.3 # Installed as dependency for contextily
 # requests==2.26.0 # Installed as dependency for erddapy, owslib, contextily
 # sgp4==2.20 # Installed as dependency for skyfield
-# shapely==1.7.1 # Installed as dependency for geopandas
+# shapely==1.8.0 # Installed as dependency for geopandas
 # six==1.16.0 # Installed as dependency for fiona, python-dateutil, cycler, munch
 # snuggs==1.4.7 # Installed as dependency for rasterio
 # urllib3==1.26.7 # Installed as dependency for requests

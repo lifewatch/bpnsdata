@@ -139,8 +139,11 @@ class MeetNetVlaamseBanken:
             unique_locations = available_data.id_location.unique()
             for b in catalogue['Locations']:
                 if b['ID'] in unique_locations:
-                    buoys.loc[len(buoys)] = b['ID'], b['Name'][1]['Message'], b['Description'][1]['Message'], \
-                                            shapely.wkt.loads(b['PositionWKT'])
+                    idx = len(buoys)
+                    buoys.loc[idx, 'geometry'] = shapely.wkt.loads(b['PositionWKT'])
+                    buoys.loc[idx, ['id_location', 'name', 'type']] = b['ID'], b['Name'][1]['Message'],\
+                                                                      b['Description'][1]['Message']
+
         return buoys.merge(available_data, on='id_location')
 
     def get_data(self, ids, start_time, end_time):
