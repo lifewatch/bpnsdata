@@ -1,5 +1,4 @@
 import pandas as pd
-import os
 import unittest
 import numpy as np
 import shapely

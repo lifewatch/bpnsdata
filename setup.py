@@ -14,7 +14,7 @@ setuptools.setup(name='bpnsdata',
                      "griddap": ["erddapy", 'xarray']
                  },
                  package_data={
-                                "bpnsdata": ["data/*.*"]
+                                "bpnsdata": ["bpnsdata/data/*.*"]
                               },
                  include_package_data=True,
                  zip_safe=False)
