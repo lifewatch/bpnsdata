@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 import unittest
 import numpy as np
 import shapely
@@ -19,13 +20,21 @@ class TestSeaDataManager(unittest.TestCase):
 
     def test_sea_data_manager(self):
         env_vars = ['shipping', 'time', 'wrakken_bank', 'habitat_suitability',
-                    'seabed_habitat', 'sea_surface', 'sea_wave']
+                    'seabed_habitat', 'sea_surface', 'sea_wave', 'rain', 'wind']
         self.manager = bpnsdata.SeaDataManager(env_vars)
         self.manager(self.geodf)
 
     def test_geolocation(self):
         survey_location = bpnsdata.geolocation.SurveyLocation('test_data/VG.gpx')
         self.df = survey_location.add_location(self.df)
+
+    def test_rain(self):
+        rain = bpnsdata.RainData()
+        rain(self.geodf)
+
+    def test_wind(self):
+        wind = bpnsdata.WindData()
+        wind(self.geodf)
 
     def test_shipping(self):
         shipping = bpnsdata.ShippingData()

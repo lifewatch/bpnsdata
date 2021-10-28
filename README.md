@@ -48,7 +48,7 @@ The available data sources are:
     * sea surface 
     * wave information
 * wrakken_bank: shipwreck information 
-* meetnet_vlaamse_banken (STILL TO IMPLEMENT): read weather data from the buoys of the meetnet vlaamse banken
+* meetnet_vlaamse_banken: read weather data from the buoys of the meetnet vlaamse banken
 
 For easier running of the classes, there is a main class called SeaDataManager, which allows to run all the 
 desired environmental variables in one line of code.
@@ -132,8 +132,15 @@ Following information will be added:
 * shipwreck_name
 
 ### Meetnet Vlaamse Banken 
-STILL TO IMPLEMENT
-Read the rainfall and the wind speed at the closest buoy
+Read the available speed at the closest buoy from https://api.meetnetvlaamsebanken.be/V2-help/.
+Attention! To be able to use this feature you need to have a user registered at Meet Net Vlaamse Banken. You can do
+it for free from their webpage. Then you need the username and the password. You can pass it directly to the created 
+objects, but if you want to use them in the SeaDataManager you will have to add the username and the password as 
+environmental variables (username_bank and password_bank).
+So far, rainfall (NSI) and average wind speed at 10 m (WVC) are implemented. 
+It adds to the DataFrame a column with the value of the data, the id of the specified buoy and the distance to the buoy.
+The id of the buoy is represented by the sum of the location id + the data id. i.e., in the buoy OMP, the id for 
+precipitation is OMP+NSI=OMPNSI
 
 
 ## Usage 
@@ -164,7 +171,7 @@ import bpnsdata
 
 # Define the seadatamanager
 env_vars = ['shipping', 'time', 'wrakken_bank', 'habitat_suitability',
-            'seabed_habitat', 'sea_surface', 'sea_wave']
+            'seabed_habitat', 'sea_surface', 'sea_wave', 'rain', 'wind']
 manager = bpnsdata.SeaDataManager(env_vars)
 
 # If the data is without geometry, then:

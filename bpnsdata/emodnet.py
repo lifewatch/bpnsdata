@@ -75,16 +75,53 @@ class ShippingData(EMODnetData):
         super().__init__(self.identifier, url, version, resolutionx, resolutiony, column_name=self.column_name)
 
     def __call__(self, df):
+        """
+        Add the specified layer data to the df
+
+        Parameters
+        ----------
+        df : GeoDataFrame
+            datetime as index and a column geometry
+
+        Returns
+        -------
+        The GeoDataFrame updated
+        """
         for (year, month), df_slice in tqdm(df[['geometry']].groupby([df.index.year, df.index.month])):
             self.set_layer_date(year, month)
             super().__call__(df_slice)
         return df
 
     def set_layer_date(self, year, month):
+        """
+        Set the layer year and month
+
+        Parameters
+        ----------
+        year: int
+            Year to download
+        month: int
+            Month of the year to download
+
+        Returns
+        -------
+        String with the layer identifier as a string
+        """
         self.identifier = 'emodnet:%s_%02d_%s_%s' % (year, month, self.layer_name, self.boat_type)
         return self.identifier
 
     def set_layer_type(self, layer_name, boat_type):
+        """
+        Change the layer type (type of layer and type of boat)
+
+        Parameters
+        ----------
+        layer_name: string
+            Can be 'rd' for route density or 'st' for vessel density
+        boat_type: string
+            Can be All, Cargo, Fishing, Passenger, Tanker or Other
+
+        """
         if layer_name == 'rd':
             self.column_name = 'route_density'
         elif layer_name == 'st':
@@ -97,6 +134,9 @@ class ShippingData(EMODnetData):
 
 class BathymetryData(EMODnetData):
     def __init__(self):
+        """
+        Read the bathymetry from EMODnet
+        """
         resolutionx = 0.00833333
         resolutiony = 0.00833333
         identifier = 'emodnet:mean'
