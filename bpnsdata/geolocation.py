@@ -188,20 +188,19 @@ class SurveyLocation:
         other_cols : str
 
         """
+        if other_cols is None:
+            other_cols = []
         if self.geotrackpoints.index.tzinfo is None:
             self.geotrackpoints.index = self.geotrackpoints.index.tz_localize('UTC')
         if 'datetime' in df.columns:
             datetime_df = pd.DataFrame({'datetime': df.datetime})
         else:
             datetime_df = pd.DataFrame({'datetime': df.index})
-        geo_df = pd.merge_asof(datetime_df.sort_values('datetime'), self.geotrackpoints, left_on="datetime",
-                               right_index=True, tolerance=pd.Timedelta(time_tolerance))
+        geo_df = pd.merge_asof(datetime_df.sort_values('datetime'), self.geotrackpoints[['geometry']+other_cols],
+                               left_on="datetime", right_index=True, tolerance=pd.Timedelta(time_tolerance),
+                               direction='nearest')
         geo_df = geo_df.set_index('datetime')
         df = geopandas.GeoDataFrame(geo_df, geometry='geometry', crs=self.geotrackpoints.crs.to_string())
-
-        if other_cols is not None:
-            for col in other_cols:
-                df[col] = geo_df[col]
 
         return df
 
