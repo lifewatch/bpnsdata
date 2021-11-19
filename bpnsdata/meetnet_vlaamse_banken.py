@@ -173,7 +173,8 @@ class MeetNetVlaamseBanken:
                     for v in tqdm(id_val['Values']):
                         data.loc[len(data)] = id_val['ID'], v['Timestamp'], v['Value']
                 data['datetime'] = pd.to_datetime(data['datetime'])
-                data['datetime'] = data['datetime'].dt.tz_localize('UTC')
+                if data['datetime'].dt.tz is None:
+                    data['datetime'] = data['datetime'].dt.tz_localize('UTC')
         return data
 
 
