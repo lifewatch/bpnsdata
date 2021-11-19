@@ -168,10 +168,12 @@ class MeetNetVlaamseBanken:
         data = pd.DataFrame(columns=['id', 'datetime', 'value'])
         if response.status_code == 200:
             values = response.json()['Values']
-            for id_val in values:
-                for v in tqdm(id_val['Values']):
-                    data.loc[len(data)] = id_val['ID'], v['Timestamp'], v['Value']
-            data['datetime'] = pd.to_datetime(data['datetime'])
+            if values is not None:
+                for id_val in values:
+                    for v in tqdm(id_val['Values']):
+                        data.loc[len(data)] = id_val['ID'], v['Timestamp'], v['Value']
+                data['datetime'] = pd.to_datetime(data['datetime'])
+                data['datetime'] = data['datetime'].dt.tz_localize('UTC')
         return data
 
 

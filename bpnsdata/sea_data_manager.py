@@ -43,7 +43,7 @@ class SeaDataManager:
         return df
 
     @staticmethod
-    def add_geodata(df, geofile):
+    def add_geodata(df, geofile, time_tolerance='1min', other_cols=None):
         """
         Add the geo information to the df from a geofile with the time and space information about the df.
         See SurveyLocation for more information
@@ -54,6 +54,10 @@ class SeaDataManager:
             Pandas dataframe with datetime as index
         geofile : str or Path
             Where the geo data is stored. can be a csv, gpx, pickle or sqlite3
+        time_tolerance : str
+            Time tolerance with the geolocation. i.e. '10min' or '1s'
+        other_cols : list or None
+            list of the columns from the geofile to keep a part from geometry
 
         Returns
         -------
@@ -61,5 +65,5 @@ class SeaDataManager:
         from the DataFrame, not the ones from the geo file.
         """
         survey_location = geolocation.SurveyLocation(geofile)
-        geodf = survey_location.add_location(df)
+        geodf = survey_location.add_location(df, time_tolerance=time_tolerance, other_cols=other_cols)
         return geodf

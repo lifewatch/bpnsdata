@@ -25,7 +25,8 @@ class TestSeaDataManager(unittest.TestCase):
 
     def test_geolocation(self):
         survey_location = bpnsdata.geolocation.SurveyLocation('test_data/VG.gpx')
-        self.df = survey_location.add_location(self.df)
+        self.df = survey_location.add_location(self.df, time_tolerance='2.5s', other_cols=None)
+        print(self.df)
 
     def test_rain(self):
         rain = bpnsdata.RainData()

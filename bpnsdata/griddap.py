@@ -113,7 +113,7 @@ class RBINSerddap(erddapy.ERDDAP):
         self.set_spatial_bounds(df)
 
         try:
-            griddap = self.to_xarray(decode_times=True)
+            griddap = self.to_xarray(decode_times=True, decode_timedelta=False)
             # Is there a xarray function?
             lat_points = xr.DataArray(df.geometry.y, dims='points')
             lon_points = xr.DataArray(df.geometry.x, dims='points')
