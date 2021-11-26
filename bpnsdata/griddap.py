@@ -122,7 +122,7 @@ class RBINSerddap(erddapy.ERDDAP):
                                          method='nearest')
             for col in self.columns:
                 df[col] = nearest_points[col].values
-        except requests.exceptions.HTTPError:
+        except (requests.exceptions.HTTPError, PermissionError):
             df[self.columns] = np.nan
 
         return df

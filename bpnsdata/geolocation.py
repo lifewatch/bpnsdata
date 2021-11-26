@@ -15,6 +15,7 @@ import shapely.geometry as sgeom
 from geopy import distance
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 import requests
+import numpy as np
 
 
 class SurveyLocation:
@@ -182,7 +183,7 @@ class SurveyLocation:
         Parameters
         ----------
         df : DataFrame
-            DataFrame from an ASA output
+            DataFrame with a datetime column or an index datetime-like
         time_tolerance : str
             Maximum time to be acceptable distance between the survey timestamp and the geolocation point i.e. 10min
         other_cols : str
@@ -192,14 +193,21 @@ class SurveyLocation:
             other_cols = []
         if self.geotrackpoints.index.tzinfo is None:
             self.geotrackpoints.index = self.geotrackpoints.index.tz_localize('UTC')
-        if 'datetime' in df.columns:
-            datetime_df = pd.DataFrame({'datetime': df.datetime})
-        else:
-            datetime_df = pd.DataFrame({'datetime': df.index})
-        geo_df = pd.merge_asof(datetime_df.sort_values('datetime'), self.geotrackpoints[['geometry']+other_cols],
-                               left_on="datetime", right_index=True, tolerance=pd.Timedelta(time_tolerance),
-                               direction='nearest')
-        geo_df = geo_df.set_index('datetime')
+
+        try:
+            if 'datetime' in df.columns:
+                geo_df = pd.merge_asof(df.sort_values('datetime'), self.geotrackpoints[['geometry']+other_cols],
+                                       left_on='datetime', right_index=True, tolerance=pd.Timedelta(time_tolerance),
+                                       direction='nearest')
+                geo_df = geo_df.set_index('datetime')
+            else:
+                geo_df = pd.merge_asof(df.sort_index(), self.geotrackpoints[['geometry'] + other_cols],
+                                       left_index=True, right_index=True, tolerance=pd.Timedelta(time_tolerance),
+                                       direction='nearest')
+        except ValueError:
+            geo_df = df
+            geo_df['geometry'] = np.nan
+
         df = geopandas.GeoDataFrame(geo_df, geometry='geometry', crs=self.geotrackpoints.crs.to_string())
 
         return df

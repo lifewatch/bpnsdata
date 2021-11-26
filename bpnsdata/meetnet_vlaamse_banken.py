@@ -4,6 +4,7 @@ import pandas as pd
 import requests
 import shapely
 from tqdm import tqdm
+import numpy as np
 
 TIME_TOLERANCE = '30min'
 
@@ -97,25 +98,28 @@ class MeetNetVlaamseBanken:
         -------
         the same GeoDataFrame updated
         """
-        catalogue = self.get_catalog()
-        start_time = df.index.min()
-        end_time = df.index.max()
-        df[self.data_field] = None
-        df[self.data_field + '_id'] = None
-        nearest_locations = geopandas.sjoin_nearest(df[['geometry']].to_crs(epsg=3395),
-                                                    catalogue.to_crs(epsg=3395),
-                                                    how='inner', distance_col=self.data_field + '_distance')
-        ids = nearest_locations.id.unique()
-        total_values = self.get_data(ids, start_time, end_time)
-        for location_id, df_id in nearest_locations.groupby('id'):
-            df_values = total_values[total_values.id == location_id]
-            df_w_values = pd.merge_asof(df_id, df_values, left_index=True, right_on='datetime',
-                                        tolerance=pd.Timedelta(TIME_TOLERANCE), direction='nearest')
-            df.loc[df_w_values.index, [self.data_field,
-                                       self.data_field + '_distance',
-                                       self.data_field + '_id']] = df_w_values[['value',
-                                                                                self.data_field + '_distance',
-                                                                                'id_x']].values
+        df[self.data_field] = np.nan
+        df[self.data_field + '_id'] = np.nan
+        try:
+            catalogue = self.get_catalog()
+            start_time = df.index.min()
+            end_time = df.index.max()
+            nearest_locations = geopandas.sjoin_nearest(df[['geometry']].to_crs(epsg=3395),
+                                                        catalogue.to_crs(epsg=3395),
+                                                        how='inner', distance_col=self.data_field + '_distance')
+            ids = nearest_locations.id.unique()
+            total_values = self.get_data(ids, start_time, end_time)
+            for location_id, df_id in nearest_locations.groupby('id'):
+                df_values = total_values[total_values.id == location_id]
+                df_w_values = pd.merge_asof(df_id, df_values, left_index=True, right_on='datetime',
+                                            tolerance=pd.Timedelta(TIME_TOLERANCE), direction='nearest')
+                df.loc[df_w_values.index, [self.data_field,
+                                           self.data_field + '_distance',
+                                           self.data_field + '_id']] = df_w_values[['value',
+                                                                                    self.data_field + '_distance',
+                                                                                    'id_x']].values
+        except requests.exceptions.ConnectionError:
+            print('Connection with the Meetnet Vlaamse Blanken could not be done. Setting data to nan...')
 
         return df
 

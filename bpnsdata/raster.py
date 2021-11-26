@@ -7,6 +7,7 @@ else:
     # importlib.resources has files(), so use that:
     import importlib.resources as importlib_resources
 import geopandas
+import numpy as np
 
 
 class RasterData:
@@ -47,7 +48,8 @@ class RasterData:
         df_map = df[['geometry']].sjoin(self.map.to_crs(df.crs)[list(self.columns.keys()) + ['geometry']],
                                         predicate='within')
         for col, col_name in self.columns.items():
-            df[col_name] = df_map[col]
+            df[col] = np.nan
+            df.loc[df_map.index, col_name] = df_map[col]
         return df
 
 
