@@ -5,6 +5,7 @@ import numpy as np
 from tqdm import tqdm
 import owslib.wcs as wcs
 import requests
+import pandas as pd
 
 
 class EMODnetData:
@@ -87,10 +88,12 @@ class ShippingData(EMODnetData):
         -------
         The GeoDataFrame updated
         """
+        df_copy = pd.DataFrame()
         for (year, month), df_slice in tqdm(df[['geometry']].groupby([df.index.year, df.index.month])):
             self.set_layer_date(year, month)
             super().__call__(df_slice)
-        return df
+            df_copy = df_copy.append(df_slice)
+        return df_copy
 
     def set_layer_date(self, year, month):
         """
