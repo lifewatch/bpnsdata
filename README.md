@@ -170,7 +170,7 @@ Use of the SeaDataManager
 import bpnsdata
 
 # Define the seadatamanager
-env_vars = ['shipping', 'time', 'wrakken_bank', 'habitat_suitability',
+env_vars = ['shipping', 'time', 'wrakken_bank', 'habitat_suitability', 'bathymetry'
             'seabed_habitat', 'sea_surface', 'sea_wave', 'rain', 'wind']
 manager = bpnsdata.SeaDataManager(env_vars)
 

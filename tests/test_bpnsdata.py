@@ -19,9 +19,10 @@ class TestSeaDataManager(unittest.TestCase):
 
     def test_sea_data_manager(self):
         env_vars = ['shipping', 'time', 'wrakken_bank', 'habitat_suitability',
-                    'seabed_habitat', 'sea_surface', 'sea_wave', 'rain', 'wind']
+                    'seabed_habitat', 'sea_surface', 'sea_wave', 'rain', 'wind', 'bathymetry']
         self.manager = bpnsdata.SeaDataManager(env_vars)
-        self.manager(self.geodf)
+        df = self.manager(self.geodf)
+        print(df)
 
     def test_geolocation(self):
         survey_location = bpnsdata.geolocation.SurveyLocation('test_data/VG.gpx')
