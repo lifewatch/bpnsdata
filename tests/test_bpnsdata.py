@@ -16,6 +16,7 @@ class TestSeaDataManager(unittest.TestCase):
         self.df = pd.DataFrame(random_data, index=time_index)
         survey_location = bpnsdata.geolocation.SurveyLocation('test_data/VG.gpx')
         self.geodf = survey_location.geotrackpoints
+        self.geodf.loc[self.geodf.iloc[0].name, 'geometry'] = shapely.geometry.Point()
 
     def test_sea_data_manager(self):
         env_vars = ['shipping', 'time', 'wrakken_bank', 'habitat_suitability',

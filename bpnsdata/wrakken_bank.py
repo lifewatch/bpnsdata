@@ -42,6 +42,9 @@ class WrakkenBankData:
                                           self.df.to_crs(epsg=3395),
                                           how='left', distance_col='distance')
 
+        if len(df_dist) != len(df):
+            # Some rows are at the same distance from more than 1 shipwreck. We keep the first one.
+            df_dist = df_dist[~df_dist.index.duplicated(keep='first')]
         df['shipwreck_distance'] = df_dist['distance']
         df['shipwreck_lat'] = df_dist['latitude']
         df['shipwreck_lon'] = df_dist['longitude']

@@ -38,16 +38,19 @@ class EMODnetData:
         wcs_response = self.w.getCoverage(identifier=self.identifier, bbox=bbox,
                                           crs=df_4326.crs.to_string(), format='image/tiff',
                                           resx=self.resolutionx, resy=self.resolutiony)
+        df_4326[self.column_name] = np.nan
         try:
             tif_file = urllib.request.urlretrieve(wcs_response.geturl())
+            not_empty_points = df_4326[~df_4326.geometry.is_empty]
             tif_raster = xr.open_rasterio(tif_file[0])
-            lat_points = xr.DataArray(df_4326.geometry.y, dims='points')
-            lon_points = xr.DataArray(df_4326.geometry.x, dims='points')
-            df[self.column_name] = tif_raster.sel(x=lon_points, y=lat_points, method='nearest').values[0]
+            lat_points = xr.DataArray(not_empty_points.geometry.y, dims='points')
+            lon_points = xr.DataArray(not_empty_points.geometry.x, dims='points')
+            df_4326.loc[not_empty_points.index, self.column_name] = tif_raster.sel(x=lon_points, y=lat_points,
+                                                                                   method='nearest').values[0]
         except rasterio.errors.RasterioIOError:
             print('url %s was not downloaded. Check possible errors' % wcs_response.geturl())
 
-        return df
+        return df_4326
 
 
 class ShippingData(EMODnetData):
