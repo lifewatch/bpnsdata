@@ -1,7 +1,7 @@
 import setuptools
 
 setuptools.setup(name='bpnsdata',
-                 version='0.1.6',
+                 version='0.1.7',
                  description='Add BPNS sea test_data to a geodataframe',
                  author='Clea Parcerisas',
                  author_email='clea.parcerisas@vliz.be',
