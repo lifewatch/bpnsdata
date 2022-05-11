@@ -41,7 +41,7 @@ class EMODnetData:
         df_4326[self.column_name] = np.nan
         try:
             tif_file = urllib.request.urlretrieve(wcs_response.geturl())
-            not_empty_points = df_4326[~df_4326.geometry.is_empty]
+            not_empty_points = df_4326.loc[~(df_4326.geometry.is_empty | df_4326.geometry.isna())]
             tif_raster = xr.open_rasterio(tif_file[0])
             lat_points = xr.DataArray(not_empty_points.geometry.y, dims='points')
             lon_points = xr.DataArray(not_empty_points.geometry.x, dims='points')
