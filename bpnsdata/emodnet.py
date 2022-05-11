@@ -94,7 +94,7 @@ class ShippingData(EMODnetData):
         df_copy = pd.DataFrame()
         for (year, month), df_slice in tqdm(df[['geometry']].groupby([df.index.year, df.index.month])):
             self.set_layer_date(year, month)
-            super().__call__(df_slice)
+            df_slice = super().__call__(df_slice)
             df_copy = df_copy.append(df_slice)
         return df_copy
 
