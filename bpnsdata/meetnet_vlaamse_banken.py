@@ -62,7 +62,13 @@ class MeetNetVlaamseBanken:
             One of the acronyms
         """
         if user is None:
-            user = os.environ["username_banken"]
+            try:
+                user = os.environ["username_banken"]
+            except KeyError:
+                raise ValueError('To access the data from meetnet vlaamsebanken you need to register. '
+                                 'Please add your username and password as environment variables as username_banken'
+                                 'and password_banken or pass them as arguments when creating a MeetNetVlaamseBanken '
+                                 'object')
         if password is None:
             password = os.environ["password_banken"]
         self.user = user
