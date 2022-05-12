@@ -48,7 +48,7 @@ class RasterData:
         df_map = df[['geometry']].sjoin(self.map.to_crs(df.crs)[list(self.columns.keys()) + ['geometry']],
                                         predicate='within')
         for col, col_name in self.columns.items():
-            df[col] = np.nan
+            df[col_name] = np.nan
             df.loc[df_map.index, col_name] = df_map[col]
         return df
 
