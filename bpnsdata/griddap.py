@@ -112,16 +112,17 @@ class RBINSerddap(erddapy.ERDDAP):
         self.set_temporal_bounds(df)
         self.set_spatial_bounds(df)
 
+        not_empty_values = ~(df.geometry.is_empty | df.geometry.isna())
         try:
             griddap = self.to_xarray(decode_times=True, decode_timedelta=False)
             # Is there a xarray function?
-            lat_points = xr.DataArray(df.geometry.y, dims='points')
-            lon_points = xr.DataArray(df.geometry.x, dims='points')
-            time_points = xr.DataArray(df.index.values, dims='points')
+            lat_points = xr.DataArray(df.loc[not_empty_values].geometry.y, dims='points')
+            lon_points = xr.DataArray(df.loc[not_empty_values].geometry.x, dims='points')
+            time_points = xr.DataArray(df.loc[not_empty_values].index.values, dims='points')
             nearest_points = griddap.sel(latitude=lat_points, longitude=lon_points, time=time_points,
                                          method='nearest')
             for col in self.columns:
-                df[col] = nearest_points[col].values
+                df.loc[not_empty_values, col] = nearest_points[col].values
         except (requests.exceptions.HTTPError, PermissionError):
             df[self.columns] = np.nan
 

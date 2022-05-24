@@ -2,7 +2,10 @@ import bpnsdata
 from bpnsdata import geolocation
 import shapely
 
-shapely.speedups.disable()
+# shapely.speedups.disable()
+
+import warnings
+warnings.filterwarnings('ignore', 'GeoSeries.isna', UserWarning)
 
 
 class SeaDataManager:
@@ -17,6 +20,7 @@ class SeaDataManager:
             i.e: for the SeabedHabitatData class, the value to pass should be seabed_habitat
         """
         self.env_vars = {}
+        self.survey_location = None
         for env in env_vars:
             env_class = ''.join([i.capitalize() for i in env.split('_')]) + 'Data'
             self.env_vars[env] = getattr(bpnsdata, env_class)()
@@ -42,8 +46,7 @@ class SeaDataManager:
             df = env_class(df)
         return df
 
-    @staticmethod
-    def add_geodata(df, geofile, time_tolerance='1min', other_cols=None):
+    def add_geodata(self, df, geofile, time_tolerance='1min', other_cols=None):
         """
         Add the geo information to the df from a geofile with the time and space information about the df.
         See SurveyLocation for more information
@@ -64,6 +67,6 @@ class SeaDataManager:
         The same dataframe converted to a geodataframe with the updated geometry. The index kept are the original ones
         from the DataFrame, not the ones from the geo file.
         """
-        survey_location = geolocation.SurveyLocation(geofile)
-        geodf = survey_location.add_location(df, time_tolerance=time_tolerance, other_cols=other_cols)
+        self.survey_location = geolocation.SurveyLocation(geofile)
+        geodf = self.survey_location.add_location(df, time_tolerance=time_tolerance, other_cols=other_cols)
         return geodf
