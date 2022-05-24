@@ -92,7 +92,7 @@ class TimeData:
         df['moon_phase'] = np.nan
         df['day_moment'] = np.nan
         df_4326 = df.to_crs(epsg=4326)
-        for row in tqdm(df_4326[['geometry']].itertuples(), total=len(df_4326)):
+        for row in tqdm(df_4326[['geometry']].itertuples(), total=len(df_4326), position=0, leave=True):
             t = row.Index
             geometry = row[1]
             if geometry is not None:
