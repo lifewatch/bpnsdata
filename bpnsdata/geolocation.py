@@ -288,10 +288,9 @@ class SurveyLocation:
         # TODO implement reading the coastline from emodnet bathymetry!
         if "geometry" not in df.columns:
             df = self.add_location(df)
-        coastline = geopandas.read_file(coastfile).loc[0].geometry.coords
-        coast_df = geopandas.GeoDataFrame(geometry=[sgeom.Point(xy)
-                                                    for xy in coastline])
-        df[column] = df['geometry'].apply(min_distance_m, geodf=coast_df)
+        coastline = geopandas.read_file(coastfile, crs='EPSG:4326')
+        coastline = coastline.to_crs('EPSG:3857').loc[0].geometry
+        df[column] = df.to_crs('EPSG:3857').distance(coastline)
 
         return df
 

@@ -2,7 +2,7 @@ import bpnsdata
 from bpnsdata import geolocation
 import shapely
 
-# shapely.speedups.disable()
+shapely.speedups.disable()
 
 import warnings
 warnings.filterwarnings('ignore', 'GeoSeries.isna', UserWarning)
