@@ -1,3 +1,4 @@
+import warnings
 import rasterio
 import urllib
 import xarray as xr
@@ -6,6 +7,7 @@ from tqdm import tqdm
 import owslib.wcs as wcs
 import requests
 import pandas as pd
+import rioxarray
 
 
 class EMODnetData:
@@ -39,10 +41,11 @@ class EMODnetData:
                                           crs=df_4326.crs.to_string(), format='image/tiff',
                                           resx=self.resolutionx, resy=self.resolutiony)
         df_4326[self.column_name] = np.nan
+        warnings.filterwarnings('ignore', 'GeoSeries.isna', UserWarning)
         try:
             tif_file = urllib.request.urlretrieve(wcs_response.geturl())
             not_empty_points = df_4326.loc[~(df_4326.geometry.is_empty | df_4326.geometry.isna())]
-            tif_raster = xr.open_rasterio(tif_file[0])
+            tif_raster = rioxarray.open_rasterio(tif_file[0])
             lat_points = xr.DataArray(not_empty_points.geometry.y, dims='points')
             lon_points = xr.DataArray(not_empty_points.geometry.x, dims='points')
             df_4326.loc[not_empty_points.index, self.column_name] = tif_raster.sel(x=lon_points, y=lat_points,
@@ -95,7 +98,7 @@ class ShippingData(EMODnetData):
         for (year, month), df_slice in tqdm(df.groupby([df.index.year, df.index.month])):
             self.set_layer_date(year, month)
             df_slice = super().__call__(df_slice)
-            df_copy = df_copy.append(df_slice)
+            df_copy = pd.concat((df_copy, df_slice))
         return df_copy
 
     def set_layer_date(self, year, month):
