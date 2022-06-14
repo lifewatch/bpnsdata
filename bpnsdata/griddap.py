@@ -3,6 +3,7 @@ import datetime
 import erddapy
 import numpy as np
 import pandas as pd
+import warnings
 import requests
 import shapely.geometry as geom
 import xarray as xr
@@ -112,6 +113,7 @@ class RBINSerddap(erddapy.ERDDAP):
         self.set_temporal_bounds(df)
         self.set_spatial_bounds(df)
 
+        warnings.filterwarnings('ignore', 'GeoSeries.isna', UserWarning)
         not_empty_values = ~(df.geometry.is_empty | df.geometry.isna())
         try:
             griddap = self.to_xarray(decode_times=True, decode_timedelta=False)
