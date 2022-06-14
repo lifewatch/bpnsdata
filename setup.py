@@ -1,8 +1,8 @@
 import setuptools
 
 setuptools.setup(name='bpnsdata',
-                 version='0.1.8',
-                 description='Add BPNS sea test_data to a geodataframe',
+                 version='0.1.9',
+                 description='Add Belgian Part of the North Sea (BPNS) marine environmental data to a geodataframe',
                  author='Clea Parcerisas',
                  author_email='clea.parcerisas@vliz.be',
                  url="https://github.com/lifewatch/bpnsdata.git",
