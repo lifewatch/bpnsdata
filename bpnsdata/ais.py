@@ -84,24 +84,24 @@ class AisData:
                     ais_df['start_segment'] = pd.to_datetime(ais_df['start_segment'])
                     ais_df['end_segment'] = pd.to_datetime(ais_df['end_segment'])
 
-                for start_time, row in tqdm(df.iterrows(), total=len(df)):
-                    end_time = start_time + dt
-                    ais_df['start_segment_in_bin'] = np.maximum(ais_df['start_segment'], start_time)
-                    ais_df['end_segment_in_bin'] = np.minimum(ais_df['end_segment'], end_time)
-                    ais_df['duration'] = ais_df['end_segment_in_bin'] - ais_df['start_segment_in_bin']
-                    ais_df['total_seconds'] = ais_df['duration'].dt.total_seconds()
-                    mask = ais_df.total_seconds > 0
-                    n_ships = mask.sum()
-                    if n_ships > 0:
-                        total_seconds = ais_df.loc[mask].total_seconds.sum()
-                        total_seconds_weighted = (ais_df.loc[mask].total_seconds *
-                                                  ais_df.loc[mask].distance_to_center).sum() / total_seconds
+                    for start_time, row in tqdm(df.iterrows(), total=len(df)):
+                        end_time = start_time + dt
+                        ais_df['start_segment_in_bin'] = np.maximum(ais_df['start_segment'], start_time)
+                        ais_df['end_segment_in_bin'] = np.minimum(ais_df['end_segment'], end_time)
+                        ais_df['duration'] = ais_df['end_segment_in_bin'] - ais_df['start_segment_in_bin']
+                        ais_df['total_seconds'] = ais_df['duration'].dt.total_seconds()
+                        mask = ais_df.total_seconds > 0
+                        n_ships = mask.sum()
+                        if n_ships > 0:
+                            total_seconds = ais_df.loc[mask].total_seconds.sum()
+                            total_seconds_weighted = (ais_df.loc[mask].total_seconds *
+                                                      ais_df.loc[mask].distance_to_center).sum() / total_seconds
 
-                        df.loc[start_time, ['ais_total_seconds',
-                                            'ais_n_ships',
-                                            'ais_total_seconds_distance_weighted']] = [total_seconds,
-                                                                                       n_ships,
-                                                                                       total_seconds_weighted]
+                            df.loc[start_time, ['ais_total_seconds',
+                                                'ais_n_ships',
+                                                'ais_total_seconds_distance_weighted']] = [total_seconds,
+                                                                                           n_ships,
+                                                                                           total_seconds_weighted]
 
             else:
                 print('There is no data for these days or the request exceeded the maximum time. Please try again '

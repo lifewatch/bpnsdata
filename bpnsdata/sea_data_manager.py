@@ -25,7 +25,7 @@ class SeaDataManager:
             env_class = ''.join([i.capitalize() for i in env.split('_')]) + 'Data'
             self.env_vars[env] = getattr(bpnsdata, env_class)()
 
-    def __call__(self, df):
+    def __call__(self, df, **kwargs):
         """
         Calls the function of all the env_vars of the class to add the parameters to the df.
         Parameters
@@ -33,6 +33,9 @@ class SeaDataManager:
         df : GeoDataFrame
             Geopandas DataFrame with one column with geometry and the datetime as index. Some classes do not need
             geometry or datetime
+        kwargs : dict
+            key has to be the name of one of the env_vars and value is a dictionary with key, value as the parameters
+            that can be passed to the __call__ function of that class.
 
         Returns
         -------
@@ -43,7 +46,10 @@ class SeaDataManager:
                               'the function add_geodata')
         for env_name, env_class in self.env_vars.items():
             print('Adding %s...' % env_name)
-            df = env_class(df)
+            if env_name in kwargs.keys():
+                df = env_class(df, **kwargs[env_name])
+            else:
+                df = env_class(df)
         return df
 
     def add_geodata(self, df, geofile, time_tolerance='1min', other_cols=None):
