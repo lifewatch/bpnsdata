@@ -2,6 +2,7 @@ import pandas as pd
 import unittest
 import numpy as np
 import shapely
+import geopandas
 
 import bpnsdata
 
@@ -69,6 +70,18 @@ class TestSeaDataManager(unittest.TestCase):
     def test_time(self):
         time = bpnsdata.TimeData()
         df = time(self.geodf)
+
+    def test_ais(self):
+        lon, lat = [2.812594, 51.704417]
+        time_index = pd.date_range(start='2017-08-21 11:35', end='2017-08-22 12:00', freq='min', tz='UTC')
+        random_data = np.random.randint(5, 30, size=len(time_index))
+        df = pd.DataFrame(random_data, index=time_index)
+        df['lat'] = lat
+        df['lon'] = lon
+        geodf = geopandas.GeoDataFrame(df, geometry=geopandas.points_from_xy(df['lon'], df['lat']), crs='epsg:4326')
+        ais = bpnsdata.AisData()
+        df = ais(geodf, dt='1min')
+        print(df)
 
 
 if __name__ == '__main__':
