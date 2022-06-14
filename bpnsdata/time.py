@@ -71,7 +71,7 @@ class TimeData:
         -------
         Moment of the day (string)
         """
-        bluffton = api.Topos(latitude_degrees=location.coords[0][0], longitude_degrees=location.coords[0][1])
+        bluffton = api.Topos(latitude_degrees=location.coords[0][1], longitude_degrees=location.coords[0][0])
         utc_dt = dt.replace(tzinfo=datetime.timezone.utc)
         t = self.ts.utc(utc_dt)
         is_dark_twilight_at = almanac.dark_twilight_day(self.eph, bluffton)
@@ -92,7 +92,8 @@ class TimeData:
         df['moon_phase'] = np.nan
         df['day_moment'] = np.nan
         df_4326 = df.to_crs(epsg=4326)
-        for row in tqdm(df_4326.loc[~df_4326.geometry.is_empty][['geometry']].itertuples(), total=len(df_4326), position=0, leave=True):
+        for row in tqdm(df_4326.loc[~df_4326.geometry.is_empty][['geometry']].itertuples(), total=len(df_4326),
+                        position=0, leave=True):
             t = row.Index
             geometry = row[1]
             if geometry is not None:
