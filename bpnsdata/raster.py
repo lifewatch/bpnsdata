@@ -30,7 +30,21 @@ class RasterData:
             for col in columns:
                 self.columns[col] = col
 
-    def __call__(self, df):
+    def __call__(self, df, **kwargs):
+        """
+        Add the raster point to the df
+
+        Parameters
+        ----------
+        df : GeoDataFrame
+            datetime as index and a column geometry
+        **kwargs: None
+            Ignored, just for compatibility
+
+        Returns
+        -------
+        The GeoDataFrame updated
+        """
         return self.get_data(df)
 
     def get_data(self, df):

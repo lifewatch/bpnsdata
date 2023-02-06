@@ -11,7 +11,6 @@ else:
 
 import numpy as np
 from skyfield import almanac, api
-from tqdm.auto import tqdm
 
 
 class TimeData:
@@ -28,9 +27,9 @@ class TimeData:
 
         self.eph = None
 
-    def __call__(self, df):
+    def __call__(self, df, datetime_column):
         self.eph = api.load_file(self.bsp_file)
-        df = self.get_time_data_df(df)
+        df = self.get_time_data_df(df, datetime_column)
         self.eph.close()
         return df
 
@@ -78,13 +77,15 @@ class TimeData:
         day_moment = is_dark_twilight_at(t).min()
         return almanac.TWILIGHTS[day_moment]
 
-    def get_time_data_df(self, df):
+    def get_time_data_df(self, df, datetime_column):
         """
         Add to the dataframe the moon_phase and the day_moment to all the rows
         Parameters
         ----------
         df : DataFrame
             DataFrame with the datetime as index
+        datetime_column: str
+
         Returns
         -------
         The dataframe with the columns added
@@ -92,11 +93,10 @@ class TimeData:
         df['moon_phase'] = np.nan
         df['day_moment'] = np.nan
         df_4326 = df.to_crs(epsg=4326)
-        for row in tqdm(df_4326.loc[~df_4326.geometry.is_empty][['geometry']].itertuples(), total=len(df_4326),
-                        position=0, leave=True):
-            t = row.Index
+        for row in df_4326.loc[~df_4326.geometry.is_empty][['geometry', datetime_column]].itertuples():
+            t = row[2]
             geometry = row[1]
             if geometry is not None:
-                df.loc[t, 'moon_phase'] = self.get_moon_phase(t)
-                df.loc[t, 'day_moment'] = self.get_day_moment(t, geometry)
+                df.loc[row.Index, 'moon_phase'] = self.get_moon_phase(t)
+                df.loc[row.Index, 'day_moment'] = self.get_day_moment(t, geometry)
         return df

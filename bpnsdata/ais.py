@@ -1,8 +1,4 @@
-import rasterio
-import urllib
-import xarray as xr
 import numpy as np
-from tqdm import tqdm
 import requests
 import pandas as pd
 import warnings
@@ -24,7 +20,7 @@ class AisData:
         self.column_name = None
         self.limit = 10000
 
-    def __call__(self, df, dt):
+    def __call__(self, df, dt, datetime_column='datetime'):
         """
         Add the specified ais data to the df
 
@@ -32,6 +28,9 @@ class AisData:
         ----------
         df : GeoDataFrame
             datetime as index and a column geometry
+        datetime_column: str
+            Column where the datetime information is stored. Default to 'datetime'
+        dt: time difference
 
         Returns
         -------
@@ -41,19 +40,21 @@ class AisData:
         warnings.filterwarnings('ignore', 'GeoSeries.isna', UserWarning)
         not_empty_values = ~(df_4326.geometry.is_empty | df_4326.geometry.isna())
         centroid = shapely.geometry.LineString([xy for xy in df_4326.loc[not_empty_values, 'geometry']]).centroid
-        df = self.get_all_ships_onepoint(df, centroid, dt)
+        df = self.get_all_ships_onepoint(df, datetime_column, centroid, dt)
 
         return df
 
-    def get_all_ships_onepoint(self, df, point, dt='5s'):
+    def get_all_ships_onepoint(self, df, datetime_column, point, dt='5s'):
         """
 
         Parameters
         ----------
         df : GeoDataFrame
             With datetime as index and geometry as a column
-        point : Shapely Point
-            Shapely point object
+        datetime_column: str
+            Column where the datetime information is stored. Default to 'datetime'
+        point : shapely.geometry.Point
+            Shapely point object with the coordinates to check
 
         Returns
         -------
@@ -61,8 +62,8 @@ class AisData:
         """
         dt = pd.to_timedelta(dt)
         lon, lat = point.coords[0]
-        start_time_str = df.index.min().strftime('%Y-%m-%d %H:%M')
-        end_time_str = df.index.max().strftime('%Y-%m-%d %H:%M')
+        start_time_str = df[datetime_column].min().strftime('%Y-%m-%d %H:%M')
+        end_time_str = df[datetime_column].max().strftime('%Y-%m-%d %H:%M')
         try:
             response = requests.get(self.url + '/items.json?', {'limit': self.limit,
                                                                 'lon': str(lon),
@@ -84,7 +85,8 @@ class AisData:
                     ais_df['start_segment'] = pd.to_datetime(ais_df['start_segment'])
                     ais_df['end_segment'] = pd.to_datetime(ais_df['end_segment'])
 
-                    for start_time, row in tqdm(df.iterrows(), total=len(df)):
+                    for i, row in df.iterrows():
+                        start_time = row[datetime_column]
                         end_time = start_time + dt
                         ais_df['start_segment_in_bin'] = np.maximum(ais_df['start_segment'], start_time)
                         ais_df['end_segment_in_bin'] = np.minimum(ais_df['end_segment'], end_time)
@@ -97,11 +99,11 @@ class AisData:
                             total_seconds_weighted = (ais_df.loc[mask].total_seconds *
                                                       ais_df.loc[mask].distance_to_center).sum() / total_seconds
 
-                            df.loc[start_time, ['ais_total_seconds',
-                                                'ais_n_ships',
-                                                'ais_total_seconds_distance_weighted']] = [total_seconds,
-                                                                                           n_ships,
-                                                                                           total_seconds_weighted]
+                            df.loc[i, ['ais_total_seconds',
+                                       'ais_n_ships',
+                                       'ais_total_seconds_distance_weighted']] = [total_seconds,
+                                                                                  n_ships,
+                                                                                  total_seconds_weighted]
 
             else:
                 print('There is no data for these days or the request exceeded the maximum time. Please try again '

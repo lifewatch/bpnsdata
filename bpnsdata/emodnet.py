@@ -3,7 +3,6 @@ import rasterio
 import urllib
 import xarray as xr
 import numpy as np
-from tqdm import tqdm
 import owslib.wcs as wcs
 import requests
 import pandas as pd
@@ -19,7 +18,16 @@ class EMODnetData:
         self.w = wcs.WebCoverageService(self.url, version=version)
         self.column_name = column_name
 
-    def __call__(self, df):
+    def __call__(self, df, **kwargs):
+        """
+        Add the env data from EMODnet to the df
+
+        Parameters
+        ----------
+        df: dataframe
+        kwargs: None
+            kwargs are ignored, only for compatibility
+        """
         return self.assign_wcs_df(df)
 
     def get_bbox(self, df):
@@ -81,7 +89,7 @@ class ShippingData(EMODnetData):
         version = '1.0.0'
         super().__init__(self.identifier, url, version, resolutionx, resolutiony, column_name=self.column_name)
 
-    def __call__(self, df):
+    def __call__(self, df, datetime_column='datetime'):
         """
         Add the specified layer data to the df
 
@@ -89,13 +97,15 @@ class ShippingData(EMODnetData):
         ----------
         df : GeoDataFrame
             datetime as index and a column geometry
+        datetime_column: str
+            Column where the datetime information is stored. Default to 'datetime'
 
         Returns
         -------
         The GeoDataFrame updated
         """
         df_copy = pd.DataFrame()
-        for (year, month), df_slice in tqdm(df.groupby([df.index.year, df.index.month])):
+        for (year, month), df_slice in df.groupby([df[datetime_column].dt.year, df[datetime_column].dt.month]):
             self.set_layer_date(year, month)
             df_slice = super().__call__(df_slice)
             df_copy = pd.concat((df_copy, df_slice))

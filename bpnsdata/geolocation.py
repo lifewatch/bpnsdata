@@ -19,14 +19,17 @@ import numpy as np
 
 
 class SurveyLocation:
-    def __init__(self, geofile=None, **kwargs):
+    def __init__(self, geofile=None, datetime_column='datetime', **kwargs):
         """
         Location of all the survey points
         Parameters
         ----------
         geofile : str or Path
             Where the geo data is stored. can be a csv, gpx, pickle or sqlite3
+        datetime_column: str
+            Column where the datetime from geotrackpoints property will be stored
         """
+        self.datetime_column = datetime_column
         if geofile is None:
             self.geotrackpoints = None
         else:
@@ -47,8 +50,7 @@ class SurveyLocation:
             self.geotrackpoints = geotrackpoints
             self.geofile = geofile
 
-    @staticmethod
-    def read_gpx(geofile):
+    def read_gpx(self, geofile):
         """
         Read a GPX from GARMIN
         Parameters
@@ -64,22 +66,19 @@ class SurveyLocation:
             geotrackpoints = geopandas.read_file(geofile, layer='track_points')
 
         geotrackpoints.drop_duplicates(subset='time', inplace=True)
-        geotrackpoints = geotrackpoints.set_index(pd.to_datetime(geotrackpoints['time']))
-        geotrackpoints = geotrackpoints.sort_index()
+        geotrackpoints[self.datetime_column] = pd.to_datetime(geotrackpoints['time'])
+        geotrackpoints = geotrackpoints.sort_values(self.datetime_column)
         geotrackpoints.dropna(subset=['geometry'], inplace=True)
 
         return geotrackpoints
 
-    @staticmethod
-    def read_pickle(geofile, datetime_col='datetime', crs='EPSG:4326'):
+    def read_pickle(self, geofile, crs='EPSG:4326'):
         """
         Read a pickle file
         Parameters
         ----------
         geofile : string or path
             Where the gps information is
-        datetime_col : string
-            Name of the column where the datetime is
         crs : string
             Projection of the gps information
 
@@ -89,23 +88,20 @@ class SurveyLocation:
         """
         df = pd.read_pickle(geofile)
         geotrackpoints = geopandas.GeoDataFrame(df, crs=crs)
-        geotrackpoints[datetime_col] = pd.to_datetime(df[datetime_col])
-        geotrackpoints.drop_duplicates(subset=datetime_col, inplace=True)
-        geotrackpoints = geotrackpoints.set_index(datetime_col)
+        geotrackpoints[self.datetime_column] = pd.to_datetime(df[self.datetime_column])
+        geotrackpoints.drop_duplicates(subset=self.datetime_column, inplace=True)
         geotrackpoints = geotrackpoints.sort_index()
         geotrackpoints.dropna(subset=['geometry'], inplace=True)
 
         return geotrackpoints
 
-    def read_csv(self, geofile, datetime_col='datetime', lat_col='Lat', lon_col='Lon'):
+    def read_csv(self, geofile, lat_col='Lat', lon_col='Lon'):
         """
         Read a csv file
         Parameters
         ----------
         geofile : string or path
             Where the gps information is
-        datetime_col : string
-            Name of the column where the datetime is
         lat_col : string
             Column with the Latitude
         lon_col : string
@@ -116,10 +112,10 @@ class SurveyLocation:
         A GeoPandasDataFrame
         """
         df = pd.read_csv(geofile)
-        geotrackpoints = self.convert_df(df, datetime_col, lat_col, lon_col)
+        geotrackpoints = self.convert_df(df, self.datetime_column, lat_col, lon_col)
         return geotrackpoints
 
-    def read_sqlite3(self, geofile, table_name='gpsData', datetime_col='UTC', lat_col='Latitude',
+    def read_sqlite3(self, geofile, table_name='gpsData', lat_col='Latitude',
                      lon_col='Longitude'):
         """
         Read a sqlite3 file with geolocation test_data
@@ -129,8 +125,6 @@ class SurveyLocation:
             sqlite3 file
         table_name : str
             name of the table to read from the sqlite3 db
-        datetime_col : str
-            name of the column of the table where the datetime information is
         lat_col : string
             Column with the Latitude
         lon_col : string
@@ -144,11 +138,10 @@ class SurveyLocation:
         query = conn.execute("SELECT * FROM %s" % table_name)
         cols = [column[0] for column in query.description]
         df = pd.DataFrame.from_records(data=query.fetchall(), columns=cols)
-        geotrackpoints = self.convert_df(df, datetime_col, lat_col, lon_col)
+        geotrackpoints = self.convert_df(df, self.datetime_column, lat_col, lon_col)
         return geotrackpoints
 
-    @staticmethod
-    def convert_df(df, datetime_col, lat_col, lon_col):
+    def convert_df(self, df, lat_col, lon_col):
         """
         Convert the DataFrame in a GeoPandas DataFrame
         Parameters
@@ -166,16 +159,15 @@ class SurveyLocation:
         """
         geotrackpoints = geopandas.GeoDataFrame(df, geometry=geopandas.points_from_xy(df[lon_col], df[lat_col]),
                                                 crs='EPSG:4326')
-        geotrackpoints[datetime_col] = pd.to_datetime(df[datetime_col])
-        geotrackpoints.drop_duplicates(subset=datetime_col, inplace=True)
-        geotrackpoints = geotrackpoints.set_index(datetime_col)
-        geotrackpoints = geotrackpoints.sort_index()
+        geotrackpoints[self.datetime_column] = pd.to_datetime(df[self.datetime_column])
+        geotrackpoints.drop_duplicates(subset=self.datetime_column, inplace=True)
+        geotrackpoints = geotrackpoints.sort_values(self.datetime_column)
         geotrackpoints.dropna(subset=[lat_col], inplace=True)
         geotrackpoints.dropna(subset=[lon_col], inplace=True)
 
         return geotrackpoints
 
-    def add_location(self, df, time_tolerance='10min', other_cols=None):
+    def add_location(self, df, datetime_column_df='datetime', time_tolerance='10min', other_cols=None):
         """
         Add the closest location of the GeoSurvey to each timestamp of the DataFrame.
         Returns a new GeoDataFrame with all the information of df but with added geometry
@@ -184,6 +176,8 @@ class SurveyLocation:
         ----------
         df : DataFrame
             DataFrame with a datetime column or an index datetime-like
+        datetime_column_df: str
+            Column where the datetime information is stored. Default to 'datetime'
         time_tolerance : str
             Maximum time to be acceptable distance between the survey timestamp and the geolocation point i.e. 10min
         other_cols : str
@@ -191,19 +185,20 @@ class SurveyLocation:
         """
         if other_cols is None:
             other_cols = []
-        if self.geotrackpoints.index.tzinfo is None:
-            self.geotrackpoints.index = self.geotrackpoints.index.tz_localize('UTC')
+        if self.geotrackpoints[self.datetime_column].dt.tz is None:
+            self.geotrackpoints[self.datetime_column] = self.geotrackpoints[self.datetime_column].dt.tz_localize('UTC')
 
         try:
-            if 'datetime' in df.columns:
-                geo_df = pd.merge_asof(df.sort_values('datetime'), self.geotrackpoints[['geometry']+other_cols],
-                                       left_on='datetime', right_index=True, tolerance=pd.Timedelta(time_tolerance),
-                                       direction='nearest')
-                geo_df = geo_df.set_index('datetime')
+            if datetime_column_df in df.columns:
+                df = df.sort_values(datetime_column_df)
+                geo_df = pd.merge_asof(df, self.geotrackpoints[['geometry', self.datetime_column]+other_cols],
+                                       left_on=datetime_column_df, right_on=self.datetime_column,
+                                       tolerance=pd.Timedelta(time_tolerance), direction='nearest')
             else:
+                # Check if the datetime is the index
                 geo_df = pd.merge_asof(df.sort_index(), self.geotrackpoints[['geometry'] + other_cols],
-                                       left_index=True, right_index=True, tolerance=pd.Timedelta(time_tolerance),
-                                       direction='nearest')
+                                       left_index=True, right_on=self.datetime_column,
+                                       tolerance=pd.Timedelta(time_tolerance), direction='nearest')
         except ValueError:
             geo_df = df
             geo_df['geometry'] = np.nan

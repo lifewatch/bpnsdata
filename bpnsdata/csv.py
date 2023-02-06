@@ -19,12 +19,21 @@ class CSVData:
                                                                            y=csv_df[lat_col]),
                                          crs='EPSG:4326')
 
-    def __call__(self, df):
+    def __call__(self, df, **kwargs):
+        """
+        Add the env data from the csv, picking the closest point
+
+        Parameters
+        ----------
+        df: dataframe
+        kwargs: None
+            kwargs are ignored, only for compatibility
+        """
         return self.add_data_df(df)
 
     def add_data_df(self, df):
         """
-        Add to each row the name of the closest shipwreck, its position in lat, lon degrees and the distance to it
+        Add to each row the name of the closest row, its position in lat, lon degrees and the distance to it
 
         Parameters
         ----------
