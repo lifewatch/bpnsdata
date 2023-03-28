@@ -13,11 +13,6 @@ class AisData:
     def __init__(self):
         """
         Will return the cumulative shipping in a certain radius
-
-        Parameters
-        ----------
-        buffer: float
-            Radius to consider, in meters
         """
         self.url = 'http://aisdb.vliz.be:9000/functions/acoustic_impact/'
         self.column_name = None
