@@ -10,7 +10,7 @@ import shapely
 
 
 class AisData:
-    def __init__(self, buffer=10000, ):
+    def __init__(self):
         """
         Will return the cumulative shipping in a certain radius
 
@@ -20,11 +20,10 @@ class AisData:
             Radius to consider, in meters
         """
         self.url = 'http://aisdb.vliz.be:9000/functions/acoustic_impact/'
-        self.buffer = buffer
         self.column_name = None
         self.limit = 10000
 
-    def __call__(self, df, dt):
+    def __call__(self, df, dt, buffer=10000):
         """
         Add the specified ais data to the df
 
@@ -32,6 +31,10 @@ class AisData:
         ----------
         df : GeoDataFrame
             datetime as index and a column geometry
+        dt: str
+            Timedelta to consider per each datetime row. i.e. (1s, 5s, 1min)
+        buffer: float
+            Radius of the circle to consider from the point in meters.
 
         Returns
         -------
@@ -41,11 +44,11 @@ class AisData:
         warnings.filterwarnings('ignore', 'GeoSeries.isna', UserWarning)
         not_empty_values = ~(df_4326.geometry.is_empty | df_4326.geometry.isna())
         centroid = shapely.geometry.LineString([xy for xy in df_4326.loc[not_empty_values, 'geometry']]).centroid
-        df = self.get_all_ships_onepoint(df, centroid, dt)
+        df = self.get_all_ships_onepoint(df, centroid, dt, buffer)
 
         return df
 
-    def get_all_ships_onepoint(self, df, point, dt='5s'):
+    def get_all_ships_onepoint(self, df, point, dt='5s', buffer=10000):
         """
 
         Parameters
@@ -54,9 +57,14 @@ class AisData:
             With datetime as index and geometry as a column
         point : Shapely Point
             Shapely point object
+        dt: str
+            Timedelta to consider per each datetime row. i.e. (1s, 5s, 1min)
+        buffer: float
+            Radius of the circle to consider from the point in meters.
 
         Returns
         -------
+        The df updated
 
         """
         dt = pd.to_timedelta(dt)
@@ -67,7 +75,7 @@ class AisData:
             response = requests.get(self.url + '/items.json?', {'limit': self.limit,
                                                                 'lon': str(lon),
                                                                 'lat': str(lat),
-                                                                'buffer_meters': self.buffer,
+                                                                'buffer_meters': buffer,
                                                                 'start_time': start_time_str,
                                                                 'end_time': end_time_str})
             df['ais_total_seconds'] = 0
@@ -94,8 +102,8 @@ class AisData:
                         n_ships = mask.sum()
                         if n_ships > 0:
                             total_seconds = ais_df.loc[mask].total_seconds.sum()
-                            total_seconds_weighted = (ais_df.loc[mask].total_seconds *
-                                                      ais_df.loc[mask].distance_to_center).sum() / total_seconds
+                            total_seconds_weighted = (ais_df.loc[mask].total_seconds /
+                                                      np.log10(ais_df.loc[mask].distance_to_center)).sum()
 
                             df.loc[start_time, ['ais_total_seconds',
                                                 'ais_n_ships',

@@ -104,8 +104,8 @@ class MeetNetVlaamseBanken:
         -------
         the same GeoDataFrame updated
         """
-        df[self.data_field] = np.nan
-        df[self.data_field + '_id'] = np.nan
+        df = df.assign(**{self.data_field: np.nan})
+        df = df.assign(**{self.data_field + '_id': np.nan})
         try:
             catalogue = self.get_catalog()
             start_time = df.index.min()
