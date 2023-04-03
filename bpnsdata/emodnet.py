@@ -7,6 +7,7 @@ import owslib.wcs as wcs
 import requests
 import pandas as pd
 import rioxarray
+import datetime
 
 
 class EMODnetData:
@@ -17,6 +18,7 @@ class EMODnetData:
         self.resolutiony = resolutiony
         self.w = wcs.WebCoverageService(self.url, version=version)
         self.column_name = column_name
+        self.time = None
 
     def __call__(self, df, **kwargs):
         """
@@ -45,9 +47,14 @@ class EMODnetData:
     def assign_wcs_df(self, df):
         df_4326 = df.to_crs(epsg=4326)
         bbox = self.get_bbox(df_4326)
+        if self.time is not None:
+            time_str = [datetime.datetime.strftime(self.time, format='%Y-%m-%dT%H:%M:%SZ')]
+        else:
+            time_str = None
         wcs_response = self.w.getCoverage(identifier=self.identifier, bbox=bbox,
                                           crs=df_4326.crs.to_string(), format='image/tiff',
-                                          resx=self.resolutionx, resy=self.resolutiony)
+                                          resx=self.resolutionx, resy=self.resolutiony, time=time_str)
+
         df_4326[self.column_name] = np.nan
         warnings.filterwarnings('ignore', 'GeoSeries.isna', UserWarning)
         try:
@@ -65,7 +72,7 @@ class EMODnetData:
 
 
 class ShippingData(EMODnetData):
-    def __init__(self, layer_name='rd', boat_type='All'):
+    def __init__(self, layer_name='routedensity', boat_type='all'):
         """
         Will return the shipping intensity of the year and month of each sample from EMODnet Human Activities
         https://www.emodnet-humanactivities.eu/
@@ -126,7 +133,8 @@ class ShippingData(EMODnetData):
         -------
         String with the layer identifier as a string
         """
-        self.identifier = 'emodnet:%s_%02d_%s_%s' % (year, month, self.layer_name, self.boat_type)
+        self.identifier = 'emodnet:%s_%s' % (self.layer_name, self.boat_type)
+        self.time = datetime.datetime(year, month, 1, 0, 0, 0)
         return self.identifier
 
     def set_layer_type(self, layer_name, boat_type):
@@ -141,9 +149,9 @@ class ShippingData(EMODnetData):
             Can be All, Cargo, Fishing, Passenger, Tanker or Other
 
         """
-        if layer_name == 'rd':
+        if layer_name == 'routedensity':
             self.column_name = 'route_density'
-        elif layer_name == 'st':
+        elif layer_name == 'shippindensity':
             self.column_name = 'ship_density'
         else:
             raise ValueError('%s is not a known layer' % layer_name)
