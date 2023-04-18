@@ -69,7 +69,7 @@ class AisData:
             response = requests.get(self.url + '/items.json?', {'limit': self.limit,
                                                                 'lon': str(lon),
                                                                 'lat': str(lat),
-                                                                'buffer_meters': buffer,
+                                                                'buffer_meters': self.buffer,
                                                                 'start_time': start_time_str,
                                                                 'end_time': end_time_str})
             df['ais_total_seconds'] = 0
