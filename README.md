@@ -6,15 +6,11 @@ Right now only Belgian Part of the North Sea data is available for all the class
 restricted to the bpns and can be used to add environmental data to other parts of the world. 
 
 ## Install 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install 
-the dependencies.
-
 ```bash
-pip install -r requirements.txt 
+pip install bpnsdata
 ```
-
-If you are working on Windows, it can be tricky to install geopandas. 
-We recommend to install FIRST the following packages (in this order) by downloading the wheels of: 
+Installing the requirements can be a bit tricky, so it might fail during installation if you are working on Windows.
+If that is the case,we recommend to install FIRST the following packages (in this order) by downloading the wheels of: 
 * GDAL
 * rasterio
 * Fiona
@@ -22,11 +18,6 @@ We recommend to install FIRST the following packages (in this order) by download
 You can follow this tutorial if you're not familiar with wheels and/or pip: 
 https://geoffboeing.com/2014/09/using-geopandas-windows/
 
-Build the project
-
-```bash
-python setup.py install
-```
 
 ## Environmental data
 Environmental data can be added by specifying it in the env_vars variable when calling the main class SeaDataManager.
@@ -49,6 +40,7 @@ The available data sources are:
     * wave information
 * wrakken_bank: shipwreck information 
 * meetnet_vlaamse_banken: read weather data from the buoys of the meetnet vlaamse banken
+* ais: AIS data from the AIS hub from VLIZ. Only access when connected to the VPN of VLIZ for the moment.
 
 For easier running of the classes, there is a main class called SeaDataManager, which allows to run all the 
 desired environmental variables in one line of code.
@@ -57,7 +49,7 @@ desired environmental variables in one line of code.
 Entry point to download map data from EMODnet using WCS. Coverage to be checked in EMODnet, but larger than BPNS. 
 The implemented classes so far are: 
 
-##### Shipping
+##### Shipping (class ShippingData)
 Shipping activity from https://www.emodnet-humanactivities.eu/
 Adds the route density or the shipping intensity from the month of the deployment to the dataset, considering the 
 location, the year and the month. 
@@ -66,7 +58,7 @@ It adds the columns:
 * ship_density
 (depending on the layer type selected)
 
-##### Bathymetry
+##### Bathymetry (class BathymetryData)
 Adds the mean bathymetry (https://www.emodnet-bathymetry.eu/) layer considering location (no time considered)
 The output column is:
 * bathymetry
@@ -75,13 +67,13 @@ The output column is:
 Raster Data represents geographical data. Only BPNS available 
 The two outputs are:
 
-##### Seabed habitats
+##### Seabed habitats (class SeabedHabitatsData)
 Adds the sea habitat (https://www.emodnet-seabedhabitats.eu/).
 The output columns are: 
 * seabed_habitat
 * substrate
 
-##### Benthic habitats 
+##### Benthic habitats (class BenthicHabitatsData)
 Habitat suitability map from the publication ([1]V. Van Lancker, G. Moerkerke, I. Du Four, E. Verfaillie, M. Rabaut, 
 and S. Degraer, “Fine-scale Geomorphological Mapping of Sandbank Environments for the Prediction of Macrobenthic 
 Occurences, Belgian Part of the North Sea,” Seafloor Geomorphology as Benthic Habitat, 
@@ -94,7 +86,7 @@ Sea State Data from RBINS (https://erddap.naturalsciences.be/erddap/index.html).
 Coverage to be checked in the RBINS erddap website, but restricted to North Sea. 
 In this version only the tables BCZ_HydroState_V1 and WAM_ECMWF are implemented.
 
-##### Sea Surface
+##### Sea Surface (class SeaSurfaceData)
 The data is added from the table: BCZ_HydroState_V1.
 * surface_baroclinic_eastward_sea_water_velocity
 * surface_baroclinic_northward_sea_water_velocity
@@ -103,14 +95,20 @@ The data is added from the table: BCZ_HydroState_V1.
 * sea_surface_temperature
 * surface_baroclinic_sea_water_velocity
 
-##### Wave Data
+##### Sea Bottom (class SeaBottomData)
+The data is added from the table: BCZ_HydroState_V1.
+* bottom_baroclinic_eastward_sea_water_velocity
+* bottom_baroclinic_northward_sea_water_velocity
+* bottom_upward_sea_water_velocity
+
+##### Wave Data (class WaveData)
 The data is added from the table: WAM_ECMWF
 Output columns:
 * hs: wave height in cm
 * tm_1: wave period
     
 
-### Time Data 
+### Time Data (class TimeData)
 Data Related to time series. It adds the time of the day (day, night, twilight dawn...) and the moon phase. 
 The calculation is done using skyfield (https://rhodesmill.org/skyfield/). 
 Coverage in all the world. 
@@ -118,12 +116,12 @@ The output columns are:
 * moment_day (twilight, dawn, day, night)
 * moon_phase (in radians)
 
-### Csv Data 
+### Csv Data (class CSVData)
 Static data that is stored in a csv, with a lat and a lon columns (names to be given).
 It returns the closest point of all the csv, the distance to it, the coordinates and also other columns selected by the
 user with the specified suffix.
 
-### Wrakken Bank 
+### Wrakken Bank (class WrakkenBankData)
 Will add information about the closest shipwreck. The data is extracted from https://wrakkendatabank.afdelingkust.be/.
 Following information will be added:
 * shipwreck_distance: Distance to closest shipwreck
@@ -131,8 +129,8 @@ Following information will be added:
 * shipwreck_lon
 * shipwreck_name
 
-### Meetnet Vlaamse Banken 
-Read the available speed at the closest buoy from https://api.meetnetvlaamsebanken.be/V2-help/.
+### Meetnet Vlaamse Banken
+Read the available weather forecast at the closest buoy from https://api.meetnetvlaamsebanken.be/V2-help/.
 Attention! To be able to use this feature you need to have a user registered at Meet Net Vlaamse Banken. You can do
 it for free from their webpage. Then you need the username and the password. You can pass it directly to the created 
 objects, but if you want to use them in the SeaDataManager you will have to add the username and the password as 
@@ -142,9 +140,17 @@ It adds to the DataFrame a column with the value of the data, the id of the spec
 The id of the buoy is represented by the sum of the location id + the data id. i.e., in the buoy OMP, the id for 
 precipitation is OMP+NSI=OMPNSI
 
+#### Rain (class RainData)
+Rainfall in NSI at the closest buoy
+
+#### Wind (class WindData)
+Average wind speed at 10 m from the surface, at the closest buoy
 
 ## Usage 
-Possible ways of loading the data 
+Possible ways of loading the data. By default, all the classes read the column 'datetime' as the column from the 
+GeopandasDataFrame where the time information is stored, but the user can select another column by specifying the 
+datetime_column argument. 
+
 ```python 
 import bpnsdata 
 import pandas as pd 
@@ -157,21 +163,44 @@ geodf = bpnsdata.SurveyLocation(geofile).geotrackpoints
 
 # Could also be done directly using geopandas: 
 geodf = geopandas.read_file(geofile)
-gedf = geodf.set_index(pd.to_datetime(geodf['time']))
 
 # Could be that we have a df (here a random one) and we want to add a geolocation to it
 # Create a random dataframe to work with
 time_index = pd.date_range(start='2020-10-12 11:35', end='2020-10-12 12:00', freq='m', tz='UTC')
 random_data = np.random.randint(5, 30, size=10)
-df = pd.DataFrame(random_data, index=time_index)
+df = pd.DataFrame(random_data)
+df['datetime'] = time_index
 ```
+
+All the classes can be used separately, by calling each class in its own. 
+First declare the class with the desired parameters, then call the object with the df as an argument. 
+
+```python 
+import bpnsdata
+
+# For example, for shipping: 
+shipping = bpnsdata.ShippingData(layer_name='routedensity', boat_type='all')
+df_env = shipping(geodf)
+```
+
+
 Use of the SeaDataManager
+
+The SeaDataManager can be used when multiple env parameters have to be added. 
+Then the user needs to list which ones need to be added. These names are the names of the available classes but with 
+all small letters and an underscore separating the words, and removing the Data at the end.
+
+For example: 
+* TimeData -> time
+* HabitatSuitabilityData -> habitat_suitability 
+* SeaSurfaceData -> sea_surface
+
 ```python 
 import bpnsdata
 
 # Define the seadatamanager
 env_vars = ['shipping', 'time', 'wrakken_bank', 'habitat_suitability', 'bathymetry'
-            'seabed_habitat', 'sea_surface', 'sea_wave', 'rain', 'wind']
+            'seabed_habitat', 'sea_surface', 'sea_bottom', sea_wave', 'rain', 'wind', 'ais']
 manager = bpnsdata.SeaDataManager(env_vars)
 
 # If the data is without geometry, then:
@@ -180,12 +209,17 @@ geodf = manager.add_geodata(df, gpx_file)
 # Once the data has geometry:
 df_env = manager(geodf)
 ```
-
-Use without the SeaDataManager**
+If specific parameters want to be passed, then you can pass a dictionary when calling the SeaDataManager, where the 
+key has to be the name of one of the env_vars and value is a dictionary with key, value as the parameters that can 
+be passed to the __call__ function of that class.
 ```python 
 import bpnsdata
 
-# For example, for shipping: 
-shipping = bpnsdata.ShippingData(layer_name='rd', boat_type='All')
-df_env = shipping(geodf)
+# Define the seadatamanager
+env_vars = ['shipping', 'time', 'wrakken_bank', 'habitat_suitability', 'bathymetry'
+            'seabed_habitat', 'sea_surface', 'sea_bottom', sea_wave', 'rain', 'wind', 'ais']
+manager = bpnsdata.SeaDataManager(env_vars, {'ais': {'buffer': 20000}})
+
+# Call the seadatamanager 
+env_df = manager(geodf)
 ```
