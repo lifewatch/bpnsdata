@@ -3,7 +3,6 @@ import geopandas
 import pandas as pd
 import requests
 import shapely
-from tqdm import tqdm
 import numpy as np
 
 TIME_TOLERANCE = '30min'
@@ -92,13 +91,15 @@ class MeetNetVlaamseBanken:
                             'Be sure to register yourself in https://api.meetnetvlaamsebanken.be/V2-help/')
         return BearerAuth(response.json()['access_token'])
 
-    def __call__(self, df):
+    def __call__(self, df, datetime_column):
         """
         Add the values of the data_field to the df. It will also add field_id (for location) and field_distance (in m)
         Parameters
         ----------
         df : GeoDataFrame
             Pandas dataframe with datetime as index and a geometry column
+        datetime_column: str
+            Column where the datetime information is stored. Default to 'datetime'
 
         Returns
         -------
@@ -108,16 +109,16 @@ class MeetNetVlaamseBanken:
         df = df.assign(**{self.data_field + '_id': np.nan})
         try:
             catalogue = self.get_catalog()
-            start_time = df.index.min()
-            end_time = df.index.max()
-            nearest_locations = geopandas.sjoin_nearest(df[['geometry']].to_crs(epsg=3395),
+            start_time = df[datetime_column].min()
+            end_time = df[datetime_column].max()
+            nearest_locations = geopandas.sjoin_nearest(df[['geometry', datetime_column]].to_crs(epsg=3395),
                                                         catalogue.to_crs(epsg=3395),
                                                         how='inner', distance_col=self.data_field + '_distance')
             ids = nearest_locations.id.unique()
             total_values = self.get_data(ids, start_time, end_time)
             for location_id, df_id in nearest_locations.groupby('id'):
                 df_values = total_values[total_values.id == location_id]
-                df_w_values = pd.merge_asof(df_id, df_values, left_index=True, right_on='datetime',
+                df_w_values = pd.merge_asof(df_id, df_values, left_on=datetime_column, right_on='datetime',
                                             tolerance=pd.Timedelta(TIME_TOLERANCE), direction='nearest')
                 df.loc[df_w_values.index, [self.data_field,
                                            self.data_field + '_distance',
@@ -180,7 +181,7 @@ class MeetNetVlaamseBanken:
             values = response.json()['Values']
             if values is not None:
                 for id_val in values:
-                    for v in tqdm(id_val['Values']):
+                    for v in id_val['Values']:
                         data.loc[len(data)] = id_val['ID'], v['Timestamp'], v['Value']
                 data['datetime'] = pd.to_datetime(data['datetime'])
                 if data['datetime'].dt.tz is None:

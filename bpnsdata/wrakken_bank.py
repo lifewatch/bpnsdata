@@ -26,7 +26,21 @@ class WrakkenBankData:
         self.df['latitude'] = geom_epsg4326.y
         self.df['longitude'] = geom_epsg4326.x
 
-    def __call__(self, df):
+    def __call__(self, df, **kwargs):
+        """
+        Add the raster point to the df
+
+        Parameters
+        ----------
+        df : GeoDataFrame
+            datetime as index and a column geometry
+        **kwargs: None
+            Ignored, just for compatibility
+
+        Returns
+        -------
+        The GeoDataFrame updated
+        """
         return self.add_data_df(df)
 
     def add_data_df(self, df):

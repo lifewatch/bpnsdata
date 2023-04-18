@@ -58,8 +58,22 @@ class RBINSerddap(erddapy.ERDDAP):
                                              minutes=delta_time.minute,
                                              seconds=delta_time.second)
 
-    def __call__(self, df):
-        return self.get_data(df)
+    def __call__(self, df, datetime_column):
+        """
+        Add the specified layer data to the df
+
+        Parameters
+        ----------
+        df : GeoDataFrame
+            datetime as index and a column geometry
+        datetime_column: str
+            Column where the datetime information is stored. Default to 'datetime'
+
+        Returns
+        -------
+        The GeoDataFrame updated
+        """
+        return self.get_data(df, datetime_column)
 
     def set_spatial_bounds(self, df):
         """
@@ -68,7 +82,7 @@ class RBINSerddap(erddapy.ERDDAP):
         Parameters
         ----------
         df: GeoDataFrame
-            Evolution dataframe with datetime as index
+            Evolution dataframe with a geometry column
         """
         min_lon, min_lat, max_lon, max_lat = df.total_bounds
         if abs(max_lon - min_lon) < self.delta_lon:
@@ -82,24 +96,26 @@ class RBINSerddap(erddapy.ERDDAP):
         self.constraints['longitude>='] = min_lon
         self.constraints['longitude<='] = max_lon
 
-    def set_temporal_bounds(self, df):
+    def set_temporal_bounds(self, df, datetime_column):
         """
         Assign to start_time and end_time attributes the minimum spatial time that will return some test_data
 
         Parameters
         ----------
         df: GeoDataFrame
-            Evolution dataframe with datetime as index
+            Evolution dataframe with a datetime column
+        datetime_column: str
+            Column where the datetime information is stored. Default to 'datetime'
         """
-        start_time = df.index.min()
-        end_time = df.index.max()
+        start_time = df[datetime_column].min()
+        end_time = df[datetime_column].max()
         if (end_time - start_time) < self.delta_time:
             start_time -= self.delta_time
             end_time += self.delta_time
         self.constraints['time>='] = start_time
         self.constraints['time<='] = end_time
 
-    def get_data(self, df):
+    def get_data(self, df, datetime_column):
         """
         Add the griddap test_data from e. It downloads the test_data from e with the df (temporal and spatial)
         constraints - max, min latitude and longitude and start and end time of the df -
@@ -108,9 +124,11 @@ class RBINSerddap(erddapy.ERDDAP):
         Parameters
         ----------
         df : GeoDataFrame
-            Needs to have - at least - time as index (datetime) and a geometry column
+            Needs to have - at least - time in a datetime_column and a geometry column
+        datetime_column: str
+            Column where the datetime information is stored. Default to 'datetime'
         """
-        self.set_temporal_bounds(df)
+        self.set_temporal_bounds(df, datetime_column)
         self.set_spatial_bounds(df)
 
         warnings.filterwarnings('ignore', 'GeoSeries.isna', UserWarning)
@@ -120,7 +138,7 @@ class RBINSerddap(erddapy.ERDDAP):
             # Is there a xarray function?
             lat_points = xr.DataArray(df.loc[not_empty_values].geometry.y, dims='points')
             lon_points = xr.DataArray(df.loc[not_empty_values].geometry.x, dims='points')
-            time_points = xr.DataArray(df.loc[not_empty_values].index.values, dims='points')
+            time_points = xr.DataArray(df.loc[not_empty_values][datetime_column].values, dims='points')
             nearest_points = griddap.sel(latitude=lat_points, longitude=lon_points, time=time_points,
                                          method='nearest')
             for col in self.columns:
@@ -161,8 +179,8 @@ class SeaSurfaceData(RBINSerddap):
                    'sea_surface_temperature']
         super().__init__(dataset_id, columns)
 
-    def __call__(self, df):
-        super().__call__(df)
+    def __call__(self, df, datetime_column):
+        super().__call__(df, datetime_column)
         df['surface_baroclinic_sea_water_velocity'] = np.sqrt((df[['surface_baroclinic_eastward_sea_water_velocity',
                                                                    'surface_baroclinic_northward_sea_water_velocity'
                                                                    ]] ** 2).sum(axis=1))
