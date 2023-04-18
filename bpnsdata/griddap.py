@@ -169,6 +169,25 @@ class SeaSurfaceData(RBINSerddap):
         return df
 
 
+class SeaBottomData(RBINSerddap):
+    def __init__(self):
+        """
+        Sea State for BPNS test_data downloader
+        """
+        dataset_id = 'BCZ_HydroState_V1'
+        columns = ['bottom_baroclinic_eastward_sea_water_velocity',
+                   'bottom_baroclinic_northward_sea_water_velocity',
+                   'bottom_upward_sea_water_velocity']
+        super().__init__(dataset_id, columns)
+
+    def __call__(self, df):
+        super().__call__(df)
+        df['bottom_baroclinic_sea_water_velocity'] = np.sqrt((df[['bottom_baroclinic_eastward_sea_water_velocity',
+                                                                  'bottom_baroclinic_northward_sea_water_velocity'
+                                                                  ]] ** 2).sum(axis=1))
+        return df
+
+
 class SeaWaveData(RBINSerddap):
     def __init__(self):
         dataset_id = 'WAM_ECMWF'
