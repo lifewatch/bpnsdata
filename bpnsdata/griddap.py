@@ -198,8 +198,8 @@ class SeaBottomData(RBINSerddap):
                    'bottom_upward_sea_water_velocity']
         super().__init__(dataset_id, columns)
 
-    def __call__(self, df):
-        super().__call__(df)
+    def __call__(self, df, datetime_column):
+        super().__call__(df, datetime_column)
         df['bottom_baroclinic_sea_water_velocity'] = np.sqrt((df[['bottom_baroclinic_eastward_sea_water_velocity',
                                                                   'bottom_baroclinic_northward_sea_water_velocity'
                                                                   ]] ** 2).sum(axis=1))
