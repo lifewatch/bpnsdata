@@ -146,6 +146,15 @@ Rainfall in NSI at the closest buoy
 #### Wind (class WindData)
 Average wind speed at 10 m from the surface, at the closest buoy
 
+### AIS (class AISData)
+AIS data from the AIS hub from VLIZ. Only access when connected to the VPN of VLIZ for the moment.
+Adds the columns: 
+* ais_total_seconds: total cumulative seconds when a ship was there 
+* ais_n_ships: total number of ships
+* ais_total_seconds_distance_weighted: total cumulative number of seconds, weighted according to the distance of
+each ship
+
+
 ## Usage 
 Possible ways of loading the data. By default, all the classes read the column 'datetime' as the column from the 
 GeopandasDataFrame where the time information is stored, but the user can select another column by specifying the 
@@ -184,7 +193,7 @@ df_env = shipping(geodf)
 ```
 
 
-Use of the SeaDataManager
+### Use of the SeaDataManager
 
 The SeaDataManager can be used when multiple env parameters have to be added. 
 Then the user needs to list which ones need to be added. These names are the names of the available classes but with 

@@ -1,7 +1,7 @@
 import setuptools
 
 setuptools.setup(name='bpnsdata',
-                 version='0.1.10',
+                 version='0.1.11',
                  description='Add Belgian Part of the North Sea (BPNS) marine environmental data to a geodataframe',
                  author='Clea Parcerisas',
                  author_email='clea.parcerisas@vliz.be',
