@@ -27,7 +27,7 @@ class TimeData:
 
         self.eph = None
 
-    def __call__(self, df, datetime_column):
+    def __call__(self, df, datetime_column='datetime'):
         self.eph = api.load_file(self.bsp_file)
         df = self.get_time_data_df(df, datetime_column)
         self.eph.close()

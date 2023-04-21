@@ -58,7 +58,7 @@ class RBINSerddap(erddapy.ERDDAP):
                                              minutes=delta_time.minute,
                                              seconds=delta_time.second)
 
-    def __call__(self, df, datetime_column):
+    def __call__(self, df, datetime_column='datetime'):
         """
         Add the specified layer data to the df
 
@@ -179,7 +179,7 @@ class SeaSurfaceData(RBINSerddap):
                    'sea_surface_temperature']
         super().__init__(dataset_id, columns)
 
-    def __call__(self, df, datetime_column):
+    def __call__(self, df, datetime_column='datetime'):
         super().__call__(df, datetime_column)
         df['surface_baroclinic_sea_water_velocity'] = np.sqrt((df[['surface_baroclinic_eastward_sea_water_velocity',
                                                                    'surface_baroclinic_northward_sea_water_velocity'
@@ -198,7 +198,7 @@ class SeaBottomData(RBINSerddap):
                    'bottom_upward_sea_water_velocity']
         super().__init__(dataset_id, columns)
 
-    def __call__(self, df, datetime_column):
+    def __call__(self, df, datetime_column='datetime'):
         super().__call__(df, datetime_column)
         df['bottom_baroclinic_sea_water_velocity'] = np.sqrt((df[['bottom_baroclinic_eastward_sea_water_velocity',
                                                                   'bottom_baroclinic_northward_sea_water_velocity'

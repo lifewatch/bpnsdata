@@ -91,7 +91,7 @@ class MeetNetVlaamseBanken:
                             'Be sure to register yourself in https://api.meetnetvlaamsebanken.be/V2-help/')
         return BearerAuth(response.json()['access_token'])
 
-    def __call__(self, df, datetime_column):
+    def __call__(self, df, datetime_column='datetime'):
         """
         Add the values of the data_field to the df. It will also add field_id (for location) and field_distance (in m)
         Parameters
