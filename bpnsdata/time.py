@@ -28,6 +28,16 @@ class TimeData:
         self.eph = None
 
     def __call__(self, df, datetime_column='datetime'):
+        """
+        Add to the df the day_moment and the moon_phase columns
+
+        Parameters
+        ----------
+        df: pd.DataFrame
+            The DataFrame to add the data to
+        datetime_column: str
+            The name of the column containing the date and time information (in datetime format)
+        """
         self.eph = api.load_file(self.bsp_file)
         df = self.get_time_data_df(df, datetime_column)
         self.eph.close()
@@ -85,7 +95,7 @@ class TimeData:
         df : DataFrame
             DataFrame with the datetime as index
         datetime_column: str
-
+            The name of the column containing the date and time information (in datetime format)
         Returns
         -------
         The dataframe with the columns added
@@ -93,10 +103,9 @@ class TimeData:
         df['moon_phase'] = np.nan
         df['day_moment'] = np.nan
         df_4326 = df.to_crs(epsg=4326)
-        for row in df_4326.loc[~df_4326.geometry.is_empty][['geometry', datetime_column]].itertuples():
-            t = row[2]
-            geometry = row[1]
-            if geometry is not None:
-                df.loc[row.Index, 'moon_phase'] = self.get_moon_phase(t)
-                df.loc[row.Index, 'day_moment'] = self.get_day_moment(t, geometry)
+        for t, time_df in df_4326.groupby(datetime_column):
+            df.loc[time_df.index, 'moon_phase'] = self.get_moon_phase(t)
+            for _, geometry_df in time_df.loc[~df_4326.geometry.is_empty].groupby(time_df['geometry'].to_wkt()):
+                if geometry_df.geometry is not None:
+                    df.loc[geometry_df.index, 'day_moment'] = self.get_day_moment(t, geometry_df.geometry.values[0])
         return df
