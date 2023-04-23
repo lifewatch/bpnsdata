@@ -87,6 +87,33 @@ class TimeData:
         day_moment = is_dark_twilight_at(t).min()
         return almanac.TWILIGHTS[day_moment]
 
+    def get_twilight_events(self, min_dt, max_dt, location):
+        """
+        Return moment of the day (day, night, twilight)
+        Parameters
+        ----------
+        min_dt : datetime
+            Datetime when to start looking for events
+        max_dt : datetime
+            Datetime when to stop looking for events
+        location : geometry object
+
+        Returns
+        -------
+        Moment of the day (string)
+        """
+        bluffton = api.Topos(latitude_degrees=location.coords[0][1], longitude_degrees=location.coords[0][0])
+        min_utc_dt = min_dt.replace(tzinfo=datetime.timezone.utc)
+        max_utc_dt = max_dt.replace(tzinfo=datetime.timezone.utc)
+        t_min = self.ts.utc(min_utc_dt)
+        t_max = self.ts.utc(max_utc_dt)
+        f = almanac.dark_twilight_day(self.eph, api.Topos(latitude_degrees=location.coords[0][1],
+                                                          longitude_degrees=location.coords[0][0]))
+        times, events = almanac.find_discrete(t_min, t_max, f)
+        first_event = f(t_min).item()
+
+        return first_event, times, events
+
     def get_time_data_df(self, df, datetime_column):
         """
         Add to the dataframe the moon_phase and the day_moment to all the rows
@@ -105,7 +132,21 @@ class TimeData:
         df_4326 = df.to_crs(epsg=4326)
         for t, time_df in df_4326.groupby(datetime_column):
             df.loc[time_df.index, 'moon_phase'] = self.get_moon_phase(t)
-            for _, geometry_df in time_df.loc[~df_4326.geometry.is_empty].groupby(time_df['geometry'].to_wkt()):
-                if geometry_df.geometry is not None:
+        for _, geometry_df in df_4326.loc[~df_4326.geometry.is_empty].groupby(time_df['geometry'].to_wkt()):
+            if geometry_df.geometry is not None:
+                # If only one date
+                if geometry_df.datetime.min() == geometry_df.datetime.max():
+                    df.loc[geometry_df.index, 'day_moment'] = self.get_day_moment(geometry_df.datetime.max(),
+                                                                                  geometry_df.geometry.values[0])
+                # If multiple dates
+                else:
+                    previous_e, times, events = self.get_twilight_events(geometry_df[datetime_column].min(),
+                                                                         geometry_df[datetime_column].max(),
+                                                                         geometry_df.geometry.values[0])
+                    previous_time = geometry_df[datetime_column].min()
+                    for t, e in zip(times, events):
+                        geometry_df.loc[(geometry_df[datetime_column] > previous_time) &
+                                        (geometry_df[datetime_column] < t)] = almanac.TWILIGHTS[previous_e]
+                        previous_e = e
                     df.loc[geometry_df.index, 'day_moment'] = self.get_day_moment(t, geometry_df.geometry.values[0])
         return df
