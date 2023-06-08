@@ -213,7 +213,7 @@ class SeaWaveData(RBINSerddap):
         super().__init__(dataset_id, columns)
 
 
-class SeaSurfaceDataNorthSea(SeaSurfaceData):
+class SeaSurfaceNorthSeaData(SeaSurfaceData):
     def __init__(self):
         """
         Sea State for BPNS test_data downloader
@@ -223,7 +223,7 @@ class SeaSurfaceDataNorthSea(SeaSurfaceData):
         super().__init__()
 
 
-class SeaBottomDataNorthSea(SeaBottomData):
+class SeaBottomNorthSeaData(SeaBottomData):
     def __init__(self):
         """
         Sea State for BPNS test_data downloader

@@ -23,7 +23,7 @@ class TestSeaDataManager(unittest.TestCase):
 
     def test_sea_data_manager(self):
         env_vars = ['shipping', 'time', 'wrakken_bank', 'habitat_suitability',
-                    'seabed_habitat', 'sea_surface', 'sea_wave', 'rain', 'wind', 'bathymetry']
+                    'seabed_habitat', 'sea_surface', 'sea_wave', 'rain', 'wind', 'bathymetry', 'sea_bottom_north_sea']
         self.manager = bpnsdata.SeaDataManager(env_vars)
         df = self.manager(self.geodf, datetime_column='datetime', ais={'dt': '1min'}, verbose=True)
         print('All data')
@@ -69,6 +69,18 @@ class TestSeaDataManager(unittest.TestCase):
         sea_surface = bpnsdata.SeaSurfaceData()
         df = sea_surface(self.geodf, datetime_column='datetime')
         print('Sea surface data')
+        print(df)
+
+    def test_sea_surface_north_sea(self):
+        sea_surface = bpnsdata.SeaSurfaceNorthSeaData()
+        df = sea_surface(self.geodf, datetime_column='datetime')
+        print('Sea surface data for North Sea')
+        print(df)
+
+    def test_sea_bottom_north_sea(self):
+        sea_bottom = bpnsdata.SeaBottomNorthSeaData()
+        df = sea_bottom(self.geodf, datetime_column='datetime')
+        print('Sea surface data for North Sea')
         print(df)
 
     def test_sea_wave(self):
