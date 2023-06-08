@@ -211,3 +211,22 @@ class SeaWaveData(RBINSerddap):
         dataset_id = 'WAM_ECMWF'
         columns = ['hs', 'tm_1']
         super().__init__(dataset_id, columns)
+
+
+class SeaSurfaceDataNorthSea(SeaSurfaceData):
+    def __init__(self):
+        """
+        Sea State for BPNS test_data downloader
+        """
+        dataset_id = 'NOS_HydroState_V1'
+
+        super().__init__()
+
+
+class SeaBottomDataNorthSea(SeaBottomData):
+    def __init__(self):
+        """
+        Sea State for BPNS test_data downloader
+        """
+        dataset_id = 'NOS_HydroState_V1'
+        super().__init__()
