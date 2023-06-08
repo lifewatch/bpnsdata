@@ -209,7 +209,7 @@ import bpnsdata
 
 # Define the seadatamanager
 env_vars = ['shipping', 'time', 'wrakken_bank', 'habitat_suitability', 'bathymetry'
-            'seabed_habitat', 'sea_surface', 'sea_bottom', sea_wave', 'rain', 'wind', 'ais']
+            'seabed_habitat', 'sea_surface', 'sea_bottom', 'sea_wave', 'rain', 'wind', 'ais', 'sea_wave_north_sea']
 manager = bpnsdata.SeaDataManager(env_vars)
 
 # If the data is without geometry, then:
