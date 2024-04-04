@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bpnsdata"
-version = "0.1.11"
+version = "0.2.0"
 description = "A package to add marine environmental data to a geopandas dataframe"
 authors = ["Clea Parcerisas <cleaparcerisas@gmail.com>"]
 readme = "README.md"
