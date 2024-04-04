@@ -197,3 +197,7 @@ class RainData(MeetNetVlaamseBanken):
 class WindData(MeetNetVlaamseBanken):
     def __init__(self, user=None, password=None):
         super().__init__(user, password, data_field='WVC')
+
+class AirPressureData(MeetNetVlaamseBanken):
+    def __init__(self, user=None, password=None):
+        super().__init__(user, password, data_field='LDR')
