@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "bpnsdata"
+version = "0.1.11"
+description = "A package to add marine environmental data to a geopandas dataframe"
+authors = ["Clea Parcerisas <cleaparcerisas@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+geopandas = "^0.14.3"
+erddapy = "^2.2.0"
+netCDF4 = "^1.6.5"
+rioxarray = "^0.15.3"
+skyfield = "^1.48"
+tqdm = "^4.66.2"
+OWSLib = "^0.30.0"
+contextily = "^1.6.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

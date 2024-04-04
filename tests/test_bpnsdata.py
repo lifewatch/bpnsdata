@@ -6,8 +6,6 @@ import geopandas
 
 import bpnsdata
 
-shapely.speedups.disable()
-
 
 class TestSeaDataManager(unittest.TestCase):
     def setUp(self) -> None:
@@ -45,6 +43,12 @@ class TestSeaDataManager(unittest.TestCase):
         wind = bpnsdata.WindData()
         df = wind(self.geodf, datetime_column='datetime')
         print('Wind data')
+        print(df)
+
+    def test_air_pressure(self):
+        airpressure = bpnsdata.AirPressureData()
+        df = airpressure(self.geodf, datetime_column='datetime')
+        print('Air pressure data')
         print(df)
 
     def test_shipping(self):
